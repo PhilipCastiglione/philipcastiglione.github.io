@@ -1,0 +1,350 @@
+/* VARIABLES */
+$full-width: 100vw;
+
+$header-height: 10.2vh; /* because pixel perfect sucks*/
+$splash-height: 35vh;
+$biography-height: 55vh;
+$app-height: 90vh;
+$contact-height: 45vh;
+$footer-height: 10vh;
+
+$primary-dark: #3B3301;
+$secondary-dark: #443800;
+$primary-light: #FFF9D7;
+$contrast-light: #83BFC6;
+$contrast-dark: #6EACB0;
+
+$font-size: $header-height * 0.8;
+
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.title {
+  width: $full-width * 0.8;
+  margin: 0 auto;
+  padding: 3vh 0;
+
+  h1 {
+    font-size: $font-size;
+  }
+}
+
+.highlight {
+  color: $secondary-dark;
+  font-weight: bold;
+}
+
+section, article {
+  position: relative;
+}
+
+.previous {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8vw 8vw 0 0;
+  cursor: pointer;
+}
+
+.previous-arrow {
+  position: absolute;
+  left: 0.5vw;
+  top: 0.5vh;
+  font-size: $font-size;
+  cursor: pointer;
+}
+
+.next {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 8vw 8vw;
+  cursor: pointer;
+}
+
+.next-arrow {
+  position: absolute;
+  right: 0.5vw;
+  bottom: 0.5vh;
+  font-size: $font-size;
+  cursor: pointer;
+}
+
+
+/* HEADER */
+header {
+  position: fixed;
+  z-index: 1;
+  width: $full-width;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  height: $header-height;
+  line-height: $header-height;
+  background-color: $primary-dark;
+
+  .links {
+    list-style: none;
+
+    li {
+      display: inline;
+      padding-left: 2vw;
+      padding-right: 2vw;
+      font-size: $font-size * .4;
+      text-decoration: none;
+      color: $contrast-light;
+      cursor: pointer;
+
+      a {
+        img {
+          margin-top: $header-height * 1.5 / 10; 
+          max-height: $header-height * 7 / 10;
+        }
+      }
+    }
+  }
+}
+
+/* SPACER */
+.header-spacer {
+  height: $header-height * .98;
+}
+
+/* SPLASH */
+.splash {
+  width: $full-width;
+  height: $splash-height;
+  background-color: $primary-dark;
+
+  text-align: center; /*PLACEHOLDER*/
+  line-height: $splash-height; /*PLACEHOLDER*/
+  font-size: $font-size * 1.5; /*PLACEHOLDER*/
+  color: $contrast-light; /*PLACEHOLDER*/
+}
+
+/* BIOGRAPHY */
+.biography {
+  width: $full-width;
+  height: $biography-height;
+  background-color: $primary-light;
+
+  .title {
+    border-bottom: 1px solid $secondary-dark;
+
+    h1 {
+      color: $secondary-dark;
+    }
+  }
+
+  .copy {
+    width: $full-width * 0.8;
+    margin: 0 auto;
+    padding: 2vh 0;
+
+    .col {
+      width: $full-width * 0.375;
+      color: $secondary-dark;
+      font-size: $font-size * 0.35;
+      
+      a {
+        text-decoration: none;
+        color: $contrast-dark;
+      }
+    }
+  }
+
+  .projects {
+    clear: both;
+    width: $full-width * 0.8;
+    margin: 0 auto;
+    padding: 5vh 0;
+
+    ul {
+      text-align: center;
+
+      li {
+        width: $full-width * 0.8 * 0.32;
+        display: inline-block;
+        text-decoration: none;
+        color: $contrast-dark;
+        font-size: $font-size * 0.4;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .next {
+    border-color: transparent transparent $secondary-dark transparent;
+  }
+  
+  .next-arrow {
+    color: $primary-light;
+  }
+}
+
+/* PORTFOLIO */
+.app-page {
+  width: $full-width;
+  height: $app-height;
+  background-color: $contrast-dark;
+
+  .previous {
+    border-color: $primary-dark transparent transparent transparent;
+  }
+
+  .previous-arrow {
+    color: $contrast-light;
+  }
+
+  .title {
+    text-align: center;
+    border-bottom: 1px solid $primary-light;
+    margin-bottom: 5vh;
+
+    h1 {
+      color: $primary-light;
+    }
+  }
+
+  .copy {
+    margin-left: $full-width * 0.1;
+    width: $full-width * 0.26;
+    color: $primary-light;
+    font-size: $font-size * 0.4;
+    max-height: 60vh;
+    overflow: hidden;
+  }
+
+  .links-wrapper {
+    margin-right: $full-width * 0.1;
+    width: $full-width * 0.5;
+    max-height: 60vh;
+    overflow: hidden;
+    color: $primary-light;
+    font-size: $font-size * 0.4;
+
+    .app {
+      display: inline-block;
+      width: $full-width * 0.22;
+      margin-right: $full-width * 0.04;
+      vertical-align: top;
+
+      img {
+        width: $full-width * 0.22;
+        height: 60vh;
+      }
+    }
+
+    .code {
+      display: inline-block;
+      width: $full-width * 0.22;
+      vertical-align: top;
+
+      a img {
+        width: $full-width * 0.22;
+        height: 21vh;
+      }
+    }
+  }
+  
+  .next {
+    border-color: transparent transparent $primary-dark transparent;
+  }
+
+  .next-arrow {
+    color: $contrast-light;
+  }
+}
+
+/* CONTACT */
+.contact {
+  width: $full-width;
+  height: $contact-height;
+  background-color: $primary-light;
+
+  .previous {
+    border-color: $primary-dark transparent transparent transparent;
+  }
+
+  .previous-arrow {
+    color: $primary-light;
+  }
+
+
+  .title {
+    border-bottom: 1px solid $secondary-dark;
+
+    h1 {
+      color: $secondary-dark;
+    }
+  }
+
+  .copy {
+    width: $full-width * 0.8;
+    margin: 0 auto;
+    padding: 2vh 0;
+
+    .col {
+      width: $full-width * 0.375;
+      color: $secondary-dark;
+      font-size: $font-size * 0.35;
+    
+    a {
+        text-decoration: none;
+        color: $contrast-dark;
+      }
+    }
+  }
+}
+
+/* FOOTER */
+footer {
+  width: $full-width;
+  height: $footer-height;
+  background-color: $primary-dark;
+  padding: 2vh 2vw;
+
+  div {
+
+    p {
+      color: $contrast-light;
+      font-size: $font-size * 0.3;
+
+      a {
+        color: $contrast-light;
+      }
+    }
+  }
+
+  .left {
+    width: 40vw;
+  }
+
+  .right {
+    text-align: right;
+    width: 50vw;
+  }
+}
+
