@@ -65,5 +65,19 @@ $(document).ready(function() {
   });
 
   // scrolling through touchpad/mousewheel etc!!
+  //PLACEHOLDER
+
+  // scroll to top on refresh
+  scrollToTarget('.about');  
 
 });
+
+/*
+add project content
+add cv when done
+scroll wheel/mouse scroll/touch version
+disable tabbing through
+SPLASH ANIMATION
+FOOTER ANIMATION
+responsive for mobile
+*/

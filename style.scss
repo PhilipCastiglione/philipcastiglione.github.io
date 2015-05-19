@@ -178,7 +178,7 @@ header {
     clear: both;
     width: $full-width * 0.8;
     margin: 0 auto;
-    padding: 5vh 0;
+    padding: 3.5vh 0;
 
     ul {
       text-align: center;
@@ -311,9 +311,26 @@ header {
       color: $secondary-dark;
       font-size: $font-size * 0.35;
     
-    a {
+      a {
         text-decoration: none;
         color: $contrast-dark;
+      }
+
+      .contact-details {
+        width: $full-width * 0.375;
+        padding: 4vh 0;
+
+        ul {
+          text-align: center;
+
+          li {
+            width: $full-width * 0.375 * 0.48;
+            display: inline-block;
+            text-decoration: none;
+            color: $contrast-dark;
+            font-size: $font-size * 0.35;
+          }
+        }
       }
     }
   }

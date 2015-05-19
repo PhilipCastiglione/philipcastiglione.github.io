@@ -129,7 +129,7 @@ header {
     clear: both;
     width: 80vw;
     margin: 0 auto;
-    padding: 5vh 0; }
+    padding: 3.5vh 0; }
     .biography .projects ul {
       text-align: center; }
       .biography .projects ul li {
@@ -218,6 +218,17 @@ header {
       .contact .copy .col a {
         text-decoration: none;
         color: #6EACB0; }
+      .contact .copy .col .contact-details {
+        width: 37.5vw;
+        padding: 4vh 0; }
+        .contact .copy .col .contact-details ul {
+          text-align: center; }
+          .contact .copy .col .contact-details ul li {
+            width: 18vw;
+            display: inline-block;
+            text-decoration: none;
+            color: #6EACB0;
+            font-size: 2.856vh; }
 
 /* FOOTER */
 footer {
