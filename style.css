@@ -1,3 +1,4 @@
+/* FONTS */
 /* VARIABLES */
 /* because pixel perfect sucks*/
 /* GLOBAL */
@@ -96,14 +97,17 @@ header {
   width: 100vw;
   height: 35vh;
   background-color: #3B3301;
-  text-align: center;
-  /*PLACEHOLDER*/
-  line-height: 35vh;
-  /*PLACEHOLDER*/
-  font-size: 12.24vh;
-  /*PLACEHOLDER*/
-  color: #83BFC6;
-  /*PLACEHOLDER*/ }
+  text-align: center; }
+  .splash .center {
+    display: inline-block;
+    margin: 0 auto;
+    padding-top: 3vh; }
+    .splash .center pre {
+      text-align: left;
+      font-family: Courier, monospace;
+      line-height: 4.08vh;
+      font-size: 4.08vh;
+      color: #83BFC6; }
 
 /* BIOGRAPHY */
 .biography {
@@ -117,11 +121,14 @@ header {
   .biography .copy {
     width: 80vw;
     margin: 0 auto;
-    padding: 2vh 0; }
+    padding: 2vh 0;
+    text-align: justify; }
     .biography .copy .col {
       width: 37.5vw;
       color: #443800;
       font-size: 2.856vh; }
+      .biography .copy .col h3 {
+        margin: 1vh 0; }
       .biography .copy .col a {
         text-decoration: none;
         color: #6EACB0; }
@@ -167,6 +174,8 @@ header {
     font-size: 3.264vh;
     max-height: 60vh;
     overflow: hidden; }
+    .app-page .copy .reduced {
+      font-size: 2.856vh; }
   .app-page .links-wrapper {
     margin-right: 10vw;
     width: 50vw;
@@ -197,7 +206,7 @@ header {
 /* CONTACT */
 .contact {
   width: 100vw;
-  height: 45vh;
+  height: 80vh;
   background-color: #FFF9D7; }
   .contact .previous {
     border-color: #3B3301 transparent transparent transparent; }
@@ -215,20 +224,49 @@ header {
       width: 37.5vw;
       color: #443800;
       font-size: 2.856vh; }
+      .contact .copy .col h3 {
+        margin: 1vh 0; }
       .contact .copy .col a {
         text-decoration: none;
         color: #6EACB0; }
+      .contact .copy .col .photo {
+        position: relative;
+        margin-top: 10vh;
+        display: inline-block;
+        width: 15vw; }
+        .contact .copy .col .photo .photo-spacer {
+          height: 32vh;
+          width: 23.57252vh; }
+        .contact .copy .col .photo .photo-top, .contact .copy .col .photo .photo-bottom {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 32vh;
+          width: 23.57252vh;
+          background-size: contain;
+          transition: opacity .3s linear; }
+        .contact .copy .col .photo .photo-top {
+          background-image: url("phil.jpg");
+          opacity: 1;
+          z-index: 1; }
+        .contact .copy .col .photo .photo-top:hover {
+          opacity: 0; }
+        .contact .copy .col .photo .photo-bottom {
+          background-image: url("phil-inverted.jpg"); }
       .contact .copy .col .contact-details {
-        width: 37.5vw;
-        padding: 4vh 0; }
+        vertical-align: top;
+        display: inline-block;
+        width: 17.5vw;
+        margin-top: 10vh; }
         .contact .copy .col .contact-details ul {
-          text-align: center; }
+          text-align: left; }
           .contact .copy .col .contact-details ul li {
-            width: 18vw;
+            width: 17.5vw;
             display: inline-block;
             text-decoration: none;
             color: #6EACB0;
-            font-size: 2.856vh; }
+            font-size: 2.856vh;
+            margin: 1vh 0; }
 
 /* FOOTER */
 footer {

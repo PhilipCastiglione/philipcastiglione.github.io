@@ -1,3 +1,6 @@
+/* FONTS */
+$mono: Courier, monospace;
+
 /* VARIABLES */
 $full-width: 100vw;
 
@@ -5,7 +8,7 @@ $header-height: 10.2vh; /* because pixel perfect sucks*/
 $splash-height: 35vh;
 $biography-height: 55vh;
 $app-height: 90vh;
-$contact-height: 45vh;
+$contact-height: 80vh;
 $footer-height: 10vh;
 
 $primary-dark: #3B3301;
@@ -136,11 +139,21 @@ header {
   width: $full-width;
   height: $splash-height;
   background-color: $primary-dark;
+  text-align: center;
 
-  text-align: center; /*PLACEHOLDER*/
-  line-height: $splash-height; /*PLACEHOLDER*/
-  font-size: $font-size * 1.5; /*PLACEHOLDER*/
-  color: $contrast-light; /*PLACEHOLDER*/
+  .center {
+    display: inline-block;
+    margin: 0 auto;
+    padding-top: 3vh;
+
+    pre {
+      text-align: left;
+      font-family: $mono;
+      line-height: $font-size * .5;
+      font-size: $font-size * .5;
+      color: $contrast-light; 
+    }
+  }
 }
 
 /* BIOGRAPHY */
@@ -161,8 +174,13 @@ header {
     width: $full-width * 0.8;
     margin: 0 auto;
     padding: 2vh 0;
+    text-align: justify;
 
     .col {
+      h3 {
+        margin: 1vh 0;
+      }
+
       width: $full-width * 0.375;
       color: $secondary-dark;
       font-size: $font-size * 0.35;
@@ -235,6 +253,10 @@ header {
     font-size: $font-size * 0.4;
     max-height: 60vh;
     overflow: hidden;
+
+    .reduced {
+      font-size: $font-size * 0.35;
+    }
   }
 
   .links-wrapper {
@@ -307,6 +329,10 @@ header {
     padding: 2vh 0;
 
     .col {
+      h3 {
+        margin: 1vh 0;
+      }
+
       width: $full-width * 0.375;
       color: $secondary-dark;
       font-size: $font-size * 0.35;
@@ -315,20 +341,58 @@ header {
         text-decoration: none;
         color: $contrast-dark;
       }
+      
+      .photo {
+        position: relative;
+        margin-top: 10vh;
+        display: inline-block;
+        width: $full-width * 0.15;
+
+        .photo-spacer {
+          height: $contact-height * .4;
+          width: $contact-height * .4 * 386 / 524;
+        }
+
+        .photo-top, .photo-bottom {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: $contact-height * .4;
+          width: $contact-height * .4 * 386 / 524;
+          background-size: contain;
+          transition: opacity .3s linear;
+        }
+        .photo-top {
+          background-image: url("phil.jpg");
+          opacity: 1;
+          z-index: 1;
+        }
+
+        .photo-top:hover {
+          opacity:0;
+        }
+
+        .photo-bottom {
+          background-image: url("phil-inverted.jpg");
+        }
+      }
 
       .contact-details {
-        width: $full-width * 0.375;
-        padding: 4vh 0;
+        vertical-align: top;
+        display: inline-block;
+        width: $full-width * 0.175;
+        margin-top: 10vh;
 
         ul {
-          text-align: center;
+          text-align: left;
 
           li {
-            width: $full-width * 0.375 * 0.48;
+            width: $full-width * 0.175;
             display: inline-block;
             text-decoration: none;
             color: $contrast-dark;
             font-size: $font-size * 0.35;
+            margin: 1vh 0;
           }
         }
       }

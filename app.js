@@ -3,7 +3,7 @@ $(document).ready(function() {
   // pages by position
   var position = {
     now: 0,
-    destinations: ['.about','.proj-1','.proj-2','.proj-3','.proj-4','.contact']
+    destinations: ['.about','.proj-1','.proj-2','.proj-3','.contact']
   };
 
   // scroll to page with with animation
