@@ -21,13 +21,18 @@ h2 {
   color: #695d4f;
 }
 
-section {
-  margin: 1em;
+.container {
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .inset {
   padding-left: 2.5em;
   border-left: 3px solid #695d4f;
+}
+
+main {
+  margin: 0.5em;
 }
 
 main li::before {
@@ -68,10 +73,11 @@ footer {
 }
 
 .row {
+  padding: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0.5em 0;
+  margin: 0.5em auto;
 }
 
 .row li {
@@ -85,3 +91,26 @@ footer {
   width: 3em;
   vertical-align: bottom;
 }
+
+img.back {
+  display: none;
+}
+
+img.front:hover {
+  display: none;
+}
+
+img.back:hover {
+  display: inline-block;
+}
+
+#copy {
+  display: none;
+}
+
+/*
+ *  fix hover effect on icons
+ *  desktop:
+ *  icon to words for email
+ *  make clipboard appear
+ */
