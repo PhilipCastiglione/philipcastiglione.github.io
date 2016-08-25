@@ -1,18 +1,33 @@
+/* FONT STUFF I GUESS */
 * {
   font-family: 'Open Sans', sans-serif;
 }
 
 body {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+main li {
+  font-size: 0.9em;
+}
+
+main li::before {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* COLOUR THINGS */
+body {
   background: #f5f4f1;
   color: #181818;
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.4;
 }
 
 h1, h3 {
-  margin: 0;
-  padding: 0.5em 0;
   background: #695d4f;
   color: #d8e4f2;
 }
@@ -21,39 +36,79 @@ h2 {
   color: #695d4f;
 }
 
-.container {
-  max-width: 640px;
-  margin: 0 auto;
+footer {
+  background: #695d4f;
 }
 
-.inset {
-  padding-left: 2.5em;
-  border-left: 3px solid #695d4f;
+main li::before {
+  color: #005da6;
+}
+
+/* LAYOUT */
+body {
+  margin: 0;
+}
+
+h1, h3 {
+  margin: 0;
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 700px;
 }
 
 main {
   margin: 0.5em;
 }
 
-main li::before {
-  font-size: 1.2em;
-  content: ">";
-  color: #005da6;
-  display: inline-block;
-  margin-left: -2em;
-  width: 2em;
-  vertical-align: middle;
-  font-weight: 900;
-}
-
 main li {
-  list-style: none;
-  font-size: 0.9em;
   padding-bottom: 0.5em;
+  list-style: none;
 }
 
 main li:last-child {
   padding-bottom: 0;
+}
+
+footer {
+  padding: 0.5em 0;
+}
+
+.row {
+  margin: 0.5em auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.row li {
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  list-style: none;
+}
+
+.row img {
+  width: 3em;
+  vertical-align: bottom;
+}
+
+/* FEATURES */
+.inset {
+  padding-left: 2.5em;
+  border-left: 3px solid #695d4f;
+}
+
+main li::before {
+  margin-left: -2em;
+  width: 2em;
+  display: inline-block;
+  vertical-align: middle;
+  content: ">";
 }
 
 a,
@@ -62,45 +117,15 @@ a:visited {
   text-decoration: none;
 }
 
-h1,
-h3 {
-  text-align: center;
-}
-
-footer {
-  background: #695d4f;
-  padding: 0.5em 0;
-}
-
-.row {
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0.5em auto;
-}
-
-.row li {
-  list-style: none;
-  display: inline-block;
-  text-align: center;
-  width: 30%;
-}
-
-.row img {
-  width: 3em;
-  vertical-align: bottom;
-}
-
 img.back {
   display: none;
 }
 
-img.front:hover {
+.img-swap:hover img.front {
   display: none;
 }
 
-img.back:hover {
+.img-swap:hover img.back {
   display: inline-block;
 }
 
@@ -110,6 +135,7 @@ img.back:hover {
 
 /*
  *  fix hover effect on icons
+ *  select colour for text
  *  desktop:
  *  icon to words for email
  *  make clipboard appear
