@@ -74,6 +74,7 @@ main a:visited {
   color: #d8e4f2;
 }
 
+.current,
 a:hover {
   color: #8c8fff !important;
 }
