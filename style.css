@@ -46,16 +46,16 @@ body {
 }
 
 header {
-  background: #695d4f;
+  background: #5c4b41;
   color: #d8e4f2;
 }
 
 h2 {
-  color: #695d4f;
+  color: #5c4b41;
 }
 
 footer {
-  background: #695d4f;
+  background: #5c4b41;
 }
 
 main li::before {
@@ -80,7 +80,7 @@ a:hover {
 }
 
 .inset {
-  border-left: 3px solid #695d4f;
+  border-left: 3px solid #5c4b41;
   background: rgba(105, 93, 79, 0.2);
 }
 
@@ -176,9 +176,9 @@ img.back {
 }
 
 /*
- *  fix hover effect on icons
- *  select colour for text
  *  desktop:
  *  icon to words for email
  *  make clipboard appear
+ *
+ *  check mobile, tablet and desktop cross-browser thoroughly
  */
