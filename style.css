@@ -8,6 +8,10 @@ body {
   line-height: 1.6;
 }
 
+h1, h3 {
+  font-weight: 600;
+}
+
 main li {
   font-size: 0.9em;
 }
@@ -19,6 +23,10 @@ main li::before {
 
 strong {
   font-weight: 600;
+}
+
+.inset {
+  font-style: italic;
 }
 
 /* COLOUR THINGS */
@@ -70,6 +78,11 @@ a:hover {
   color: #8c8fff !important;
 }
 
+.inset {
+  border-left: 3px solid #695d4f;
+  background: rgba(105, 93, 79, 0.2);
+}
+
 /* LAYOUT */
 body {
   margin: 0;
@@ -95,8 +108,7 @@ main {
 }
 
 .inset {
-  padding-left: 2.5em;
-  border-left: 3px solid #695d4f;
+  padding: 0.5em 0.5em 0.5em 2.5em;
 }
 
 main li {
