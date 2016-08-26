@@ -27,7 +27,17 @@ body {
   color: #181818;
 }
 
-h1, h3 {
+::-moz-selection {
+  background-color: #005da6;
+  color: #d8e4f2;
+}
+
+::selection {
+  background-color: #005da6;
+  color: #d8e4f2;
+}
+
+header {
   background: #695d4f;
   color: #d8e4f2;
 }
@@ -44,9 +54,29 @@ main li::before {
   color: #005da6;
 }
 
+main a,
+main a:focus,
+main a:visited {
+  color: #005da6;
+}
+
+.row a,
+.row a:focus,
+.row a:visited {
+  color: #d8e4f2;
+}
+
+a:hover {
+  color: #8c8fff !important;
+}
+
 /* LAYOUT */
 body {
   margin: 0;
+}
+
+li {
+  list-style: none;
 }
 
 h1, h3 {
@@ -64,9 +94,13 @@ main {
   margin: 0.5em;
 }
 
+.inset {
+  padding-left: 2.5em;
+  border-left: 3px solid #695d4f;
+}
+
 main li {
   padding-bottom: 0.5em;
-  list-style: none;
 }
 
 main li:last-child {
@@ -78,8 +112,7 @@ footer {
 }
 
 .row {
-  margin: 0.5em auto;
-  padding: 0;
+  padding: 0.5em 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -89,7 +122,6 @@ footer {
   width: 30%;
   display: inline-block;
   text-align: center;
-  list-style: none;
 }
 
 .row img {
@@ -98,11 +130,6 @@ footer {
 }
 
 /* FEATURES */
-.inset {
-  padding-left: 2.5em;
-  border-left: 3px solid #695d4f;
-}
-
 main li::before {
   margin-left: -2em;
   width: 2em;
@@ -113,6 +140,7 @@ main li::before {
 
 a,
 a:hover,
+a:focus,
 a:visited {
   text-decoration: none;
 }
