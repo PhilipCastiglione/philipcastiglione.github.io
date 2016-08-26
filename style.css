@@ -121,6 +121,7 @@ main li:last-child {
 }
 
 footer {
+  margin-top: 3em;
   padding: 0.5em 0;
 }
 
@@ -170,7 +171,7 @@ img.back {
   display: inline-block;
 }
 
-#copy {
+.copy {
   display: none;
 }
 
