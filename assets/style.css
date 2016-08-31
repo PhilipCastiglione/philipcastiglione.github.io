@@ -29,7 +29,7 @@ strong {
   font-style: italic;
 }
 
-table {
+table.inset {
   font-size: 0.9em;
 }
 
@@ -238,11 +238,3 @@ td:last-child {
 .commented:hover span {
   display: inline-block;
 }
-
-/*
- *  desktop:
- *  icon to words for email
- *  make clipboard appear
- *
- *  check mobile, tablet and desktop cross-browser thoroughly
- */
