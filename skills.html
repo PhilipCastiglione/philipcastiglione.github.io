@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Philip Castiglione</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Philip Castiglione</h1>
+    <h3>Developer</h3>
+    <nav class="row container">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./interests.html">Interests</a></li>
+      <li><a href="./journey.html">Journey</a></li>
+      <li><span class="current">Skills</span></li>
+    </nav>
+  </header>
+  <main>
+    <section class="container">
+      <h2>Rating Scale</h2>
+      <p>This is an arbitrary rating scale I have developed to self-assess my skills in various areas and plan growth and development. The scale is not linear - if you placed a population of people with each skill on this scale, I'd expect <a href="http://www.mathsisfun.com/data/images/skewed-distribution.gif" target="_blank" rel="noopener noreferrer">relatively high kurtosis and positive skewness</a>.</p>
+      <p>A rating legend is provided here:</p>
+      <table class="inset">
+        <tr>
+          <td>&starf; &star; &star; &star; &star; </td>
+          <td>Novice level application, some sandbox experimentation</td>
+        </tr>
+        <tr>
+          <td>&starf; &starf; &star; &star; &star; </td>
+          <td>Modest proficiency, use in a professional context</td>
+        </tr>
+        <tr>
+          <td>&starf; &starf; &starf; &star; &star; </td>
+          <td>Full professional proficiency</td>
+        </tr>
+        <tr>
+          <td>&starf; &starf; &starf; &starf; &star; </td>
+          <td>Applying advanced theory</td>
+        </tr>
+        <tr>
+          <td>&starf; &starf; &starf; &starf; &starf; </td>
+          <td>Recognised authority</td>
+        </tr>
+        <tr>
+          <td><span class="known">&starf; &starf;</span> <span class="gap">&star; &star;</span> &star; </td>
+          <td><span class="known">Current</span> - <span class="gap">Goal</span>  - Unneeded</td>
+        </tr>
+        <tr>
+          <td><span class="known">&starf; &starf;</span> <span class="excess">&starf;</span> &star; &star; </td>
+          <td><span class="known">Current</span> - <span class="excess">Beyond goal</span></td>
+        </tr>
+        <tr>
+          <td>&star; &star; &star; &star; &star; </td>
+          <td>
+            <span class="commented"> Hover to see a comment.
+              <span>This is the comment.</span>
+            </span>
+          </td>
+        </tr>
+      </table>
+      </section>
+    <section class="container">
+      <!-- read a file in with php? or put in from json probably actually... -->
+    </section>
+  </main>
+  <footer>
+    <ul class="row container">
+      <li>
+        <a href="mailto:philipcastiglione@gmail.com" target="_top">
+          <span class="img-swap">
+            <img class="front" src="./images/email-l.png">
+            <img class="back" src="./images/email-d.png">
+          </span>
+        </a>
+        <span class="copy">OR</span>
+        <a class="copy" id="copy" data-clipboard-text="philipcastiglione@gmail.com"><image src="./images/clipboard-l.png"></a>
+      </li>
+      <li>
+        <a href="https://github.com/PhilipCastiglione" target="_blank" rel="noopener noreferrer">
+          <span class="img-swap">
+            <img class="front" src="./images/github-l.png">
+            <img class="back" src="./images/github-d.png">
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://au.linkedin.com/in/philcastiglione" target="_blank" rel="noopener noreferrer">
+          <span class="img-swap">
+            <img class="front" src="./images/linkedin-l.png">
+            <img class="back" src="./images/linkedin-d.png">
+          </span>
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="vendor/clipboard.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
