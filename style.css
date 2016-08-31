@@ -33,6 +33,10 @@ table {
   font-size: 0.9em;
 }
 
+.commented span {
+  font-size: 15px;
+}
+
 /* COLOUR THINGS */
 /* off-white: #f5f4f1;
  * soft-black: #181818;
@@ -106,6 +110,11 @@ a:hover {
 
 .excess {
   color: #8c8fff;
+}
+
+.commented span {
+  background: white;
+  border: 1px solid black;
 }
 
 /* LAYOUT */
@@ -209,6 +218,25 @@ td:first-child {
 
 td:last-child {
   width: 75%;
+}
+
+.commented {
+  position: relative;
+  text-decoration: underline;
+}
+
+.commented span {
+  display: none;
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+  margin-left: 5px;
+  padding: 7px;
+  border-radius: 6px 6px 6px 0;
+}
+
+.commented:hover span {
+  display: inline-block;
 }
 
 /*
