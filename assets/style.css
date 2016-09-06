@@ -43,56 +43,48 @@ table.inset {
 }
 
 /* COLOUR THINGS */
-/* off-white: #f5f4f1;
- * soft-black: #181818;
- * dark-primary: #005da6;
- * mid-primary: #8c8fff;
- * light-primary: #d8e4f2;
- * secondary: #5c4b41;
- * contrast: #ff8c8f;
- */
 body {
-  background: #f5f4f1;
+  background: #fff;
   color: #181818;
 }
 
 ::-moz-selection {
-  background-color: #005da6;
-  color: #d8e4f2;
+  background-color: #A80FB8;
+  color: #B98EBE;
 }
 
 ::selection {
-  background-color: #005da6;
-  color: #d8e4f2;
+  background-color: #A80FB8;
+  color: #B98EBE;
 }
 
 header {
-  background: #5c4b41;
-  color: #d8e4f2;
+  background: #000000;
+  color: #B98EBE;
 }
 
 h2 {
-  color: #5c4b41;
+  color: #000000;
 }
 
 footer {
-  background: #5c4b41;
+  background: #000000;
 }
 
 main li::before {
-  color: #005da6;
+  color: #A80FB8;
 }
 
 main a,
 main a:focus,
 main a:visited {
-  color: #005da6;
+  color: #A80FB8;
 }
 
 .row a,
 .row a:focus,
 .row a:visited {
-  color: #d8e4f2;
+  color: #B98EBE;
 }
 
 h1 a,
@@ -103,24 +95,24 @@ h1 a:visited {
 
 .current,
 a:hover {
-  color: #8c8fff !important;
+  color: #8C5092 !important;
 }
 
 .inset {
-  border-left: 3px solid #5c4b41;
-  background: rgba(105, 93, 79, 0.2);
+  border-left: 3px solid #000000;
+  background: rgba(68,68,68,0.2);
 }
 
 .known {
-  color: #8c8fff;
+  color: #8C5092;
 }
 
 .gap {
-  color: #ff8c8f;
+  color: #cc0000;
 }
 
 .excess {
-  color: #005da6;
+  color: #A80FB8;
 }
 
 .commented span {
@@ -165,6 +157,19 @@ h5 {
 
 main {
   margin: 0.5em;
+}
+
+.hero {
+  margin: -0.5em;
+  width: 100vw;
+  box-shadow: inset 0px 0px 300px black;
+}
+
+.hero img {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  display: inherit;
 }
 
 .inset {
