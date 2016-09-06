@@ -1,6 +1,5 @@
 # TODO
 Remaining tasks:
-1. learning page js
 1. better styling for comments
 1. better colours
 1. make clipboard animation for copy to clipboard

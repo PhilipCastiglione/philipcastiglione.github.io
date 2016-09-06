@@ -12,6 +12,13 @@ var appendHeader = function(node, category) {
   node.appendChild(categoryHeader);
 };
 
+var appendDescription = function(node, learning) {
+  var learningDescription = document.createElement("p");
+  learningDescription.className = "description";
+  learningDescription.innerText = learning["description"];
+  node.appendChild(learningDescription);
+};
+
 var appendScore = function(node, skill) {
   var skillScore = document.createElement("td");
   var known = skill["current"];
@@ -48,7 +55,14 @@ var appendScore = function(node, skill) {
   node.appendChild(skillScore);
 };
 
-var appendName = function(node, skill) {
+var appendProgress = function(node, learning) {
+  var learningProgress = document.createElement("span");
+  learningProgress.className = "progress";
+  learningProgress.innerText = learning["progress"];
+  node.appendChild(learningProgress);
+};
+
+var appendSkillName = function(node, skill) {
   var skillName = document.createElement("td");
   skillName.innerText = skill["name"];
 
@@ -62,19 +76,38 @@ var appendName = function(node, skill) {
   node.appendChild(skillName);
 };
 
+var appendLearningName = function(node, learning) {
+  var learningName = document.createElement("h5");
+  learningName.innerText = learning["name"];
+  node.appendChild(learningName);
+};
+
 var appendSkills = function(node, skills, category) {
   var categoryTable = document.createElement("table");
-  for (var skill in SKILLS[category]) {
-    var skillObj = SKILLS[category][skill];
+  for (var skill in skills[category]) {
+    var skillObj = skills[category][skill];
     var skillNode = document.createElement("tr");
     appendScore(skillNode, skillObj);
-    appendName(skillNode, skillObj);
+    appendSkillName(skillNode, skillObj);
     categoryTable.appendChild(skillNode);
   }
   node.appendChild(categoryTable);
 };
 
-var appendCategory = function(node, skills, category) {
+var appendLearning = function(node, learnings, category) {
+  var learningNode = document.createElement("div");
+  for (var learning in learnings[category]) {
+    var learningObj = learnings[category][learning];
+    appendLearningName(learningNode, learningObj);
+    if (learningObj.hasOwnProperty("progress")) {
+      appendProgress(learningNode, learningObj);
+    }
+    appendDescription(learningNode, learningObj);
+  }
+  node.appendChild(learningNode);
+};
+
+var appendSkillCategory = function(node, skills, category) {
   var categoryNode = document.createElement("div");
   appendHeader(categoryNode, category);
   appendSkills(categoryNode, skills, category);
@@ -85,7 +118,23 @@ var importSkills = function() {
   var skillContainer = document.getElementsByClassName("skills")[0];
   for (var category in SKILLS) {
     if (SKILLS.hasOwnProperty(category)) {
-      appendCategory(skillContainer, SKILLS, category);
+      appendSkillCategory(skillContainer, SKILLS, category);
+    }
+  }
+};
+
+var appendLearningCategory = function(node, learnings, category) {
+  var categoryNode = document.createElement("div");
+  appendHeader(categoryNode, category);
+  appendLearning(categoryNode, learnings, category);
+  node.appendChild(categoryNode);
+};
+
+var importLearning = function() {
+  var learningContainer = document.getElementsByClassName("learning")[0];
+  for (var category in LEARNING) {
+    if (LEARNING.hasOwnProperty(category)) {
+      appendLearningCategory(learningContainer, LEARNING, category);
     }
   }
 };
@@ -95,7 +144,10 @@ var main = function() {
 
   if (location.pathname.match("skills")) {
     importSkills();
+  } else if (location.pathname.match("learning")) {
+    importLearning();
   }
+
 };
 
 ready(main);

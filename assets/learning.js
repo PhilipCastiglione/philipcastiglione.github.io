@@ -44,12 +44,12 @@ var LEARNING = {
   "Underway": [
     {
       "name": "LCTHW",
-      "description": "Learn C The Hard Way, by Zed Shaw at learncodethehardway.com"
+      "description": "Learn C The Hard Way, by Zed Shaw at learncodethehardway.com",
       "progress": "18/53"
     },
     {
       "name": "Intro to Linux",
-      "description": "by the Linux Foundation, delivered via edX"
+      "description": "by the Linux Foundation, delivered via edX",
       "progress": "16/18"
     },
     {
@@ -84,7 +84,7 @@ var LEARNING = {
       "description": "by Uncle Bob",
       "progress": "135/462"
     }
-  ]
+  ],
   "Planned": [
     {
       "name": "Signals to Packets Part 2",
