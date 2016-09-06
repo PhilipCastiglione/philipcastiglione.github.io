@@ -269,3 +269,15 @@ td:last-child {
 .commented:hover span {
   display: inline-block;
 }
+
+@media (min-width: 800px) {
+  .copy {
+    display: inline-block;
+  }
+
+  .copy img {
+    width: 2em;
+    vertical-align: super;
+    margin-left: 1em;
+  }
+}
