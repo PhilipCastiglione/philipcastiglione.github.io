@@ -90,6 +90,12 @@ main a:visited {
   color: #d8e4f2;
 }
 
+h1 a,
+h1 a:focus
+h1 a:visited {
+  color: inherit;
+}
+
 .current,
 a:hover {
   color: #8c8fff !important;
