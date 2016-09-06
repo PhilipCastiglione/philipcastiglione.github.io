@@ -139,8 +139,21 @@ var importLearning = function() {
   }
 };
 
+var animateClipboard = function(e) {
+  var span = (e.target.id === "copy")? e.target : e.target.parentNode;
+  span.children[0].src = "./images/clipboard-success-l.png";
+  span.children[1].src = "./images/clipboard-success-d.png";
+  span.className = "copy img-swap bounce"
+  setTimeout(function() {
+    span.children[0].src = "./images/clipboard-l.png";
+    span.children[1].src = "./images/clipboard-d.png";
+    span.className = "copy img-swap"
+  }, 1200);
+};
+
 var main = function() {
   new Clipboard("#copy");
+  document.getElementById("copy").addEventListener("click", animateClipboard);
 
   if (location.pathname.match("skills")) {
     importSkills();
