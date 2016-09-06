@@ -273,6 +273,7 @@ td:last-child {
 @media (min-width: 800px) {
   .copy {
     display: inline-block;
+    cursor: pointer;
   }
 
   .copy img {
