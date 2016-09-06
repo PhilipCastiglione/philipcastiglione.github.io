@@ -1,10 +1,15 @@
 var SKILLS = {
   "Artificial Intelligence": [
-  {
-    "name": "Neural Networks",
-    "current": 0,
-    "goal": 5
-  }
+    {
+      "name": "Neural Networks",
+      "current": 0,
+      "goal": 5
+    },
+    {
+      "name": "Search Algorithms",
+      "current": 1,
+      "goal": 4
+    }
   ],
   "Back End Web Development": [
     {
@@ -70,6 +75,11 @@ var SKILLS = {
     },
     {
       "name": "Logic for Computation",
+      "current": 1,
+      "goal": 4
+    },
+    {
+      "name": "Optimisation",
       "current": 1,
       "goal": 4
     }
@@ -208,7 +218,7 @@ var SKILLS = {
     },
     {
       "name": "Clojure",
-      "current": 1,
+      "current": 0,
       "goal": 1
     },
     {
@@ -309,7 +319,7 @@ var SKILLS = {
       "goal": 0
     },
     {
-      "name": "Apple Development Process",
+      "name": "Apple Dev/Store Process",
       "current": 1,
       "goal": 0
     }
