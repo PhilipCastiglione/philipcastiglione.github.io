@@ -25,12 +25,17 @@ strong {
   font-weight: 600;
 }
 
-.inset {
+.inset,
+.description {
   font-style: italic;
 }
 
 table.inset {
   font-size: 0.9em;
+}
+
+.description {
+  font-size: 0.8em;
 }
 
 .commented span {
@@ -136,6 +141,21 @@ h1, h3 {
   margin: 0;
   padding: 0.5em 0;
   text-align: center;
+}
+
+h5 {
+  margin: 0.5em 0 0 0;
+  display: inline-block;
+  width: 85%;
+}
+
+.progress {
+  float: right;
+  font-size: 0.8em;
+}
+
+.description {
+  margin-top: 0;
 }
 
 .container {
