@@ -97,8 +97,8 @@ var importLearning = function() {
   }
 };
 
-var animateClipboard = function(e) {
-  var span = (e.target.id === "copy")? e.target : e.target.parentNode;
+var animateClipboard = function() {
+  var span = document.getElementById("copy");
   span.children[0].src = "./images/clipboard-success-l.png";
   span.children[1].src = "./images/clipboard-success-d.png";
   span.className = "copy img-swap bounce"
@@ -109,11 +109,17 @@ var animateClipboard = function(e) {
   }, 1200);
 };
 
+var rejectClipboard = function() {
+  document.getElementById("copy").innerHTML = "";
+  alert("Your browser doesn't support copying to clipboard!");
+};
+
 var main = function() {
   console.log("What are YOU doing here?");
 
-  new Clipboard("#copy");
-  document.getElementById("copy").addEventListener("click", animateClipboard);
+  var clipboard = new Clipboard("#copy");
+  clipboard.on('success', animateClipboard);
+  clipboard.on('error', rejectClipboard);
 
   if (location.pathname.match("skills")) {
     importSkills();

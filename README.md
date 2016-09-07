@@ -1,14 +1,11 @@
 # TODO
 Remaining tasks:
 1. ensure cross browser
-- clipboard copy doesn't work on safari
-- look for and handle error events
 1. ensure cross platform responsiveness
 1. refine content
 1. some kind of sorting algo animation for props
-1. split out css & js
-1. minify & gzip assets
 1. get it reviewed
+1. point dns
 
 Cross Browser confirmed good:
 - apple screen chrome
