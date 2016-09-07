@@ -1,117 +1,75 @@
-function ready(cb) {
+function ready(callback) {
   if (document.readyState != "loading"){
-    cb();
+    callback();
   } else {
-    document.addEventListener("DOMContentLoaded", cb);
+    document.addEventListener("DOMContentLoaded", callback);
   }
 }
 
-var appendHeader = function(node, category) {
-  var categoryHeader = document.createElement("h2");
-  categoryHeader.innerText = category;
-  node.appendChild(categoryHeader);
-};
-
-var appendDescription = function(node, learning) {
-  var learningDescription = document.createElement("p");
-  learningDescription.className = "description";
-  learningDescription.innerText = learning["description"];
-  node.appendChild(learningDescription);
+var appendToNode = function(node, el, content, className, callback) {
+  var elementNode = document.createElement(el);
+  if (content) { elementNode.innerText = content; }
+  if (className) { elementNode.className = className; }
+  if (callback) { callback(elementNode); }
+  node.appendChild(elementNode);
 };
 
 var appendScore = function(node, skill) {
-  var skillScore = document.createElement("td");
-  var known = skill["current"];
-  var goal = skill["goal"];
-  var knownStarNode = document.createElement("span");
+  appendToNode(node, "td", null, null, function(skillScore) {
+    var max = Math.max(skill["current"], skill["goal"]);
+    var min = Math.min(skill["current"], skill["goal"]);
 
-  knownStarNode.className = "known";
-  var emptyStarNode = document.createElement("span");
+    appendToNode(skillScore, "span", Array(min + 1).join("★"), "known");
 
-  if (known >= goal) {
-    knownStarNode.innerText = Array(goal + 1).join("★");
-    skillScore.appendChild(knownStarNode);
+    if (skill["current"] > skill["goal"]) {
+      appendToNode(skillScore, "span", Array(max - min + 1).join("★"), "excess");
+    } else {
+      appendToNode(skillScore, "span", Array(max - min + 1).join("☆"), "gap");
+    }
 
-    var excessStarNode = document.createElement("span");
-    excessStarNode.className = "excess";
-    excessStarNode.innerText = Array(known - goal + 1).join("★");
-    skillScore.appendChild(excessStarNode);
-
-    emptyStarNode.innerText = Array(5 - known + 1).join("☆");
-  } else {
-    knownStarNode.innerText = Array(known + 1).join("★");
-    skillScore.appendChild(knownStarNode);
-
-    var gapStarNode = document.createElement("span");
-    gapStarNode.className = "gap";
-    gapStarNode.innerText = Array(goal - known + 1).join("☆");
-    skillScore.appendChild(gapStarNode);
-
-    emptyStarNode.innerText = Array(5 - goal + 1).join("☆");
-  }
-
-  skillScore.appendChild(emptyStarNode);
-
-  node.appendChild(skillScore);
-};
-
-var appendProgress = function(node, learning) {
-  var learningProgress = document.createElement("span");
-  learningProgress.className = "progress";
-  learningProgress.innerText = learning["progress"];
-  node.appendChild(learningProgress);
+    appendToNode(skillScore, "span", Array(5 - max + 1).join("☆"));
+  });
 };
 
 var appendSkillName = function(node, skill) {
-  var skillName = document.createElement("td");
-  skillName.innerText = skill["name"];
-
-  if (skill.hasOwnProperty("comment")) {
-    skillName.className = "commented";
-    var commentNode = document.createElement("span");
-    commentNode.innerText = skill["comment"];
-    skillName.appendChild(commentNode);
-  }
-
-  node.appendChild(skillName);
-};
-
-var appendLearningName = function(node, learning) {
-  var learningName = document.createElement("h5");
-  learningName.innerText = learning["name"];
-  node.appendChild(learningName);
+  appendToNode(node, "td", skill["name"], null, function(skillName) {
+    if (skill.hasOwnProperty("comment")) {
+      skillName.className = "commented";
+      appendToNode(skillName, "span", skill["comment"]);
+    }
+  });
 };
 
 var appendSkills = function(node, skills, category) {
-  var categoryTable = document.createElement("table");
-  for (var skill in skills[category]) {
-    var skillObj = skills[category][skill];
-    var skillNode = document.createElement("tr");
-    appendScore(skillNode, skillObj);
-    appendSkillName(skillNode, skillObj);
-    categoryTable.appendChild(skillNode);
-  }
-  node.appendChild(categoryTable);
+  appendToNode(node, "table", null, null, function(categoryTable) {
+    for (var skill in skills[category]) {
+      var skillObj = skills[category][skill];
+      var skillNode = document.createElement("tr");
+      appendScore(skillNode, skillObj);
+      appendSkillName(skillNode, skillObj);
+      categoryTable.appendChild(skillNode);
+    }
+  });
 };
 
 var appendLearning = function(node, learnings, category) {
-  var learningNode = document.createElement("div");
-  for (var learning in learnings[category]) {
-    var learningObj = learnings[category][learning];
-    appendLearningName(learningNode, learningObj);
-    if (learningObj.hasOwnProperty("progress")) {
-      appendProgress(learningNode, learningObj);
+  appendToNode(node, "div", null, null, function(learningNode) {
+    for (var learning in learnings[category]) {
+      var learningObj = learnings[category][learning];
+      appendToNode(learningNode, "h5", learningObj["name"]);
+      if (learningObj.hasOwnProperty("progress")) {
+        appendToNode(learningNode, "span", learningObj["progress"], "progress");
+      }
+      appendToNode(learningNode, "p", learningObj["description"], "description");
     }
-    appendDescription(learningNode, learningObj);
-  }
-  node.appendChild(learningNode);
+  });
 };
 
 var appendSkillCategory = function(node, skills, category) {
-  var categoryNode = document.createElement("div");
-  appendHeader(categoryNode, category);
-  appendSkills(categoryNode, skills, category);
-  node.appendChild(categoryNode);
+  appendToNode(node, "div", null, null, function(categoryNode) {
+    appendToNode(categoryNode, "h2", category);
+    appendSkills(categoryNode, skills, category);
+  });
 };
 
 var importSkills = function() {
@@ -124,10 +82,10 @@ var importSkills = function() {
 };
 
 var appendLearningCategory = function(node, learnings, category) {
-  var categoryNode = document.createElement("div");
-  appendHeader(categoryNode, category);
-  appendLearning(categoryNode, learnings, category);
-  node.appendChild(categoryNode);
+  appendToNode(node, "div", null, null, function(categoryNode) {
+    appendToNode(categoryNode, "h2", category);
+    appendLearning(categoryNode, learnings, category);
+  });
 };
 
 var importLearning = function() {
