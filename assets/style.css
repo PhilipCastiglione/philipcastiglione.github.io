@@ -207,6 +207,11 @@ footer {
   vertical-align: bottom;
 }
 
+.skills,
+.learning {
+  min-height: 100vh;
+}
+
 /* FEATURES */
 main li::before {
   margin-left: -2em;
