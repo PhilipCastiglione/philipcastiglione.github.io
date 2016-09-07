@@ -152,6 +152,8 @@ var animateClipboard = function(e) {
 };
 
 var main = function() {
+  console.log("What are YOU doing here?");
+
   new Clipboard("#copy");
   document.getElementById("copy").addEventListener("click", animateClipboard);
 
@@ -160,7 +162,6 @@ var main = function() {
   } else if (location.pathname.match("learning")) {
     importLearning();
   }
-
 };
 
 ready(main);

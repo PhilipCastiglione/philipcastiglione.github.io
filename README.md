@@ -1,14 +1,11 @@
 # TODO
 Remaining tasks:
-
-1. min height on skills and learning page
 1. ensure cross browser
 - clipboard copy doesn't work on safari
 - look for and handle error events
 1. ensure cross platform responsiveness
 1. refine content
 1. refactor js
-1. sneaky comment in console log
 1. some kind of sorting algo animation for props
 1. split out css & js
 1. minify & gzip assets
