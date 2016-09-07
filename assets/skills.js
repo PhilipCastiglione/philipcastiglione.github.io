@@ -152,7 +152,7 @@ var SKILLS = {
     },
     {
       "name": "Networking",
-      "current": 0,
+      "current": 1,
       "goal": 2
     },
     {
