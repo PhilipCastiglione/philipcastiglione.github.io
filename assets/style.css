@@ -176,6 +176,11 @@ main {
   padding: 0.5em 0.5em 0.5em 2.5em;
 }
 
+table.inset {
+  padding: 0.5em 0.5em 0.5em 1em;
+}
+
+
 main li {
   padding-bottom: 0.5em;
 }
@@ -249,11 +254,11 @@ table {
 }
 
 td:first-child {
-  width: 25%;
+  width: 35%;
 }
 
 td:last-child {
-  width: 75%;
+  width: 65%;
 }
 
 .commented {
@@ -305,7 +310,7 @@ td:last-child {
 }
 
 /* RESPONSIVE */
-@media (min-width: 800px) {
+@media (min-width: 1025px) {
   .copy {
     display: inline-block;
     cursor: pointer;

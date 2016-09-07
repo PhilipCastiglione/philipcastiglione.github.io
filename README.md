@@ -11,13 +11,17 @@ Cross Browser confirmed good:
 - apple screen chrome
 - apple screen firefox
 - apple screen safari
-
-Cross Browser need to check:
-- apple screen edge
 - laptop size screen chrome
 - laptop size screen firefox
 - laptop size screen safari
+- ipad simulator landscape
+- ipad simulator portrait
+- iphone simulator landscape
+- iphone simulator portrait
+- iphone
+- android phone simulator
+
+Cross Browser need to check:
+- apple screen edge
 - laptop size screen edge
 - ipad
-- iphone
-- android phone? eh
