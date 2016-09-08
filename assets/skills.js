@@ -110,7 +110,7 @@ var SKILLS = {
     {
       "name": "AWS",
       "current": 0,
-      "goal": 2,
+      "goal": 1,
       "comment": "EC2, EBS, ElasticBeanstalk, RDS, Lambda, S3, Glacier, Auto Scaling, Load Balancing, ElastiCache, Cloudfront"
     },
     {
