@@ -1,0 +1,28 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+div {
+  color: #8C5092;
+  width: 100vw;
+  top: 30vh;
+  position: fixed;
+}
+
+h1 {
+  font-size: 4em;
+  text-align: center;
+}
+
+a,
+a:hover,
+a:focus,
+a:visited {
+  color: inherit;
+  display: block;
+  text-align: center;
+}
+
+a:hover {
+  color: #B98EBE;
+}
