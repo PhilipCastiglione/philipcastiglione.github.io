@@ -18,12 +18,6 @@ var SKILLS = {
       "goal": 2
     },
     {
-      "name": "Node.js",
-      "current": 0,
-      "goal": 1,
-      "comment": "With some basic express, I guess this is also npm and FE tooling..."
-    },
-    {
       "name": "Ruby on Rails",
       "current": 3,
       "goal": 4
@@ -88,12 +82,12 @@ var SKILLS = {
     {
       "name": "NoSQL",
       "current": 0,
-      "goal": 2
+      "goal": 1
     },
     {
       "name": "RDBMS Theory & Application",
       "current": 1,
-      "goal": 3
+      "goal": 2
     },
     {
       "name": "Redis",
