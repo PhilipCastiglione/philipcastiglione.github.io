@@ -135,9 +135,8 @@ var SKILLS = {
     },
     {
       "name": "Linux",
-      "current": 1,
-      "goal": 2,
-      "comment": "familiarity with Debian (use Ubuntu), Fedora (played with CentOS), SUSE (played with openSUSE)"
+      "current": 2,
+      "goal": 2
     },
     {
       "name": "Mac OS",

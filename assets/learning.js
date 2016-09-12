@@ -39,18 +39,17 @@ var LEARNING = {
     {
       "name": "Redux Training Videos",
       "description": "A series of training videos on egghead.io delivered by the creator of Redux Dan Abramov"
-    }
+    },
+    {
+      "name": "Intro to Linux",
+      "description": "by the Linux Foundation, delivered via edX"
+    },
   ],
   "Underway": [
     {
       "name": "LCTHW",
       "description": "Learn C The Hard Way, by Zed Shaw at learncodethehardway.com",
       "progress": "18/53"
-    },
-    {
-      "name": "Intro to Linux",
-      "description": "by the Linux Foundation, delivered via edX",
-      "progress": "16/18"
     },
     {
       "name": "CS50 Intro to Computer Science",
