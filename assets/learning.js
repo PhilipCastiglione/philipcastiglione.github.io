@@ -59,7 +59,7 @@ var LEARNING = {
     {
       "name": "Hacking: The Art Of Exploitation",
       "description": "by Jon Erickson",
-      "progress": "83/492"
+      "progress": "120/572"
     },
     {
       "name": "Intro to R Programming",
