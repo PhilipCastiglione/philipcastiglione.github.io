@@ -44,6 +44,10 @@ var LEARNING = {
       "name": "Intro to Linux",
       "description": "by the Linux Foundation, delivered via edX"
     },
+    {
+      "name": "Confident Ruby",
+      "description": "by Avdi Grimm"
+    }
   ],
   "Underway": [
     {
