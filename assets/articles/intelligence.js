@@ -1,3 +1,4 @@
+"
 Created on: 16/09/2016
 
 # Short Musing on Intelligence
@@ -62,3 +63,4 @@ only the very same question chose to defer at the beginning of this process.
 
 Choosing good goals is a tough, but seperate question. Intelligence at least, is the measurement of an agent's ability
 to achieve those goals, once they are drawn from a wide pool of possible goals, in a wide range of environments.
+"
