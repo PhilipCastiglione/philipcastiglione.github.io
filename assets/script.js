@@ -109,7 +109,8 @@ var loadArticle = function(articleName) {
     var md = window.markdownit();
     var wat = md.render(blob);
     console.log(wat);
-
+    var articleContainer = document.getElementsByClassName("article")[0];
+    articleContainer.innerHTML = wat;
   };
 
   req.addEventListener("error", function(e) {
