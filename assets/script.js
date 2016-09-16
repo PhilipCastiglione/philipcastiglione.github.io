@@ -99,7 +99,7 @@ var importLearning = function() {
 
 var loadArticle = function(articleName) {
   var req = new XMLHttpRequest();
-  req.open("GET", "./articles/" + articleName, true);
+  req.open("GET", "./assets/articles/" + articleName, true);
   req.responseType = "blob";
 
   req.onload = function(e) {
