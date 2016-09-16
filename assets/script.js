@@ -102,22 +102,15 @@ var loadArticle = function(node, articleName) {
   req.open("GET", "./assets/articles/" + articleName + ".md", true);
 
   req.onload = function(e) {
-    console.log("success state");
-    console.log(e);
-    console.log(req);
-    console.log(req.response);
-    var article = req.response;
-    var md = window.markdownit();
-    node.innerHTML = md.render(article);
-    document.getElementsByTagName("footer")[0].style = "";
+    if (req.statusText === "Not Found") {
+      location.pathname = "article not found";
+    } else {
+      var article = req.response;
+      var md = window.markdownit();
+      node.innerHTML = md.render(article);
+      document.getElementsByTagName("footer")[0].style = "";
+    }
   };
-
-  req.addEventListener("error", function(e) {
-    console.log("error state");
-    console.log(e);
-    location.pathname = "./journey.html";
-    //location.pathname = "article not found";
-  });
 
   req.send();
 };
