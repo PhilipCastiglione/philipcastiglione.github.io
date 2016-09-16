@@ -1,6 +1,6 @@
 Created on: 16/09/2016
 
-# Short Musing on Intelligence
+## What Is Intelligence?
 
 So we have set out to create Artificial Intelligence. Let's start right at the beginning though; AI is surely a tool,
 not a goal. So, in fact, what is the goal?
