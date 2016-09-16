@@ -109,7 +109,10 @@ var loadArticle = function(node, articleName) {
   };
 
   req.addEventListener("error", function(e) {
-    location.pathname = "article not found";
+    console.log("error state");
+    console.log(e);
+    location.pathname = "./journey.html";
+    //location.pathname = "article not found";
   });
 
   req.send();
