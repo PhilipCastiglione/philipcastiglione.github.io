@@ -99,7 +99,7 @@ var importLearning = function() {
 
 var loadArticle = function(articleName) {
   var req = new XMLHttpRequest();
-  req.open("GET", "./assets/articles/" + articleName, true);
+  req.open("GET", "./assets/articles/" + articleName + ".js", true);
   req.responseType = "blob";
 
   req.onload = function(e) {
@@ -107,7 +107,11 @@ var loadArticle = function(articleName) {
     console.log(e);
     console.log(req);
     console.log(blob);
-  };
+  };.
+
+  req.addEventListener("error", function() {
+    location.pathname = "404";
+  });
 
   req.send();
 };
