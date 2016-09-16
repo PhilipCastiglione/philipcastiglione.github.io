@@ -102,6 +102,10 @@ var loadArticle = function(node, articleName) {
   req.open("GET", "./assets/articles/" + articleName + ".md", true);
 
   req.onload = function(e) {
+    console.log("success state");
+    console.log(e);
+    console.log(req);
+    console.log(req.response);
     var article = req.response;
     var md = window.markdownit();
     node.innerHTML = md.render(article);
