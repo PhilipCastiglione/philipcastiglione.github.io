@@ -107,7 +107,7 @@ var loadArticle = function(articleName) {
     console.log(e);
     console.log(req);
     console.log(blob);
-  };.
+  };
 
   req.addEventListener("error", function() {
     location.pathname = "404";
