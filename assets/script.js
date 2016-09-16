@@ -100,13 +100,13 @@ var importLearning = function() {
 var loadArticle = function(node, articleName) {
   var req = new XMLHttpRequest();
   req.open("GET", "./assets/articles/" + articleName + ".md", true);
-  //req.open("GET", "./assets/articles/" + articleName + ".js", true);
-  //req.overrideMimeType("text/plain");
 
   req.onload = function(e) {
     var article = req.response;
     var md = window.markdownit();
     node.innerHTML = md.render(article);
+    document.findElementsByTagName("footer")[0].style = "";
+    //document.findElementsByTagName("footer")[0].style = "display: block;";
   };
 
   req.addEventListener("error", function(e) {
