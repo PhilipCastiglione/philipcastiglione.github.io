@@ -100,7 +100,6 @@ var importLearning = function() {
 var loadArticle = function(articleName) {
   var req = new XMLHttpRequest();
   req.open("GET", "./assets/articles/" + articleName + ".js", true);
-  req.responseType = "blob";
 
   req.onload = function(e) {
     var blob = req.response;
@@ -109,8 +108,9 @@ var loadArticle = function(articleName) {
     console.log(blob);
   };
 
-  req.addEventListener("error", function() {
-    location.pathname = "404";
+  req.addEventListener("error", function(e) {
+    console.log(e);
+    //location.pathname = "404";
   });
 
   req.send();
