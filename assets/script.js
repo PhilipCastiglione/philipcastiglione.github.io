@@ -106,6 +106,10 @@ var loadArticle = function(articleName) {
     console.log(e);
     console.log(req);
     console.log(blob);
+    var md = window.markdownit();
+    var wat = md.render(blob);
+    console.log(wat);
+
   };
 
   req.addEventListener("error", function(e) {
