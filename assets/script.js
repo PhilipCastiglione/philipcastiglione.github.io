@@ -97,20 +97,20 @@ var importLearning = function() {
   }
 };
 
-var loadArticle = function(articleName) {
+var loadArticle = function(node, articleName) {
   var req = new XMLHttpRequest();
-  req.open("GET", "./assets/articles/" + articleName + ".js", true);
+  req.open("GET", "./assets/articles/" + articleName + ".md", true);
+  //req.open("GET", "./assets/articles/" + articleName + ".js", true);
+  //req.overrideMimeType("text/plain");
 
   req.onload = function(e) {
-    var blob = req.response;
+    var article = req.response;
     var md = window.markdownit();
-    var wat = md.render(blob);
-    var articleContainer = document.getElementsByClassName("article")[0];
-    articleContainer.innerHTML = wat;
+    node.innerHTML = md.render(article);
   };
 
   req.addEventListener("error", function(e) {
-    location.pathname = "404";
+    location.pathname = "article not found";
   });
 
   req.send();
@@ -119,9 +119,10 @@ var loadArticle = function(articleName) {
 var importArticle = function() {
   var articleName = location.search;
   if (articleName.length == 0) {
-    location.pathname = "404";
+    location.pathname = "article not found";
   } else {
-    loadArticle(articleName.replace("?", ""));
+    var articleContainer = document.getElementsByClassName("article")[0];
+    loadArticle(articleContainer, articleName.replace("?", ""));
   }
 };
 
