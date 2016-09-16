@@ -1,11 +1,11 @@
-Created on: 16/09/2016
-
 ## What Is Intelligence?
+_16th September, 2016_
 
 So we have set out to create Artificial Intelligence. Let's start right at the beginning though; AI is surely a tool,
 not a goal. So, in fact, what is the goal?
 
 Maybe we can point to the old Deep Mind catchphrase?
+
 > _"Solve Intelligence, then use that to solve everything else"_
 
 Well, that's great. Though obviously simplistic. it's suitable as a starting point so we will accept this for now and
