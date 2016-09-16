@@ -97,6 +97,30 @@ var importLearning = function() {
   }
 };
 
+var loadArticle = function(articleName) {
+  var req = new XMLHttpRequest();
+  req.open("GET", "./articles/" + articleName, true);
+  req.responseType = "blob";
+
+  req.onload = function(e) {
+    var blob = req.response;
+    console.log(e);
+    console.log(req);
+    console.log(blob);
+  };
+
+  req.send();
+};
+
+var importArticle = function() {
+  var articleName = location.search;
+  if (articleName.length == 0) {
+    location.pathname = "404";
+  } else {
+    loadArticle(articleName.replace("?", ""));
+  }
+};
+
 var animateClipboard = function() {
   var span = document.getElementById("copy");
   span.children[0].src = "./images/clipboard-success-l.png";
@@ -125,6 +149,8 @@ var main = function() {
     importSkills();
   } else if (location.pathname.match("learning")) {
     importLearning();
+  } else if (location.pathname.match("articles")) {
+    importArticle();
   }
 };
 
