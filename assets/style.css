@@ -98,6 +98,7 @@ a:hover {
   color: #8C5092 !important;
 }
 
+blockquote,
 .inset {
   border-left: 3px solid #000000;
   background: rgba(68,68,68,0.2);
@@ -172,6 +173,7 @@ main {
   display: inherit;
 }
 
+blockquote,
 .inset {
   padding: 0.5em 0.5em 0.5em 2.5em;
 }
