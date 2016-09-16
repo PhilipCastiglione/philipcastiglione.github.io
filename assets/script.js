@@ -105,8 +105,7 @@ var loadArticle = function(node, articleName) {
     var article = req.response;
     var md = window.markdownit();
     node.innerHTML = md.render(article);
-    document.findElementsByTagName("footer")[0].style = "";
-    //document.findElementsByTagName("footer")[0].style = "display: block;";
+    document.getElementsByTagName("footer")[0].style = "";
   };
 
   req.addEventListener("error", function(e) {
