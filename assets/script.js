@@ -127,12 +127,12 @@ var importArticle = function() {
 
 var animateClipboard = function() {
   var span = document.getElementById("copy");
-  span.children[0].src = "./images/clipboard-success-l.png";
-  span.children[1].src = "./images/clipboard-success-d.png";
+  span.children[0].src = "./assets/images/clipboard-success-l.png";
+  span.children[1].src = "./assets/images/clipboard-success-d.png";
   span.className = "copy img-swap bounce"
   setTimeout(function() {
-    span.children[0].src = "./images/clipboard-l.png";
-    span.children[1].src = "./images/clipboard-d.png";
+    span.children[0].src = "./assets/images/clipboard-l.png";
+    span.children[1].src = "./assets/images/clipboard-d.png";
     span.className = "copy img-swap"
   }, 1200);
 };
