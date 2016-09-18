@@ -139,7 +139,7 @@ var animateClipboard = function() {
 
 var rejectClipboard = function() {
   document.getElementById("copy").innerHTML = "";
-  alert("Your browser doesn't support copying to clipboard!");
+  alert("Your browser doesn't support copying to clipboard! Copy this manually I guess: philipcastiglione@gmail.com");
 };
 
 var main = function() {
