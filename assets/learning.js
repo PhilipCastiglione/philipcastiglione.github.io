@@ -83,20 +83,22 @@ var LEARNING = {
       "progress": "9/15"
     },
     {
-      "name": "Clean Code",
-      "description": "by Uncle Bob",
-      "progress": "135/462"
-    }
-  ],
-  "Planned": [
-    {
       "name": "Signals to Packets Part 2",
-      "description": "by HKUST, delivered via edX"
+      "description": "by HKUST, delivered via edX",
+      "progress": "0/15"
     },
     {
       "name": "Signals to Packets Part 3",
-      "description": "by HKUST, delivered via edX"
+      "description": "by HKUST, delivered via edX",
+      "progress": "0/15"
     },
+    {
+      "name": "Clean Code",
+      "description": "by Uncle Bob",
+      "progress": "194/462"
+    }
+  ],
+  "Planned": [
     {
       "name": "Advanced Redux Training Videos",
       "description": "A follow on advanced series of training videos on egghead.io delivered by the creator of Redux Dan Abramov"
