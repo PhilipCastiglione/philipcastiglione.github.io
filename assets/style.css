@@ -44,18 +44,18 @@ table.inset {
 
 /* COLOUR THINGS */
 body {
-  background: #fff;
+  background: #FFF;
   color: #181818;
 }
 
 ::-moz-selection {
   background-color: #A80FB8;
-  color: #B98EBE;
+  color: #FFF;
 }
 
 ::selection {
   background-color: #A80FB8;
-  color: #B98EBE;
+  color: #FFF;
 }
 
 header {
