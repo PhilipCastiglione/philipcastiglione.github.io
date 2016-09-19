@@ -8,11 +8,13 @@ Maybe we can point to the old Deep Mind catchphrase?
 
 > _"Solve Intelligence, then use that to solve everything else"_
 
-Well, that's great. Though obviously simplistic. it's suitable as a starting point so we will accept this for now and
-come back to clarify what we really mean another time.
+Well, that's great. Though obviously simplistic, it does illustrate the real objective. Progress towards solving the
+world's existing problems and improving the capabilities of the species. Let's stick with this as a starting point and
+come back to clarify what we more specifically mean another time.
 
-So, "intelligence". Artificial is sufficiently obvious in this context, but intelligence is much more ambiguous in
-meaning. What is it we mean by intelligent? There are many competing definitions and agreement is hard to find.
+So, with that out of the way, "intelligence". Artificial is sufficiently obvious in this context, but intelligence is
+much more ambiguous in meaning. What is it we mean by intelligent? There are many competing definitions and agreement is
+hard to find.
 
 We need a definition that is:
 
@@ -33,16 +35,20 @@ Examining the definition against our established criteria, it is:
 1. sufficiently specific and non-negative for a stipulative definition
 1. very succinct
 
-Does it describe the essential elements of the concept? Well, that question is actually kind of the wrong way around.
-If the essential elements of the concept were clear and well described, we would have our definition. Looking at what
-it has and what it doesn't have might at least lead us to a level of confidence that this is a sufficient working
-definitiion.
+Does it describe the essential elements of the concept?
 
-Adopting this definition, we describe intelligence as itself being like a measure, rather than a capability one
-exercises. This is highly appropriate to our purpose.
+Well, that question is actually kind of the wrong way around. If the essential elements of the concept were clear and
+well described, we would have our definition. Looking at what it has and what it doesn't have might at least lead us to
+a level of confidence that this is a sufficient working definitiion.
+
+This definition describes intelligence as itself being like a measure, rather than a capability one exercises. This is
+highly appropriate to our purpose as we are using intelligence as a nebulous term to refer to a range of capabilities
+that we want to measure.
 
 Agency and goal seeking are arguably the outcomes of some deeper invisible feature described by intelligence rather
-than descriptions of it, but this kind of definition by observation is also convenient for us for similar reasons.
+than descriptions of it, but this kind of definition by observation is also convenient for us. If we observe evidence
+of agency and goal seeking then that is sufficient infer their presence. For now at least this preferable to attempting
+to deductively reason about the root causes of agency and purpose, better left to a seperate examination.
 
 It's worth noting that the specific use of "wide range of environments" nicely captures the essence of generalized
 intelligence, pointedly distinct from the functioning of an entity or process highly specialized to a specific task.
@@ -58,7 +64,9 @@ conflicting goals.
 
 This problem would be a signficant one if we were attempting to define what goals were purposeful or desirable.
 However, given that we want only to achieve a workable definition of intelligence, the problem with this definition is
-only the very same question chose to defer at the beginning of this process.
+only the very same question chose to defer at the beginning of this process. The problem might be addressed through an
+approach at the [Value Loading Problem](https://www.edge.org/response-detail/26198) or alternatively might require a
+more fundamental philosophical tack.
 
-Choosing good goals is a tough, but seperate question. Intelligence at least, is the measurement of an agent's ability
-to achieve those goals, once they are drawn from a wide pool of possible goals, in a wide range of environments.
+Nevertheless this is a tough, but seperate question. Intelligence at least, we can accept as the measurement of an
+agent's ability to achieve those goals, in a wide range of environments.
