@@ -2,11 +2,11 @@
 _16th September, 2016_
 
 So we have set out to create Artificial Intelligence. Let's start right at the beginning though; AI is surely a tool,
-not a goal. So, in fact, what is the goal?
+not a goal. So what is the goal?
 
-This is worthy of a seperate article, but as a starting point maybe we can point to the old Deep Mind catchphrase?
+This is worthy of a seperate article, but as a starting point maybe we can point to the old Deep Mind catchphrase:
 
-> _"Solve Intelligence, then use that to solve everything else"_
+> _"Solve Intelligence, then use that to solve everything else."_
 
 Though obviously simplistic, this phrase illustrates the real objective: everything else. Progress towards solving the
 world's existing problems and improving the capabilities and condition of the species in some way, great or small.
@@ -17,19 +17,17 @@ So, with that out of the way, "intelligence". Artificial is sufficiently obvious
 much more ambiguous in meaning. What is it we mean by intelligent? There are many competing definitions and agreement is
 hard to find.
 
-We need a definition that is:
+We need a definition that:
 
-1. measurable
-1. does not define by negation (i.e. x is "not y")
+1. is measurable
+1. defines declaratively, not by negation (as in "x is not y")
 1. does not include redundant information or red herrings
-1. is not lacking in any essential element of the concept
+1. contains all essential elements of the concept for our purpose
 
-After some limited research, the best definition I have so far is:
+After some limited research, the best definition I have so far is from
+[A Collection of Definitions of Intelligence](http://dl.acm.org/citation.cfm?id=1565458) by Legg & Hutter (2007):
 
 > _"Intelligence measures an agent's ability to achieve goals in a wide range of environments."_
-
-This is from [A Collection of Definitions of Intelligence](http://dl.acm.org/citation.cfm?id=1565458) by Legg & Hutter
-(2007).
 
 Examining the definition against our established criteria, it is:
 1. sufficiently measurable (width in range of environments, success in achieving goals)
@@ -38,7 +36,7 @@ Examining the definition against our established criteria, it is:
 
 Does it describe the essential elements of the concept?
 
-Well, that question is actually kind of the wrong way around. If the essential elements of the concept were clear and
+Well, that question is actually probably the wrong way around. If the essential elements of the concept were clear and
 well described, we would have our definition. Looking at what it has and what it doesn't have might at least lead us to
 a level of confidence that this is a sufficient working definition.
 
