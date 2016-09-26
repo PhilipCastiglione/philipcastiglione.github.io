@@ -61,11 +61,6 @@ var LEARNING = {
       "progress": "4/13"
     },
     {
-      "name": "Hacking: The Art Of Exploitation",
-      "description": "by Jon Erickson",
-      "progress": "120/572"
-    },
-    {
       "name": "Intro to R Programming",
       "description": "Learn R in R with Swirl",
       "progress": "9/15"
@@ -91,6 +86,11 @@ var LEARNING = {
       "name": "Signals to Packets Part 3",
       "description": "by HKUST, delivered via edX",
       "progress": "0/15"
+    },
+    {
+      "name": "Hacking: The Art Of Exploitation",
+      "description": "by Jon Erickson",
+      "progress": "197/572"
     },
     {
       "name": "Clean Code",
