@@ -306,7 +306,20 @@ var SKILLS = {
     {
       "name": "Reinforcement Learning",
       "current": 0,
-      "goal": 5
+      "goal": 4,
+      "comment": "TODO: increase granularity"
+    },
+    {
+      "name": "Supervised Learning",
+      "current": 0,
+      "goal": 4,
+      "comment": "TODO: increase granularity"
+    },
+    {
+      "name": "Unsupervised Learning",
+      "current": 0,
+      "goal": 4,
+      "comment": "TODO: increase granularity"
     }
   ],
   "Mathematics": [
