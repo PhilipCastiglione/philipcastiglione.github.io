@@ -1,12 +1,28 @@
 var SKILLS = {
   "Artificial Intelligence": [
     {
-      "name": "Neural Networks",
+      "name": "Classifiers and statistical learning",
       "current": 0,
-      "goal": 5
+      "goal": 4
     },
     {
-      "name": "Search Algorithms",
+      "name": "Epistemology",
+      "current": 0,
+      "goal": 4,
+      "comment": "in the context of AI this seems to be often referred to as 'Knowledge Representation and Reasoning (KR)'"
+    },
+    {
+      "name": "Logic and Symbology",
+      "current": 0,
+      "goal": 4
+    },
+    {
+      "name": "Neural Networks",
+      "current": 0,
+      "goal": 4
+    },
+    {
+      "name": "Search and Optimization",
       "current": 1,
       "goal": 4
     }
