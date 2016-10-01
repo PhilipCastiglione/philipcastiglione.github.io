@@ -58,7 +58,7 @@ var LEARNING = {
     {
       "name": "CS50 Intro to Computer Science",
       "description": "by Harvard, delivered via edX",
-      "progress": "4/13"
+      "progress": "6/13"
     },
     {
       "name": "Intro to R Programming",
