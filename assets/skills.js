@@ -267,6 +267,11 @@ var SKILLS = {
       "goal": 1
     },
     {
+      "name": "PHP",
+      "current": 1,
+      "goal": 0
+    },
+    {
       "name": "Prolog",
       "current": 0,
       "goal": 1
