@@ -30,7 +30,7 @@ var SKILLS = {
   "Back End Web Development": [
     {
       "name": "Internet Protocols, Request Structure & Routing",
-      "current": 1,
+      "current": 2,
       "goal": 2
     },
     {
