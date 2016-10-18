@@ -53,7 +53,7 @@ var LEARNING = {
     {
       "name": "LCTHW",
       "description": "Learn C The Hard Way, by Zed Shaw at learncodethehardway.com",
-      "progress": "18/53"
+      "progress": "21/53"
     },
     {
       "name": "CS50 Intro to Computer Science",
