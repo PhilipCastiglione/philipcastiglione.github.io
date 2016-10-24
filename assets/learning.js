@@ -61,14 +61,14 @@ var LEARNING = {
       "progress": "12/13"
     },
     {
-      "name": "Intro to R Programming",
-      "description": "Learn R in R with Swirl",
-      "progress": "9/15"
+      "name": "Hacking: The Art Of Exploitation",
+      "description": "by Jon Erickson",
+      "progress": "243/572"
     },
     {
-      "name": "PH525.1x Statistics and R",
-      "description": "by Harvard, delivered via edX",
-      "progress": "0/4"
+      "name": "Silence On The Wire: a Field Guide to Passive Reconnaissance and Indirect Attacks",
+      "description": "by Michal Zalewski",
+      "progress": "39/312"
     }
   ],
   "On Hold": [
@@ -88,9 +88,14 @@ var LEARNING = {
       "progress": "0/15"
     },
     {
-      "name": "Hacking: The Art Of Exploitation",
-      "description": "by Jon Erickson",
-      "progress": "197/572"
+      "name": "Intro to R Programming",
+      "description": "Learn R in R with Swirl",
+      "progress": "9/15"
+    },
+    {
+      "name": "PH525.1x Statistics and R",
+      "description": "by Harvard, delivered via edX",
+      "progress": "0/4"
     },
     {
       "name": "Clean Code",
@@ -106,10 +111,6 @@ var LEARNING = {
     {
       "name": "Haskell Programming",
       "description": "by Christopher Allen and Julie Moronuki"
-    },
-    {
-      "name": "Learn You a Haskell for Great Good!",
-      "description": "Miran Lipovača"
     },
     {
       "name": "Introduction to Functional Programming",
