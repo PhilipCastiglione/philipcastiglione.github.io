@@ -46,7 +46,7 @@ var SKILLS = {
     {
       "name": "Web/Application Security",
       "current": 1,
-      "goal": 2
+      "goal": 3
     }
   ],
   "Computer Hardware": [
@@ -60,6 +60,11 @@ var SKILLS = {
       "name": "High Powered/Specialized Computing",
       "current": 0,
       "goal": 2
+    },
+    {
+      "name": "Server Hardware",
+      "current": 0,
+      "goal": 1
     }
   ],
   "Computer Science": [
@@ -70,7 +75,7 @@ var SKILLS = {
     },
     {
       "name": "Computer Architecture",
-      "current": 0,
+      "current": 1,
       "goal": 2
     },
     {
@@ -96,6 +101,12 @@ var SKILLS = {
   ],
   "Data Management": [
     {
+      "name": "In Memory Store",
+      "current": 1,
+      "goal": 2,
+      "comment": "Redis"
+    },
+    {
       "name": "NoSQL",
       "current": 0,
       "goal": 1
@@ -106,21 +117,17 @@ var SKILLS = {
       "goal": 2
     },
     {
-      "name": "Redis",
+      "name": "SQL Databases",
       "current": 1,
-      "goal": 2
-    },
-    {
-      "name": "SQL",
-      "current": 1,
-      "goal": 2
+      "goal": 3,
+      "comment": "Postgres, MySQL"
     }
   ],
   "Dev & Sys Ops": [
     {
       "name": "AWS",
       "current": 0,
-      "goal": 1,
+      "goal": 2,
       "comment": "EC2, EBS, ElasticBeanstalk, RDS, Lambda, S3, Glacier, Auto Scaling, Load Balancing, ElastiCache, Cloudfront"
     },
     {
@@ -146,13 +153,13 @@ var SKILLS = {
     },
     {
       "name": "Heroku",
-      "current": 2,
-      "goal": 2
+      "current": 1,
+      "goal": 1
     },
     {
       "name": "Linux",
-      "current": 2,
-      "goal": 2
+      "current": 1,
+      "goal": 3
     },
     {
       "name": "Mac OS",
@@ -189,7 +196,7 @@ var SKILLS = {
     {
       "name": "CSS/Sass",
       "current": 2,
-      "goal": 1
+      "goal": 2
     },
     {
       "name": "Ember",
@@ -204,7 +211,7 @@ var SKILLS = {
     {
       "name": "Modern Web Development",
       "current": 2,
-      "goal": 1,
+      "goal": 2,
       "comment": "Cross browser, cross platform design, accessibility..."
     },
     {
@@ -253,7 +260,7 @@ var SKILLS = {
     {
       "name": "JavaScript",
       "current": 2,
-      "goal": 2,
+      "goal": 3,
       "comment": "ES6"
     },
     {
@@ -305,6 +312,11 @@ var SKILLS = {
       "name": "Smalltalk",
       "current": 0,
       "goal": 1
+    },
+    {
+      "name": "SQL",
+      "current": 1,
+      "goal": 3
     }
   ],
   "Machine Learning": [
