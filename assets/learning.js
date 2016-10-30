@@ -53,7 +53,7 @@ var LEARNING = {
     {
       "name": "LCTHW",
       "description": "Learn C The Hard Way, by Zed Shaw at learncodethehardway.com",
-      "progress": "21/53"
+      "progress": "25/53"
     },
     {
       "name": "CS50 Intro to Computer Science",
@@ -68,7 +68,7 @@ var LEARNING = {
     {
       "name": "Silence On The Wire: a Field Guide to Passive Reconnaissance and Indirect Attacks",
       "description": "by Michal Zalewski",
-      "progress": "39/312"
+      "progress": "149/312"
     }
   ],
   "On Hold": [
@@ -115,6 +115,14 @@ var LEARNING = {
     {
       "name": "Introduction to Functional Programming",
       "description": "by Delft, delivered via edX"
+    },
+    {
+      "name": "White Hat Hacker 2017 Bundle",
+      "description": "various TBC"
+    },
+    {
+      "name": "Computer Hacker Professional Certification Package",
+      "description": "various TBC"
     }
   ]
 };
