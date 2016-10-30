@@ -2,7 +2,8 @@
 
 Content:
 
-1. Rework skills to have 3 categories, Software Development, InfoSec and AI
+1. Rework skills to have 3 categories, Software Development, InfoSec and AI (what about other?)
+1. Rework learning to have 3 categories, Software Development, InfoSec and AI (what about other?)
 1. Move Journey page into writing, and have a writing section
 1. Make a writing home page and make stuff make more sense
 
