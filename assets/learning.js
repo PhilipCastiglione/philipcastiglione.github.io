@@ -66,9 +66,14 @@ var LEARNING = {
       "progress": "243/572"
     },
     {
+      "name": "Introduction to Functional Programming",
+      "description": "by Delft, delivered via edX",
+      "progress": "1/14"
+    },
+    {
       "name": "Silence On The Wire: a Field Guide to Passive Reconnaissance and Indirect Attacks",
       "description": "by Michal Zalewski",
-      "progress": "149/312"
+      "progress": "177/312"
     }
   ],
   "On Hold": [
@@ -111,10 +116,6 @@ var LEARNING = {
     {
       "name": "Haskell Programming",
       "description": "by Christopher Allen and Julie Moronuki"
-    },
-    {
-      "name": "Introduction to Functional Programming",
-      "description": "by Delft, delivered via edX"
     },
     {
       "name": "White Hat Hacker 2017 Bundle",
