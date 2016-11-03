@@ -68,12 +68,12 @@ var LEARNING = {
     {
       "name": "Introduction to Functional Programming",
       "description": "by Delft, delivered via edX",
-      "progress": "1/14"
+      "progress": "3/14"
     },
     {
       "name": "Silence On The Wire: a Field Guide to Passive Reconnaissance and Indirect Attacks",
       "description": "by Michal Zalewski",
-      "progress": "177/312"
+      "progress": "208/312"
     }
   ],
   "On Hold": [
