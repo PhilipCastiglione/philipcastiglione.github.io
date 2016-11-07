@@ -69,6 +69,11 @@ var LEARNING = {
       "progress": "243/572"
     },
     {
+      "name": "Haskell Programming",
+      "description": "by Christopher Allen and Julie Moronuki",
+      "progress": "57/1,228"
+    },
+    {
       "name": "Introduction to Functional Programming",
       "description": "by Delft, delivered via edX",
       "progress": "3/14"
@@ -110,10 +115,6 @@ var LEARNING = {
     {
       "name": "Advanced Redux Training Videos",
       "description": "A follow on advanced series of training videos on egghead.io delivered by the creator of Redux Dan Abramov"
-    },
-    {
-      "name": "Haskell Programming",
-      "description": "by Christopher Allen and Julie Moronuki"
     },
     {
       "name": "White Hat Hacker 2017 Bundle",
