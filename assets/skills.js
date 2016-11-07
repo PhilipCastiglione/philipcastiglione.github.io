@@ -31,7 +31,7 @@ var SKILLS = {
     {
       "name": "Internet Protocols, Request Structure & Routing",
       "current": 2,
-      "goal": 2
+      "goal": 3
     },
     {
       "name": "Ruby on Rails",
@@ -133,7 +133,7 @@ var SKILLS = {
     {
       "name": "Capistrano",
       "current": 1,
-      "goal": 0
+      "goal": 1
     },
     {
       "name": "CI/CD",
@@ -184,7 +184,7 @@ var SKILLS = {
     {
       "name": "Windows",
       "current": 1,
-      "goal": 1
+      "goal": 2
     }
   ],
   "Front End Web Development": [
@@ -340,6 +340,11 @@ var SKILLS = {
     }
   ],
   "Mathematics": [
+    {
+      "name": "Lambda Calculus",
+      "current": 1,
+      "goal": 2
+    },
     {
       "name": "Linear Algebra",
       "current": 1,
