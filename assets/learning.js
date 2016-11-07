@@ -49,6 +49,10 @@ var LEARNING = {
       "description": "by Avdi Grimm"
     },
     {
+      "name": "CS50 Intro to Computer Science",
+      "description": "by Harvard, delivered via edX"
+    },
+    {
       "name": "Silence On The Wire: a Field Guide to Passive Reconnaissance and Indirect Attacks",
       "description": "by Michal Zalewski"
     }
@@ -58,11 +62,6 @@ var LEARNING = {
       "name": "LCTHW",
       "description": "Learn C The Hard Way, by Zed Shaw at learncodethehardway.com",
       "progress": "25/53"
-    },
-    {
-      "name": "CS50 Intro to Computer Science",
-      "description": "by Harvard, delivered via edX",
-      "progress": "12/13"
     },
     {
       "name": "Hacking: The Art Of Exploitation",
