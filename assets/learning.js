@@ -66,12 +66,12 @@ var LEARNING = {
     {
       "name": "Hacking: The Art Of Exploitation",
       "description": "by Jon Erickson",
-      "progress": "243/572"
+      "progress": "223/492"
     },
     {
       "name": "Haskell Programming",
       "description": "by Christopher Allen and Julie Moronuki",
-      "progress": "57/1,228"
+      "progress": "82/1,228"
     },
     {
       "name": "Introduction to Functional Programming",
