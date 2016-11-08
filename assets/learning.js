@@ -77,6 +77,11 @@ var LEARNING = {
       "name": "Introduction to Functional Programming",
       "description": "by Delft, delivered via edX",
       "progress": "3/14"
+    },
+    {
+      "name": "Network From Scratch To Advanced Implementation",
+      "description": "by Mohamed Atef, delivered via StackSkills",
+      "progress": "6%"
     }
   ],
   "On Hold": [
