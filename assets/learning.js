@@ -66,7 +66,7 @@ var LEARNING = {
     {
       "name": "Hacking: The Art Of Exploitation",
       "description": "by Jon Erickson",
-      "progress": "273/492"
+      "progress": "295/492"
     },
     {
       "name": "Haskell Programming",
@@ -81,7 +81,7 @@ var LEARNING = {
     {
       "name": "Network From Scratch To Advanced Implementation",
       "description": "by Mohamed Atef, delivered via StackSkills",
-      "progress": "9%"
+      "progress": "15%"
     }
   ],
   "On Hold": [
