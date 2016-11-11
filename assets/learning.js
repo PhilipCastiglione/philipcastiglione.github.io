@@ -61,7 +61,7 @@ var LEARNING = {
     {
       "name": "LCTHW",
       "description": "Learn C The Hard Way, by Zed Shaw at learncodethehardway.com",
-      "progress": "25/53"
+      "progress": "27/53"
     },
     {
       "name": "Hacking: The Art Of Exploitation",
@@ -81,7 +81,7 @@ var LEARNING = {
     {
       "name": "Network From Scratch To Advanced Implementation",
       "description": "by Mohamed Atef, delivered via StackSkills",
-      "progress": "15%"
+      "progress": "17%"
     }
   ],
   "On Hold": [
