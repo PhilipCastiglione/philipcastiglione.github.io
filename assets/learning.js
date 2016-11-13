@@ -79,9 +79,9 @@ var LEARNING = {
       "progress": "3/14"
     },
     {
-      "name": "Network From Scratch To Advanced Implementation",
+      "name": "Networks From Scratch To Advanced Implementation",
       "description": "by Mohamed Atef, delivered via StackSkills",
-      "progress": "17%"
+      "progress": "40%"
     }
   ],
   "On Hold": [
