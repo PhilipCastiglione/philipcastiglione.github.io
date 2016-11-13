@@ -6,6 +6,7 @@ Content:
 1. Rework learning to have 3 categories, Software Development, InfoSec and AI (what about other?)
 1. Move Journey page into writing, and have a writing section
 1. Make a writing home page and make stuff make more sense
+1. Learning should probably organise things by type (course, book, etc)
 
 Styling:
 
