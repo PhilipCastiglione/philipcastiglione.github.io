@@ -71,7 +71,7 @@ var LEARNING = {
     {
       "name": "Haskell Programming",
       "description": "by Christopher Allen and Julie Moronuki",
-      "progress": "82/1,228"
+      "progress": "98/1,228"
     },
     {
       "name": "Introduction to Functional Programming",
@@ -81,7 +81,7 @@ var LEARNING = {
     {
       "name": "Networks From Scratch To Advanced Implementation",
       "description": "by Mohamed Atef, delivered via StackSkills",
-      "progress": "54%"
+      "progress": "60%"
     }
   ],
   "On Hold": [
