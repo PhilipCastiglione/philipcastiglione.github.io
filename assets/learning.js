@@ -76,7 +76,7 @@ var LEARNING = {
     {
       "name": "Introduction to Functional Programming",
       "description": "by Delft, delivered via edX",
-      "progress": "3/14"
+      "progress": "5/14"
     },
     {
       "name": "Networks From Scratch To Advanced Implementation",
