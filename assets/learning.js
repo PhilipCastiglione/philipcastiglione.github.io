@@ -82,6 +82,11 @@ var LEARNING = {
       "name": "Networks From Scratch To Advanced Implementation",
       "description": "by Mohamed Atef, delivered via StackSkills",
       "progress": "60%"
+    },
+    {
+      "name": "STATx Preparing for the AP Statistics Exam",
+      "description": "by TBR, delivered via edX",
+      "progress": "1/42"
     }
   ],
   "On Hold": [
