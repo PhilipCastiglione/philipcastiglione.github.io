@@ -224,13 +224,13 @@ var SKILLS = {
   "Languages": [
     {
       "name": "C",
-      "current": 1,
+      "current": 2,
       "goal": 2
     },
     {
       "name": "C++",
       "current": 0,
-      "goal": 1
+      "goal": 3
     },
     {
       "name": "Clojure",
@@ -291,7 +291,7 @@ var SKILLS = {
     {
       "name": "R",
       "current": 0,
-      "goal": 1
+      "goal": 3
     },
     {
       "name": "Ruby",
@@ -315,6 +315,11 @@ var SKILLS = {
     },
     {
       "name": "SQL",
+      "current": 1,
+      "goal": 3
+    },
+    {
+      "name": "TypeScript",
       "current": 1,
       "goal": 3
     }
