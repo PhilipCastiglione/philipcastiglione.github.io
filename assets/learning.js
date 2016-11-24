@@ -86,7 +86,7 @@ var LEARNING = {
     {
       "name": "STATx Preparing for the AP Statistics Exam",
       "description": "by TBR, delivered via edX",
-      "progress": "7/42"
+      "progress": "12/42"
     }
   ],
   "On Hold": [
