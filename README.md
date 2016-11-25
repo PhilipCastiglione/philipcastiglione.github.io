@@ -2,11 +2,12 @@
 
 Content:
 
-1. Rework skills to have 3 categories, Software Development, InfoSec and AI (what about other?)
-1. Rework learning to have 3 categories, Software Development, InfoSec and AI (what about other?)
+1. Rework site to reflect new focus on AI research
+1. Rework skills
+1. Rework learning
 1. Move Journey page into writing, and have a writing section
 1. Make a writing home page and make stuff make more sense
-1. Learning should probably organise things by type (course, book, etc)
+1. Learning should probably organise things by type (course, book, etc)?
 
 Styling:
 
@@ -24,7 +25,7 @@ Underway:
 
 To Write:
 
-1. paths: choosing between product, infosec and ai
+1. choosing AI research
 1. approaches to creating intelligence
 1. specific environments and goals that we care about article
 1. specific environments and goals for training/testing/measuring article
