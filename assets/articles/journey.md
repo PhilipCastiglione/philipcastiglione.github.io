@@ -14,13 +14,13 @@ Bachelor of Arts/Commerce (Asian Studies/Accounting), then a Bachelor of Commerc
 meaningful.
 
 Eventually settling for progress over passion, I graduated with a high distinction average from a top ranked
-[university]("http://fbe.unimelb.edu.au/finance") and begun a career traversing the borders of Finance and Management
+[university](http://fbe.unimelb.edu.au/finance) and begun a career traversing the borders of Finance and Management
 Consulting. Nice one. Theoretically. In fact, my business career was superficially successful, but ultimately deeply
 unfulfilling.
 
 After a number of years, I finally decided enough was enough and that it was time to sacrifice convention for happiness.
 I quit my job and enrolled in a Bachelor of Social Science, planning to major in Sociology and Criminology. I believe
-[Law & Order]("https://youtu.be/gP3MuUTmXNk") is only partly responsible for this. However, after a few months of study
+[Law & Order](https://youtu.be/gP3MuUTmXNk) is only partly responsible for this. However, after a few months of study
 and just a few weeks of term, I quickly realised I'd misfired and didn't find the actual work as appealing as I'd
 expected.
 
@@ -40,7 +40,7 @@ guidance of my aforementioned brother. I quickly discovered the immense pleasure
 some people, was also available to me.
 
 After a month and a half of this, I began an intense 12 week accelerator course. It was
-[one of those]("https://generalassemb.ly/education/web-development-immersive") ~70 hour per week coding bootcamps
+[one of those](https://generalassemb.ly/education/web-development-immersive) ~70 hour per week coding bootcamps
 presently in vogue and it was hugely effective for me. I lucked out and had an excellent instructor. Fully immersing
 myself for 12 weeks, the course helped me develop sufficient proficiency to get my first programming job as a back-end
 web developer slapping around Ruby on Rails and the occasional smear of JavaScript.
@@ -51,11 +51,11 @@ web developer slapping around Ruby on Rails and the occasional smear of JavaScri
 > required to be a decent developer. I'm not sure I'd recommend this path to someone who didn't feel similarly._
 
 After a year building websites and web apps of increasing complexity, learning rapidly under the tutelage of the
-generous and skilled [Andrew Buntine]("https://github.com/buntine"), I received an offer to work on a greenfield project
+generous and skilled [Andrew Buntine](https://github.com/buntine), I received an offer to work on a greenfield project
 producing a new product for a SaaS company using an exciting, cutting edge tech stack. The new job offered focussed
 mentoring, a single, complex product to focus on, an increase in responsibility and a commensurate salary increase.
 
-I've now been employed at [JCurve Solutions]("https://www.jcurve.com.au/") for some time, working primarily on that
+I've now been employed at [JCurve Solutions](https://www.jcurve.com.au/) for some time, working primarily on that
 project. My love affair with programming continues unimpeded and I no longer consider my delayed entrance to the scene
 with regret. I've since learned that many skills from my previous career translate well and that I can bring valuable
 perspectives to my development practice that I wouldn't have without my unique experiences.
@@ -71,7 +71,7 @@ I am able to fully commit. I enjoy working and learning every day. I spend (emba
 and programming out of work hours, purely by choice.
 
 I am immensely grateful to those who have guided me along the way and continue to do so. A few people on that long list
-are the fantastic teacher of my course [DT]("https://github.com/epoch"), the previously mentioned Andrew Buntine, my
-current boss and superb mentor [Dan Cheail]("https://github.com/dnch"), my impressive peers
-[Luke Shillabeer]("https://github.com/kiwwa") and [Jaya Wijono]("https://github.com/Jayzz55"). Finally, thanks to a
+are the fantastic teacher of my course [DT](https://github.com/epoch), the previously mentioned Andrew Buntine, my
+current boss and superb mentor [Dan Cheail](https://github.com/dnch), my impressive peers
+[Luke Shillabeer](https://github.com/kiwwa) and [Jaya Wijono](https://github.com/Jayzz55). Finally, thanks to a
 constant source of support, perspective, information and still the best programmer I've ever met, my brother.
