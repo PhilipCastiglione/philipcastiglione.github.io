@@ -1,6 +1,18 @@
 var LEARNING = {
   "Completed": [
     {
+      "name": "Codecademy HTML & CSS",
+      "description": "Codecademy introductory HTML & CSS course"
+    },
+    {
+      "name": "Codecademy JavaScript",
+      "description": "Codecademy introductory JavaScript course"
+    },
+    {
+      "name": "Codecademy Python",
+      "description": "Codecademy introductory Python course"
+    },
+    {
       "name": "LPTHW",
       "description": "Learn Python The Hard Way, by Zed Shaw at learncodethehardway.com"
     },
