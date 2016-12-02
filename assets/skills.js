@@ -168,7 +168,7 @@ var SKILLS = {
     },
     {
       "name": "Shell Scripting",
-      "current": 1,
+      "current": 2,
       "goal": 2
     },
     {
