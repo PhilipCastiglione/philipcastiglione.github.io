@@ -71,6 +71,11 @@ var LEARNING = {
   ],
   "Underway": [
     {
+      "name": "AlgebraX: Introduction To Algabra",
+      "description": "by SchoolYourself, delivered via edX",
+      "progress": "0%"
+    },
+    {
       "name": "LCTHW",
       "description": "Learn C The Hard Way, by Zed Shaw at learncodethehardway.com",
       "progress": "27/53"
@@ -96,9 +101,9 @@ var LEARNING = {
       "progress": "60%"
     },
     {
-      "name": "STATx Preparing for the AP Statistics Exam",
+      "name": "STATx: Preparing for the AP Statistics Exam",
       "description": "by TBR, delivered via edX",
-      "progress": "37%"
+      "progress": "40%"
     }
   ],
   "On Hold": [
