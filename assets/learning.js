@@ -73,7 +73,7 @@ var LEARNING = {
     {
       "name": "AlgebraX: Introduction To Algabra",
       "description": "by SchoolYourself, delivered via edX",
-      "progress": "31%"
+      "progress": "52%"
     },
     {
       "name": "LCTHW",
