@@ -80,6 +80,11 @@ var LEARNING = {
       "progress": "27/53"
     },
     {
+      "name": "GeometryX: Introduction To Geometry",
+      "description": "by SchoolYourself, delivered via edX",
+      "progress": "17%"
+    },
+    {
       "name": "Hacking: The Art Of Exploitation",
       "description": "by Jon Erickson",
       "progress": "295/492"
@@ -102,7 +107,7 @@ var LEARNING = {
     {
       "name": "STATx: Preparing for the AP Statistics Exam",
       "description": "by TBR, delivered via edX",
-      "progress": "40%"
+      "progress": "43%"
     }
   ],
   "On Hold": [
