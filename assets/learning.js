@@ -105,6 +105,16 @@ var LEARNING = {
       "progress": "43%"
     }
   ],
+  "Planned": [
+    {
+      "name": "MAT117: College Algebra and Problem Solving",
+      "description": "by ASU, delivered via edX",
+    },
+    {
+      "name": "UT.PreC.10.03x: Discovery Precalculus",
+      "description": "by UTAustin, delivered via edX",
+    }
+  ],
   "Did Not Complete": [
     {
       "name": "Clean Code",
@@ -125,16 +135,6 @@ var LEARNING = {
       "name": "Networks From Scratch To Advanced Implementation",
       "description": "by Mohamed Atef, delivered via StackSkills",
       "progress": "60%"
-    }
-  ],
-  "Planned": [
-    {
-      "name": "MAT117: College Algebra and Problem Solving",
-      "description": "by ASU, delivered via edX",
-    },
-    {
-      "name": "UT.PreC.10.03x: Discovery Precalculus",
-      "description": "by UTAustin, delivered via edX",
     }
   ]
 };
