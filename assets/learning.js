@@ -85,46 +85,9 @@ var LEARNING = {
       "progress": "17%"
     },
     {
-      "name": "Hacking: The Art Of Exploitation",
-      "description": "by Jon Erickson",
-      "progress": "295/492"
-    },
-    {
       "name": "Haskell Programming",
       "description": "by Christopher Allen and Julie Moronuki",
       "progress": "98/1,228"
-    },
-    {
-      "name": "Introduction to Functional Programming",
-      "description": "by Delft, delivered via edX",
-      "progress": "5/14"
-    },
-    {
-      "name": "Networks From Scratch To Advanced Implementation",
-      "description": "by Mohamed Atef, delivered via StackSkills",
-      "progress": "60%"
-    },
-    {
-      "name": "STATx: Preparing for the AP Statistics Exam",
-      "description": "by TBR, delivered via edX",
-      "progress": "43%"
-    }
-  ],
-  "On Hold": [
-    {
-      "name": "Signals to Packets Part 1",
-      "description": "by HKUST, delivered via edX",
-      "progress": "9/15"
-    },
-    {
-      "name": "Signals to Packets Part 2",
-      "description": "by HKUST, delivered via edX",
-      "progress": "0/15"
-    },
-    {
-      "name": "Signals to Packets Part 3",
-      "description": "by HKUST, delivered via edX",
-      "progress": "0/15"
     },
     {
       "name": "Intro to R Programming",
@@ -132,28 +95,46 @@ var LEARNING = {
       "progress": "9/15"
     },
     {
-      "name": "PH525.1x Statistics and R",
-      "description": "by Harvard, delivered via edX",
-      "progress": "0/4"
+      "name": "Introduction to Functional Programming",
+      "description": "by Delft, delivered via edX",
+      "progress": "5/14"
     },
+    {
+      "name": "STATx: Preparing for the AP Statistics Exam",
+      "description": "by TBR, delivered via edX",
+      "progress": "43%"
+    }
+  ],
+  "Did Not Complete": [
     {
       "name": "Clean Code",
       "description": "by Uncle Bob",
       "progress": "194/462"
+    },
+    {
+      "name": "Signals to Packets Part 1",
+      "description": "by HKUST, delivered via edX",
+      "progress": "9/15"
+    },
+    {
+      "name": "Hacking: The Art Of Exploitation",
+      "description": "by Jon Erickson",
+      "progress": "295/492"
+    },
+    {
+      "name": "Networks From Scratch To Advanced Implementation",
+      "description": "by Mohamed Atef, delivered via StackSkills",
+      "progress": "60%"
     }
   ],
   "Planned": [
     {
-      "name": "Advanced Redux Training Videos",
-      "description": "A follow on advanced series of training videos on egghead.io delivered by the creator of Redux Dan Abramov"
+      "name": "MAT117: College Algebra and Problem Solving",
+      "description": "by ASU, delivered via edX",
     },
     {
-      "name": "White Hat Hacker 2017 Bundle",
-      "description": "various TBC"
-    },
-    {
-      "name": "Computer Hacker Professional Certification Package",
-      "description": "various TBC"
+      "name": "UT.PreC.10.03x: Discovery Precalculus",
+      "description": "by UTAustin, delivered via edX",
     }
   ]
 };
