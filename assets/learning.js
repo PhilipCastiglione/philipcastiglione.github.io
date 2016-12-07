@@ -67,14 +67,13 @@ var LEARNING = {
     {
       "name": "Silence On The Wire: a Field Guide to Passive Reconnaissance and Indirect Attacks",
       "description": "by Michal Zalewski"
+    },
+    {
+      "name": "AlgebraX: Introduction To Algabra",
+      "description": "by SchoolYourself, delivered via edX"
     }
   ],
   "Underway": [
-    {
-      "name": "AlgebraX: Introduction To Algabra",
-      "description": "by SchoolYourself, delivered via edX",
-      "progress": "52%"
-    },
     {
       "name": "LCTHW",
       "description": "Learn C The Hard Way, by Zed Shaw at learncodethehardway.com",
