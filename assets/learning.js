@@ -82,7 +82,7 @@ var LEARNING = {
     {
       "name": "GeometryX: Introduction To Geometry",
       "description": "by SchoolYourself, delivered via edX",
-      "progress": "17%"
+      "progress": "21%"
     },
     {
       "name": "Haskell Programming",
@@ -102,7 +102,7 @@ var LEARNING = {
     {
       "name": "STATx: Preparing for the AP Statistics Exam",
       "description": "by TBR, delivered via edX",
-      "progress": "43%"
+      "progress": "48%"
     }
   ],
   "Planned": [
