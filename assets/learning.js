@@ -100,6 +100,11 @@ var LEARNING = {
       "progress": "5/14"
     },
     {
+      "name": "MAT117: College Algebra and Problem Solving",
+      "description": "by ASU, delivered via edX",
+      "progress": "48%"
+    },
+    {
       "name": "STATx: Preparing for the AP Statistics Exam",
       "description": "by TBR, delivered via edX",
       "progress": "48%"
@@ -107,12 +112,8 @@ var LEARNING = {
   ],
   "Planned": [
     {
-      "name": "MAT117: College Algebra and Problem Solving",
-      "description": "by ASU, delivered via edX",
-    },
-    {
       "name": "UT.PreC.10.03x: Discovery Precalculus",
-      "description": "by UTAustin, delivered via edX",
+      "description": "by UTAustin, delivered via edX"
     }
   ],
   "Did Not Complete": [
@@ -124,7 +125,7 @@ var LEARNING = {
     {
       "name": "Signals to Packets Part 1",
       "description": "by HKUST, delivered via edX",
-      "progress": "9/15"
+      "progress": "60%"
     },
     {
       "name": "Hacking: The Art Of Exploitation",
