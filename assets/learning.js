@@ -69,7 +69,7 @@ var LEARNING = {
       "description": "by Michal Zalewski"
     },
     {
-      "name": "AlgebraX: Introduction To Algabra",
+      "name": "AlgebraX: Introduction To Algebra",
       "description": "by SchoolYourself, delivered via edX"
     }
   ],
