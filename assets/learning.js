@@ -71,6 +71,10 @@ var LEARNING = {
     {
       "name": "AlgebraX: Introduction To Algebra",
       "description": "by SchoolYourself, delivered via edX"
+    },
+    {
+      "name": "GeometryX: Introduction To Geometry",
+      "description": "by SchoolYourself, delivered via edX"
     }
   ],
   "Underway": [
@@ -78,11 +82,6 @@ var LEARNING = {
       "name": "LCTHW",
       "description": "Learn C The Hard Way, by Zed Shaw at learncodethehardway.com",
       "progress": "27/53"
-    },
-    {
-      "name": "GeometryX: Introduction To Geometry",
-      "description": "by SchoolYourself, delivered via edX",
-      "progress": "75%"
     },
     {
       "name": "Haskell Programming",
