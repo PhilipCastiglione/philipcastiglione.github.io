@@ -106,7 +106,7 @@ var LEARNING = {
     {
       "name": "STATx: Preparing for the AP Statistics Exam",
       "description": "by TBR, delivered via edX",
-      "progress": "75%"
+      "progress": "76%"
     }
   ],
   "Planned": [
@@ -134,7 +134,7 @@ var LEARNING = {
     {
       "name": "Networks From Scratch To Advanced Implementation",
       "description": "by Mohamed Atef, delivered via StackSkills",
-      "progress": "60%"
+      "progress": "62%"
     }
   ]
 };
