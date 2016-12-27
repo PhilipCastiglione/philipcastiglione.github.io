@@ -101,7 +101,7 @@ var LEARNING = {
     {
       "name": "MAT117: College Algebra and Problem Solving",
       "description": "by ASU, delivered via edX",
-      "progress": "77%"
+      "progress": "82%"
     },
     {
       "name": "STATx: Preparing for the AP Statistics Exam",
