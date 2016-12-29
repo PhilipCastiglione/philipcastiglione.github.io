@@ -79,6 +79,11 @@ var LEARNING = {
   ],
   "Underway": [
     {
+      "name": "Dive Into Python 3",
+      "description": "by Mark Pilgrim at http://www.diveintopython3.net",
+      "progress": "3/22"
+    },
+    {
       "name": "LCTHW",
       "description": "Learn C The Hard Way, by Zed Shaw at learncodethehardway.com",
       "progress": "27/53"
