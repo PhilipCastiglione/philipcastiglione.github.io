@@ -75,6 +75,10 @@ var LEARNING = {
     {
       "name": "GeometryX: Introduction To Geometry",
       "description": "by SchoolYourself, delivered via edX"
+    },
+    {
+      "name": "MAT117: College Algebra and Problem Solving",
+      "description": "by ASU, delivered via edX"
     }
   ],
   "Underway": [
@@ -104,14 +108,14 @@ var LEARNING = {
       "progress": "5/14"
     },
     {
-      "name": "MAT117: College Algebra and Problem Solving",
-      "description": "by ASU, delivered via edX",
-      "progress": "96%"
-    },
-    {
       "name": "STATx: Preparing for the AP Statistics Exam",
       "description": "by TBR, delivered via edX",
       "progress": "81%"
+    },
+    {
+      "name": "The Brain That Changes Itself",
+      "description": "by Norman Doidge",
+      "progress": "150/427"
     }
   ],
   "Planned": [
