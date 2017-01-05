@@ -115,7 +115,7 @@ var LEARNING = {
     {
       "name": "The Brain That Changes Itself",
       "description": "by Norman Doidge",
-      "progress": "150/427"
+      "progress": "163/427"
     }
   ],
   "Planned": [
