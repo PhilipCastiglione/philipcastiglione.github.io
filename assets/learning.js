@@ -110,12 +110,12 @@ var LEARNING = {
     {
       "name": "STATx: Preparing for the AP Statistics Exam",
       "description": "by TBR, delivered via edX",
-      "progress": "81%"
+      "progress": "83%"
     },
     {
       "name": "The Brain That Changes Itself",
       "description": "by Norman Doidge",
-      "progress": "163/427"
+      "progress": "176/427"
     }
   ],
   "Planned": [
