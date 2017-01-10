@@ -79,6 +79,10 @@ var LEARNING = {
     {
       "name": "MAT117: College Algebra and Problem Solving",
       "description": "by ASU, delivered via edX"
+    },
+    {
+      "name": "STATx: Preparing for the AP Statistics Exam",
+      "description": "by TBR, delivered via edX"
     }
   ],
   "Underway": [
@@ -108,14 +112,9 @@ var LEARNING = {
       "progress": "5/14"
     },
     {
-      "name": "STATx: Preparing for the AP Statistics Exam",
-      "description": "by TBR, delivered via edX",
-      "progress": "81%"
-    },
-    {
       "name": "The Brain That Changes Itself",
       "description": "by Norman Doidge",
-      "progress": "163/427"
+      "progress": "221/427"
     }
   ],
   "Planned": [
