@@ -114,12 +114,12 @@ var LEARNING = {
     {
       "name": "The Brain That Changes Itself",
       "description": "by Norman Doidge",
-      "progress": "232/427"
+      "progress": "258/427"
     },
     {
       "name": "UT.PreC.10.03x: Discovery Precalculus",
       "description": "by UTAustin, delivered via edX",
-      "progress": "3%"
+      "progress": "6%"
     }
   ],
   "Planned": [
