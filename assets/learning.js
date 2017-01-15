@@ -83,6 +83,10 @@ var LEARNING = {
     {
       "name": "STATx: Preparing for the AP Statistics Exam",
       "description": "by TBR, delivered via edX"
+    },
+    {
+      "name": "The Brain That Changes Itself",
+      "description": "by Norman Doidge"
     }
   ],
   "Underway": [
@@ -110,11 +114,6 @@ var LEARNING = {
       "name": "Introduction to Functional Programming",
       "description": "by Delft, delivered via edX",
       "progress": "5/14"
-    },
-    {
-      "name": "The Brain That Changes Itself",
-      "description": "by Norman Doidge",
-      "progress": "258/427"
     },
     {
       "name": "UT.PreC.10.03x: Discovery Precalculus",
