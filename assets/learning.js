@@ -91,6 +91,11 @@ var LEARNING = {
   ],
   "Underway": [
     {
+      "name": "A Field Guide To Lies And Statistics",
+      "description": "by Daniel Levitin",
+      "progress": "107/292"
+    },
+    {
       "name": "Dive Into Python 3",
       "description": "by Mark Pilgrim at http://www.diveintopython3.net",
       "progress": "3/22"
@@ -125,10 +130,6 @@ var LEARNING = {
     {
       "name": "CSMM.101x Artificial Intelligence (AI)",
       "description": "by Columbia University, delivered via edX"
-    },
-    {
-      "name": "A Field Guide To Lies And Statistics",
-      "description": "by Daniel Levitin"
     }
   ],
   "Did Not Complete": [
