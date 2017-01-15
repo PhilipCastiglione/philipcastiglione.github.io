@@ -118,10 +118,18 @@ var LEARNING = {
     {
       "name": "UT.PreC.10.03x: Discovery Precalculus",
       "description": "by UTAustin, delivered via edX",
-      "progress": "13%"
+      "progress": "15%"
     }
   ],
   "Planned": [
+    {
+      "name": "CSMM.101x Artificial Intelligence (AI)",
+      "description": "by Columbia University, delivered via edX"
+    },
+    {
+      "name": "A Field Guide To Lies And Statistics",
+      "description": "by Daniel Levitin"
+    }
   ],
   "Did Not Complete": [
     {
