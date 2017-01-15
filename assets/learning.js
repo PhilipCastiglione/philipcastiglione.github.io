@@ -118,7 +118,7 @@ var LEARNING = {
     {
       "name": "UT.PreC.10.03x: Discovery Precalculus",
       "description": "by UTAustin, delivered via edX",
-      "progress": "6%"
+      "progress": "13%"
     }
   ],
   "Planned": [
