@@ -93,12 +93,12 @@ var LEARNING = {
     {
       "name": "A Field Guide To Lies And Statistics",
       "description": "by Daniel Levitin",
-      "progress": "107/292"
+      "progress": "112/292"
     },
     {
       "name": "Dive Into Python 3",
       "description": "by Mark Pilgrim at http://www.diveintopython3.net",
-      "progress": "3/22"
+      "progress": "4/22"
     },
     {
       "name": "LCTHW",
@@ -123,7 +123,7 @@ var LEARNING = {
     {
       "name": "UT.PreC.10.03x: Discovery Precalculus",
       "description": "by UTAustin, delivered via edX",
-      "progress": "15%"
+      "progress": "17%"
     }
   ],
   "Planned": [
