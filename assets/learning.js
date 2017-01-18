@@ -98,7 +98,7 @@ var LEARNING = {
     {
       "name": "Dive Into Python 3",
       "description": "by Mark Pilgrim at http://www.diveintopython3.net",
-      "progress": "4/22"
+      "progress": "5/22"
     },
     {
       "name": "LCTHW",
