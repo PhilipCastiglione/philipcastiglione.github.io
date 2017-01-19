@@ -93,7 +93,7 @@ var LEARNING = {
     {
       "name": "A Field Guide To Lies And Statistics",
       "description": "by Daniel Levitin",
-      "progress": "142/292"
+      "progress": "164/292"
     },
     {
       "name": "Dive Into Python 3",
