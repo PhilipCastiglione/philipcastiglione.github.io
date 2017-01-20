@@ -4,7 +4,8 @@ Content:
 
 1. Rework skills
 1. Rework learning
-1. Learning should probably organise things by type (course, book, etc)?
+1. Refocus again
+1. Add pics to articles
 
 Styling:
 
@@ -15,10 +16,12 @@ Styling:
 
 Written:
 
-1. Journey 7/9/16
+1. Origins 7/9/16
 1. What is Intelligence? 16/9/16
 
 Underway:
+
+1. What does a researcher look like
 
 To Write:
 
