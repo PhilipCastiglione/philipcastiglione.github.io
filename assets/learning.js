@@ -87,13 +87,17 @@ var LEARNING = {
     {
       "name": "The Brain That Changes Itself",
       "description": "by Norman Doidge"
+    },
+    {
+      "name": "A Field Guide To Lies And Statistics",
+      "description": "by Daniel Levitin"
     }
   ],
   "Underway": [
     {
-      "name": "A Field Guide To Lies And Statistics",
-      "description": "by Daniel Levitin",
-      "progress": "164/292"
+      "name": "CSMM.101x Artificial Intelligence (AI)",
+      "description": "by Columbia University, delivered via edX",
+      "progress": "1/11"
     },
     {
       "name": "Dive Into Python 3",
@@ -119,18 +123,9 @@ var LEARNING = {
       "name": "Introduction to Functional Programming",
       "description": "by Delft, delivered via edX",
       "progress": "5/14"
-    },
-    {
-      "name": "UT.PreC.10.03x: Discovery Precalculus",
-      "description": "by UTAustin, delivered via edX",
-      "progress": "17%"
     }
   ],
   "Planned": [
-    {
-      "name": "CSMM.101x Artificial Intelligence (AI)",
-      "description": "by Columbia University, delivered via edX"
-    }
   ],
   "Did Not Complete": [
     {
@@ -152,6 +147,11 @@ var LEARNING = {
       "name": "Networks From Scratch To Advanced Implementation",
       "description": "by Mohamed Atef, delivered via StackSkills",
       "progress": "62%"
+    },
+    {
+      "name": "UT.PreC.10.03x: Discovery Precalculus",
+      "description": "by UTAustin, delivered via edX",
+      "progress": "17%"
     }
   ]
 };
