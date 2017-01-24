@@ -2,9 +2,9 @@
 
 Content:
 
-1. Rework skills
-1. Rework learning
-1. Refocus again
+1. In the long term, sections should be: bio, research, cv, blog
+1. Delete skills, learning
+1. Refocus and update copy
 1. Add pics to articles
 
 Styling:
