@@ -102,7 +102,7 @@ var LEARNING = {
     {
       "name": "Dive Into Python 3",
       "description": "by Mark Pilgrim at http://www.diveintopython3.net",
-      "progress": "7/22"
+      "progress": "8/22"
     },
     {
       "name": "LCTHW",
@@ -123,6 +123,11 @@ var LEARNING = {
       "name": "Introduction to Functional Programming",
       "description": "by Delft, delivered via edX",
       "progress": "5/14"
+    },
+    {
+      "name": "The Man Who Wasn't There",
+      "description": "by Anil Ananthaswamy",
+      "progress": "13/308"
     }
   ],
   "Planned": [
