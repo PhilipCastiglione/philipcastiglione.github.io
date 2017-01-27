@@ -102,7 +102,7 @@ var LEARNING = {
     {
       "name": "Dive Into Python 3",
       "description": "by Mark Pilgrim at http://www.diveintopython3.net",
-      "progress": "8/22"
+      "progress": "9/22"
     },
     {
       "name": "LCTHW",
@@ -127,7 +127,7 @@ var LEARNING = {
     {
       "name": "The Man Who Wasn't There",
       "description": "by Anil Ananthaswamy",
-      "progress": "13/308"
+      "progress": "20/308"
     }
   ],
   "Planned": [
