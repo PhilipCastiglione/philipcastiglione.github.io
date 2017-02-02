@@ -44,3 +44,21 @@ In reality, the concept of there being a “law” that enabled continuous expon
 Certainly, improvements in one area help improvements in another. The internet for example has massively increased the rate of growth in many other discovery pursuits. The development of GAI would most certainly do something similar, maybe even much more profoundly. However, we can’t simply generalise this concept to the field of AI research and just expect that all progress towards unlocking all the many capabilities required to actually create a GAI can be represented as a simple number and that all progress builds on itself in a multiplicative fashion and therefore will grow exponentially.
 
 So to summarise another embarrassingly long Facebook comment, I think that it doesn’t necessarily make sense to consider “progress in science towards the ability to build general AI” as something simple enough to apply a linear or exponential growth model to. Progress in the field is much more nuanced, and while definitely increasing with increased resourcing in recent times, there is still a lot of slow, hard research to do in order to solve all the technical problems ahead.
+
+
+more notes 3:
+I don't disagree that in progress will generally accelerate compared with current rates as a result of technological progress; perhaps just about how much, and how much work there is remaining.
+
+For example if there were a linear increase in the rate of progress of n and an exponential increase of y, but y was very small it still might take many decades.
+
+An annual 1% increase in the rate of progress still only results in progress at a rate of ~270% (compared with a present relative baseline of 100%) after 100 years.
+
+If you were only progressing towards the eventual goal at a present rate of 0.6% per year of the amount of work required to achieve the goal, you would achieve your goal in 100 years, even with that exponential rate increase.
+
+If we do abstract everything down to simple numbers, it's only which numbers we pick after all!
+
+PS to be more specific and clear,
+
+> the fact that lots of slow, incremental research needs to be done
+
+just changes my expectation with respect to how much work is left, and to what extent it can and will be accelerated (and to what extent progress resultant from it's incremental achievement will contribute to exponential or linear (or no!) increase in the rate of progress itself)
