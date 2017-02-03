@@ -97,12 +97,12 @@ var LEARNING = {
     {
       "name": "CSMM.101x Artificial Intelligence (AI)",
       "description": "by Columbia University, delivered via edX",
-      "progress": "1/11"
+      "progress": "2/11"
     },
     {
       "name": "Dive Into Python 3",
       "description": "by Mark Pilgrim at http://www.diveintopython3.net",
-      "progress": "9/22"
+      "progress": "10/22"
     },
     {
       "name": "LCTHW",
@@ -127,7 +127,7 @@ var LEARNING = {
     {
       "name": "The Man Who Wasn't There",
       "description": "by Anil Ananthaswamy",
-      "progress": "20/308"
+      "progress": "44/308"
     }
   ],
   "Planned": [
