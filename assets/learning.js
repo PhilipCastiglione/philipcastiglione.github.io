@@ -97,7 +97,7 @@ var LEARNING = {
     {
       "name": "CSMM.101x Artificial Intelligence (AI)",
       "description": "by Columbia University, delivered via edX",
-      "progress": "3/11"
+      "progress": "4/11"
     },
     {
       "name": "Dive Into Python 3",
