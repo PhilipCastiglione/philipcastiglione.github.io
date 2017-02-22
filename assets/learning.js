@@ -95,6 +95,11 @@ var LEARNING = {
   ],
   "Underway": [
     {
+      "name": "Codecademy SQL",
+      "description": "Codecademy introductory HTML & CSS course",
+      "progress": "0%"
+    },
+    {
       "name": "CSMM.101x Artificial Intelligence (AI)",
       "description": "by Columbia University, delivered via edX",
       "progress": "4/11"
@@ -102,8 +107,20 @@ var LEARNING = {
     {
       "name": "Dive Into Python 3",
       "description": "by Mark Pilgrim at http://www.diveintopython3.net",
-      "progress": "11/22"
+      "progress": "12/22"
     },
+    {
+      "name": "The Man Who Wasn't There",
+      "description": "by Anil Ananthaswamy",
+      "progress": "124/308"
+    },
+    {
+      "name": "SQL Antipatterns: Avoiding the Pitfalls of Database Programming",
+      "description": "by Bill Karwin",
+      "progress": "26/309"
+    }
+  ],
+  "On Hold": [
     {
       "name": "LCTHW",
       "description": "Learn C The Hard Way, by Zed Shaw at learncodethehardway.com",
@@ -123,16 +140,27 @@ var LEARNING = {
       "name": "Introduction to Functional Programming",
       "description": "by Delft, delivered via edX",
       "progress": "5/14"
-    },
-    {
-      "name": "The Man Who Wasn't There",
-      "description": "by Anil Ananthaswamy",
-      "progress": "84/308"
     }
   ],
   "Planned": [
+    {
+      "name": "SIT105 - Critical Thinking and Problem Solving for IT",
+      "description": "BCompSci unit at Deakin University"
+    },
+    {
+      "name": "SIT190 - Introductory Mathematical Methods",
+      "description": "BCompSci unit at Deakin University"
+    },
+    {
+      "name": "SIT111 - Introduction to Computer Science",
+      "description": "BCompSci unit at Deakin University"
+    },
+    {
+      "name": "HPS111 - Psychology A: Fundamentals of Human Behaviour",
+      "description": "BCompSci unit at Deakin University"
+    }
   ],
-  "Did Not Complete": [
+  "Will Not Complete": [
     {
       "name": "Clean Code",
       "description": "by Uncle Bob",
