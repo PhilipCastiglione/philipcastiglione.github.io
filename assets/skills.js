@@ -245,7 +245,7 @@ var SKILLS = {
     },
     {
       "name": "Python",
-      "current": 1,
+      "current": 2,
       "goal": 3
     },
     {
@@ -261,7 +261,7 @@ var SKILLS = {
     {
       "name": "SQL",
       "current": 1,
-      "goal": 0
+      "goal": 3
     },
     {
       "name": "TypeScript",

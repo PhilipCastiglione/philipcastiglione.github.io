@@ -91,13 +91,17 @@ var LEARNING = {
     {
       "name": "A Field Guide To Lies And Statistics",
       "description": "by Daniel Levitin"
+    },
+    {
+      "name": "Codecademy Learn SQL",
+      "description": "Codecademy introductory HTML & CSS course"
     }
   ],
   "Underway": [
     {
-      "name": "Codecademy SQL",
+      "name": "Codecademy SQL: Table Transform",
       "description": "Codecademy introductory HTML & CSS course",
-      "progress": "0%"
+      "progress": "50%"
     },
     {
       "name": "CSMM.101x Artificial Intelligence (AI)",
