@@ -95,14 +95,13 @@ var LEARNING = {
     {
       "name": "Codecademy Learn SQL",
       "description": "Codecademy introductory HTML & CSS course"
-    }
-  ],
-  "Underway": [
+    },
     {
       "name": "Codecademy SQL: Table Transform",
       "description": "Codecademy introductory HTML & CSS course",
-      "progress": "50%"
-    },
+    }
+  ],
+  "Underway": [
     {
       "name": "CSMM.101x Artificial Intelligence (AI)",
       "description": "by Columbia University, delivered via edX",
