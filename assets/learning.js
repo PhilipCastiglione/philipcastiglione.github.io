@@ -94,14 +94,19 @@ var LEARNING = {
     },
     {
       "name": "Codecademy Learn SQL",
-      "description": "Codecademy introductory HTML & CSS course"
+      "description": "Codecademy introductory SQL course"
     },
     {
       "name": "Codecademy SQL: Table Transform",
-      "description": "Codecademy introductory HTML & CSS course",
+      "description": "Codecademy intermediate SQL course"
     }
   ],
   "Underway": [
+    {
+      "name": "Codecademy SQL: Analyzing Business Metrics",
+      "description": "Codecademy intermediate SQL course",
+      "progress": "50%"
+    },
     {
       "name": "CSMM.101x Artificial Intelligence (AI)",
       "description": "by Columbia University, delivered via edX",
