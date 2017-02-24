@@ -114,7 +114,7 @@ var LEARNING = {
     {
       "name": "Dive Into Python 3",
       "description": "by Mark Pilgrim at http://www.diveintopython3.net",
-      "progress": "12/22"
+      "progress": "13/22"
     },
     {
       "name": "The Man Who Wasn't There",
