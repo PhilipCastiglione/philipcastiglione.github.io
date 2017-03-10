@@ -3,7 +3,7 @@
 Content:
 
 1. In the long term, sections should be: bio, research, cv, blog
-1. Delete skills, link to learning
+1. Delete links to skills, learning
 1. Refocus and update copy
 1. Add pics to articles
 

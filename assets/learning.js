@@ -114,12 +114,12 @@ var LEARNING = {
     {
       "name": "Dive Into Python 3",
       "description": "by Mark Pilgrim at http://www.diveintopython3.net",
-      "progress": "13/22"
+      "progress": "14/22"
     },
     {
       "name": "The Man Who Wasn't There",
       "description": "by Anil Ananthaswamy",
-      "progress": "124/308"
+      "progress": "165/308"
     },
     {
       "name": "SQL Antipatterns: Avoiding the Pitfalls of Database Programming",
