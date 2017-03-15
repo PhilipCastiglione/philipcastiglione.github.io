@@ -114,17 +114,17 @@ var LEARNING = {
     {
       "name": "Dive Into Python 3",
       "description": "by Mark Pilgrim at http://www.diveintopython3.net",
-      "progress": "14/22"
-    },
-    {
-      "name": "The Man Who Wasn't There",
-      "description": "by Anil Ananthaswamy",
-      "progress": "165/308"
+      "progress": "15/22"
     },
     {
       "name": "SQL Antipatterns: Avoiding the Pitfalls of Database Programming",
       "description": "by Bill Karwin",
-      "progress": "26/309"
+      "progress": "70/309"
+    },
+    {
+      "name": "The Man Who Wasn't There",
+      "description": "by Anil Ananthaswamy",
+      "progress": "205/308"
     }
   ],
   "On Hold": [
