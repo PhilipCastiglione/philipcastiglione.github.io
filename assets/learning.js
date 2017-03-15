@@ -117,6 +117,16 @@ var LEARNING = {
       "progress": "15/22"
     },
     {
+      "name": "HPS111 - Psychology A: Fundamentals of Human Behaviour",
+      "description": "BCompSci unit at Deakin University",
+      "progress": "16%"
+    },
+    {
+      "name": "SIT105 - Critical Thinking and Problem Solving for IT",
+      "description": "BCompSci unit at Deakin University",
+      "progress": "12%"
+    },
+    {
       "name": "SQL Antipatterns: Avoiding the Pitfalls of Database Programming",
       "description": "by Bill Karwin",
       "progress": "70/309"
@@ -151,19 +161,11 @@ var LEARNING = {
   ],
   "Planned": [
     {
-      "name": "SIT105 - Critical Thinking and Problem Solving for IT",
-      "description": "BCompSci unit at Deakin University"
-    },
-    {
       "name": "SIT190 - Introductory Mathematical Methods",
       "description": "BCompSci unit at Deakin University"
     },
     {
       "name": "SIT111 - Introduction to Computer Science",
-      "description": "BCompSci unit at Deakin University"
-    },
-    {
-      "name": "HPS111 - Psychology A: Fundamentals of Human Behaviour",
       "description": "BCompSci unit at Deakin University"
     }
   ],
