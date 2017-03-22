@@ -49,6 +49,9 @@ $(document).ready(function() {
   // on page load attach 
   var fetchList = function(searchText, pageNum) {
     // TODO: only movies at the moment
+    // TODO: toggle to exclude low count
+    // TODO: toggle to extend to old movies
+    // TODO: need to sort after all fetches are complete
     var url = 'http://www.omdbapi.com/?s=' + searchText + '&page=' + pageNum + '&type=movie';
     $.get(url, function(data) {
       var results = data;
