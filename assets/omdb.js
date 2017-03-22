@@ -12,6 +12,7 @@ $(document).ready(function() {
 
   var fetchMovie = function(event) {
     var $target = $(event.target);
+    $target.unbind();
     var url = 'http://www.omdbapi.com/?i=' + $target.attr('id') + '&tomatoes=true';
     $.get(url, function(data) {
       var $div = $('<div>');
@@ -22,7 +23,6 @@ $(document).ready(function() {
       $div.append($('<p>').text('Rotten Tomatoes rating: ' + data['tomatoRating']));
       $div.append($('<p>').text('Metacritic rating: ' + data['Metascore']));
       $div.insertAfter($target);
-      $target.unbind();
     });
   };
 
@@ -73,5 +73,10 @@ $(document).ready(function() {
     }
   }
 
+  $(document).keypress(function(e){
+    if (e.which == 13){
+      $("#go").click();
+    }
+  });
   $('#go').click(search);
 });
