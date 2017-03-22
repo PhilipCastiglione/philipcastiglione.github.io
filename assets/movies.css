@@ -1,0 +1,39 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.console {
+  line-height: 1.5em;
+  text-align: center;
+}
+
+#flash {
+  color: orange;
+}
+
+input {
+  vertical-align: bottom;
+  width: 300px;
+  height: 40px;
+  padding: 5px;
+  padding-right: 15px;
+  font-size: 1.2em;
+}
+
+button {
+  vertical-align: bottom;
+  width: 60px;
+  height: 54px;
+  padding: 5px;
+  font-size: 1em;
+  border: 2px solid black;
+}
+
+.movie {
+  text-decoration: underline;
+  font-size: 1.2em;
+}
+
+.movie:hover {
+  cursor: pointer;
+}

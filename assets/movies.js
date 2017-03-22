@@ -10,9 +10,15 @@ $(document).ready(function() {
     return 0;
   };
 
+  var toggleMovie = function(event) {
+    var $target = $(event.target);
+    $target.next().slideToggle(100);
+  };
+
   var fetchMovie = function(event) {
     var $target = $(event.target);
     $target.unbind();
+    $target.click(toggleMovie);
     var url = 'http://www.omdbapi.com/?i=' + $target.attr('id') + '&tomatoes=true';
     $.get(url, function(data) {
       var $div = $('<div>');
