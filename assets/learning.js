@@ -119,12 +119,12 @@ var LEARNING = {
     {
       "name": "HPS111 - Psychology A: Fundamentals of Human Behaviour",
       "description": "BCompSci unit at Deakin University",
-      "progress": "20%"
+      "progress": "28%"
     },
     {
       "name": "SIT105 - Critical Thinking and Problem Solving for IT",
       "description": "BCompSci unit at Deakin University",
-      "progress": "15%"
+      "progress": "24%"
     },
     {
       "name": "SQL Antipatterns: Avoiding the Pitfalls of Database Programming",
