@@ -101,30 +101,29 @@
   <p>Flights are booked for a 2 week visit over Oct/Nov to suss the place out. I'm roughly planning a move for the start of 2020.</p>
   <hr>
   <p>
-    <span id='foot1'>[1] - <a href="https://www.freeforexapi.com" target="_blank" rel="noopener noreferrer">https://www.freeforexapi.com<img style='display:none;' alt="Free Forex API" src="https://www.freeforexapi.com/Images/link.png" height="20"></a></span>
+    <span id='foot1'>[1] - <a href="https://exchangeratesapi.io" target="_blank" rel="noopener noreferrer">https://exchangeratesapi.io</a></span>
   </p>
   <script>
     const salAUD = 126651;
-    const url = `https://www.freeforexapi.com/api/live?pairs=EURUSD,AUDUSD`
+    const url = `https://api.exchangeratesapi.io/latest?base=AUD&symbols=EUR`
 
     const rateSpan = document.getElementById('rate');
     const eurSpan = document.getElementById('eur');
-    const xmlhttp = new XMLHttpRequest();
+    const request = new XMLHttpRequest();
 
-    xmlhttp.onreadystatechange = function() {
+    request.open("GET", url, true);
+    request.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         const response = JSON.parse(this.responseText);
-        if (response.code == 200) {
-          const EURUSD = response.rates.EURUSD.rate;
-          const AUDUSD = response.rates.EURUSD.rate;
-          const EURAUD = AUDUSD / EURUSD;
-          rateSpan.innerHTML = EURAUD.toFixed(3);
-          eurSpan.innerHTML = Math.floor(EURAUD * salAUD).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        if (response.rates && response.rates.EUR) {
+          const AUDEUR = response.rates.EUR
+          rateSpan.innerHTML = AUDEUR.toFixed(3);
+          eurSpan.innerHTML = Math.floor(AUDEUR * salAUD).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
       }
     };
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
+
+    request.send();
   </script>
 </body>
 </html>
