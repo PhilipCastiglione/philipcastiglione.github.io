@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Conway</title>
+  <link rel="shortcut icon" href="conway.png" type="image/x-icon">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="underscore.js"></script>
+  <script src="patterns.js"></script>
+  <script src="conwizzle.js"></script>
+</head>
+<body>
+  <div class="controls">
+    <p>
+      <button id="pause">PAUSE</button><br>
+      <button id="continue">CONTINUE</button><br>
+      <button id="reset">RESET</button><br>
+    </p>
+    <p>
+      SPEED:<br>
+      <button class="speed" data-speed="200">SLOW</button><br>
+      <button class="speed selected" data-speed="100">MEDIUM</button><br>
+      <button class="speed" data-speed="50">FAST</button><br>
+      <button class="speed" data-speed="20">STUPID</button><br>
+    </p>
+    <p>
+      STARTING PATTERN:<br>
+      <button class="start" data-pattern="rpentomino">RPENTOMINO</button><br>
+      <button class="start" data-pattern="diehard">DIEHARD</button><br>
+      <button class="start selected" data-pattern="acorn">ACORN</button><br>
+      <button class="start" data-pattern="glider">GLIDER</button><br>
+      <button class="start" data-pattern="lwss">SPACESHIP</button><br>
+    </p>
+    <p>
+      CLICK PATTERN:<br>
+      <button class="click" data-pattern="rpentomino">RPENTOMINO</button><br>
+      <button class="click" data-pattern="diehard">DIEHARD</button><br>
+      <button class="click" data-pattern="acorn">ACORN</button><br>
+      <button class="click selected" data-pattern="glider">GLIDER</button><br>
+      <button class="click" data-pattern="lwss">SPACESHIP</button><br>
+    </p>
+  </div>
+  <div class="time"><p>Generation: <span id="generation">0</span></p></div>
+  <canvas id="grid"></canvas>
+</body>
+</html>
