@@ -19,6 +19,12 @@
     .reset {
       margin: 0;
       padding: 0;
+
+      animation: fadeIn 6s;
+      -webkit-animation: fadeIn 6s;
+      -moz-animation: fadeIn 6s;
+      -o-animation: fadeIn 6s;
+      -ms-animation: fadeIn 6s;
     }
     .card {
       box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -26,6 +32,7 @@
       top: 50%;
       left: 50%;
       margin-top: 100px;
+      margin-bottom: 100px;
       transform: translate(-50%, 0%);
     }
     .background {
@@ -33,15 +40,44 @@
       position: absolute;
       top: 0;
       left: 0;
-      min-height: calc(100vh - (100vh - 100%));
-      max-height: calc(100vh - (100vh - 100%));
+      height: calc(100vh - (100vh - 100%));
       width: calc(100vw - (100vw - 100%));
-      overflow: hidden;
+      min-height: 1260px;
+      min-width: 1050px;
     }
     @media only screen and (max-width: 768px) {
+      .background {
+        min-height: auto;
+        min-width: auto;
+      }
       .card {
         width: 80%;
       }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @-moz-keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @-webkit-keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @-o-keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @-ms-keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
     }
   </style>
 </head>
