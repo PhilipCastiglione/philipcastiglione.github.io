@@ -6,7 +6,7 @@ p {
 }
 
 button {
-  color: rgb(70,170,255);
+  color: rgb(40,140,255);
   background-color: rgba(130,90,200,.5);
   font-size: 10px;
   min-width: 10vw;
@@ -30,6 +30,6 @@ button {
 }
 
 .selected {
-  color: rgba(130,90,200,.5) !important;
-  background-color: rgb(70,170,255) !important;
+  color: rgba(130,90,200,.8) !important;
+  background-color: rgb(100,200,255) !important;
 }

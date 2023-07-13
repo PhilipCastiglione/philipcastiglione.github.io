@@ -15,10 +15,98 @@
   <meta property="og:description" content="Home Page for the personal website of Philip Castiglione">
   <meta property="og:site-name" content="Philip Castiglione">
   <meta property="og:image" content="http://philipcastiglione.me/assets/images/hero.jpg">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      color: #e1f1fa;
+    }
+    body h1 {
+      font-family: Tahoma, Arial, Helvetica, sans-serif;
+      font-size: 2.75rem;
+      font-weight: 100;
+      padding-top: 30vh;
+      padding-left: 5vw;
+      padding-right: 5vw;
+      padding-bottom: 24px;
+    }
+    body p {
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      font-size: 1.1rem;
+      font-weight: 100;
+      padding-left: 5vw;
+      padding-right: 5vw;
+      line-height: 1.5rem;
+      max-width: 560px;
+    }
+    body > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: fixed;
+      z-index: -10;
+    }
+    @media only screen and (max-width: 1024px) {
+      .img-cover {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+    .logos {
+      padding-top: 18px;
+    }
+    .logo > img {
+      width: 48px;
+      height: 48px;
+      margin-right: 8px;
+      background-color: #e1f1fa;
+      border: 1px solid #e1f1fa;
+      border-radius: 4px;
+    }
+    .logo > img:hover {
+      opacity: 0.5;
+    }
+    .game {
+      position: fixed;
+      padding-right: 0;
+      bottom: 4px;
+      right: 6px;
+    }
+    .game a {
+      color: #e1f1fa;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 100;
+    }
+    .game a:hover {
+      opacity: 0.5;
+    }
+    @media only screen and (max-width: 1024px) {
+      .game {
+        visibility: hidden;
+      }
+    }
+  </style>
 </head>
 <body>
-  <p>There isn't much to see here at the moment.</p>
-  <p>For professional information you can check out my <a href="https://www.linkedin.com/in/philcastiglione/">LinkedIn</a>.</p>
-  <p>Or, feel free to <a href="./conway/index.html">play a game</a>.</p>
+  <div class="img-cover"></div>
+  <img src="./assets/images/hero.jpg" alt="a robot, thinking">
+  <h1>Philip Castiglione</h1>
+  <p>Philip Castiglione has built a unique background over 17 years and two careers. With experience from roles commercial (Management Consultant), technical (Platform Tech Lead) and both (CTO), Phil innovates at the intersection of business and technology.</p>
+  <p class="logos">
+    <a href="https://www.linkedin.com/in/philcastiglione/" class="logo" target="_blank" rel="noopener noreferrer"><img src="./assets/images/linkedin.png" alt="linkedin logo"></a>
+    <a href="https://twitter.com/PhilCastiglione" class="logo" target="_blank" rel="noopener noreferrer"><img src="./assets/images/twitter.png" alt="twitter logo"></a>
+  </p>
+  <p class="game"><a href="./conway/index.html">Play a game</a></p>
 </body>
 </html>
