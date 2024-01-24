@@ -17,8 +17,29 @@
   <meta property="og:image:width" content="1401" />
   <meta property="og:image:height" content="788" />
   <meta property="og:type" content="website" />
+  <style>
+    #cutest {
+      display: inline-block;
+      font-size: 6rem;
+      padding-left: 30px;
+      color: rgb(255,255,255);
+    }
+  </style>
 </head>
 <body>
-  <h1>Gráinne Craig is the cutest.</h1>
+  <h1>Gráinne Craig is the <span id="cutest">cutest</span>.</h1>
+  <script>
+    var cutest = document.getElementById('cutest');
+    var red = Math.random()*255;
+    var green = Math.random()*255;
+    var blue = Math.random()*255;
+
+    setInterval(function() {
+      red = (red + 4) % 256;
+      green = (green - 4) % 256;
+      blue = (blue + 2) % 256;
+      cutest.style.color = `rgb(${red}, ${green}, ${blue})`;
+    }, 100);
+  </script>
 </body>
 </html>
