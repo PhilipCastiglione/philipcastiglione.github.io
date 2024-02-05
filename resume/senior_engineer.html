@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Philip Castiglione</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="./assets/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./assets/images/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="./public/manifest.json">
+  <link rel="mask-icon" href="./assets/images/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Philip Castiglione" />
+  <meta property="og:description" content="Philip Castiglione - Senior Software Engineer" />
+  <meta property="og:url" content="https://philipcastiglione.com/senior_engineer.html" />
+  <meta property="og:image" content="https://philipcastiglione.com/assets/images/hero.jpg" />
+  <meta property="og:image:width" content="1401" />
+  <meta property="og:image:height" content="788" />
+  <meta property="og:type" content="website" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-top: 25px;
+      margin-bottom: 40px;
+    }
+    main {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      margin-bottom: 50px;
+    }
+    aside {
+      width: 400px;
+      text-align: right;
+      padding-top: 10px;
+      padding-bottom: 30px;
+      padding-right: 50px;
+      padding-left: 30px;
+    }
+    aside > section {
+      margin-bottom: 30px;
+    }
+    main > section {
+      width: 800px;
+      padding-left: 110px;
+      padding-top: 10px;
+      padding-bottom: 30px;
+      padding-right: 30px;
+      background-color: #eee;
+      filter: drop-shadow(2px 5px 5px #8c8c8c);
+    }
+    img {
+      filter: drop-shadow(1px 2px 2px #8c8c8c);
+    }
+    main > section > section {
+      position: relative;
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: 500;
+      font-size: 3.5rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: 500;
+      font-size: 2.25rem;
+      margin-top: 0.25rem;
+      margin-bottom: 0.5rem;
+    }
+    h3 {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: 600;
+      font-size: 1.75rem;
+      margin-top: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    h4 {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    h5 {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: 400;
+      font-size: 1.25rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+    h6 {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+      margin-top: 0.25rem;
+      margin-bottom: 0.5rem;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+    p, li {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.01em;
+      line-height: 1.4em;
+    }
+    p {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    li {
+      margin-top: 0.125rem;
+      margin-bottom: 0.125rem;
+      list-style: square;
+    }
+    .socials {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      text-align: center;
+    }
+    .link {
+      margin-top: 8px;
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+    a {
+      color: #000;
+    }
+    a:hover {
+      color: #8c8c8c;
+      text-decoration: none;
+    }
+    a:hover img {
+      opacity: 0.8;
+      border-radius: 2px;
+      outline: 3px solid #eee;
+      background-color: #eee;
+    }
+    .logo {
+      width: 50px;
+      height: 50px;
+    }
+    .entity {
+      position: absolute;
+      top: 5px;
+      left: -70px;
+    }
+    @media only screen and (max-width: 1200px) {
+      aside {
+        padding-right: 30px;
+        padding-left: 20px;
+      }
+      main > section {
+        padding-left: 90px;
+        padding-right: 20px;
+      }
+    }
+    @media only screen and (max-width: 900px) {
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      aside {
+        width: 100%;
+        text-align: left;
+        margin-right: 0;
+      }
+      main {
+        margin-bottom: 0;
+      }
+      main > section {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 0;
+      }
+      aside > section {
+        margin-bottom: 0;
+      }
+    }
+    @media only screen and (max-width: 420px) {
+      h1 {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Philip Castiglione</h1>
+    <h2>Senior Software Engineer</h2>
+  </header>
+  <main>
+    <aside>
+      <section>
+        <h3>Profile</h3>
+        <p>I am a skilled software engineer with 9 years of experience across demanding projects, diverse tech stacks and industries.</p>
+        <p>With soft skills equally developed as technical expertise, I excel in collaborative problem solving, thrive in conditions of complexity & uncertainty and build clarity & consensus to drive outcomes.</p>
+        <p>After experiencing both, I've learned I enjoy hands on technical roles more than management.</p>
+      </section>
+      <section>
+        <h3>Technologies</h3>
+        <p>Ruby, Python, TypeScript, JavaScript, C#, HTML, CSS</p>
+        <p>Rails, Node.js, Flask, SQL, Postgres, React, Ember, MySQL, Redis, MongoDB, AWS, Azure, GCP, DevOps, CI/CD, Docker, Terraform, OOP, TDD, REST, Microservices, Monitoring, Load Testing, Artificial Intelligence & Machine Learning</p>
+        <p>...and a lot more! These are my most commercially used languages and tools, but I'm always trying and learning new things.</p>
+      </section>
+      <section>
+        <h3>Online</h3>
+        <div class="socials">
+          <p><a href="https://philipcastiglione.com" target="_blank" rel="noopener noreferrer"><img class="link logo" src="../assets/images/website.png" alt="website logo"><br>Website</a></p>
+          <p><a href="https://github.com/PhilipCastiglione" target="_blank" rel="noopener noreferrer"><img class="link logo" src="../assets/images/github.png" alt="github logo"><br>Github</a></p>
+          <p><a href="https://linkedin.com/in/philcastiglione" target="_blank" rel="noopener noreferrer"><img class="link logo" src="../assets/images/linkedin.png" alt="linkedin logo"><br>LinkedIn</a></p>
+        </div>
+      </section>
+    </aside>
+    <section>
+      <h3>Professional History Highlights</h3>
+      <section>
+        <img class="entity logo" src="../assets/images/elevate.jpeg" alt="linkedin logo">
+        <h4>Software Engineer Contractor</h4>
+        <h5>Elevate Partners (Jul 2022 - present)</h5>
+        <h6>Remote - mostly Dublin,&nbsp;Ireland & Perth,&nbsp;Australia</h6>
+        <p>
+          <ul>
+            <li>Co-founder "CTO" for Empow: the tech guy at a 4 person tech startup; responsible for everything. Rapidly developing, deploying live and extending features at breakneck pace.</li>
+            <li>Senior Engineer for Oportun: North American listed Fintech. The opposite environment to Empow! Heavily regulated and secure environment, working on a well tested and robust software system dealing with money and banks.</li>
+          </ul>
+        </p>
+      </section>
+      <section>
+        <img class="entity logo" src="../assets/images/digit.jpeg" alt="linkedin logo">
+        <h4>Platform Tech Lead (promoted from Senior Engineer)</h4>
+        <h5>DIGIT, a Scopely Studio (Nov 2019 - Jun 2022)</h5>
+        <h6>Hybrid - Dublin,&nbsp;Ireland</h6>
+        <p>
+          <ul>
+            <li>Architected & built highly scalable, robust & low latency distributed systems for 100k+ high traffic concurrent users</li>
+            <li>Spearheaded quality engineering, agile development practices and new processes</li>
+            <li>Hired, onboarded and mentored team members</li>
+          </ul>
+        </p>
+      </section>
+      <section>
+        <img class="entity logo" src="../assets/images/cogent.jpeg" alt="linkedin logo">
+        <h4>Software Developer</h4>
+        <h5>Cogent (Apr 2018 - Nov 2019)</h5>
+        <h6>On-site - Melbourne,&nbsp;Australia</h6>
+        <p>
+          <ul>
+            <li>Worked with 5 clients, quickly getting up to speed on new tech stacks & codebases to deliver value</li>
+            <li>Delivered carefully architected, robustly tested features & highly available and scalable services</li>
+          </ul>
+        </p>
+      </section>
+      <section>
+        <img class="entity logo" src="../assets/images/a2i2.jpeg" alt="linkedin logo">
+        <h4>Secondment - Machine Learning Internship</h4>
+        <h5>A²I² - Applied Artificial Intelligence Institute (Nov 2018 - Dec 2019)</h5>
+        <h6>On-site - Melbourne,&nbsp;Australia</h6>
+        <p>
+          <ul>
+            <li>A 5-week secondment from Cogent to upskill in AI/ML (before it was cool) in order to help Cogent enter the space</li>
+            <li>I built a<a class="link" href="https://github.com/PhilipCastiglione/sketchup" target="_blank" rel="noopener noreferrer">computer vision (object detection) prototype for generating application UIs from hand drawn sketches</a></li>
+          </ul>
+        </p>
+      </section>
+      <section>
+        <img class="entity logo" src="../assets/images/jcurve.jpeg" alt="linkedin logo">
+        <h4>Software Developer</h4>
+        <h5>JCurve Solutions (May 2016 - Apr 2018)</h5>
+        <h6>On-site - Melbourne,&nbsp;Australia</h6>
+        <p>
+          <ul>
+            <li>ASX listed product (SaaS) company</li>
+            <li>Core contributor on the primary product - learned best practices regarding code, tests, architecture, code review</li>
+          </ul>
+        </p>
+      </section>
+      <section>
+        <img class="entity logo" src="../assets/images/hardhat.jpeg" alt="linkedin logo">
+        <h4>Junior Programmer</h4>
+        <h5>Hardhat Digital (Jun 2015 - May 2016)</h5>
+        <h6>On-site - Melbourne,&nbsp;Australia</h6>
+        <p>
+          <ul>
+            <li>Built websites, CMS backed ecommerce portals, cross-platform phone apps</li>
+            <li>Worked with smart people and learned a load, got great feedback from clients and colleagues</li>
+          </ul>
+        </p>
+      </section>
+      <h3>Education</h3>
+      <section>
+        <img class="entity logo" src="../assets/images/deakin.jpeg" alt="linkedin logo">
+        <h4>Bachelor of Computer Science</h4>
+        <h5>Deakin University - Top Student Award</h5>
+        <p>Deakin Scholarship for Excellence, Professor of Information Technology Award, School of Information Technology Award, Patrick Pleass Memorial Award, Australian Computer Society Student Excellence Award</p>
+      </section>
+      <section>
+        <img class="entity logo" src="../assets/images/unimelb.jpeg" alt="linkedin logo">
+        <h4>Bachelor of Finance</h4>
+        <h5>University of Melbourne - Honor Roll</h5>
+        <p>CPA Management Accounting Prize, Sothertons Fraud and Forensics Prize</p>
+      </section>
+      <h3>Pre-Software Experience</h3>
+      <section>
+        <p>Philip had a career in Finance & Management Consulting between 2009 and 2014.</p>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
