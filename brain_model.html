@@ -1,0 +1,1089 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Brain Model</title>
+  <style>
+    /* cspell:disable-file */
+    /* webkit printing magic: print all background colors */
+    html {
+      -webkit-print-color-adjust: exact;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    @media only screen {
+      body {
+        margin: 2em auto;
+        max-width: 900px;
+        color: rgb(55, 53, 47);
+      }
+    }
+
+    body {
+      line-height: 1.4;
+    }
+
+    a,
+    a.visited {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    .pdf-relative-link-path {
+      font-size: 80%;
+      color: #444;
+    }
+
+    h1,
+    h2,
+    h3 {
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    .page-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 0.75em;
+    }
+
+    h1 {
+      font-size: 1.875rem;
+      margin-top: 1.875rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin-top: 1.25rem;
+    }
+
+    .source {
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      padding: 1.5em;
+      word-break: break-all;
+    }
+
+    .callout {
+      border-radius: 3px;
+      padding: 1rem;
+    }
+
+    figure {
+      margin: 1.25em 0;
+      page-break-inside: avoid;
+    }
+
+    figcaption {
+      opacity: 0.5;
+      font-size: 85%;
+      margin-top: 0.5em;
+    }
+
+    mark {
+      background-color: transparent;
+    }
+
+    .indented {
+      padding-left: 1.5em;
+    }
+
+    hr {
+      background: transparent;
+      display: block;
+      width: 100%;
+      height: 1px;
+      visibility: visible;
+      border: none;
+      border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    @media only print {
+      img {
+        max-height: 100vh;
+        object-fit: contain;
+      }
+    }
+
+    @page {
+      margin: 1in;
+    }
+
+    .collection-content {
+      font-size: 0.875rem;
+    }
+
+    .column-list {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .column {
+      padding: 0 1em;
+    }
+
+    .column:first-child {
+      padding-left: 0;
+    }
+
+    .column:last-child {
+      padding-right: 0;
+    }
+
+    .table_of_contents-item {
+      display: block;
+      font-size: 0.875rem;
+      line-height: 1.3;
+      padding: 0.125rem;
+    }
+
+    .table_of_contents-indent-1 {
+      margin-left: 1.5rem;
+    }
+
+    .table_of_contents-indent-2 {
+      margin-left: 3rem;
+    }
+
+    .table_of_contents-indent-3 {
+      margin-left: 4.5rem;
+    }
+
+    .table_of_contents-link {
+      text-decoration: none;
+      opacity: 0.7;
+      border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid rgba(55, 53, 47, 0.09);
+      border-collapse: collapse;
+    }
+
+    table {
+      border-left: none;
+      border-right: none;
+    }
+
+    th,
+    td {
+      font-weight: normal;
+      padding: 0.25em 0.5em;
+      line-height: 1.5;
+      min-height: 1.5em;
+      text-align: left;
+    }
+
+    th {
+      color: rgba(55, 53, 47, 0.6);
+    }
+
+    ol,
+    ul {
+      margin: 0;
+      margin-block-start: 0.6em;
+      margin-block-end: 0.6em;
+    }
+
+    li>ol:first-child,
+    li>ul:first-child {
+      margin-block-start: 0.6em;
+    }
+
+    ul>li {
+      list-style: disc;
+    }
+
+    ul.to-do-list {
+      padding-inline-start: 0;
+    }
+
+    ul.to-do-list>li {
+      list-style: none;
+    }
+
+    .to-do-children-checked {
+      text-decoration: line-through;
+      opacity: 0.375;
+    }
+
+    ul.toggle>li {
+      list-style: none;
+    }
+
+    ul {
+      padding-inline-start: 1.7em;
+    }
+
+    ul>li {
+      padding-left: 0.1em;
+    }
+
+    ol {
+      padding-inline-start: 1.6em;
+    }
+
+    ol>li {
+      padding-left: 0.2em;
+    }
+
+    .mono ol {
+      padding-inline-start: 2em;
+    }
+
+    .mono ol>li {
+      text-indent: -0.4em;
+    }
+
+    .toggle {
+      padding-inline-start: 0em;
+      list-style-type: none;
+    }
+
+    /* Indent toggle children */
+    .toggle>li>details {
+      padding-left: 1.7em;
+    }
+
+    .toggle>li>details>summary {
+      margin-left: -1.1em;
+    }
+
+    .selected-value {
+      display: inline-block;
+      padding: 0 0.5em;
+      background: rgba(206, 205, 202, 0.5);
+      border-radius: 3px;
+      margin-right: 0.5em;
+      margin-top: 0.3em;
+      margin-bottom: 0.3em;
+      white-space: nowrap;
+    }
+
+    .collection-title {
+      display: inline-block;
+      margin-right: 1em;
+    }
+
+    .page-description {
+      margin-bottom: 2em;
+    }
+
+    .simple-table {
+      margin-top: 1em;
+      font-size: 0.875rem;
+      empty-cells: show;
+    }
+
+    .simple-table td {
+      height: 29px;
+      min-width: 120px;
+    }
+
+    .simple-table th {
+      height: 29px;
+      min-width: 120px;
+    }
+
+    .simple-table-header-color {
+      background: rgb(247, 246, 243);
+      color: black;
+    }
+
+    .simple-table-header {
+      font-weight: 500;
+    }
+
+    time {
+      opacity: 0.5;
+    }
+
+    .icon {
+      display: inline-block;
+      max-width: 1.2em;
+      max-height: 1.2em;
+      text-decoration: none;
+      vertical-align: text-bottom;
+      margin-right: 0.5em;
+    }
+
+    img.icon {
+      border-radius: 3px;
+    }
+
+    .user-icon {
+      width: 1.5em;
+      height: 1.5em;
+      border-radius: 100%;
+      margin-right: 0.5rem;
+    }
+
+    .user-icon-inner {
+      font-size: 0.8em;
+    }
+
+    .text-icon {
+      border: 1px solid #000;
+      text-align: center;
+    }
+
+    .page-cover-image {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      max-height: 30vh;
+    }
+
+    .page-header-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .page-header-icon-with-cover {
+      margin-top: -0.72em;
+      margin-left: 0.07em;
+    }
+
+    .page-header-icon img {
+      border-radius: 3px;
+    }
+
+    .link-to-page {
+      margin: 1em 0;
+      padding: 0;
+      border: none;
+      font-weight: 500;
+    }
+
+    p>.user {
+      opacity: 0.5;
+    }
+
+    td>.user,
+    td>time {
+      white-space: nowrap;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.5);
+      margin-right: 0.6em;
+      vertical-align: middle;
+    }
+
+    p {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .image {
+      border: none;
+      margin: 1.5em 0;
+      padding: 0;
+      border-radius: 0;
+      text-align: center;
+    }
+
+    .code,
+    code {
+      background: rgba(135, 131, 120, 0.15);
+      border-radius: 3px;
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-size: 85%;
+      tab-size: 2;
+    }
+
+    code {
+      color: #eb5757;
+    }
+
+    .code {
+      padding: 1.5em 1em;
+    }
+
+    .code-wrap {
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .code>code {
+      background: none;
+      padding: 0;
+      font-size: 100%;
+      color: inherit;
+    }
+
+    blockquote {
+      font-size: 1.25em;
+      margin: 1em 0;
+      padding-left: 1em;
+      border-left: 3px solid rgb(55, 53, 47);
+    }
+
+    .bookmark {
+      text-decoration: none;
+      max-height: 8em;
+      padding: 0;
+      display: flex;
+      width: 100%;
+      align-items: stretch;
+    }
+
+    .bookmark-title {
+      font-size: 0.85em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 1.75em;
+      white-space: nowrap;
+    }
+
+    .bookmark-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bookmark-info {
+      flex: 4 1 180px;
+      padding: 12px 14px 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .bookmark-image {
+      width: 33%;
+      flex: 1 1 180px;
+      display: block;
+      position: relative;
+      object-fit: cover;
+      border-radius: 1px;
+    }
+
+    .bookmark-description {
+      color: rgba(55, 53, 47, 0.6);
+      font-size: 0.75em;
+      overflow: hidden;
+      max-height: 4.5em;
+      word-break: break-word;
+    }
+
+    .bookmark-href {
+      font-size: 0.75em;
+      margin-top: 0.25em;
+    }
+
+    .sans {
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    .code {
+      font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+    }
+
+    .serif {
+      font-family: Lyon-Text, Georgia, ui-serif, serif;
+    }
+
+    .mono {
+      font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+    }
+
+    .pdf .sans {
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP';
+    }
+
+    .pdf:lang(zh-CN) .sans {
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC';
+    }
+
+    .pdf:lang(zh-TW) .sans {
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC';
+    }
+
+    .pdf:lang(ko-KR) .sans {
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR';
+    }
+
+    .pdf .code {
+      font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+    }
+
+    .pdf:lang(zh-CN) .code {
+      font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+    }
+
+    .pdf:lang(zh-TW) .code {
+      font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+    }
+
+    .pdf:lang(ko-KR) .code {
+      font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+    }
+
+    .pdf .serif {
+      font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP';
+    }
+
+    .pdf:lang(zh-CN) .serif {
+      font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC';
+    }
+
+    .pdf:lang(zh-TW) .serif {
+      font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC';
+    }
+
+    .pdf:lang(ko-KR) .serif {
+      font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR';
+    }
+
+    .pdf .mono {
+      font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+    }
+
+    .pdf:lang(zh-CN) .mono {
+      font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+    }
+
+    .pdf:lang(zh-TW) .mono {
+      font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+    }
+
+    .pdf:lang(ko-KR) .mono {
+      font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+    }
+
+    .highlight-default {
+      color: rgba(55, 53, 47, 1);
+    }
+
+    .highlight-gray {
+      color: rgba(120, 119, 116, 1);
+      fill: rgba(120, 119, 116, 1);
+    }
+
+    .highlight-brown {
+      color: rgba(159, 107, 83, 1);
+      fill: rgba(159, 107, 83, 1);
+    }
+
+    .highlight-orange {
+      color: rgba(217, 115, 13, 1);
+      fill: rgba(217, 115, 13, 1);
+    }
+
+    .highlight-yellow {
+      color: rgba(203, 145, 47, 1);
+      fill: rgba(203, 145, 47, 1);
+    }
+
+    .highlight-teal {
+      color: rgba(68, 131, 97, 1);
+      fill: rgba(68, 131, 97, 1);
+    }
+
+    .highlight-blue {
+      color: rgba(51, 126, 169, 1);
+      fill: rgba(51, 126, 169, 1);
+    }
+
+    .highlight-purple {
+      color: rgba(144, 101, 176, 1);
+      fill: rgba(144, 101, 176, 1);
+    }
+
+    .highlight-pink {
+      color: rgba(193, 76, 138, 1);
+      fill: rgba(193, 76, 138, 1);
+    }
+
+    .highlight-red {
+      color: rgba(212, 76, 71, 1);
+      fill: rgba(212, 76, 71, 1);
+    }
+
+    .highlight-gray_background {
+      background: rgba(241, 241, 239, 1);
+    }
+
+    .highlight-brown_background {
+      background: rgba(244, 238, 238, 1);
+    }
+
+    .highlight-orange_background {
+      background: rgba(251, 236, 221, 1);
+    }
+
+    .highlight-yellow_background {
+      background: rgba(251, 243, 219, 1);
+    }
+
+    .highlight-teal_background {
+      background: rgba(237, 243, 236, 1);
+    }
+
+    .highlight-blue_background {
+      background: rgba(231, 243, 248, 1);
+    }
+
+    .highlight-purple_background {
+      background: rgba(244, 240, 247, 0.8);
+    }
+
+    .highlight-pink_background {
+      background: rgba(249, 238, 243, 0.8);
+    }
+
+    .highlight-red_background {
+      background: rgba(253, 235, 236, 1);
+    }
+
+    .block-color-default {
+      color: inherit;
+      fill: inherit;
+    }
+
+    .block-color-gray {
+      color: rgba(120, 119, 116, 1);
+      fill: rgba(120, 119, 116, 1);
+    }
+
+    .block-color-brown {
+      color: rgba(159, 107, 83, 1);
+      fill: rgba(159, 107, 83, 1);
+    }
+
+    .block-color-orange {
+      color: rgba(217, 115, 13, 1);
+      fill: rgba(217, 115, 13, 1);
+    }
+
+    .block-color-yellow {
+      color: rgba(203, 145, 47, 1);
+      fill: rgba(203, 145, 47, 1);
+    }
+
+    .block-color-teal {
+      color: rgba(68, 131, 97, 1);
+      fill: rgba(68, 131, 97, 1);
+    }
+
+    .block-color-blue {
+      color: rgba(51, 126, 169, 1);
+      fill: rgba(51, 126, 169, 1);
+    }
+
+    .block-color-purple {
+      color: rgba(144, 101, 176, 1);
+      fill: rgba(144, 101, 176, 1);
+    }
+
+    .block-color-pink {
+      color: rgba(193, 76, 138, 1);
+      fill: rgba(193, 76, 138, 1);
+    }
+
+    .block-color-red {
+      color: rgba(212, 76, 71, 1);
+      fill: rgba(212, 76, 71, 1);
+    }
+
+    .block-color-gray_background {
+      background: rgba(241, 241, 239, 1);
+    }
+
+    .block-color-brown_background {
+      background: rgba(244, 238, 238, 1);
+    }
+
+    .block-color-orange_background {
+      background: rgba(251, 236, 221, 1);
+    }
+
+    .block-color-yellow_background {
+      background: rgba(251, 243, 219, 1);
+    }
+
+    .block-color-teal_background {
+      background: rgba(237, 243, 236, 1);
+    }
+
+    .block-color-blue_background {
+      background: rgba(231, 243, 248, 1);
+    }
+
+    .block-color-purple_background {
+      background: rgba(244, 240, 247, 0.8);
+    }
+
+    .block-color-pink_background {
+      background: rgba(249, 238, 243, 0.8);
+    }
+
+    .block-color-red_background {
+      background: rgba(253, 235, 236, 1);
+    }
+
+    .select-value-color-uiBlue {
+      background-color: rgba(35, 131, 226, .07);
+    }
+
+    .select-value-color-pink {
+      background-color: rgba(245, 224, 233, 1);
+    }
+
+    .select-value-color-purple {
+      background-color: rgba(232, 222, 238, 1);
+    }
+
+    .select-value-color-green {
+      background-color: rgba(219, 237, 219, 1);
+    }
+
+    .select-value-color-gray {
+      background-color: rgba(227, 226, 224, 1);
+    }
+
+    .select-value-color-transparentGray {
+      background-color: rgba(227, 226, 224, 0);
+    }
+
+    .select-value-color-translucentGray {
+      background-color: rgba(255, 255, 255, 0.0375);
+    }
+
+    .select-value-color-orange {
+      background-color: rgba(250, 222, 201, 1);
+    }
+
+    .select-value-color-brown {
+      background-color: rgba(238, 224, 218, 1);
+    }
+
+    .select-value-color-red {
+      background-color: rgba(255, 226, 221, 1);
+    }
+
+    .select-value-color-yellow {
+      background-color: rgba(253, 236, 200, 1);
+    }
+
+    .select-value-color-blue {
+      background-color: rgba(211, 229, 239, 1);
+    }
+
+    .select-value-color-pageGlass {
+      background-color: undefined;
+    }
+
+    .select-value-color-washGlass {
+      background-color: undefined;
+    }
+
+    .checkbox {
+      display: inline-flex;
+      vertical-align: text-bottom;
+      width: 16;
+      height: 16;
+      background-size: 16px;
+      margin-left: 2px;
+      margin-right: 5px;
+    }
+
+    .checkbox-on {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+    }
+
+    .checkbox-off {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+    }
+  </style>
+</head>
+
+<body>
+  <article id="ead2b520-0901-482f-aed9-e0d480d4c6d3" class="page sans">
+    <header>
+      <h1 class="page-title">Brain Model</h1>
+      <p class="page-description"></p>
+    </header>
+    <div class="page-body">
+      <figure id="35255dbf-ecb1-4a01-80c6-83d5cc8d7945" class="image"><a href="./assets/images/brain_diagram.png"><img
+            style="width:624px" src="./assets/images/brain_diagram.png" /></a></figure>
+      <h1 id="78127b8e-417f-483d-8c40-913bb083494f" class="">Legend</h1>
+      <p id="6acc509d-bf10-42ca-bdcb-e1dee7db12bb" class="block-color-red">Unanswered question/issue</p>
+      <p id="4e3372f1-37e2-4811-b11d-2d20db41aa48" class="block-color-pink">Probably V2 model</p>
+      <h1 id="20c2b36f-c918-4cee-9511-c0c25e6c7e98" class="">Architecture</h1>
+      <p id="2ed1a3bb-4ad5-4af0-a2f4-f79f182f52ea" class="">Neurons, of 3 different kinds, organised in a brain mass:
+      </p>
+      <ul id="b5a2e5d8-74f4-4570-a432-821f3a4b73ce" class="bulleted-list">
+        <li style="list-style-type:disc">Afferent (sensory) Neurons - special input, output to neurons</li>
+      </ul>
+      <ul id="e888644c-c7a6-4377-90bf-d33d772a4ada" class="bulleted-list">
+        <li style="list-style-type:disc">Interneurons - neurons to neurons</li>
+      </ul>
+      <ul id="0a6e26ac-d7ae-4cbc-9d25-c101236fe484" class="bulleted-list">
+        <li style="list-style-type:disc">Efferent (effector) Neurons - input from neurons, special output</li>
+      </ul>
+      <p id="2c1f23b1-bfd7-47bc-a9d1-963681cbe4e9" class="">The brain is conceived as a structure that contains the
+        neurons. However, this may not be a domain object, but just observable behaviour/properties of the amalgam.
+        (Derived) attributes are:</p>
+      <ul id="781030c3-c36d-44d7-87fd-b1ba42dee0c5" class="bulleted-list">
+        <li style="list-style-type:disc">Afferent surface(s): receptor function(s)</li>
+      </ul>
+      <ul id="57614e9e-18a6-4de5-b8ff-18db34e8f34b" class="bulleted-list">
+        <li style="list-style-type:disc">Efferent surface(s): effector function(s)</li>
+      </ul>
+      <ul id="19c4cd0c-2041-4049-8b5f-3aac0aa31a1c" class="bulleted-list">
+        <li style="list-style-type:disc">Overall size, linkedness, other network characteristics</li>
+      </ul>
+      <ul id="9cfb3983-effa-4521-bd19-eabd87cac101" class="bulleted-list">
+        <li style="list-style-type:disc">Structure and location of neurons<ul id="e2d8d2c2-d13b-4aef-bd7f-fe9e51f5c2e5"
+            class="bulleted-list">
+            <li style="list-style-type:circle">Neurons that share function should be co-located. In a good system, this
+              would be hardware realities (rather than virtualised).</li>
+          </ul>
+        </li>
+      </ul>
+      <p id="1cef2385-956c-43b3-a4b9-cf63dd6aad0d" class="block-color-red">Neurogenesis? Does this require some active
+        concept/object outside of neurons? Or, neurons could (coordinate to?) create neighbours under some conditions?
+        Not how it works in the brain, but maybe just as good (or better).</p>
+      <h1 id="ccc2ce32-0741-470c-8622-e600425640b6" class="">Neurons</h1>
+      <h2 id="e3752a5b-609d-4b2e-acd7-9e143ba11170" class="">Behaviour</h2>
+      <ul id="98f5a246-21ca-475b-9d07-d2e86cef6f2f" class="bulleted-list">
+        <li style="list-style-type:disc">Receive special input (afferent)</li>
+      </ul>
+      <ul id="10b428f0-a188-4243-8f88-671be9ce3f52" class="bulleted-list">
+        <li style="list-style-type:disc">Receive neuron signal (interneuron, efferent)<ul
+            id="20185faf-0124-49a8-a94f-c8b9960242ea" class="block-color-pink bulleted-list">
+            <li style="list-style-type:circle">Transform neuron signal input</li>
+          </ul>
+          <ul id="d68a87c5-c818-49cc-ab14-ffaa046cd661" class="block-color-pink bulleted-list">
+            <li style="list-style-type:circle">Change input transformer function</li>
+          </ul>
+        </li>
+      </ul>
+      <ul id="11d5d067-68d0-4b5f-8064-2690e6ea7f2f" class="bulleted-list">
+        <li style="list-style-type:disc">Trigger outward signal based on (aggregated) input<ul
+            id="e9d1dffe-bc1d-41d9-9787-277824585a2f" class="bulleted-list">
+            <li style="list-style-type:circle"><mark class="highlight-red">Change trigger threshold function (only if
+                this doesn’t end up being global, eg. because we want to increase our capacity for internal
+                state)</mark></li>
+          </ul>
+        </li>
+      </ul>
+      <ul id="aee4ccdd-5527-4c48-9ac9-b4b6b5ebbe37" class="bulleted-list">
+        <li style="list-style-type:disc">Send neuron signal (afferent, interneuron)<ul
+            id="c70d85dc-dc33-44bf-a046-4f00c126dd2c" class="block-color-default bulleted-list">
+            <li style="list-style-type:circle">Transform neuron signal output</li>
+          </ul>
+          <ul id="262883e3-da75-4d97-a645-f07a2e440530" class="block-color-default bulleted-list">
+            <li style="list-style-type:circle">Change output transformer function</li>
+          </ul>
+        </li>
+      </ul>
+      <ul id="355d7c21-265f-41f0-a387-541b57a3e81d" class="bulleted-list">
+        <li style="list-style-type:disc">Send special output (efferent)</li>
+      </ul>
+      <ul id="241c75c8-68a2-41e8-b64b-29d810cee334" class="block-color-default bulleted-list">
+        <li style="list-style-type:disc">Add inward connection (interneuron, efferent)</li>
+      </ul>
+      <ul id="2bcb14c2-bf85-4d51-ba93-a1bf12369fa7" class="block-color-default bulleted-list">
+        <li style="list-style-type:disc">Prune inward connection (interneuron, efferent)</li>
+      </ul>
+      <ul id="6abea362-98b9-4edb-b359-8cd0d01b90cf" class="block-color-default bulleted-list">
+        <li style="list-style-type:disc">Add outward connection (afferent, interneuron)</li>
+      </ul>
+      <ul id="f9cd8e0b-cddd-46ac-a2dc-03885d35594f" class="block-color-default bulleted-list">
+        <li style="list-style-type:disc">Prune outward connection (afferent, interneuron)</li>
+      </ul>
+      <ul id="5ba4d972-9c06-4161-ae72-6944f5f018a2" class="block-color-pink bulleted-list">
+        <li style="list-style-type:disc">Apoptosis (death)</li>
+      </ul>
+      <ul id="c37a52dd-71d8-4918-a93b-0ed838607d64" class="block-color-pink bulleted-list">
+        <li style="list-style-type:disc">Genesis (birth)</li>
+      </ul>
+      <h2 id="1b46b459-3567-4cc7-9b6c-05c303eb709e" class="">Attributes</h2>
+      <h3 id="8fb61739-1142-4385-bdf1-e2560a2d089d" class="">Individual</h3>
+      <ul id="266622c0-0bf2-46e6-9d44-d9918e120245" class="bulleted-list">
+        <li style="list-style-type:disc">Location of neuron within the system<ul
+            id="8f080a00-ac1f-4151-afe6-da7223ee445a" class="bulleted-list">
+            <li style="list-style-type:circle">Distance from (connected and unconnected) neighbours</li>
+          </ul>
+        </li>
+      </ul>
+      <ul id="3f18ec8b-5bca-4586-af71-92f4fec188a7" class="bulleted-list">
+        <li style="list-style-type:disc">Inward connected neighbours</li>
+      </ul>
+      <ul id="1b0a1af9-20fb-4066-ab70-2e7e316e60f1" class="bulleted-list">
+        <li style="list-style-type:disc">Outward connected neighbours</li>
+      </ul>
+      <ul id="440bf6cc-7094-4138-b6ef-d485b2b5271c" class="bulleted-list">
+        <li style="list-style-type:disc"><mark class="highlight-pink">Input transformer function</mark>
+          <ul id="c58c1603-fbf0-4271-a6f7-8cee8258b765" class="bulleted-list">
+            <li style="list-style-type:circle"><mark class="highlight-pink">By inward connected neighbour</mark></li>
+          </ul>
+          <ul id="25d1dcd0-0222-4cda-9221-8c2c5d4e1609" class="bulleted-list">
+            <li style="list-style-type:circle"><mark class="highlight-pink">Or group</mark></li>
+          </ul>
+        </li>
+      </ul>
+      <ul id="48007649-fd31-43ba-9859-942edc4888b0" class="bulleted-list">
+        <li style="list-style-type:disc">Output transformer function<ul id="ef50f665-45c9-4781-a686-d085504d1e0f"
+            class="bulleted-list">
+            <li style="list-style-type:circle">By outward connected neighbour</li>
+          </ul>
+          <ul id="7a93f579-e7ba-4508-90fe-7bcc7c04fe9f" class="bulleted-list">
+            <li style="list-style-type:circle"><mark class="highlight-pink">Or group</mark></li>
+          </ul>
+        </li>
+      </ul>
+      <h3 id="6ae8bdc8-583c-47f4-9a0f-0d3238db1a07" class="">Global</h3>
+      <ul id="ea059a9a-07cd-4428-bc3a-3beef891d664" class="bulleted-list">
+        <li style="list-style-type:disc">Initial values/functions, and ranges/limits for:<ul
+            id="0b8c3344-5cc2-4095-9949-b05bae947371" class="bulleted-list">
+            <li style="list-style-type:circle">Location</li>
+          </ul>
+          <ul id="8da028f7-6b37-474d-ac94-a87d705dd067" class="bulleted-list">
+            <li style="list-style-type:circle">Inward neighbours<ul id="cc2fd914-faf3-4e3e-880e-3ef21b413a7c"
+                class="bulleted-list">
+                <li style="list-style-type:square">number</li>
+              </ul>
+              <ul id="5883ec14-21c5-4481-9f6c-9fedafd65d00" class="bulleted-list">
+                <li style="list-style-type:square">selection</li>
+              </ul>
+            </li>
+          </ul>
+          <ul id="7fb1d039-5946-4f8b-a57c-157a94d2244d" class="bulleted-list">
+            <li style="list-style-type:circle">Outward neighbours<ul id="c87a55bb-9d14-49cf-89a6-73fa59d7922d"
+                class="bulleted-list">
+                <li style="list-style-type:square">number</li>
+              </ul>
+              <ul id="ca65dddf-d08f-49b7-8352-c159654885fe" class="bulleted-list">
+                <li style="list-style-type:square">selection</li>
+              </ul>
+            </li>
+          </ul>
+          <ul id="fdd2bf38-0ef1-49f9-9e24-5a8b10323137" class="block-color-pink bulleted-list">
+            <li style="list-style-type:circle">Input transformer function<ul id="3f4a0e00-cf2a-46fb-87bb-fb6516003ba9"
+                class="bulleted-list">
+                <li style="list-style-type:square">By inward neighbour</li>
+              </ul>
+              <ul id="57a04fe7-c76a-4f31-b712-c1e21ef4bfd3" class="bulleted-list">
+                <li style="list-style-type:square">Or group</li>
+              </ul>
+            </li>
+          </ul>
+          <ul id="eae1aefd-517f-4a2a-b421-c7c0b20bf11f" class="bulleted-list">
+            <li style="list-style-type:circle">Output transformer function<ul id="21846f38-9881-499a-945f-5460c714377d"
+                class="bulleted-list">
+                <li style="list-style-type:square">By outward neighbour</li>
+              </ul>
+              <ul id="c10bee58-c6fb-4ce6-820c-27e4ae474344" class="block-color-pink bulleted-list">
+                <li style="list-style-type:square">Or group</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul id="88490028-f68c-4e6b-8eda-ccf242c8817c" class="bulleted-list">
+        <li style="list-style-type:disc">Trigger threshold function<ul id="1492a7c0-e822-4892-aebe-ec67c6e10d6a"
+            class="bulleted-list">
+            <li style="list-style-type:circle">Absolute refractory function</li>
+          </ul>
+          <ul id="06376b9f-60bc-4e07-8488-e92d77c4bbaf" class="bulleted-list">
+            <li style="list-style-type:circle">Post refractory period function</li>
+          </ul>
+        </li>
+      </ul>
+      <ul id="a9931b98-f9e1-4002-9735-9089b044f713" class="bulleted-list">
+        <li style="list-style-type:disc">Signal decay to baseline function</li>
+      </ul>
+      <ul id="a77612f6-19b1-450b-84c7-6c6e88add113" class="bulleted-list">
+        <li style="list-style-type:disc">Trigger for adding an inward connection</li>
+      </ul>
+      <ul id="396ecc02-d7cd-4074-ae7f-4d2fecc43199" class="bulleted-list">
+        <li style="list-style-type:disc">Trigger for pruning an inward connection</li>
+      </ul>
+      <ul id="2e6f216c-f3ed-48b8-86ac-57a893c40694" class="bulleted-list">
+        <li style="list-style-type:disc">Trigger for adding an outward connection</li>
+      </ul>
+      <ul id="5d98c0b9-85f7-4c55-af6c-5c5c9b78239e" class="bulleted-list">
+        <li style="list-style-type:disc">Trigger for pruning an outward connection</li>
+      </ul>
+      <ul id="b68f844e-658f-4a65-ac91-82fafdccb359" class="block-color-pink bulleted-list">
+        <li style="list-style-type:disc">Trigger for apoptosis</li>
+      </ul>
+      <ul id="fb0447e0-1eff-47f4-985a-da7ab4f6a9e8" class="block-color-pink bulleted-list">
+        <li style="list-style-type:disc">Trigger for genesis</li>
+      </ul>
+      <h1 id="44387161-c8dd-49cd-8a7f-a6e6f0beebc4" class="">Processes</h1>
+      <p id="fe0dad3e-6252-49c7-b1f2-35adba6586d3" class="">Are there different processes? Why would there be. </p>
+      <p id="ce86192b-2208-4b62-907e-8a202869e6d7" class="">Train</p>
+      <ul id="b56d5295-e247-451b-b142-d9230f1e4cf3" class="bulleted-list">
+        <li style="list-style-type:disc">“unlabelled”; just form structure</li>
+      </ul>
+      <ul id="5dcb1edf-bb59-4762-920f-1b2d2cc37035" class="bulleted-list">
+        <li style="list-style-type:disc">“labelled”; associative - providing input of type A (eg. visual) and type(s)
+          B(-Z) (eg. conceptual) at the same time to guide associative structure</li>
+      </ul>
+      <p id="fa757f56-fcc8-403e-a7cf-a6343fdd154c" class="">Interact</p>
+      <ul id="07bb78b5-836c-4502-9d20-81f2e83fed9d" class="bulleted-list">
+        <li style="list-style-type:disc">seeking some specific output - probably the same as the unlabelled training
+          action, given the assumption that you can infer output on the effector you’re interested in</li>
+      </ul>
+      <h1 id="a26fcae7-7272-439a-9bc3-52c6e5f8f6a1" class="">Questions</h1>
+      <p id="f198fe37-e65b-4734-9e3c-cf61dd45f26e" class=""><strong>In the absence of input, what should
+          happen?</strong></p>
+      <p id="ec67c719-85b7-4dce-80ca-eacd2efae3b0" class="">After some time, baseline behaviour: eg nothing</p>
+      <p id="1e9049fb-79b8-432c-9b84-4c6f0b8a69c2" class=""><strong>Insight into internal state? Monitoring?</strong>
+      </p>
+      <p id="4e74bf70-2f05-420b-a5ab-5f9ae0c28be2" class="">This is a combination of:</p>
+      <ul id="9e9f953f-7ea2-4bd0-a4d4-8fda23031505" class="bulleted-list">
+        <li style="list-style-type:disc">effector function(s) for higher level information (”what are you thinking
+          about”)</li>
+      </ul>
+      <ul id="12bf5376-128c-44e2-8d2d-03295af97005" class="bulleted-list">
+        <li style="list-style-type:disc">regular software monitoring</li>
+      </ul>
+      <p id="e59ce8bf-0341-41cd-b13a-751177248ddc" class="block-color-red"><strong>Intentional structure?</strong></p>
+      <p id="6ff424e9-6bd5-4812-b705-111df09ebd32" class="block-color-red">For example, a communication channel in the
+        middle of the brain, like our white matter.</p>
+      <p id="15e867ac-d634-4bac-8065-44a3e4a34585" class="block-color-red">Or, to represent our concept of instincts
+        (eg. every neurotypical brain recognises human faces from birth easily)</p>
+      <p id="e085da0f-2902-45aa-80bc-8794a66d70a1" class="block-color-red"><strong>Do we need more internal
+          state?</strong></p>
+      <p id="42f3e618-0b24-4f4a-9d0f-d7936a48b583" class="block-color-red">For example for short/long term memory
+        (though digital storage with access would probably be eventually a nice advantage), attention…</p>
+      <p id="22cb6112-f46e-4357-81de-82bb0eeb9540" class="block-color-red"><strong>Speeds/rates, framerate in
+          general</strong></p>
+      <p id="4bdbef10-95bb-40e5-8c55-1ce3b7bedf6c" class="block-color-red">Think about this</p>
+      <p id="ab37bc1a-b17e-4476-9ae8-cb9dc3203979" class="">
+      </p>
+    </div>
+  </article><span class="sans" style="font-size:14px;padding-top:2em"></span>
+</body>
+
+</html>
