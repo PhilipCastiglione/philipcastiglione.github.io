@@ -5,15 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Philip Castiglione</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="../assets/images/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="../assets/images/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="../public/manifest.json">
-  <link rel="mask-icon" href="../assets/images/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="./public/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="./public/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./public/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="./public/manifest.json">
   <meta name="theme-color" content="#000000">
   <meta property="og:title" content="Philip Castiglione" />
-  <meta property="og:description" content="Philip Castiglione - Senior Software Engineer" />
-  <meta property="og:url" content="https://philipcastiglione.com/senior_engineer.html" />
+  <meta property="og:description" content="Philip Castiglione – Software Engineer" />
+  <meta property="og:url" content="https://philipcastiglione.com/resume/software_engineer.html" />
   <meta property="og:image" content="https://philipcastiglione.com/assets/images/hero.jpg" />
   <meta property="og:image:width" content="1401" />
   <meta property="og:image:height" content="788" />
@@ -31,9 +30,19 @@
     }
 
     header {
-      text-align: center;
+      display: flex;
+      flex-direction: row;
+      place-content: center;
+      place-items: center;
+      gap: 10px 50px;
       margin-top: 25px;
       margin-bottom: 40px;
+    }
+
+    .avatar {
+      border-radius: 100%;
+      width: 120px;
+      height: 120px;
     }
 
     main {
@@ -119,6 +128,7 @@
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-weight: 400;
       font-size: 1rem;
+      font-style: italic;
       letter-spacing: 0.02em;
       margin-top: 0.25rem;
       margin-bottom: 1rem;
@@ -138,6 +148,7 @@
     }
 
     p {
+      font-weight: 300;
       margin-top: 0.5rem;
       margin-bottom: 0.5rem;
     }
@@ -151,7 +162,8 @@
     .socials {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      gap: 18px;
+      justify-content: flex-end;
       text-align: center;
     }
 
@@ -163,11 +175,11 @@
 
     a {
       color: #000;
+      text-decoration: none;
     }
 
     a:hover {
       color: #8c8c8c;
-      text-decoration: none;
     }
 
     a:hover img {
@@ -229,6 +241,10 @@
     }
 
     @media only screen and (max-width: 420px) {
+      header {
+        flex-direction: column;
+      }
+
       h1 {
         font-size: 3rem;
       }
@@ -242,35 +258,37 @@
 
 <body>
   <header>
-    <h1>Philip Castiglione</h1>
-    <h2>Senior Software Engineer</h2>
+    <img class="avatar" src="../assets/images/me.jpeg" alt="a photgraph of Philip smiling">
+    <div>
+      <h1>Philip Castiglione</h1>
+      <h2>Software Engineer</h2>
+    </div>
   </header>
   <main>
     <aside>
       <section>
         <h3>Profile</h3>
-        <p>I am a skilled software engineer with 9 years of experience across demanding projects, diverse tech stacks
-          and industries.</p>
-        <p>With soft skills equally developed as technical expertise, I excel in collaborative problem solving, thrive
-          in conditions of complexity & uncertainty and build clarity & consensus to drive outcomes.</p>
-        <p>After experiencing both, I've learned I enjoy hands on technical roles more than management.</p>
+        <p>9 years in software engineering<br />(principal engineer, tech lead)</p>
+        <p>Strong tech skills</p>
+        <p>Strong soft skills</p>
+        <p>7 years in finance & business</p>
       </section>
       <section>
         <h3>Technologies</h3>
         <p>Ruby, Python, TypeScript, JavaScript, C#, HTML, CSS</p>
-        <p>Rails, Node.js, Flask, SQL, Postgres, React, Svelte, Ember, MySQL, Redis, MongoDB, AWS, Azure, GCP, DevOps,
+        <p>Rails, Node.js, Flask, FastAPI, React, Svelte, SQL, Postgres, MySQL, MongoDB, Redis, AWS, Azure, GCP, DevOps,
           CI/CD, Docker, Terraform, OOP, TDD, REST, Microservices, Monitoring, Load Testing, Artificial Intelligence &
           Machine Learning</p>
-        <p>...and a lot more! These are my most commercially used languages and tools, but I'm always trying and
+        <p>...and many more!<br />These are my most commercially used languages and tools, but I'm always trying and
           learning new things.</p>
       </section>
       <section>
         <h3>Online</h3>
         <div class="socials">
-          <p><a href="https://philipcastiglione.com" target="_blank" rel="noopener noreferrer"><img class="link logo"
-                src="../assets/images/website.png" alt="website logo"><br>Website</a></p>
           <p><a href="https://github.com/PhilipCastiglione" target="_blank" rel="noopener noreferrer"><img
                 class="link logo" src="../assets/images/github.png" alt="github logo"><br>Github</a></p>
+          <p><a href="https://hachyderm.io/@xaoz" target="_blank" rel="noopener noreferrer"><img class="link logo"
+                src="../assets/images/mastodon.png" alt="github logo"><br>Mastodon</a></p>
           <p><a href="https://linkedin.com/in/philcastiglione" target="_blank" rel="noopener noreferrer"><img
                 class="link logo" src="../assets/images/linkedin.png" alt="linkedin logo"><br>LinkedIn</a></p>
         </div>
@@ -280,16 +298,14 @@
       <h3>Professional History Highlights</h3>
       <section>
         <img class="entity logo" src="../assets/images/elevate.jpeg" alt="linkedin logo">
-        <h4>Software Engineer Contractor</h4>
+        <h4>Principal Consultant</h4>
         <h5>Elevate Partners (Jul 2022 - present)</h5>
-        <h6>Remote - mostly Dublin,&nbsp;Ireland & Perth,&nbsp;Australia</h6>
+        <h6>Remote - mostly from Dublin,&nbsp;Ireland and Perth,&nbsp;Australia</h6>
         <p>
         <ul>
-          <li>Co-founder/"CTO" for HR SaaS startup: the tech guy at a 4 person tech startup; responsible for everything.
-            Rapidly developing, deploying live and adding features at breakneck pace.</li>
-          <li>Senior Engineer for North American exchange listed Neobank ("FinTech"): the opposite environment to the
-            above. Heavily regulated and security oriented environment, working on a well tested and robust software
-            system dealing with money and banks.</li>
+          <li>Principal Engineer at North American Health/Data/Fintech startup</li>
+          <li>Senior Engineer at North American exchange listed Neobank/FinTech</li>
+          <li>Co-Founder CTO at HR SaaS startup</li>
         </ul>
         </p>
       </section>
@@ -302,7 +318,8 @@
         <ul>
           <li>Architected & built highly scalable, robust, consistent & low latency distributed systems for 100k+ high
             traffic concurrent users.</li>
-          <li>Lead a team of 5 amazing engineers; hiring, onboarding, mentoring.</li>
+          <li>Lead a team of 5 amazing engineers; hiring, onboarding, mentoring; facilitating, protecting and enabling.
+          </li>
         </ul>
         </p>
       </section>
@@ -326,9 +343,9 @@
         <h6>On-site - Melbourne,&nbsp;Australia</h6>
         <p>
         <ul>
-          <li>A 5-week secondment from Cogent to upskill in AI/ML (before it was cool) in order to help Cogent enter the
-            space.</li>
-          <li>I built a<a class="link" href="https://github.com/PhilipCastiglione/sketchup" target="_blank"
+          <li>A secondment from Cogent to upskill in AI/ML (before it was cool) in order to help Cogent enter the space.
+          </li>
+          <li>Built a<a class="link" href="https://github.com/PhilipCastiglione/sketchup" target="_blank"
               rel="noopener noreferrer">computer vision (object detection) prototype for generating application UIs from
               hand drawn sketches.</a></li>
         </ul>
@@ -375,8 +392,7 @@
       </section>
       <h3>Pre-Software Experience</h3>
       <section>
-        <p>I had a career in Finance & Management Consulting between 2009 and 2014. I changed career to become a
-          programmer because I enjoyed it more.</p>
+        <p>I had a career in finance & business strategy/operations prior to changing career.</p>
       </section>
     </section>
   </main>
