@@ -39,7 +39,18 @@
       padding-top: 28vh;
       padding-left: 5vw;
       padding-right: 5vw;
+    }
+
+    body aside {
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      font-size: 0.8rem;
+      font-style: italic;
+      font-weight: 100;
+      padding-left: 5vw;
+      padding-right: 5vw;
       padding-bottom: 24px;
+      line-height: 1.5rem;
+      max-width: 540px;
     }
 
     body p {
@@ -52,6 +63,17 @@
       line-height: 1.5rem;
       max-width: 540px;
     }
+
+    p a,
+    p a:visited {
+      color: #e1f1fa;
+    }
+
+    p a:hover {
+      color: #3ebef5;
+      text-decoration: none;
+    }
+
 
     body>img {
       width: 100%;
@@ -89,7 +111,8 @@
     }
 
     .logo>img:hover {
-      opacity: 0.5;
+      border-color: #3ebef5;
+      background-color: #3ebef5;
     }
 
     .game {
@@ -107,7 +130,7 @@
     }
 
     .game a:hover {
-      opacity: 0.5;
+      color: #3ebef5;
     }
 
     @media only screen and (max-width: 1024px) {
@@ -122,10 +145,14 @@
   <div class="img-cover"></div>
   <img src="./assets/images/hero.jpg" alt="a robot, thinking">
   <h1>Philip Castiglione</h1>
-  <p>Computers.</p>
+  <aside>BCompSc(Cognitive Science), BCom(Finance)</aside>
+  <p>Software engineer.</p>
+  <p>My personal interests include cognitive neuroscience and the tantalising fantasy of artificial intelligence.</p>
   <p class="logos">
     <a href="https://github.com/philipCastiglione/" class="logo" target="_blank" rel="noopener noreferrer"><img
         src="./assets/images/github.png" alt="github logo"></a>
+    <a href="https://x.com/PhilCastiglione" class="logo" target="_blank" rel="noopener noreferrer"><img
+        src="./assets/images/twitter.png" alt="twitter logo"></a>
     <a href="https://hachyderm.io/@xaoz" class="logo" target="_blank" rel="noopener noreferrer"><img
         src="./assets/images/mastodon.png" alt="mastodon logo"></a>
     <a href="https://www.linkedin.com/in/philcastiglione/" class="logo" target="_blank" rel="noopener noreferrer"><img
