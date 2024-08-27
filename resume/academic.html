@@ -14,6 +14,10 @@
   <meta property="og:description" content="Academic Curriculum Vitae" />
   <meta property="og:url" content="https://philipcastiglione.com/resume/academic.html" />
   <meta property="og:type" content="website" />
+  <script>
+    // TODO: remove this when the resume is ready
+    window.location.replace("https://philipcastiglione.com/public/resume.pdf");
+  </script>
   <style>
     * {
       margin: 0;
@@ -21,12 +25,214 @@
       box-sizing: border-box;
     }
 
-    @media only screen and (max-width: 1024px) {}
+    body {
+      max-width: 1056px;
+      margin: 0 auto;
+      padding: 48px;
+      color: #e1f1fa;
+      background: linear-gradient(#141419, #232d39);
+    }
+
+    main {
+      border: 1px solid #e1f1fa;
+      background-color: rgba(0, 0, 0, 0.14);
+      box-shadow: 0px 0px 140px #323238;
+      padding: 24px 48px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Tahoma, Arial, Helvetica, sans-serif;
+      font-weight: 100;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.75rem;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 1.3rem;
+      margin: 30px 0 12px 0;
+      font-style: italic;
+    }
+
+    p,
+    ul,
+    ol {
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      font-weight: 100;
+      margin-bottom: 14px;
+      font-size: 0.9rem;
+      line-height: 1.3rem;
+    }
+
+    ul li,
+    ol li {
+      padding-bottom: 4px;
+    }
+
+    /* last list item should have no padding */
+    ul li:last-child,
+    ol li:last-child {
+      padding-bottom: 0;
+    }
+
+    ul {
+      padding-left: 12px;
+    }
+
+    ol {
+      padding-left: 18px;
+    }
+
+    a {
+      color: #e1f1fa;
+    }
+
+    a:hover {
+      color: #3ebef5;
+    }
+
+    .super {
+      display: inline-block;
+      position: relative;
+      font-size: 0.7rem;
+      vertical-align: super;
+      padding: 0 1px;
+    }
+
+    .tooltip {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      top: -30px;
+      background-color: black;
+      border: 1px dotted white;
+      padding: 4px 8px;
+    }
+
+    .super:hover .tooltip {
+      display: block;
+    }
+
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .column {
+      width: 48%;
+      text-align: justify;
+    }
+
+    .text-shadow {
+      text-shadow: 1px 1px 8px #3ebef5;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    @media only screen and (max-width: 900px) {
+      .column {
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+
+      main {
+        padding: 12px 24px;
+      }
+
+      .mobile {
+        display: block;
+      }
+    }
   </style>
 </head>
 
 <body>
-  TODO
+  <main>
+    <h1><span class="text-shadow">Philip Castiglione</span></h1>
+    <section>
+      <h3>This is a work in progress. If you're seeing it, you must have javascript turned off, in which case I
+        encourage
+        you to visit the <a href="https://philipcastiglione.com/public/resume.pdf" rel="noopener noreferrer">PDF
+          version</a> of my resume.</h3>
+      <p>
+        I'm a software engineer with 10 years of industry experience. I graduated top of my Computer Science degree,
+        winning all the major prizes and awards.<a href="https://www.linkedin.com/in/philcastiglione/" target="_blank"
+          rel="noopener noreferrer"><span class="super">1<span class="tooltip">🔗&nbsp;LinkedIn</span></span></a><span
+          class="super">,</span><a href="./resume/academic.html" target="_blank" rel="noopener noreferrer"><span
+            class="super">
+            2
+            <span class="tooltip">🔗&nbsp;Curriculum&nbsp;Vitae</span>
+          </span>
+        </a>
+      </p>
+      <p>
+        I am seeking to transition from commercial industry into academic research, to satisfy a deep intellectual
+        curiosity and profound desire to work on questions fundamental to the human condition.
+      </p>
+    </section>
+    <section>
+      <h2>Professional Experience</h2>
+      <div class="columns">
+        <div class="column">
+          <p>Principal Consultant | Elevate Partners | (Remote) Dublin & Perth 07/22 – now</p>
+          <p>Platform Tech Lead | DIGIT, a Scopely Studio | (Hybrid) Dublin, Ireland 11/19 – 06/22</p>
+          <p>Software Engineer Consultant | Cogent (acq. by Block NYSE: SQ) | Melbourne, Australia 04/18 – 11/19</p>
+          <p>Machine Learning Internship | A²I² (Applied AI Institute) | Melbourne, Australia 11/18 – 12/18</p>
+          <p>Software Developer | JCurve Solutions (ASX: JCS) | Melbourne, Australia 05/16 – 04/18</p>
+          <p>Junior Programmer | Hardhat Digital | Melbourne, Australia 06/15 – 05/16</p>
+          <p>Teaching Assistant (part time) | General Assembly | Melbourne, Australia 09/15 – 12/16</p>
+          <p>Strategy and Business Analyst | University of Melbourne | Melbourne, Australia '13 – '15</p>
+          <p>Non-Executive Director | Safe Marketing Australia | Melbourne, Australia '11 – '14</p>
+          <p>Management Consultant - Operations & Strategy | KPMG | Brisbane, Australia '12 - '13</p>
+          <p>Co-Founder | SC Financial Group & Castiglione Securities Trading | Bangkok, Bangkok City, Thailand & Perth,
+            Australia & Melbourne, Australia '09 – '11</p>
+          <p>Senior Accounts Officer | The University of Western Australia | Perth, Australia '05 – '09</p>
+        </div>
+        <div class="column">
+          <p>Software 1.</p>
+          <ol>
+            <li>Hyperfocus of intellectual effort and resources dedicated to limited lines of inquiry </li>
+            <li>The boom to bust investment / hype cycle of capital</li>
+            <li>An observable transition towards narrow commercial applications and extracting return on investment</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Education</h2>
+      <div class="columns">
+        <div class="column">
+          <p>Education 1.</p>
+        </div>
+        <div class="column">
+          <p>Education 1.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3>References available on request.</h3>
+    </section>
+  </main>
 </body>
 
 </html>
