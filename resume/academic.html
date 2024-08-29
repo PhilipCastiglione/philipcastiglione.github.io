@@ -14,10 +14,6 @@
   <meta property="og:description" content="Academic Curriculum Vitae" />
   <meta property="og:url" content="https://philipcastiglione.com/resume/academic.html" />
   <meta property="og:type" content="website" />
-  <script>
-    // TODO: remove this when the resume is ready
-    window.location.replace("https://philipcastiglione.com/public/resume.pdf");
-  </script>
   <style>
     * {
       margin: 0;
@@ -102,52 +98,61 @@
       color: #3ebef5;
     }
 
-    .super {
-      display: inline-block;
-      position: relative;
-      font-size: 0.7rem;
-      vertical-align: super;
-      padding: 0 1px;
-    }
-
-    .tooltip {
-      display: none;
-      position: absolute;
-      z-index: 1;
-      top: -30px;
-      background-color: black;
-      border: 1px dotted white;
-      padding: 4px 8px;
-    }
-
-    .super:hover .tooltip {
-      display: block;
-    }
-
-    .columns {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .column {
-      width: 48%;
-      text-align: justify;
-    }
-
     .text-shadow {
       text-shadow: 1px 1px 8px #3ebef5;
     }
 
-    .mobile {
-      display: none;
+    .grid {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 4px 24px;
     }
 
-    @media only screen and (max-width: 900px) {
-      .column {
-        width: 100%;
-        text-align: left;
-      }
+    .full-row {
+      grid-column: 1 / -1;
+    }
+
+    .two-column-cell {
+      grid-column: span 2;
+      margin-top: -14px;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .tooltip {
+      font-size: 1.1rem;
+      display: inline-block;
+      position: relative;
+    }
+
+    .tooltip:hover {
+      color: #3ebef5;
+    }
+
+    .tooltip-content {
+      font-size: 0.9rem;
+      display: none;
+      min-width: 300px;
+      position: absolute;
+      z-index: 1;
+      top: -30px;
+      right: 0;
+      background-color: black;
+      border: 1px dotted white;
+      color: #e1f1fa;
+      padding: 4px 8px;
+    }
+
+    .tooltip:hover .tooltip-content {
+      display: block;
+    }
+
+    .title {
+      text-shadow: 0px 0px 2px #3ebef5;
+    }
+
+    .hide {
+      display: none;
     }
 
     @media only screen and (max-width: 600px) {
@@ -158,10 +163,6 @@
       main {
         padding: 12px 24px;
       }
-
-      .mobile {
-        display: block;
-      }
     }
   </style>
 </head>
@@ -170,20 +171,9 @@
   <main>
     <h1><span class="text-shadow">Philip Castiglione</span></h1>
     <section>
-      <h3>This is a work in progress. If you're seeing it, you must have javascript turned off, in which case I
-        encourage
-        you to visit the <a href="https://philipcastiglione.com/public/resume.pdf" rel="noopener noreferrer">PDF
-          version</a> of my resume.</h3>
       <p>
         I'm a software engineer with 10 years of industry experience. I graduated top of my Computer Science degree,
-        winning all the major prizes and awards.<a href="https://www.linkedin.com/in/philcastiglione/" target="_blank"
-          rel="noopener noreferrer"><span class="super">1<span class="tooltip">🔗&nbsp;LinkedIn</span></span></a><span
-          class="super">,</span><a href="./resume/academic.html" target="_blank" rel="noopener noreferrer"><span
-            class="super">
-            2
-            <span class="tooltip">🔗&nbsp;Curriculum&nbsp;Vitae</span>
-          </span>
-        </a>
+        winning all the major prizes and awards.
       </p>
       <p>
         I am seeking to transition from commercial industry into academic research, to satisfy a deep intellectual
@@ -191,43 +181,104 @@
       </p>
     </section>
     <section>
-      <h2>Professional Experience</h2>
-      <div class="columns">
-        <div class="column">
-          <p>Principal Consultant | Elevate Partners | (Remote) Dublin & Perth 07/22 – now</p>
-          <p>Platform Tech Lead | DIGIT, a Scopely Studio | (Hybrid) Dublin, Ireland 11/19 – 06/22</p>
-          <p>Software Engineer Consultant | Cogent (acq. by Block NYSE: SQ) | Melbourne, Australia 04/18 – 11/19</p>
-          <p>Machine Learning Internship | A²I² (Applied AI Institute) | Melbourne, Australia 11/18 – 12/18</p>
-          <p>Software Developer | JCurve Solutions (ASX: JCS) | Melbourne, Australia 05/16 – 04/18</p>
-          <p>Junior Programmer | Hardhat Digital | Melbourne, Australia 06/15 – 05/16</p>
-          <p>Teaching Assistant (part time) | General Assembly | Melbourne, Australia 09/15 – 12/16</p>
-          <p>Strategy and Business Analyst | University of Melbourne | Melbourne, Australia '13 – '15</p>
-          <p>Non-Executive Director | Safe Marketing Australia | Melbourne, Australia '11 – '14</p>
-          <p>Management Consultant - Operations & Strategy | KPMG | Brisbane, Australia '12 - '13</p>
-          <p>Co-Founder | SC Financial Group & Castiglione Securities Trading | Bangkok, Bangkok City, Thailand & Perth,
-            Australia & Melbourne, Australia '09 – '11</p>
-          <p>Senior Accounts Officer | The University of Western Australia | Perth, Australia '05 – '09</p>
-        </div>
-        <div class="column">
-          <p>Software 1.</p>
-          <ol>
-            <li>Hyperfocus of intellectual effort and resources dedicated to limited lines of inquiry </li>
-            <li>The boom to bust investment / hype cycle of capital</li>
-            <li>An observable transition towards narrow commercial applications and extracting return on investment</li>
-          </ol>
-        </div>
-      </div>
+      <h2 class="full-row">Research Interests</h2>
+      <ul>
+        <li>Cognitive Computational Neuroscience</li>
+        <li>Using techniques and lessons from neuroscience and artificial intelligence to explore cognition</li>
+        <li>Foundational improvements to AI/ML models</li>
+        <li>Neuromorphic Computing</li>
+      </ul>
     </section>
-    <section>
-      <h2>Education</h2>
-      <div class="columns">
-        <div class="column">
-          <p>Education 1.</p>
-        </div>
-        <div class="column">
-          <p>Education 1.</p>
-        </div>
-      </div>
+    <section class="grid">
+      <h2 class="full-row">Industry Experience</h2>
+      <p>'22 &mdash; </p>
+      <p><span class="title">Principal Consultant</span>, Elevate Partners</p>
+      <p>Dublin (IE), Perth (AU)</p>
+      <p>'19 &mdash; '22</p>
+      <p><span class="title">Platform Tech Lead</span>, DIGIT, a Scopely Studio</p>
+      <p>Dublin (IE)</p>
+      <p>'18 &mdash; '19</p>
+      <p><span class="title">Software Engineer Consultant</span>, Cogent (acq. by Block NYSE: SQ)</p>
+      <p>Melbourne (AU)</p>
+      <p>'16 &mdash; '18</p>
+      <p><span class="title">Software Developer</span>, JCurve Solutions (ASX: JCS)</p>
+      <p>Melbourne (AU)</p>
+      <p>'15 &mdash; '16</p>
+      <p><span class="title">Junior Programmer</span>, Hardhat Digital</p>
+      <p>Melbourne (AU)</p>
+      <p class="full-row">Prior to 2015 I worked in Management Consulting and Finance, before seeking greater alignment
+        in software.</p>
+      <p class="hide">'13 &mdash; '15</p>
+      <p class="hide"><span class="title">Strategy and Business Analyst</span>, University of Melbourne</p>
+      <p class="hide">Melbourne (AU)</p>
+      <p class="hide">'11 &mdash; '14</p>
+      <p class="hide"><span class="title">Non-Executive Director</span>, Safe Marketing Australia</p>
+      <p class="hide">Melbourne (AU)</p>
+      <p class="hide">'12 &mdash; '13</p>
+      <p class="hide"><span class="title">Management Consultant - Operations & Strategy</span>, KPMG</p>
+      <p class="hide">Brisbane (AU)</p>
+      <p class="hide">'09 &mdash; '11</p>
+      <p class="hide"><span class="title">Co-Founder</span>, SC Financial Group & Castiglione Securities Trading</p>
+      <p class="hide">Bangkok (TH), Perth (AU)</p>
+      <p class="hide">'05 &mdash; '09</p>
+      <p class="hide"><span class="title">Senior Accounts Officer</span>, The University of Western Australia</p>
+      <p class="hide">Perth (AU)</p>
+      <h2 class="full-row">Research & Teaching Experience</h2>
+      <p>'18 &mdash; '18</p>
+      <p><span class="title">Machine Learning Internship</span> (6 weeks), A²I² (Applied AI Institute)</p>
+      <p>Melbourne (AU)</p>
+      <p></p>
+      <p class="two-column-cell">Computer Vision "AI-UI" project generating application markup (HTML) from hand drawn
+        sketches.</p>
+      <p>'15 &mdash; '15</p>
+      <p><span class="title">Teaching Assistant</span> (part time, 12 weeks), General Assembly</p>
+      <p>Melbourne (AU)</p>
+      <p></p>
+      <p class="two-column-cell">Lecturing, tutorials, one-on-one tutoring, assignments & marking.</p>
+      <h2 class="full-row">Education</h2>
+      <p>'17 &mdash; '20</p>
+      <p><span class="title">Bachelor of Computer Science (Cognitive Science)</span>, Deakin University</p>
+      <p>Melbourne (AU)</p>
+      <p></p>
+      <p class="two-column-cell">
+        Graduated with the highest grades and many academic awards, whilst also working full time.<br>
+        <br>
+        Grade: 92% (High Distinction) average<br>
+        <br>
+        Awards for academic achievement:<br>
+        - Australian Computer Society Student Excellence Award <span class="tooltip">ⓘ<span
+            class="tooltip-content">Awarded to the best performing student who has successfully completed their final
+            year in an ACS-accredited undergraduate course</span></span><br>
+        - Deakin Scholarship for Excellence <span class="tooltip">ⓘ<span class="tooltip-content">Awarded for exceptional
+            academic achievement</span></span><br>
+        - Patrick Pleass Memorial Award <span class="tooltip">ⓘ<span class="tooltip-content">Top mark across first 2
+            years in Bachelor of Computer Science</span></span><br>
+        - School of Information Technology Award <span class="tooltip">ⓘ<span class="tooltip-content">Top mark amongst
+            second year IT students faculty & campus wide</span></span><br>
+        - Professor of Information Technology Award <span class="tooltip">ⓘ<span class="tooltip-content">Top mark
+            amongst first year IT students faculty & campus wide</span></span><br>
+        - Graduated With Distinction
+      </p>
+      <p>'09 &mdash; '12</p>
+      <p><span class="title">Bachelor of Commerce (Finance)</span> University of Melbourne</p>
+      <p>Melbourne (AU)</p>
+      <p></p>
+      <p class="two-column-cell">
+        Grade: 85% (High Distinction) average<br>
+        <br>
+        Awards for academic achievement:<br>
+        - CPA Management Accounting Prize <span class="tooltip">ⓘ<span class="tooltip-content">Top student in Management
+            Accounting</span></span><br>
+        - Sothertons Fraud and Forensics Prize <span class="tooltip">ⓘ<span class="tooltip-content">Top student in
+            Business Fraud and Forensics</span></span><br>
+      </p>
+      <h2 class="full-row">Service</h2>
+      <p>'17 &mdash; '20</p>
+      <p><span class="title">Co-Founding Member & Treasurer</span>, Deakin Software Engineering Club</p>
+      <p>Melbourne (AU)</p>
+      <p>'10 &mdash; '11</p>
+      <p><span class="title">Member & Volunteer</span>, Rotary Club of Perth</p>
+      <p>Perth (AU)</p>
     </section>
     <section>
       <h3>References available on request.</h3>
