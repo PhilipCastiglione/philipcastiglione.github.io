@@ -1,0 +1,23 @@
+- name: Home
+  link: /index_new.html
+- name: Playbook
+  link: /playbook.html
+- name: Tools
+  link: /tools/
+  children:
+    - name: Was That Useful?
+      link: /tools/useful.html
+- name: Blog
+  link: /blog.html
+- name: Resume
+  link: /resume.html
+- name: Personal
+  link: /personal/
+  children:
+    - name: Health
+      link: /personal/health/
+      children:
+        - name: Sleep
+          link: /personal/health/sleep.html
+        - name: Electromagnetic Radiation
+          link: /personal/health/emr.html
