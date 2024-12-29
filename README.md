@@ -52,45 +52,39 @@ bundle exec jekyll build
 
 ## TODO
 
-- [ ] Get deployed
-    - https://docs.github.com/en/pages/quickstart
-
-- [ ] Deal with the other stuff?
-    - [ ] public / assets (test in prod)
-    - [ ] og image tags
-
-- [ ] Make it look good
+- [ ] Make it look good, and well implemented
     - [ ] Theming
-
-- [ ] Set defaults in _config.yml
-    - eg.
-    ```yaml
-    defaults:
-    # _posts
-    - scope:
-        path: ""
-        type: posts
-      values:
-        layout: single
-        read_time: true
-        comments: true
-        share: true
-        related: true
-    ```
-    - ref: https://mmistakes.github.io/minimal-mistakes/docs/installation/
+    - [ ] Set defaults in _config.yml
+        - eg.
+        ```yaml
+        defaults:
+        # _posts
+        - scope:
+            path: ""
+            type: posts
+        values:
+            layout: single
+            read_time: true
+            comments: true
+            share: true
+            related: true
+        ```
+        - ref: https://mmistakes.github.io/minimal-mistakes/docs/installation/
 
 - [ ] Update README
 - [ ] Fill out content
+
+- [ ] social links
+- [ ] bio (update config description)
+- [ ] linkedin
+- [ ] resume
+- [ ] remove unused assets/images
+
+- [ ] look for more jekyll plugins (like, do i want jekyll sitemap and feed)
+    - https://jekyllrb.com/docs/step-by-step/10-deployment/
 
 - [ ] Layout improvements & best practices
     - [ ] Accessibility
     - [ ] Unroll stuff - og still (the only) thing?
 - [ ] SEO stuff
 - [ ] analytics? maybe
-- [ ] look for more jekyll plugins (like, do i want jekyll sitemap and feed)
-    - https://jekyllrb.com/docs/step-by-step/10-deployment/
-- [ ] social links
-- [ ] bio (update config description)
-- [ ] linkedin
-- [ ] resume
-- [ ] remove unused assets/images
