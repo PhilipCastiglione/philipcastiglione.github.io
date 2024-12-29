@@ -25,12 +25,12 @@ bundle exec jekyll build
 
 - [x] index
 - [x] 404 page
-- [x] Tools
-    - [x] Useful
 - [x] Playbook
 - [x] Blog (Writing/Thoughts about management)
     - [x] index
     - [x] example post ...
+- [x] Tools
+    - [x] Useful
 - [x] Resume
     - [x] page version
     - [x] as pdf
@@ -52,15 +52,13 @@ bundle exec jekyll build
 
 ## TODO
 
-- [ ] Get some initial content for the sitemap sections
-    - [ ] files w/ content
-    - [ ] nav
+- [ ] Get deployed
+    - https://docs.github.com/en/pages/quickstart
+
 - [ ] Deal with the other stuff?
-    - [x] favicon
-    - [ ] fix the public links and warnings..?
     - [ ] public / assets (test in prod)
     - [ ] og image tags
-- [ ] Create a branch and make a commit
+
 - [ ] Make it look good
     - [ ] Theming
 
@@ -80,10 +78,6 @@ bundle exec jekyll build
         related: true
     ```
     - ref: https://mmistakes.github.io/minimal-mistakes/docs/installation/
-
-- [ ] Get deployed
-    - [ ] get back on main branch
-    - https://docs.github.com/en/pages/quickstart
 
 - [ ] Update README
 - [ ] Fill out content

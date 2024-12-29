@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Electromagnetic Radiation
+title: Philip Castiglione – Health
 ---
 # Electromagnetic Radiation
 

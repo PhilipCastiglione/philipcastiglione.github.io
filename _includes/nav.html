@@ -1,0 +1,22 @@
+<style>
+    .nav-active {
+        color: red;
+    }
+</style>
+<nav>
+    {% for i1 in site.data.nav %}
+    <a href="{{ i1.link }}" {% if page.url contains i1.link %}class="nav-active" {% endif %}>
+        {{ i1.name }}
+    </a>
+    {% for i2 in i1.children %}
+    <a href="{{ i2.link }}" {% if page.url contains i2.link %}class="nav-active" {% endif %}>
+        {{ i2.name }}
+    </a>
+    {% for i3 in i2.children %}
+    <a href="{{ i3.link }}" {% if page.url contains i3.link %}class="nav-active" {% endif %}>
+        {{ i3.name }}
+    </a>
+    {% endfor %}
+    {% endfor %}
+    {% endfor %}
+</nav>
