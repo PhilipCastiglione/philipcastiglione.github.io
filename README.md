@@ -65,18 +65,25 @@ Deploy by merging to master and pushing to GitHub.
             related: true
         ```
         - ref: https://mmistakes.github.io/minimal-mistakes/docs/installation/
+    - [ ] mobile
 
-- [ ] Update README
+- [ ] footer
+    - [ ] sitemap
+    - [ ] social links
+        - [ ] linkedin
+        - [ ] github
+
+- [ ] bio (update config description, linkedin, resume)
+- [ ] update resume & make and attach pdf version
+
 - [ ] Fill out content
 
-- [ ] social links
-- [ ] bio (update config description)
-- [ ] linkedin
-- [ ] resume
 - [ ] remove unused assets/images
 
 - [ ] look for more jekyll plugins (like, do i want jekyll sitemap and feed)
     - https://jekyllrb.com/docs/step-by-step/10-deployment/
+
+- [ ] Update README
 
 - [ ] Layout improvements & best practices
     - [ ] Accessibility
