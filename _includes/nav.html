@@ -1,22 +1,62 @@
 <style>
-    .nav-active {
+    .includes-nav-active {
         color: red;
     }
 </style>
 <nav>
-    {% for i1 in site.data.nav %}
-    <a href="{{ i1.link }}" {% if page.url contains i1.link %}class="nav-active" {% endif %}>
-        {{ i1.name }}
-    </a>
-    {% for i2 in i1.children %}
-    <a href="{{ i2.link }}" {% if page.url contains i2.link %}class="nav-active" {% endif %}>
-        {{ i2.name }}
-    </a>
-    {% for i3 in i2.children %}
-    <a href="{{ i3.link }}" {% if page.url contains i3.link %}class="nav-active" {% endif %}>
-        {{ i3.name }}
-    </a>
-    {% endfor %}
-    {% endfor %}
+    {% for nav_item in site.data.nav %}
+        {% if page.url contains nav_item.link %}
+            {% assign level_one_nav_item = nav_item %}
+            <div>
+                <a class="includes-nav-active" href="{{ nav_item.link }}">
+                    {{ nav_item.name | upcase }}
+                </a>
+            </div>
+        {% else %}
+            <div>
+                <a href="{{ nav_item.link }}">
+                    {{ nav_item.name | upcase }}
+                </a>
+            </div>
+        {% endif %}
     {% endfor %}
 </nav>
+{% if level_one_nav_item.children %}
+    <nav>
+        {% for nav_item in level_one_nav_item.children %}
+            {% if page.url contains nav_item.link %}
+                {% assign level_two_nav_item = nav_item %}
+                <div>
+                    <a class="includes-nav-active" href="{{ nav_item.link }}">
+                        {{ nav_item.name | upcase }}
+                    </a>
+                </div>
+            {% else %}
+                <div>
+                    <a href="{{ nav_item.link }}">
+                        {{ nav_item.name | upcase }}
+                    </a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </nav>
+{% endif %}
+{% if level_two_nav_item.children %}
+    <nav>
+        {% for nav_item in level_two_nav_item.children %}
+            {% if page.url contains nav_item.link %}
+                <div>
+                    <a class="includes-nav-active" href="{{ nav_item.link }}">
+                        {{ nav_item.name | upcase }}
+                    </a>
+                </div>
+            {% else %}
+                <div>
+                    <a href="{{ nav_item.link }}">
+                        {{ nav_item.name | upcase }}
+                    </a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </nav>
+{% endif %}
