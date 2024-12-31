@@ -14,12 +14,7 @@ Serve locally
 bundle exec jekyll serve -l
 ```
 
-Deploy
-
-```sh
-bundle exec jekyll build
-...?
-```
+Deploy by merging to master and pushing to GitHub.
 
 ## Sitemap
 
