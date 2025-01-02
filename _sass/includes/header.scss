@@ -14,18 +14,23 @@
 
 .includes-header-rows {
     flex: 1;
+
+    hr {
+        margin: $spacing-unit 0;
+    }
 }
 
 .includes-header {
     display: flex;
     gap: $spacing-unit * 3;
     font-size: $font-size-base * 1.25;
-    margin: $spacing-unit 0;
+    margin: $spacing-unit * 0.5 0;
 }
 
 .includes-header-top-level {
     justify-content: space-between;
     font-size: $font-size-base * 1.4;
+    margin: $spacing-unit 0;
 }
 
 .includes-header-link-item {
