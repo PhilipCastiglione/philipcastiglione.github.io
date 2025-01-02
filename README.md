@@ -49,10 +49,7 @@ Deploy by merging to master and pushing to GitHub.
 
 - [ ] Make it look good, and well implemented
     - [ ] Design
-        - [ ] Typography
-        - [ ] Color
-        - [ ] Icons
-        - [ ] Images
+        - [ ] font
     - [ ] Theming
     - [ ] Set defaults in _config.yml
         - eg.
@@ -95,3 +92,5 @@ Deploy by merging to master and pushing to GitHub.
 - [ ] update resume & make and attach pdf version
 
 - [ ] Fill out content
+
+- [ ] emr: all the source links are broken

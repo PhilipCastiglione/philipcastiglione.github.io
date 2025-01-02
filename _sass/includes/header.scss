@@ -1,7 +1,11 @@
 .includes-header-container {
-    display: flex;
     margin-top: $spacing-unit * 2;
     margin-bottom: $spacing-unit * 2;
+}
+
+.includes-header-content {
+    display: flex;
+    gap: $spacing-unit * 3;
 }
 
 .includes-header-logo {
@@ -9,7 +13,6 @@
 }
 
 .includes-header-rows {
-    margin-left: $spacing-unit * 3;
     flex: 1;
 }
 
@@ -22,34 +25,19 @@
 
 .includes-header-top-level {
     justify-content: space-between;
-    font-size: $font-size-base * 1.5;
+    font-size: $font-size-base * 1.4;
 }
 
 .includes-header-link-item {
     border-radius: $border-radius;
     padding: $spacing-unit $spacing-unit * 1.5;
-    
-    &:hover {
-        text-decoration: none;
-        color: lighten($color-primary, 15%);
-        background-color: darken($color-white, 10%);
-    }
 }
 
 .includes-header-link-item-parent,
 .includes-header-link-item-active {
-    text-decoration: underline;
-    
-    &:hover {
-        text-decoration: underline;
-    }
+    font-weight: bold;
 }
 
 .includes-header-link-item-active {
-    color: $color-black;
-    
-    &:hover {
-        color: $color-black;
-        background: none;
-    }
+    color: darken($color-contrast, 15%);
 }
