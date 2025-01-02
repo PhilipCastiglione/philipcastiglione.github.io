@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Philip Castiglione – Health
 permalink: /personal/health/sleep.html
 ---
