@@ -48,6 +48,22 @@ Deploy by merging to master and pushing to GitHub.
 ## TODO
 
 - [ ] Make it look good, and well implemented
+    - [ ] Design
+        - [ ] Layout
+            - [ ] header (logo, nav)
+                - [ ] logo
+                - [ ] nav
+            - [ ] footer
+                - [ ] sitemap
+                - [ ] social links
+                    - [ ] linkedin
+                    - [ ] github
+            - [ ] post
+            - [ ] non-post pages
+        - [ ] Typography
+        - [ ] Color
+        - [ ] Icons
+        - [ ] Images
     - [ ] Theming
     - [ ] Set defaults in _config.yml
         - eg.
@@ -67,26 +83,20 @@ Deploy by merging to master and pushing to GitHub.
         - ref: https://mmistakes.github.io/minimal-mistakes/docs/installation/
     - [ ] mobile
 
-- [ ] footer
-    - [ ] sitemap
-    - [ ] social links
-        - [ ] linkedin
-        - [ ] github
-
-- [ ] bio (update config description, linkedin, resume)
-- [ ] update resume & make and attach pdf version
-
-- [ ] Fill out content
-
 - [ ] remove unused assets/images
 
 - [ ] look for more jekyll plugins (like, do i want jekyll sitemap and feed)
     - https://jekyllrb.com/docs/step-by-step/10-deployment/
-
-- [ ] Update README
 
 - [ ] Layout improvements & best practices
     - [ ] Accessibility
     - [ ] Unroll stuff - og still (the only) thing?
 - [ ] SEO stuff
 - [ ] analytics? maybe
+
+- [ ] Update README
+
+- [ ] bio (update config description, linkedin, resume, og:description)
+- [ ] update resume & make and attach pdf version
+
+- [ ] Fill out content
