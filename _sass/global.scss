@@ -3,6 +3,8 @@
 html,
 body {
     scroll-behavior: smooth;
+    font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
+    font-weight: normal;
 }
 
 // LAYOUT
@@ -28,6 +30,22 @@ $border-radius: 4px;
     padding-right: $spacing-unit * 2;
 }
 
+p,
+li {
+    margin-top: $spacing-unit;
+    margin-bottom: $spacing-unit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: $spacing-unit * 3;
+    margin-bottom: $spacing-unit * 1;
+}
+
 // COLORS
 
 $color-primary: #4c88a9;
@@ -50,11 +68,20 @@ a:hover {
 
 // TYPOGRAPHY
 
-$font-size-base: 16px;
+$font-size-base: 18px;
 
 p,
 li {
     font-size: $font-size-base;
+    line-height: 1.4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.4;
 }
 h1 {
     font-size: $font-size-base * 2;
