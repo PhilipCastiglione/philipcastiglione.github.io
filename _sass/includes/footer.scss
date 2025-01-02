@@ -1,5 +1,46 @@
 .includes-footer-container {
     min-width: 100vw;
     margin-top: $spacing-unit * 4;
-    background-color: $color-grey;
+    padding-top: $spacing-unit * 3;
+    background-color: lighten($color-black, 50%);
+
+    a {
+        font-size: $font-size-base;
+    }
+
+    > .main-body {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: $spacing-unit * 3;
+    }
+
+    > .main-body div:last-child {
+        flex: 1;
+    }
+}
+
+.includes-footer-socials {
+    display: flex;
+    justify-content: space-between;
+    gap: $spacing-unit * 3;
+    margin-top: $spacing-unit * 2;
+    margin-bottom: $spacing-unit * 2;
+    width: fit-content;
+}
+
+.includes-footer-logo {
+    
+    > img {
+        padding: $spacing-unit * 0.5;
+        width: 52px;
+        height: 52px;
+        background-color: darken($color-white, 15%);
+        border: 1px solid darken($color-white, 15%);
+        border-radius: $border-radius;
+
+        &:hover {
+            border-color: $color-primary;
+            background-color: $color-primary;
+        }
+    }
 }
