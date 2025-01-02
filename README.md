@@ -50,14 +50,6 @@ Deploy by merging to master and pushing to GitHub.
 - [ ] Make it look good, and well implemented
     - [ ] Design
         - [ ] Layout
-            - [ ] header (logo, nav)
-                - [ ] logo
-                - [ ] nav
-            - [ ] footer
-                - [ ] sitemap
-                - [ ] social links
-                    - [ ] linkedin
-                    - [ ] github
             - [ ] post
             - [ ] non-post pages
         - [ ] Typography
@@ -81,7 +73,7 @@ Deploy by merging to master and pushing to GitHub.
             related: true
         ```
         - ref: https://mmistakes.github.io/minimal-mistakes/docs/installation/
-    - [ ] mobile
+    - [ ] Mobile, Tablet, Laptop, Large Screen
 
 - [ ] remove unused assets/images
 

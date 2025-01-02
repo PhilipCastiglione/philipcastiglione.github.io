@@ -1,6 +1,14 @@
+// BEHAVIOUR
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 // LAYOUT
 
 $spacing-unit: 8px;
+$border-radius: 4px;
 
 .main-body {
     margin-left: $spacing-unit * 3;
@@ -11,8 +19,7 @@ $spacing-unit: 8px;
 
 $color-primary: #007bff;
 $color-black: #000000;
-$color-grey: #6c757d;
-$color-light-grey: #e8e9ea;
+$color-white: #ffffff;
 
 // TYPOGRAPHY
 
