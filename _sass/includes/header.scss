@@ -1,45 +1,44 @@
-.includes-nav-container {
+.includes-header-container {
     display: flex;
-    margin-top: $spacing-unit * 4;
-    margin-bottom: $spacing-unit * 4;
+    margin-top: $spacing-unit * 2;
+    margin-bottom: $spacing-unit * 2;
 }
 
-.includes-nav-logo {
-    margin-top: $spacing-unit;
-    margin-bottom: $spacing-unit;
+.includes-header-logo {
+    margin: $spacing-unit;
 }
 
-.includes-nav-rows {
+.includes-header-rows {
     margin-left: $spacing-unit * 3;
     flex: 1;
 }
 
-.includes-nav {
+.includes-header {
     display: flex;
     gap: $spacing-unit * 3;
     font-size: $font-size-base * 1.25;
     margin: $spacing-unit 0;
 }
 
-.includes-nav-top-level {
+.includes-header-top-level {
     justify-content: space-between;
     font-size: $font-size-base * 1.5;
 }
 
-.includes-nav-link-item {
+.includes-header-link-item {
     color: $color-primary;
-    border-radius: 4px;
+    border-radius: $border-radius;
     padding: $spacing-unit $spacing-unit * 1.5;
     
     &:hover {
         text-decoration: none;
         color: lighten($color-primary, 15%);
-        background-color: $color-light-grey;
+        background-color: darken($color-white, 10%);
     }
 }
 
-.includes-nav-link-item-parent,
-.includes-nav-link-item-active {
+.includes-header-link-item-parent,
+.includes-header-link-item-active {
     text-decoration: underline;
     
     &:hover {
@@ -47,7 +46,7 @@
     }
 }
 
-.includes-nav-link-item-active {
+.includes-header-link-item-active {
     color: $color-black;
     
     &:hover {
