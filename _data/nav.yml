@@ -8,7 +8,7 @@
     - name: Was That Useful?
       link: /tools/useful.html
 - name: Blog
-  link: /blog.html
+  link: /blog/
 - name: Resume
   link: /resume.html
 - name: Personal
