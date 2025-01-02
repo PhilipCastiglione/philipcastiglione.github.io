@@ -49,9 +49,6 @@ Deploy by merging to master and pushing to GitHub.
 
 - [ ] Make it look good, and well implemented
     - [ ] Design
-        - [ ] Layout
-            - [ ] post
-            - [ ] non-post pages
         - [ ] Typography
         - [ ] Color
         - [ ] Icons
@@ -75,12 +72,16 @@ Deploy by merging to master and pushing to GitHub.
         - ref: https://mmistakes.github.io/minimal-mistakes/docs/installation/
     - [ ] Mobile, Tablet, Laptop, Large Screen
 
-- [ ] remove unused assets/images
-
 - [ ] set permalinks for home page
+
+- [ ] add a bit of basic content
 
 - [ ] look for more jekyll plugins (like, do i want jekyll sitemap and feed)
     - https://jekyllrb.com/docs/step-by-step/10-deployment/
+
+- [ ] design iteration
+
+- [ ] remove unused pages/assets/images/stuff
 
 - [ ] Layout improvements & best practices
     - [ ] Accessibility

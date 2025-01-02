@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Philip Castiglione – Blog
 permalink: /blog/
 ---
@@ -8,9 +8,9 @@ permalink: /blog/
 
 <div>
     {% for post in site.posts %}
-        <li>
+        <div>
             <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
             {{ post.excerpt }}
-        </li>
+        </div>
     {% endfor %}
 </div>

@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: page
 title: Philip Castiglione – Tools
 permalink: /tools/
 ---
 
 # Tools
 
-A collection of tools...
+Under construction. Check back soon.
