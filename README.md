@@ -77,6 +77,8 @@ Deploy by merging to master and pushing to GitHub.
 
 - [ ] remove unused assets/images
 
+- [ ] set permalinks for home page
+
 - [ ] look for more jekyll plugins (like, do i want jekyll sitemap and feed)
     - https://jekyllrb.com/docs/step-by-step/10-deployment/
 
