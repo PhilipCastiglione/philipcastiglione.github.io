@@ -1,19 +1,23 @@
 {% if page.url contains include.link_item.link %}
-<div>
-    {% if page.url == include.link_item.link %}
-    <span class="includes-header-link-item includes-header-link-item-active">
-        {{ include.link_item.name }}
-    </span>
-    {% else %}
-    <a class="includes-header-link-item includes-header-link-item-parent" href="{{ include.link_item.link }}">
-        {{ include.link_item.name }}
-    </a>
-    {% endif %}
-</div>
+    <div>
+        {% if page.url == include.link_item.link %}
+            <span class="includes-header-link-item includes-header-link-item-active">
+                {{ include.link_item.name }}
+            </span>
+        {% elsif include.link_item.link == "/" %}
+            <a class="includes-header-link-item" href="{{ include.link_item.link }}">
+                {{ include.link_item.name }}
+            </a>
+        {% else %}
+            <a class="includes-header-link-item includes-header-link-item-parent" href="{{ include.link_item.link }}">
+                {{ include.link_item.name }}
+            </a>
+        {% endif %}
+    </div>
 {% else %}
-<div>
-    <a class="includes-header-link-item" href="{{ include.link_item.link }}">
-        {{ include.link_item.name }}
-    </a>
-</div>
+    <div>
+        <a class="includes-header-link-item" href="{{ include.link_item.link }}">
+            {{ include.link_item.name }}
+        </a>
+    </div>
 {% endif %}

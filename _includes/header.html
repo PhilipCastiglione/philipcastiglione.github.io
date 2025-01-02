@@ -11,6 +11,7 @@
                 {% endfor %}
             </nav>
             {% if level_one_nav_items %}
+                <hr />
                 <nav class="includes-header">
                     {% for nav_item in level_one_nav_items %}
                         {% include nav_link.html link_item=nav_item %}
@@ -21,6 +22,7 @@
                 </nav>
             {% endif %}
             {% if level_two_nav_items %}
+                <hr />
                 <nav class="includes-header">
                     {% for nav_item in level_two_nav_items %}
                         {% include nav_link.html link_item=nav_item %}
