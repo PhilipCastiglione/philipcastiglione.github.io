@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Philip Castiglione – Health
+permalink: /personal/health/sleep.html
 ---
 
 # Rules for good sleep

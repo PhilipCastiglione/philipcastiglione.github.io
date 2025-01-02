@@ -1,6 +1,7 @@
 ---
 layout: bare
 title: Speech
+permalink: /speech.html
 ---
 Hello everyone,
 

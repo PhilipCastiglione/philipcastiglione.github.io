@@ -1,6 +1,7 @@
 ---
 layout: bare
 title: Thanks For Coming!
+permalink: /thanks.html
 ---
 <style>
     body {
@@ -15,4 +16,4 @@ title: Thanks For Coming!
 
 # Thanks For Coming!!! ❤️
 
-![wedding cake](./cake.png)
+![wedding cake]({{ '/assets/images/pages/cake.png' | relative_url}})

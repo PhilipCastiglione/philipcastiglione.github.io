@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Philip Castiglione – Blog
+permalink: /blog/
 ---
 
 # Blog

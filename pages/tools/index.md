@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Philip Castiglione – Tools
+permalink: /tools/
 ---
 
 # Tools
