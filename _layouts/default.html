@@ -22,8 +22,11 @@
 </head>
 
 <body>
-    {% include nav.html %}
-    {{ content }}
+    <main class="layouts-default-main">
+        {% include nav.html %}
+        <div class="layouts-default-main-content">{{ content }}</div>
+        {% include footer.html %}
+    </main>
 </body>
 
 </html>
