@@ -16,69 +16,34 @@ bundle exec jekyll serve -l
 
 Deploy by merging to master and pushing to GitHub.
 
-## Sitemap
-
-- [x] index
-- [x] 404 page
-- [x] Playbook
-- [x] Blog (Writing/Thoughts about management)
-    - [x] index
-    - [x] example post ...
-- [x] Tools
-    - [x] Useful
-- [x] Resume
-    - [x] page version
-    - [x] as pdf
-- [ ] Personal
-    - [x] index
-    - [x] Wedding stuff
-    - [ ] Health
-    - [ ] Other Interests...
-    - [ ] CCN
-    - [ ] Dreams
-    - [ ] Trivia
-    - [ ] Writing
-    - [ ] Game Dev
-    - [ ] Self Development
-
 ## Reference
 
 * https://github.com/mmistakes/minimal-mistakes/tree/master/
 
 ## TODO
 
+- [ ] add a bit of basic content
+    - [ ] home
+    - [ ] more management blog posts
+        - [ ] 1
+        - [ ] 2
+    - [ ] replace resume
+
 - [ ] Make it look good, and well implemented
-    - [ ] Design
-        - [ ] font
-    - [ ] Theming
-    - [ ] Set defaults in _config.yml
-        - eg.
-        ```yaml
-        defaults:
-        # _posts
-        - scope:
-            path: ""
-            type: posts
-        values:
-            layout: single
-            read_time: true
-            comments: true
-            share: true
-            related: true
-        ```
-        - ref: https://mmistakes.github.io/minimal-mistakes/docs/installation/
     - [ ] Mobile, Tablet, Laptop, Large Screen
 
-- [ ] set permalinks for home page
+- [ ] transition home page
 
-- [ ] add a bit of basic content
+- [ ] go live
 
 - [ ] look for more jekyll plugins (like, do i want jekyll sitemap and feed)
     - https://jekyllrb.com/docs/step-by-step/10-deployment/
 
-- [ ] design iteration
+- [ ] tags vs categories
 
-- [ ] remove unused pages/assets/images/stuff
+- [ ] use better linking https://jekyllrb.com/docs/liquid/tags/#link
+
+- [ ] design iteration
 
 - [ ] Layout improvements & best practices
     - [ ] Accessibility
@@ -88,9 +53,30 @@ Deploy by merging to master and pushing to GitHub.
 
 - [ ] Update README
 
+- [ ] remove unused pages/assets/images/stuff
+
 - [ ] bio (update config description, linkedin, resume, og:description)
 - [ ] update resume & make and attach pdf version
 
 - [ ] Fill out content
+
+- [ ] cross link posts
+
+- [ ] Set defaults in _config.yml
+    - eg.
+    ```yaml
+    defaults:
+    # _posts
+    - scope:
+        path: ""
+        type: posts
+    values:
+        layout: single
+        read_time: true
+        comments: true
+        share: true
+        related: true
+    ```
+    - ref: https://mmistakes.github.io/minimal-mistakes/docs/installation/
 
 - [ ] emr: all the source links are broken
