@@ -24,13 +24,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: $spacing-unit * 0.5 $spacing-unit * 3;
-    font-size: $font-size-base * 1.25;
+    font-size: $font-size-base * 1.125;
     margin: $spacing-unit * 0.5 0;
 }
 
 .includes-header-top-level {
     justify-content: space-between;
-    font-size: $font-size-base * 1.4;
+    font-size: $font-size-base * 1.25;
     margin: $spacing-unit 0;
 }
 
