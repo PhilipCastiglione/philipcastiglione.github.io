@@ -17,6 +17,8 @@
     - name: Health
       link: /personal/health/
       children:
+        - name: Exercise
+          link: /personal/health/exercise.html
         - name: Sleep
           link: /personal/health/sleep.html
         - name: Electromagnetic Radiation

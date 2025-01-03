@@ -5,6 +5,8 @@ permalink: /personal/health/emr.html
 ---
 # Electromagnetic Radiation
 
+This page is a bit random but exists so I can share it with people worried about this topic.
+
 ## Motivation
 
 - Is it bad to have a phone next to you all the time?
