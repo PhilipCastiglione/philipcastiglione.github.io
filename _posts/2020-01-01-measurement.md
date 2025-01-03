@@ -1,39 +1,94 @@
 ---
 layout: post
-post_title: Measurement
+post_title: Performance Management Metrics
 categories: blog management
 ---
 > *“When a measure becomes a target, it ceases to be a good measure.” - [Goodhart’s Law](https://en.wikipedia.org/wiki/Goodhart%27s_law)*
 
-### OKRs
+**OKRs** and **KPIs** are (often confused or undifferentiated) approaches to setting quantitative targets and measuring individual and organisational performance.
 
-A tool used to drive behaviour change by focusing around quantifiable metrics. These should generally not be organisation wide, on the basis that people at different levels in the organisation cannot influence the same things. It is also safest to make them temporary since initiating behaviour change is the point. The longer they stick around, the less effective they will be.
+Here's how I define and use these tools, to stop measurement going wrong.
 
-### KPIs
+## OKR
 
-Metrics important to monitor. KPIs should not be used to directly influence behaviour, they should be observed as a reflection of the result of changes only. Individuals incentives should not align with KPIs or they will become ineffective.
+A tool used to drive behavioural change by focusing on quantifiable metrics.
+
+It is preferable to make OKRs temporary since initiating behaviour change is the point. The longer they stick around, the less effective or meaningful they will be.
+
+These should neither be organisation wide nor naively cascaded, because people at different levels in the organisation cannot influence the same things.
+
+Don't use too many. A manager should be able to list theirs from memory.
+
+## KPI
+
+Metrics important to monitor in order to drive decisions.
+
+KPIs are not temporary and should not be used to directly influence behaviour. They should be observed as a reflection of the result of changes only.
+
+Unlike OKRs, personal incentives should **not** be driven by KPIs.
 
 ## Discussion
 
-Some part of my views are not conventional.
-    
-The important thing about OKRs in my opinion is that they should be an intentional tool used to drive a behaviour change.
+These are somewhat idiosyncratic definitions, below is why.
 
-They're not a passive metric (this is actually the theoretical difference between OKRs and KPIs, though those secretly modify behaviour too; OKRs are just explicit about that. KPIs can have some use and are another discussion).
+OKRs and KPIs can go wrong by being:
 
-I think they're often done wrong and cause problems; it can be hard to say if the problems outweigh the intended effects. The nastiest risk is gamified solutions that hit the OKR but aren't the desired behaviour ("want less bugs? make it harder for customers to report them! or just fire all your programmers!").
+1. gameable
+1. assigned to people with limited agency to achieve them
+1. unclear, untargeted, or disconnected from reality
 
-Personally I think the key is to use them as a very targeted tool, even a short term one. Set an OKR to train a new set of behaviours then retire it once some target change has taken effect.
+### Gameable Metrics
 
-Oh and most people shouldn't care about OKRs, they're a management tool. Why (it’s a controversial statement)?
+This point is the most dangerous. If a metric can be gamed, it will be. From what I have observed, essentially every metric can be gamed.
 
-Here's my view: most people working on their job don't really care about some management numbers, and you can't make them do anything other than briefly pretend to care.
+The longer a(n incentivised) metric exists, the more people will find ways to game it. This is not a question of cynicism or honour; people will always act in accordance with the incentives their environment creates.
 
-As evidence, I submit the fact that (I believe) a lot of people agree with the tweet Patrick started this discussion with.
+Incentivising metrics also drives short-termism. Bringing future period benefit forward or sacrificing long term benefit for a short term boost are common tactics to achieve incentive maximisation (for bonuses or career progression).
 
-An exception is where you tie an OKR to something an individual actually does care about, which should be very specific to their own job, and within their influence (eg. sales targets for individual people rolled up into division/business unit targets). But personally I think it's quite rare that one numerical goal makes a lot of sense to drive behaviour change at multiple different levels within a business.
+> _Want fewer bugs and plan to count bug reports? No problem, we'll just make it harder for customers to submit reports. Or perhaps you can count open issues? Sure, we'll just auto-close stale but unfixed issues – based on some criteria that sounds totally reasonable. How about sales targets? Harder to create out of thin air? But pretty easy to manipulate closing dates and revenue milestones, pushing forward or backwards to maximize period based bonuses._
+>
+> _All of these examples are from real experience._
 
-I should qualify that I'm talking about orgs over a certain size; big enough that people on the coalface feel disconnected from leadership
-    
+Gameability is fundamentally why OKRs should be temporary and why KPIs should not be directly incentivised.
 
-The bigger a company gets, the more abstract and inaccurate measures of progress get (eg [doing the actual work & the players have the thing] → [story points burning down on a chart]).
+This is a hard problem.
+
+### Uncontrollable Metrics
+
+Assigning an OKR to someone who feels disempowered to influence it is deeply demotivating.
+
+One approach to resolving this is taking input from assignees about their OKRs during the design phase.
+
+> _Management might fear the risk of individuals negotiating compromised (easy) targets, but this is an orthogonal concern to functionally unachievable targets._
+>
+> _Once the concept of an OKR is agreed then the target numbers can be negotiated, but if a manager tells you they can't influence the numbers you think they can, then you need to know that._
+>
+> _This approach leads to much greater buy in than top down assigned OKRs without consultation._
+
+A similar mistake is to create an OKR notionally under control, but that in reality is mainly down to chance. A prime example is a raw revenue metric for a division whose financials are mostly driven by broad macroeconomic conditions.
+
+The correction in this case is to use a market adjusted metric (eg. deliver x% **market-adjusted** revenue growth). Fair (appropriate, comparable) calculations for market values should be designed up front, not when the OKR is assessed.
+
+
+### Vague & Abstract Metrics
+
+Vague metrics simply fail to drive desired behaviour, or drive the wrong behaviour.
+
+For software engineers in particular, the bigger a company gets, the more abstract and inaccurate measures of progress get.
+
+The most common version of this:
+
+[doing the actual work & the customers have a feature] → [story points burning down on a chart]
+
+If you want story points burning down on a chart, all I have to do is influence points! During estimation, work, or after the fact. It's very disconnected from the goal (what are we actually building? did it work?)
+
+Target the real thing. If someone wants to use story points to help manage their work, fine. But if you measure story points, then the fake thing becomes the focus.
+
+
+### Who Should Care?
+
+Should we expect everyone to care about OKRs? Have a big company meeting where we present the org-level or division level OKRs to everyone via slides. Probably not. They're a management tool.
+
+In particular when people feel unable to meaningfully contribute to high level targets, mostly all this does is increase the sense of dissociation between management and team members. For some reason it's a common delusion amongst senior managers that this is either motivating or useful to individual contributors; in my experience it just makes senior management appear out of touch.
+
+An even worse mistake, forcing people to pretend to care damages culture, relationships and will reduce respect for management. People generally don't want to be made to lie or be fake, so don't ask them to.

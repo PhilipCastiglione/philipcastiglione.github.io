@@ -5,7 +5,7 @@
 - name: Tools
   link: /tools/
   children:
-    - name: Was That Useful?
+    - name: Was This Useful?
       link: /tools/useful.html
 - name: Blog
   link: /blog/
