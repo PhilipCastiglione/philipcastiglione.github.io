@@ -14,12 +14,39 @@
 - name: Personal
   link: /personal/
   children:
+    - name: AI
+      link: /personal/ai.html
+    - name: CCN
+      link: /personal/ccn.html
     - name: Health
       link: /personal/health/
       children:
         - name: Exercise
           link: /personal/health/exercise.html
+        - name: Longevity
+          link: /personal/health/longevity/
         - name: Sleep
           link: /personal/health/sleep.html
         - name: Electromagnetic Radiation
           link: /personal/health/emr.html
+    - name: Writing
+      link: /personal/writing.html
+    - name: Game Dev
+      link: /personal/game_dev.html
+    - name: Spatial Design
+      link: /personal/spatial_design.html
+    - name: Tea
+      link: /personal/tea.html
+    - name: Self Development
+      link: /personal/self_development.html
+    - name: Trivia
+      link: /personal/trivia.html
+    - name: Psyche
+      link: /personal/psyche/
+      children:
+        - name: Spirituality
+          link: /personal/psyche/spirituality.html
+        - name: Dreams
+          link: /personal/psyche/dreams.html
+        - name: Jung
+          link: /personal/psyche/jung.html
