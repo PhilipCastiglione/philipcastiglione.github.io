@@ -6,6 +6,8 @@ permalink: /blog/
 
 # Blog
 
+_Disclaimer: this is targeted at medium to large organisations; big enough that people on the coalface feel disconnected from leadership._
+
 <div>
     {% for post in site.posts %}
         <div>

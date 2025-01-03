@@ -7,6 +7,26 @@ body {
     font-weight: normal;
 }
 
+// COLORS
+
+$color-primary: #4c88a9;
+$color-contrast: #ff9000;
+$color-black: #000000;
+$color-white: #ffffff;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: darken($color-primary, 10%);
+}
+
+a:hover {
+    background-color: darken($color-white, 7%);
+}
+
 // LAYOUT
 
 $spacing-unit: 8px;
@@ -46,24 +66,14 @@ h6 {
     margin-bottom: $spacing-unit * 1;
 }
 
-// COLORS
-
-$color-primary: #4c88a9;
-$color-contrast: #ff9000;
-$color-black: #000000;
-$color-white: #ffffff;
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: darken($color-primary, 10%);
-}
-
-a:hover {
-    background-color: darken($color-white, 7%);
+blockquote {
+    border-left: $spacing-unit solid $color-primary;
+    padding-left: $spacing-unit * 2;
+    padding-top: $spacing-unit * 0.5;
+    padding-bottom: $spacing-unit * 0.5;
+    margin-top: $spacing-unit * 2.5;
+    margin-bottom: $spacing-unit * 2.5;
+    background-color: lighten($color-primary, 45%);
 }
 
 // TYPOGRAPHY
