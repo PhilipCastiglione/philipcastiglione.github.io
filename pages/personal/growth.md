@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Philip Castiglione
-permalink: /personal/self_development.html
+permalink: /personal/growth.html
 ---
 
-# Self Development
+# Growth
 
 Under construction. Check back soon.

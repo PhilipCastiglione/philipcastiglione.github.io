@@ -14,6 +14,11 @@ $color-contrast: #ff9000;
 $color-black: #000000;
 $color-white: #ffffff;
 
+body {
+    color: $color-black;
+    background-color: $color-white;
+}
+
 h1,
 h2,
 h3,
@@ -114,4 +119,10 @@ h6 {
 
 a {
     color: $color-primary;
+}
+
+// UTILS
+
+.text-center {
+    text-align: center;
 }
