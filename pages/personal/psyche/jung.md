@@ -6,4 +6,4 @@ permalink: /personal/psyche/jung.html
 
 # Jung
 
-Under construction. Please check back later.
+Under construction. Check back soon.

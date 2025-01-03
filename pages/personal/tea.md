@@ -6,4 +6,4 @@ permalink: /personal/tea.html
 
 # Tea 
 
-Under construction. Please check back later.
+Under construction. Check back soon.

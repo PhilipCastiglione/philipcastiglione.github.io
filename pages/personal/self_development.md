@@ -6,4 +6,4 @@ permalink: /personal/self_development.html
 
 # Self Development
 
-Under construction. Please check back later.
+Under construction. Check back soon.

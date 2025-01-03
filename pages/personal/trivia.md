@@ -6,4 +6,4 @@ permalink: /personal/trivia.html
 
 # Trivia 
 
-Under construction. Please check back later.
+Under construction. Check back soon.

@@ -6,4 +6,4 @@ permalink: /personal/game_dev.html
 
 # Game Development 
 
-Under construction. Please check back later.
+Under construction. Check back soon.

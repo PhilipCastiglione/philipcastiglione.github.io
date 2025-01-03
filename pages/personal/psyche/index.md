@@ -6,4 +6,4 @@ permalink: /personal/psyche/
 
 # Psyche
 
-Under construction. Please check back later.
+Under construction. Check back soon.

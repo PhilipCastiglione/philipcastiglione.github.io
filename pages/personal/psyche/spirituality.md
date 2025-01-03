@@ -6,4 +6,4 @@ permalink: /personal/psyche/spirituality.html
 
 # Spirituality
 
-Under construction. Please check back later.
+Under construction. Check back soon.
