@@ -6,4 +6,4 @@ permalink: /personal/health/
 
 # Health
 
-Under construction. Check back soon.
+A collection of pages including goals, tracking, rules I've learned, bits of research... all designed to help keep healthy.

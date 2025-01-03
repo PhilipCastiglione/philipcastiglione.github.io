@@ -22,7 +22,8 @@
 
 .includes-header {
     display: flex;
-    gap: $spacing-unit * 3;
+    flex-wrap: wrap;
+    gap: $spacing-unit * 0.5 $spacing-unit * 3;
     font-size: $font-size-base * 1.25;
     margin: $spacing-unit * 0.5 0;
 }
@@ -36,6 +37,7 @@
 .includes-header-link-item {
     border-radius: $border-radius;
     padding: $spacing-unit $spacing-unit * 1.5;
+    white-space: nowrap;
 }
 
 .includes-header-link-item-parent,
