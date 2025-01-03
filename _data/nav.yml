@@ -39,8 +39,6 @@
       link: /personal/tea.html
     - name: Self Development
       link: /personal/self_development.html
-    - name: Trivia
-      link: /personal/trivia.html
     - name: Psyche
       link: /personal/psyche/
       children:
