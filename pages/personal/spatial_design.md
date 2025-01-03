@@ -6,4 +6,4 @@ permalink: /personal/spatial_design.html
 
 # Spatial Design
 
-Under construction. Please check back later.
+Under construction. Check back soon.

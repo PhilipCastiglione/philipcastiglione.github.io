@@ -6,4 +6,4 @@ permalink: /personal/health/longevity.html
 
 # Longevity
 
-Under construction. Please check back later.
+Under construction. Check back soon.

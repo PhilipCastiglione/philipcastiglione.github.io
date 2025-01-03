@@ -6,4 +6,4 @@ permalink: /personal/ccn.html
 
 # Cognitive Computational Neuroscience 
 
-Under construction. Please check back later.
+Under construction. Check back soon.
