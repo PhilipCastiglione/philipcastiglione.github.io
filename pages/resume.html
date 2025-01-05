@@ -1,272 +1,153 @@
 ---
-layout: bare
+layout: default
 title: Philip Castiglione – Resume
 permalink: /resume.html
 ---
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
 
-  body {
-    max-width: 1056px;
-    margin: 0 auto;
-    padding: 48px;
-    color: #e1f1fa;
-    background: linear-gradient(#141419, #232d39);
-  }
-
-  main {
-    border: 1px solid #e1f1fa;
-    background-color: rgba(0, 0, 0, 0.14);
-    box-shadow: 0px 0px 140px #323238;
-    padding: 24px 48px;
-  }
-
-  h1,
-  h2,
-  h3 {
-    font-family: Tahoma, Arial, Helvetica, sans-serif;
-    font-weight: 100;
-  }
-
-  h1 {
-    text-align: center;
-    font-size: 2.75rem;
-    margin-bottom: 24px;
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 18px;
-  }
-
-  h3 {
-    text-align: center;
-    font-size: 1.3rem;
-    margin: 30px 0 12px 0;
-    font-style: italic;
-  }
-
-  p,
-  ul,
-  ol {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-weight: 100;
-    margin-bottom: 14px;
-    font-size: 0.9rem;
-    line-height: 1.3rem;
-  }
-
-  ul li,
-  ol li {
-    padding-bottom: 4px;
-  }
-
-  /* last list item should have no padding */
-  ul li:last-child,
-  ol li:last-child {
-    padding-bottom: 0;
-  }
-
-  ul {
-    padding-left: 12px;
-  }
-
-  ol {
-    padding-left: 18px;
-  }
-
-  a {
-    color: #e1f1fa;
-  }
-
-  a:hover {
-    color: #3ebef5;
-  }
-
-  .text-shadow {
-    text-shadow: 1px 1px 8px #3ebef5;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 4px 24px;
-  }
-
-  .full-row {
-    grid-column: 1 / -1;
-  }
-
-  .two-column-cell {
-    grid-column: span 2;
-    margin-top: -14px;
-    margin-bottom: 16px;
-    font-style: italic;
-  }
-
-  .tooltip {
-    font-size: 1.1rem;
-    display: inline-block;
-    position: relative;
-  }
-
-  .tooltip:hover {
-    color: #3ebef5;
-  }
-
-  .tooltip-content {
-    font-size: 0.9rem;
-    display: none;
-    min-width: 300px;
-    position: absolute;
-    z-index: 1;
-    top: -30px;
-    right: 0;
-    background-color: black;
-    border: 1px dotted white;
-    color: #e1f1fa;
-    padding: 4px 8px;
-  }
-
-  .tooltip:hover .tooltip-content {
-    display: block;
-  }
-
-  .title {
-    text-shadow: 0px 0px 2px #3ebef5;
-  }
-
-  .hide {
-    display: none;
-  }
-
-  @media only screen and (max-width: 600px) {
-    body {
-      padding: 20px;
-    }
-
-    main {
-      padding: 12px 24px;
-    }
-  }
-</style>
-<main>
-  <h1><span class="text-shadow">Philip Castiglione</span></h1>
-  <section>
-    <p>
-      I'm a software engineer with 10 years of industry experience. I graduated top of my Computer Science degree,
-      winning all the major prizes and awards.
-    </p>
-    <p>
-      I am seeking to transition from commercial industry into academic research, to satisfy a deep intellectual
-      curiosity and profound desire to work on questions fundamental to the human condition.
-    </p>
-  </section>
-  <section>
-    <h2 class="full-row">Research Interests</h2>
+<div class="pages-resume page-container">
+  <div class="outer-container">
+    <div class="text-center">
+      <p>
+        <a href="{{ '/public/PhilipCastiglioneResume.pdf' | relative_url }}">Click here for a pdf version.</a>
+      </p>
+      <h1>Philip Castiglione</h1>
+      <h4>Technology and Management Expert</h4>
+    </div>
+    <div class="pages-resume-header-title">
+      <hr>
+      <h2>Experience</h2>
+      <hr>
+    </div>
+    <!-- Elevate Partners -->
+    <div class="pages-resume-header-row">
+      <h3>Principal Consultant</h3>
+      <h3>Elevate Partners</h3>
+      <p class="pages-resume-header-location-date">
+        <em>(Remote) Dublin & Perth</em>
+        <span>07/22 - now</span>
+      </p>
+    </div>
     <ul>
-      <li>Cognitive Computational Neuroscience</li>
-      <li>Using techniques and lessons from neuroscience and artificial intelligence to explore cognition</li>
-      <li>Foundational improvements to AI/ML models</li>
-      <li>Neuromorphic Computing</li>
+      <li>US stealth data/fintech startup: Led the design and rapid prototyping of a SaaS product prototype for founder
+        sales pitches using scalable and hirable cutting edge technologies including Python, FastAPI, TypeScript, React,
+        Docker and GCP. Established strong patterns and coached client engineers on best practices.</li>
+      <li>NASDAQ listed fintech: Identified, designed and drove changes in vendor API usage reducing spend by 35%
+        (>$1.1m USD p.a), implemented on TypeScript Node.js backend after achieving buy-in from stakeholders and
+        socialising with engineering.</li>
+      <li>Australian startup: As technical co-founder, built and deployed an entire HR SaaS platform single handedly in
+        Ruby on Rails. Built a fully automated integrated sales engine for the B2B phone & email outreach team.</li>
     </ul>
-  </section>
-  <section class="grid">
-    <h2 class="full-row">Industry Experience</h2>
-    <p>'22 &mdash; </p>
-    <p><span class="title">Principal Consultant</span>, Elevate Partners</p>
-    <p>Dublin (IE), Perth (AU)</p>
-    <p>'19 &mdash; '22</p>
-    <p><span class="title">Platform Tech Lead</span>, DIGIT, a Scopely Studio</p>
-    <p>Dublin (IE)</p>
-    <p>'18 &mdash; '19</p>
-    <p><span class="title">Software Engineer Consultant</span>, Cogent (acq. by Block NYSE: SQ)</p>
-    <p>Melbourne (AU)</p>
-    <p>'16 &mdash; '18</p>
-    <p><span class="title">Software Developer</span>, JCurve Solutions (ASX: JCS)</p>
-    <p>Melbourne (AU)</p>
-    <p>'15 &mdash; '16</p>
-    <p><span class="title">Junior Programmer</span>, Hardhat Digital</p>
-    <p>Melbourne (AU)</p>
-    <p class="full-row">Prior to 2015 I worked in Management Consulting and Finance, before seeking greater alignment
-      in software.</p>
-    <p class="hide">'13 &mdash; '15</p>
-    <p class="hide"><span class="title">Strategy and Business Analyst</span>, University of Melbourne</p>
-    <p class="hide">Melbourne (AU)</p>
-    <p class="hide">'11 &mdash; '14</p>
-    <p class="hide"><span class="title">Non-Executive Director</span>, Safe Marketing Australia</p>
-    <p class="hide">Melbourne (AU)</p>
-    <p class="hide">'12 &mdash; '13</p>
-    <p class="hide"><span class="title">Management Consultant - Operations & Strategy</span>, KPMG</p>
-    <p class="hide">Brisbane (AU)</p>
-    <p class="hide">'09 &mdash; '11</p>
-    <p class="hide"><span class="title">Co-Founder</span>, SC Financial Group & Castiglione Securities Trading</p>
-    <p class="hide">Bangkok (TH), Perth (AU)</p>
-    <p class="hide">'05 &mdash; '09</p>
-    <p class="hide"><span class="title">Senior Accounts Officer</span>, The University of Western Australia</p>
-    <p class="hide">Perth (AU)</p>
-    <h2 class="full-row">Research & Teaching Experience</h2>
-    <p>'18 &mdash; '18</p>
-    <p><span class="title">Machine Learning Internship</span>, A²I² (Applied AI Institute)</p>
-    <p>Melbourne (AU)</p>
-    <p></p>
-    <p class="two-column-cell">Computer Vision "AI-UI" project generating application markup (HTML) from hand drawn
-      sketches.<br>Short term secondment from Cogent to increase AI/ML expertise available in the company.</p>
-    <p>'15 &mdash; '15</p>
-    <p><span class="title">Teaching Assistant</span> (part-time), General Assembly</p>
-    <p>Melbourne (AU)</p>
-    <p></p>
-    <p class="two-column-cell">Lecturing, tutorials, one-on-one tutoring, assignments & marking.</p>
-    <h2 class="full-row">Education</h2>
-    <p>'17 &mdash; '20</p>
-    <p><span class="title">Bachelor of Computer Science (Cognitive Science)</span>, Deakin University</p>
-    <p>Melbourne (AU)</p>
-    <p></p>
-    <p class="two-column-cell">
-      Graduated with the highest grades and many academic awards, whilst also working full time.<br>
-      <br>
-      Grade: 92% (High Distinction) average<br>
-      <br>
-      Awards for academic achievement:<br>
-      - Australian Computer Society Student Excellence Award <span class="tooltip">ⓘ<span
-          class="tooltip-content">Awarded to the best performing student who has successfully completed their final
-          year in an ACS-accredited undergraduate course</span></span><br>
-      - Deakin Scholarship for Excellence <span class="tooltip">ⓘ<span class="tooltip-content">Awarded for exceptional
-          academic achievement</span></span><br>
-      - Patrick Pleass Memorial Award <span class="tooltip">ⓘ<span class="tooltip-content">Top mark across first 2
-          years in Bachelor of Computer Science</span></span><br>
-      - School of Information Technology Award <span class="tooltip">ⓘ<span class="tooltip-content">Top mark amongst
-          second year IT students faculty & campus wide</span></span><br>
-      - Professor of Information Technology Award <span class="tooltip">ⓘ<span class="tooltip-content">Top mark
-          amongst first year IT students faculty & campus wide</span></span><br>
-      - Graduated With Distinction
-    </p>
-    <p>'09 &mdash; '12</p>
-    <p><span class="title">Bachelor of Commerce (Finance)</span> University of Melbourne</p>
-    <p>Melbourne (AU)</p>
-    <p></p>
-    <p class="two-column-cell">
-      Grade: 85% (High Distinction) average<br>
-      <br>
-      Awards for academic achievement:<br>
-      - CPA Management Accounting Prize <span class="tooltip">ⓘ<span class="tooltip-content">Top student in Management
-          Accounting</span></span><br>
-      - Sothertons Fraud and Forensics Prize <span class="tooltip">ⓘ<span class="tooltip-content">Top student in
-          Business Fraud and Forensics</span></span><br>
-    </p>
-    <h2 class="full-row">Service</h2>
-    <p>'17 &mdash; '20</p>
-    <p><span class="title">Co-Founding Member & Treasurer</span>, Deakin Software Engineering Club</p>
-    <p>Melbourne (AU)</p>
-    <p>'10 &mdash; '11</p>
-    <p><span class="title">Member & Volunteer</span>, Rotary Club of Perth</p>
-    <p>Perth (AU)</p>
-  </section>
-  <section>
-    <h3>References available on request.</h3>
-  </section>
-</main>
+    <!-- DIGIT, a Scopely Studio -->
+    <div class="pages-resume-header-row">
+      <h3>Platform Tech Lead</h3>
+      <h3>DIGIT, a Scopely Studio</h3>
+      <p class="pages-resume-header-location-date">
+        <em>(Hybrid) Dublin, Ireland</em>
+        <span>11/19 - 06/22</span>
+      </p>
+    </div>
+    <ul>
+      <li>Led design and platform implementation of Battle Pass feature driving >$100m USD annual revenue using a highly
+        efficient, consistent and robust architecture of Python, Flask, MySQL, Redis, Celery and Protobuf to serve >100k
+        heavy traffic CCU.</li>
+      <li>Retained key customers by solving a long term complex flaky bug using load testing and performance profiling
+        techniques.</li>
+      <li>Consistently received the highest review rating possible and received two promotions within 2 years.</li>
+      <li>Lead a team of 5 amazing engineers; hiring, onboarding, mentoring; facilitating, protecting and enabling them.
+      </li>
+    </ul>
+    <!-- Cogent (acq. by Block NYSE: SQ) -->
+    <div class="pages-resume-header-row">
+      <h3>Software Engineer Consultant</h3>
+      <h3>Cogent (acq. by Block NYSE: SQ)</h3>
+      <p class="pages-resume-header-location-date">
+        <em>Melbourne, Australia</em>
+        <span>04/18 - 11/19</span>
+      </p>
+    </div>
+    <ul>
+      <li>ASX50 proptech: Improved core search path response time by 200-300ms (10-15%) for >100m monthly users via
+        optimisations through an event sourced data stream (Amazon RDS and Amazon Redshift), several microservice
+        enrichment layers (Ruby, Scala, GraphQL) to the front end (Backbone, React, jQuery).</li>
+      <li>Initiated Cogent’s AI & Machine Learning practice, building a public recommender system demo to drive client
+        acquisition and then implementing an NLP pipeline to automate customer onboarding for a B2B SaaS startup,
+        reducing manual effort by >40%.</li>
+      <li>Every client I worked with tried to hire me.</li>
+    </ul>
+    <!-- A2I2 (Applied AI Institute) -->
+    <div class="pages-resume-header-row">
+      <h3>Machine Learning Internship</h3>
+      <h3>A2I2 (Applied AI Institute)</h3>
+      <p class="pages-resume-header-location-date">
+        <em>Melbourne, Australia</em>
+        <span>11/18 - 12/18</span>
+      </p>
+    </div>
+    <ul>
+      <li>A secondment from Cogent to upskill in AI/ML in order to help Cogent enter the space.</li>
+      <li>Built a computer vision prototype for generating application UIs from hand drawn sketches.</li>
+    </ul>
+    <!-- JCurve Solutions (ASX: JCS) -->
+    <div class="pages-resume-header-row">
+      <h3>Software Developer</h3>
+      <h3>JCurve Solutions (ASX: JCS)</h3>
+      <p class="pages-resume-header-location-date">
+        <em>Melbourne, Australia</em>
+        <span>05/16 - 04/18</span>
+      </p>
+    </div>
+    <ul>
+      <li>Core contributor on the primary product: learned best practices regarding code, tests, architecture, code
+        review.</li>
+      <li>Designed and built handrolled Authn/Authz system to OWASP standards supporting OAuth2 and ACL permissions
+        using JWTs.</li>
+    </ul>
+    <!-- Hardhat Digital -->
+    <div class="pages-resume-header-row">
+      <h3>Junior Programmer</h3>
+      <h3>Hardhat Digital</h3>
+      <p class="pages-resume-header-location-date">
+        <em>Melbourne, Australia</em>
+        <span>06/15 - 05/16</span>
+      </p>
+    </div>
+    <ul>
+      <li>Built CMS backed ecommerce websites, cross-platform phone apps and learned fullstack development from a
+        brilliant mentor.</li>
+    </ul>
+    <div class="pages-resume-header-title">
+      <hr>
+      <h2>Education</h2>
+      <hr>
+    </div>
+    <!-- Deakin University -->
+    <div class="pages-resume-header-row">
+      <h3>Bachelor of Computer Science</h3>
+      <h3>Deakin University</h3>
+      <p class="pages-resume-header-location-date">
+        <em>Melbourne, Australia</em>
+        <span>03/17 - 11/20</span>
+      </p>
+    </div>
+    <ul>
+      <li>Graduated top of my year, with many academic awards, whilst also working full time.</li>
+      <li>Deakin Scholarship for Excellence, Professor of Information Technology Award, School of Information Technology
+        Award, Patrick Pleass Memorial Award, Australian Computer Society Student Excellence Award, Graduated With
+        Distinction.</li>
+      <li>Founding Executive Member (Treasurer) of Deakin Software Engineering Club.</li>
+    </ul>
+    <!-- University of Melbourne -->
+    <div class="pages-resume-header-row">
+      <h3>Bachelor of Commerce (Finance)</h3>
+      <h3>University of Melbourne</h3>
+      <p class="pages-resume-header-location-date">
+        <em>Melbourne, Australia</em>
+        <span>03/09 - 02/12</span>
+      </p>
+    </div>
+    <ul>
+      <li>High Distinction average, multiple academic awards, whilst also working full time.</li>
+      <li>CPA Management Accounting Prize, Sothertons Fraud and Forensics Prize.</li>
+    </ul>
+  </div>
+</div>

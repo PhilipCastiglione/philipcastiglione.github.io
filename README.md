@@ -22,8 +22,6 @@ Deploy by merging to master and pushing to GitHub.
 
 ## TODO
 
-- [ ] update resume & make and attach pdf version
-
 - [ ] look for more jekyll plugins (like, do i want jekyll sitemap and feed)
     - https://jekyllrb.com/docs/step-by-step/10-deployment/
 
@@ -42,6 +40,8 @@ Deploy by merging to master and pushing to GitHub.
 - [ ] remove unused pages/assets/images/stuff
 
 - [ ] Improve home page
+
+- [ ] Improve resume
 
 - [ ] Improve management blog main page text
 
