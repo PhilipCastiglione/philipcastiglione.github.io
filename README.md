@@ -22,17 +22,13 @@ Deploy by merging to master and pushing to GitHub.
 
 ## TODO
 
+
 - [ ] add a bit of basic content
-    - [ ] home
-    - [ ] more management blog posts
-        - [ ] 1
-        - [ ] 2
+    - [ ] one more management blog posts
     - [ ] replace resume
 
 - [ ] Make it look good, and well implemented
     - [ ] Mobile, Tablet, Laptop, Large Screen
-
-- [ ] transition home page
 
 - [ ] go live
 
@@ -55,12 +51,16 @@ Deploy by merging to master and pushing to GitHub.
 
 - [ ] Improve home page
 
+- [ ] Improve management blog main page text
+
 - [ ] remove unused pages/assets/images/stuff
 
 - [ ] bio (update config description, linkedin, resume, og:description)
 - [ ] update resume & make and attach pdf version
 
 - [ ] Fill out content
+
+- [ ] post dates
 
 - [ ] cross link posts
 
