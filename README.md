@@ -22,19 +22,14 @@ Deploy by merging to master and pushing to GitHub.
 
 ## TODO
 
+- [ ] Mobile, Tablet, Laptop, Large Screen
 
-- [ ] add a bit of basic content
-    - [ ] replace resume
-
-- [ ] Make it look good, and well implemented
-    - [ ] Mobile, Tablet, Laptop, Large Screen
+- [ ] update resume & make and attach pdf version
 
 - [ ] look for more jekyll plugins (like, do i want jekyll sitemap and feed)
     - https://jekyllrb.com/docs/step-by-step/10-deployment/
 
 - [ ] tags vs categories
-
-- [ ] use better linking https://jekyllrb.com/docs/liquid/tags/#link
 
 - [ ] design iteration
 
@@ -46,18 +41,17 @@ Deploy by merging to master and pushing to GitHub.
 
 - [ ] Update README
 
+- [ ] remove unused pages/assets/images/stuff
+
 - [ ] Improve home page
 
 - [ ] Improve management blog main page text
 
-- [ ] remove unused pages/assets/images/stuff
-
 - [ ] bio (update config description, linkedin, resume, og:description)
-- [ ] update resume & make and attach pdf version
 
-- [ ] Fill out content
+- [ ] more content
 
-- [ ] post dates
+- [ ] figure out post dates
 
 - [ ] cross link posts
 
