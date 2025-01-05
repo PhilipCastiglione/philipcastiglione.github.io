@@ -34,6 +34,11 @@ a:hover {
 
 // LAYOUT
 
+$media-phone: 480px;
+$media-tablet: 768px;
+$media-desktop: 1024px;
+$media-large: 1536px;
+
 $spacing-unit: 8px;
 $border-radius: 4px;
 
@@ -139,4 +144,21 @@ a {
 
 .text-center {
     text-align: center;
+}
+
+.media-tablet,
+.media-desktop,
+.media-large {
+    display: none;
+}
+
+@media only screen and (min-width: $media-phone) {
+    .media-phone-only {
+        display: none;
+    }
+    .media-tablet,
+    .media-desktop,
+    .media-large {
+        display: unset;
+    }
 }

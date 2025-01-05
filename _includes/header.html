@@ -3,8 +3,15 @@
         <div class="includes-header-logo">
             <img src="{{ '/public/favicon-32x32.png' | relative_url }}" alt="a castle" />
         </div>
-        <div class="includes-header-rows">
-            <nav class="includes-header includes-header-top-level">
+        <div class="includes-header-rows media-phone-only">
+            <nav class="includes-header-row includes-header-top-level">
+                <a class="includes-header-link-item includes-header-phone-home" href="/">Home</a>
+                <a class="includes-header-link-item" id="includes-header-phone-open" href="#">Menu</a>
+                <a class="includes-header-link-item" id="includes-header-phone-close" href="#">Close</a>
+            </nav>
+        </div>
+        <div class="includes-header-rows media-tablet">
+            <nav class="includes-header-row includes-header-top-level">
                 {% for nav_item in site.data.nav %}
                     {% include nav_link.html link_item=nav_item %}
                     {% if page.url contains nav_item.link %}
@@ -14,7 +21,7 @@
             </nav>
             {% if level_one_nav_items %}
                 <hr>
-                <nav class="includes-header">
+                <nav class="includes-header-row">
                     {% for nav_item in level_one_nav_items %}
                         {% include nav_link.html link_item=nav_item %}
                         {% if page.url contains nav_item.link %}
@@ -25,7 +32,7 @@
             {% endif %}
             {% if level_two_nav_items %}
                 <hr>
-                <nav class="includes-header">
+                <nav class="includes-header-row">
                     {% for nav_item in level_two_nav_items %}
                         {% include nav_link.html link_item=nav_item %}
                     {% endfor %}
@@ -33,4 +40,41 @@
             {% endif %}
         </div>
     </div>
+    <div class="outer-container media-phone-only" id="includes-header-phone-menu-opened">
+        <nav class="includes-header-phone-menu">
+            {% for nav_item in site.data.nav %}
+                {% include nav_link.html link_item=nav_item %}
+                {% if page.url contains nav_item.link %}
+                    <div class="includes-header-phone-menu-level-two">
+                        {% for nav_item_2 in nav_item.children %}
+                            {% include nav_link.html link_item=nav_item_2 %}
+                            {% if page.url contains nav_item_2.link %}
+                                <div class="includes-header-phone-menu-level-three">
+                                    {% for nav_item_3 in nav_item_2.children %}
+                                        {% include nav_link.html link_item=nav_item_3 %}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </nav>
+    </div>
 </div>
+<script>
+    const phoneMenuButton = document.getElementById('includes-header-phone-open');
+    const phoneMenuCloseButton = document.getElementById('includes-header-phone-close');
+    const phoneMenuOpened = document.getElementById('includes-header-phone-menu-opened');
+
+    phoneMenuButton.addEventListener('click', function() {
+        phoneMenuButton.style.display = 'none';
+        phoneMenuCloseButton.style.display = 'unset';
+        phoneMenuOpened.style.display = 'unset';
+    });
+    phoneMenuCloseButton.addEventListener('click', function() {
+        phoneMenuButton.style.display = 'unset';
+        phoneMenuCloseButton.style.display = 'none';
+        phoneMenuOpened.style.display = 'none';
+    });
+</script>
