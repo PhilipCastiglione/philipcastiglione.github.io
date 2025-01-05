@@ -1,10 +1,9 @@
 ---
 layout: post
 title: Philip Castiglione – Health
+post_title: Electromagnetic Radiation
 permalink: /personal/health/emr.html
 ---
-# Electromagnetic Radiation
-
 This page is a bit random but exists so I can share it with people worried about this topic.
 
 ## Motivation

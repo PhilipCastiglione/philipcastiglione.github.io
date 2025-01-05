@@ -1,9 +1,7 @@
 ---
 layout: page
 title: Philip Castiglione – Psyche
+post_title: Psyche
 permalink: /personal/psyche/
 ---
-
-# Psyche
-
 Under construction. Check back soon.

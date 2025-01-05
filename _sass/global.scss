@@ -61,9 +61,12 @@ $border-radius: 4px;
 }
 
 p,
-li {
+li,
+aside,
+blockquote {
     margin-top: $spacing-unit * 1.5;
     margin-bottom: $spacing-unit * 1.5;
+    word-break: break-word;
 }
 
 h1,
@@ -84,6 +87,11 @@ blockquote {
     margin-top: $spacing-unit * 2.5;
     margin-bottom: $spacing-unit * 2.5;
     background-color: lighten($color-primary, 45%);
+}
+
+aside {
+    padding: $spacing-unit;
+    background-color: lighten($color-contrast, 45%);
 }
 
 // TYPOGRAPHY

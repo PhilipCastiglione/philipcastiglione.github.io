@@ -1,10 +1,9 @@
 ---
 layout: post
 title: Philip Castiglione – Health
+post_title: Be Your Own Personal Trainer
 permalink: /personal/health/byopt.html
 ---
-
-# Be Your Own Personal Trainer
 
 [Course link](https://www.udemy.com/course/be-your-own-personal-trainer-byopt-for-men/learn/lecture/3282028#questions)
 
