@@ -24,13 +24,10 @@ Deploy by merging to master and pushing to GitHub.
 
 
 - [ ] add a bit of basic content
-    - [ ] one more management blog posts
     - [ ] replace resume
 
 - [ ] Make it look good, and well implemented
     - [ ] Mobile, Tablet, Laptop, Large Screen
-
-- [ ] go live
 
 - [ ] look for more jekyll plugins (like, do i want jekyll sitemap and feed)
     - https://jekyllrb.com/docs/step-by-step/10-deployment/
