@@ -3,8 +3,6 @@
 html,
 body {
     scroll-behavior: smooth;
-    font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
-    font-weight: normal;
 }
 
 // COLORS
@@ -13,6 +11,8 @@ $color-primary: #4c88a9;
 $color-contrast: #ff9000;
 $color-black: #000000;
 $color-white: #ffffff;
+
+$color-linkedin: #0a66c2;
 
 body {
     color: $color-black;
@@ -49,7 +49,7 @@ $border-radius: 4px;
 }
 
 .inner-container {
-    max-width: 900px;
+    max-width: 960px;
     margin: 0 auto;
     padding-left: $spacing-unit * 2;
     padding-right: $spacing-unit * 2;
@@ -83,6 +83,19 @@ blockquote {
 
 // TYPOGRAPHY
 
+html,
+body {
+    font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
+    font-weight: normal;
+}
+
 $font-size-base: 18px;
 
 p,
@@ -90,6 +103,7 @@ li {
     font-size: $font-size-base;
     line-height: 1.4;
 }
+
 h1,
 h2,
 h3,

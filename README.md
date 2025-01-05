@@ -53,6 +53,8 @@ Deploy by merging to master and pushing to GitHub.
 
 - [ ] Update README
 
+- [ ] Improve home page
+
 - [ ] remove unused pages/assets/images/stuff
 
 - [ ] bio (update config description, linkedin, resume, og:description)

@@ -1,164 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: Philip Castiglione
+---
+<div class="page-container">
+    <div class="inner-container">
+        <h1 class="text-center welcome">Welcome! I'm Philip Castiglione</h1>
+        <div class="pages-index-section-one-content">
+            <img src="{{ '/assets/images/me.jpeg' | relative_url }}" alt="a photo of me" class="pages-index-me">
+            <div>
+                <p>I am a <b>technology and management expert</b> who leads brilliant teams working on award winning
+                    products
+                    and transforms organisations.
+                </p>
+                <p>With 20 years across two careers, I'm uniquely balanced across tech and business.</p>
+                <div class="pages-index-buttons">
+                    <a href="https://www.linkedin.com/in/philcastiglione/" target="_blank"
+                        class="pages-index-linkedin-button">
+                        Connect on LinkedIn
+                        <div class="pages-index-linkedin-logo"></div>
+                    </a>
+                    <a href="{% link pages/resume.html %}" class="pages-index-resume-link">
+                        View Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Philip Castiglione</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="./public/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="./public/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="./public/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="./public/manifest.json">
-  <meta name="theme-color" content="#000000">
-  <meta property="og:title" content="Philip Castiglione" />
-  <meta property="og:description" content="Home Page for the personal website of Philip Castiglione" />
-  <meta property="og:url" content="https://philipcastiglione.com" />
-  <meta property="og:image" content="https://philipcastiglione.com/assets/images/hero.jpg" />
-  <meta property="og:image:width" content="1401" />
-  <meta property="og:image:height" content="788" />
-  <meta property="og:type" content="website" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<div style="display: none;">
+    <div class="pages-index-section-two">
+        <div class="inner-container">
+        </div>
+    </div>
+    <div class="pages-index-section-three">
+    </div>
 
-    body {
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-      position: relative;
-      color: #e1f1fa;
-    }
+    <p>add testimonials</p>
+    <p>deeply technical</p>
+    <p>cross timezone, cross culture</p>
+    <p>management philosophy</p>
 
-    body h1 {
-      font-family: Tahoma, Arial, Helvetica, sans-serif;
-      font-size: 2.75rem;
-      font-weight: 100;
-      padding-top: 28vh;
-      padding-left: 5vw;
-      padding-right: 5vw;
-    }
+    <p>Here are my beliefs about management.</p>
+    <p>I believe in bringing the rigour of engineering to the science of effective management.</p>
+    <p>I believe in honour and integrity in the workplace, as in life.</p>
+    <p>I believe in the power of radical candour and aspire towards radical transparency.</p>
 
-    body aside {
-      font-family: Verdana, Arial, Helvetica, sans-serif;
-      font-size: 0.8rem;
-      font-style: italic;
-      font-weight: 100;
-      padding-left: 5vw;
-      padding-right: 5vw;
-      padding-bottom: 24px;
-      line-height: 1.5rem;
-      max-width: 540px;
-    }
+    <p>academia, theory... BCompSc(Cognitive Science), BCom(Finance)</p>
+    <p>I have a Bachelor of Computer Science &mdash; Cognitive Science (WAM 92%, graduated top of the degree
+        with most of the awards) and a Bachelor of Commmerce &mdash; Finance (WAM 85%, multiple awards).</p>
 
-    body p {
-      font-family: Verdana, Arial, Helvetica, sans-serif;
-      font-size: 1.1rem;
-      font-weight: 100;
-      padding-left: 5vw;
-      padding-right: 5vw;
-      padding-bottom: 10px;
-      line-height: 1.5rem;
-      max-width: 540px;
-    }
+    <h4>10 years in software and 10 in finance and management consulting. All of them spent thinking and learning.</h4>
+    <h4>I've managed (and lead) teams across a variety of organisations. Made and fixed many mistakes.</h4>
+    <h4>I am passionate about .</h4>
+    <p>I have a pretty broad range. A sample of my recent titles in consulting, contract and permanent roles ranges
+        across: CTO, Principal Engineer and Platform Tech Lead.</p>
 
-    p a,
-    p a:visited {
-      color: #e1f1fa;
-    }
-
-    p a:hover {
-      color: #3ebef5;
-      text-decoration: none;
-    }
-
-
-    body>img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: fixed;
-      z-index: -10;
-    }
-
-    .deemphasize {
-      opacity: 0.6;
-    }
-
-    @media only screen and (max-width: 1024px) {
-      .img-cover {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background: rgba(0, 0, 0, 0.5);
-      }
-    }
-
-    .logos {
-      padding-top: 24px;
-    }
-
-    .logo>img {
-      width: 48px;
-      height: 48px;
-      margin-right: 8px;
-      background-color: #e1f1fa;
-      border: 1px solid #e1f1fa;
-      border-radius: 4px;
-    }
-
-    .logo>img:hover {
-      border-color: #3ebef5;
-      background-color: #3ebef5;
-    }
-
-    .game {
-      position: fixed;
-      padding-right: 0;
-      bottom: 0;
-      right: 12px;
-    }
-
-    .game a {
-      color: #e1f1fa;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 100;
-    }
-
-    .game a:hover {
-      color: #3ebef5;
-    }
-
-    @media only screen and (max-width: 1024px) {
-      .game {
-        visibility: hidden;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="img-cover"></div>
-  <img src="./assets/images/hero.jpg" alt="a robot, thinking">
-  <h1>Philip Castiglione</h1>
-  <aside>BCompSc(Cognitive Science), BCom(Finance)</aside>
-  <p>Software engineer.</p>
-  <p>My personal interests include cognitive neuroscience and the tantalising fantasy of artificial intelligence.</p>
-  <p class="logos">
-    <a href="https://github.com/philipCastiglione/" class="logo" target="_blank" rel="noopener noreferrer"><img
-        src="./assets/images/github.png" alt="github logo"></a>
-    <a href="https://www.linkedin.com/in/philcastiglione/" class="logo" target="_blank" rel="noopener noreferrer"><img
-        src="./assets/images/linkedin.png" alt="linkedin logo"></a>
-    <a href="https://x.com/PhilCastiglione" class="logo" target="_blank" rel="noopener noreferrer"><img
-        src="./assets/images/twitter.png" alt="twitter logo"></a>
-    <a href="https://hachyderm.io/@xaoz" class="logo" target="_blank" rel="noopener noreferrer"><img
-        src="./assets/images/mastodon.png" alt="mastodon logo"></a>
-  </p>
-  <p class="game deemphasize"><a href="./conway/index.html">Play a game</a></p>
-</body>
-
-</html>
+    <p>say no to mediocre management</p>
+</div>

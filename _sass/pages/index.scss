@@ -1,0 +1,70 @@
+.welcome {
+    margin-top: $spacing-unit * 6;
+    font-size: $font-size-base * 2.5;
+}
+
+.pages-index-section-one-content {
+    display: flex;
+    align-items: center;
+    margin-top: $spacing-unit * 8;
+    flex-direction: row-reverse;
+    gap: $spacing-unit * 10;
+    text-align: center;
+
+    p {
+        font-size: $font-size-base * 1.15;
+    }
+}
+
+.pages-index-me {
+    width: 280px;
+    height: 280px;
+    flex-shrink: 0;
+    border-radius: $border-radius * 1.5;
+    overflow: hidden;
+}
+
+.pages-index-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: $spacing-unit * 6;
+}
+
+.pages-index-linkedin-button {
+    display: flex;
+    gap: $spacing-unit * 1.5;
+    color: $color-white;
+    background-color: $color-linkedin;
+    padding: $spacing-unit * 2 $spacing-unit * 4;
+    border-radius: $border-radius * 3;
+    font-size: $font-size-base * 1.25;
+    font-weight: 500;
+
+    &:hover {
+        background-color: lighten($color-linkedin, 15%);
+        text-decoration: none;
+    }
+}
+
+.pages-index-linkedin-logo {
+    width: $font-size-base * 1.6;
+    height: $font-size-base * 1.6;
+    mask-image: url("/assets/images/linkedin.png");
+    mask-size: contain;
+    background-color: $color-white;
+}
+
+.pages-index-resume-link {
+    font-size: $font-size-base;
+    padding: $spacing-unit;
+    color: lighten($color-black, 40%);
+    border-radius: $border-radius;
+}
+
+.pages-index-section-two {
+    margin-top: $spacing-unit * 12;
+    padding-top: $spacing-unit * 6;
+    padding-bottom: $spacing-unit * 4;
+    background-color: lighten($color-primary, 40%);
+}
