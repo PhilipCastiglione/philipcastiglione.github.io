@@ -22,8 +22,6 @@ Deploy by merging to master and pushing to GitHub.
 
 ## TODO
 
-- [ ] Mobile, Tablet, Laptop, Large Screen
-
 - [ ] update resume & make and attach pdf version
 
 - [ ] look for more jekyll plugins (like, do i want jekyll sitemap and feed)

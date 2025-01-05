@@ -22,9 +22,7 @@ body {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
     color: darken($color-primary, 10%);
 }
 
@@ -34,7 +32,7 @@ a:hover {
 
 // LAYOUT
 
-$media-phone: 480px;
+$media-phone: 520px;
 $media-tablet: 768px;
 $media-desktop: 1024px;
 $media-large: 1536px;
@@ -60,6 +58,10 @@ $border-radius: 4px;
     padding-right: $spacing-unit * 2;
 }
 
+// TYPOGRAPHY
+
+$font-size-base: 18px;
+
 p,
 li,
 aside,
@@ -67,16 +69,6 @@ blockquote {
     margin-top: $spacing-unit * 1.5;
     margin-bottom: $spacing-unit * 1.5;
     word-break: break-word;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: $spacing-unit * 3;
-    margin-bottom: $spacing-unit * 1;
 }
 
 blockquote {
@@ -94,22 +86,11 @@ aside {
     background-color: lighten($color-contrast, 45%);
 }
 
-// TYPOGRAPHY
-
 html,
 body {
     font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
     font-weight: normal;
 }
-
-h1,
-h2,
-h3 {
-    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
-    font-weight: normal;
-}
-
-$font-size-base: 18px;
 
 p,
 li {
@@ -120,28 +101,69 @@ li {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
+    margin-top: $spacing-unit * 2;
+    margin-bottom: $spacing-unit * 1;
+    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
+    font-weight: normal;
     line-height: 1.4;
 }
+
 h1 {
-    font-size: $font-size-base * 2;
-}
-h2 {
     font-size: $font-size-base * 1.5;
 }
-h3 {
+h2 {
     font-size: $font-size-base * 1.25;
 }
-h4 {
-    font-size: $font-size-base * 1.15;
+h3 {
+    font-size: $font-size-base * 1.1;
 }
-h5 {
+h4 {
     font-size: $font-size-base * 1;
 }
-h6 {
-    font-size: $font-size-base * 0.85;
+
+@media only screen and (min-width: $media-tablet) {
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin-top: $spacing-unit * 3;
+        margin-bottom: $spacing-unit * 1;
+    }
+    h1 {
+        font-size: $font-size-base * 1.75;
+    }
+    h2 {
+        font-size: $font-size-base * 1.35;
+    }
+    h3 {
+        font-size: $font-size-base * 1.125;
+    }
+}
+
+@media only screen and (min-width: $media-desktop) {
+    h1 {
+        font-size: $font-size-base * 2;
+    }
+    h2 {
+        font-size: $font-size-base * 1.5;
+    }
+    h3 {
+        font-size: $font-size-base * 1.25;
+    }
+    h4 {
+        font-size: $font-size-base * 1.125;
+    }
+}
+
+@media only screen and (min-width: $media-large) {
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin-top: $spacing-unit * 4;
+        margin-bottom: $spacing-unit * 1.5;
+    }
 }
 
 a {
