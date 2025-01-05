@@ -2,7 +2,7 @@
 layout: post
 post_title: Technology Choices
 categories: blog management
-excerpt: A few quick principles and tips to guide technology & design choices
+excerpt: A few quick principles and tips to guide technology and design choices.
 ---
 ### Core Principles
 
