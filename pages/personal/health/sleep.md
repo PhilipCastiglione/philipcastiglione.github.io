@@ -1,11 +1,9 @@
 ---
 layout: post
 title: Philip Castiglione – Health
+post_title: Rules For Good Sleep
 permalink: /personal/health/sleep.html
 ---
-
-# Rules for good sleep
-
 1. good bed
 1. good pillow & position 
 1. use a sleep mask

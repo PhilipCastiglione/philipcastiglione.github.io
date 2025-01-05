@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Philip Castiglione – Health
+post_title: Exercise
 permalink: /personal/health/exercise.html
 ---
 
-# Dang
+## Dang
 
 In 2024 I slipped a disc working out. I didn't listen to my body and was driven by numbers, goals and ego stuff I guess. I've always had the intention of using good form when lifting weights, but I've learned that's not sufficient - you can still hurt yourself! The mind is willing but the flesh is weak.
 
@@ -20,7 +21,7 @@ The focus is now on:
 * light weights
 * achievable goals
 
-# Goals
+## Goals
 
 I'll still use some numbers and targets as motivation, and because I need to return to a basic modicum of function!
 
@@ -28,7 +29,7 @@ I'll still use some numbers and targets as motivation, and because I need to ret
 
 Current goals are for 13/04/2025.
 
-## Cardio Fitness
+### Cardio Fitness
 
 > **Current Goals:**
 > 
@@ -39,7 +40,7 @@ In the medium term future I'll track against the beep test and try and get a hal
 
 In the longer term future, I could get a better measure of VO2max, improve my ability to do longer endurance training by rehabilitating my hip flexor and/or doing exercise that supports it (eg. swimming), include some kind of acute short term fitness measure & training.
 
-## Strength
+### Strength
 
 > **Current Goals:**
 > 
@@ -56,7 +57,7 @@ Next I'll aim to get back to the age/gender Novice level 8 rep max target on the
 
 I'm not planning longer term yet.
 
-## Flexibility
+### Flexibility
 
 > **Current Goals:**
 > 
@@ -66,7 +67,7 @@ Need to even understand how to make goals for this.
 
 Yoga or pilates might be good longer term?
 
-## Body Composition
+### Body Composition
 
 > **Current Goals:**
 > 
@@ -76,7 +77,7 @@ Try and get there by increasing exercise rather than calorie restriction.
 
 This will always be a bit of a vanity measure...
 
-## Resources
+### Resources
 
 _(NB: some irrelevant or out of date.)_
 
