@@ -17,7 +17,10 @@
     - name: AI
       link: /personal/ai.html
     - name: CCN
-      link: /personal/ccn.html
+      link: /personal/ccn/
+      children:
+        - name: Brain Model
+          link: /personal/ccn/brain_model.html
     - name: Health
       link: /personal/health/
       children:
