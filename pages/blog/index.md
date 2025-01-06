@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Philip Castiglione – Blog
+title: Philip Castiglione - Blog
 permalink: /blog/
 ---
 

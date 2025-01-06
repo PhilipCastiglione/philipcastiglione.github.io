@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Philip Castiglione – Health
+title: Philip Castiglione - Health
 post_title: Electromagnetic Radiation
 permalink: /personal/health/emr.html
 ---
@@ -84,7 +84,7 @@ EMFs are grouped by frequency, where higher frequency → more dangerous.
         
         A lot of the research in this area is outdated as it is concerned with phone calls. Many people use their cell phones constantly now, but not for making phone calls.
         
-        There is some more recent study and reviews reported in 2015 ([9](https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/cell-phones-fact-sheet#r9)) and in 2019 ([10](https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/cell-phones-fact-sheet#r10)) that show mixed findings but overall do not show an association between cell phone use and cancer ([11](https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/cell-phones-fact-sheet#r11)–[22](https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/cell-phones-fact-sheet#r22)).
+        There is some more recent study and reviews reported in 2015 ([9](https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/cell-phones-fact-sheet#r9)) and in 2019 ([10](https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/cell-phones-fact-sheet#r10)) that show mixed findings but overall do not show an association between cell phone use and cancer ([11](https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/cell-phones-fact-sheet#r11)-[22](https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/cell-phones-fact-sheet#r22)).
         
         There is some evidence from 2005 specifically of a potentially increased risk of acoustic neuroma associated with long term phone use ([source](https://www.notion.so/Electro-Magnetic-Radiation-d71b403d8f3b4fc490059630778b12ea?pvs=21)). There are other studies that show mixed results.
         
@@ -107,7 +107,7 @@ EMFs are grouped by frequency, where higher frequency → more dangerous.
     
     Other residential exposures at home:
     
-    - The majority of epidemiologic studies have shown no relationship between [breast cancer](https://www.cancer.gov/Common/PopUps/popDefinition.aspx?id=CDR0000444971&version=Patient&language=en) in women and exposure to extremely low frequency EMFs (ELF-EMFs) in the home ([41](https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/electromagnetic-fields-fact-sheet#r41)–[44](https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/electromagnetic-fields-fact-sheet#r44)), although a few individual studies have suggested an association; only one reported results that were [statistically significant](https://www.cancer.gov/Common/PopUps/popDefinition.aspx?id=CDR0000044167&version=Patient&language=en) ([45](https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/electromagnetic-fields-fact-sheet#r45)).
+    - The majority of epidemiologic studies have shown no relationship between [breast cancer](https://www.cancer.gov/Common/PopUps/popDefinition.aspx?id=CDR0000444971&version=Patient&language=en) in women and exposure to extremely low frequency EMFs (ELF-EMFs) in the home ([41](https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/electromagnetic-fields-fact-sheet#r41)-[44](https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/electromagnetic-fields-fact-sheet#r44)), although a few individual studies have suggested an association; only one reported results that were [statistically significant](https://www.cancer.gov/Common/PopUps/popDefinition.aspx?id=CDR0000044167&version=Patient&language=en) ([45](https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/electromagnetic-fields-fact-sheet#r45)).
         
         Studies haven’t shown significant risk from using household appliances, but there seems to be a stated assumption that there is much shorter exposure to these appliances than powerlines, as though they are only used briefly. It isn’t clear that there has been much research on many hours of use of household appliances in a day (eg. working from home next to 2 routers, a desktop computer and a laptop for 10+ hours, then transitioning to a television... more or less constant exposure). (opinion)
         
@@ -184,7 +184,7 @@ With a high level of caution, *just in case*, you might prevent extreme exposure
 **Electromagnetic Fields and Cancer Fact Sheet**
 [https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/electromagnetic-fields-fact-sheet](https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/electromagnetic-fields-fact-sheet)
 2. **INTERNATIONAL COMMISSION ON NON‐IONIZING RADIATION PROTECTION
-ICNIRP GUIDELINES FOR LIMITING EXPOSURE TO TIME‐VARYING ELECTRIC AND MAGNETIC FIELDS (1HZ – 100 kHZ)**
+ICNIRP GUIDELINES FOR LIMITING EXPOSURE TO TIME‐VARYING ELECTRIC AND MAGNETIC FIELDS (1HZ - 100 kHZ)**
 [http://www.icnirp.org/cms/upload/publications/ICNIRPLFgdl.pdf](http://www.icnirp.org/cms/upload/publications/ICNIRPLFgdl.pdf)
 3. **UK Health Protection Agency
 Health Effects from Radiofrequency Electromagnetic Fields: Report of the independent Advisory Group on Non-ionising Radiation**
