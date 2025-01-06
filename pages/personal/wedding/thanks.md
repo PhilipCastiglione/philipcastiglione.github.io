@@ -16,4 +16,4 @@ permalink: /thanks.html
 
 # Thanks For Coming!!! ❤️
 
-![wedding cake]({{ '/assets/images/pages/cake.png' | relative_url}})
+![wedding cake]({{ '/assets/images/cake.png' | relative_url}})

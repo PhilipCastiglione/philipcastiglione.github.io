@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Philip Castiglione
-permalink: /personal/ccn.html
+permalink: /personal/ccn/
 ---
 
 # Cognitive Computational Neuroscience 
