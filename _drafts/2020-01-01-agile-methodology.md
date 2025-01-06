@@ -1,7 +1,9 @@
 ---
 layout: post
 post_title: Agile Development
-categories: blog management
+categories: blog
+tags: management process
+excerpt: TODO
 ---
 
 Agile is the approach, sometimes described as a mindset or philosophy.

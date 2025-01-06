@@ -1,7 +1,9 @@
 ---
 layout: post
 post_title: State The Goal Explicitly
-categories: blog management
+categories: blog
+tags: management people
+excerpt: TODO
 ---
 
 The power of stating the goal explicitly 

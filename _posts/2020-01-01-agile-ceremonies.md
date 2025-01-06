@@ -1,7 +1,8 @@
 ---
 layout: post
 post_title: Agile Ceremonies
-categories: blog management
+categories: blog
+tags: management process
 excerpt: How to make the most of agile and avoid some of the pitfalls.
 ---
 

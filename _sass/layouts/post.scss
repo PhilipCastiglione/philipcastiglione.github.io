@@ -29,3 +29,19 @@
         margin-top: $spacing-unit * 5;
     }
 }
+
+.layouts-post-tags {
+    margin-top: $spacing-unit * 4;
+    margin-bottom: $spacing-unit * 2;
+    display: flex;
+    gap: $spacing-unit;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.layouts-post-tag {
+    font-size: $font-size-base;
+    padding: $spacing-unit * 0.5 $spacing-unit;
+    border-radius: $border-radius;
+    background-color: lighten($color-primary, 40%);
+}

@@ -1,7 +1,9 @@
 ---
 layout: post
 post_title: Negative Emotions & Reactions
-categories: blog management
+categories: blog
+tags: management people
+excerpt: TODO
 ---
 
 When experiencing negative emotions, wait

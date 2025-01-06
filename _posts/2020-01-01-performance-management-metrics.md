@@ -1,7 +1,8 @@
 ---
 layout: post
 post_title: Performance Management Metrics
-categories: blog management
+categories: blog
+tags: management people
 excerpt: “When a measure becomes a target, it ceases to be a good measure.” - Goodhart’s Law
 ---
 > *“When a measure becomes a target, it ceases to be a good measure.” - [Goodhart’s Law](https://en.wikipedia.org/wiki/Goodhart%27s_law)*
