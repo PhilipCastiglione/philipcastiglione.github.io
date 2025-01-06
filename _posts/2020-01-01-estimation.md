@@ -14,7 +14,7 @@ Estimations end up defining achievement. Estimates are made to fit deadlines (ob
 
 Estimations reduce velocity. The primary cause of this is that when a task was estimated conservatively (or overestimated by mistake), generally people will make that estimate correct rather than delivering earlier. There are system incentives at play; mostly it is unwise for an IC to deliver shorter than their estimates, as it will lead them to be put in pressurised delivery conditions in the future. When a task is underestimated, it doesn't take less time! So there's no win.
 
-Further, in relation to quantifying progress with numbers they’re not really important as an individual contributor. I know after a given sprint without measuring anything how effective I was and what my rough velocity was, because I was there. The main outcome of using story points to measure performance is training people to game metrics and estimation.
+Further, in relation to quantifying progress with numbers they’re not really important as an individual contributor. I know after a given sprint without measuring anything how effective I was and what my rough velocity was, because I was there. The main outcome of using story points to [measure performance]({% post_url 2020-01-01-performance-management-metrics %}) is training people to game metrics and estimation.
 
 Aggregating estimates and using them to make predictions is risky and potentially misleading. Teams and projects are not static; “80 story points” with some team/project combination 3 months ago provides little inference today.
 

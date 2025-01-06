@@ -14,7 +14,7 @@ Your specific Agile framework (eg Scrum, Kanban, Extreme Programming (XP), SAFe,
 
 Purpose: to ensure that the backlog has the correct work (eg "tickets/cards/stories etc") in it.
 
-- correct → prioritised, (roughly) estimated, sufficiently defined
+- correct → prioritised, (roughly) [estimated]({% post_url 2020-01-01-estimation %}), sufficiently defined
 
 Attendees: Team & Project Leads, Project/Production Managers
 
@@ -23,7 +23,7 @@ Attendees: Team & Project Leads, Project/Production Managers
 
 During the meeting:
 
-- Estimate (high level) and prioritise new tickets
+- [Estimate]({% post_url 2020-01-01-estimation %}) (high level) and prioritise new tickets
 - Flag poorly defined tickets
 
 Post-meeting actions:
@@ -37,7 +37,7 @@ Required ticket detail:
 - Depends on team norms but must be sufficient for someone to start a task and/or have clear direction for discovery
 - Don't fall into the trap of requiring huge amounts of formally structured information on every ticket; leads to excessive fake work
 
-Estimations at this stage should be high level, just enough to prioritise based on effort/value.
+[Estimations]({% post_url 2020-01-01-estimation %}) at this stage should be high level, just enough to prioritise based on effort/value.
 
 If you're not doing Kanban: this should either be a short meeting, or better, run less often than sprintly.
 
@@ -52,7 +52,7 @@ Purpose:
 
 Team members should know what they expect to work on, what dependencies they have, what they are dependencies for and have some rough guess about where they expect their tasks to end up.
 
-If at this stage you have high level ticket estimates made by (eg.) the team lead then this is the time to discuss and negotiate estimates with the individuals doing the work.
+If at this stage you have high level ticket [estimates]({% post_url 2020-01-01-estimation %}) made by (eg.) the team lead then this is the time to discuss and negotiate [estimates]({% post_url 2020-01-01-estimation %}) with the individuals doing the work.
 
 > **Sprint Goals**
 > 

@@ -78,11 +78,11 @@ Vague metrics simply fail to drive desired behaviour, or drive the wrong behavio
 
 For software engineers in particular, the bigger a company gets, the more abstract and inaccurate measures of progress get.
 
-The most common version of this:
+A common example of this:
 
 [doing the actual work & the customers have a feature] → [story points burning down on a chart]
 
-If you want story points burning down on a chart, all I have to do is influence points! During estimation, work, or after the fact. It's very disconnected from the goal (what are we actually building? did it work?)
+If you want story points burning down on a chart, all I have to do is influence points! During [estimation]({% post_url 2020-01-01-estimation %}), work, or after the fact. It's very disconnected from the goal (what are we actually building? did it work?)
 
 Target the real thing. If someone wants to use story points to help manage their work, fine. But if you measure story points, then the fake thing becomes the focus.
 
