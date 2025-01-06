@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Philip Castiglione - Health
+title: Philip Castiglione - Psyche
 post_title: Dreams
 permalink: /personal/psyche/dreams.html
 ---
