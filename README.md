@@ -22,9 +22,6 @@ Deploy by merging to master and pushing to GitHub.
 
 ## TODO
 
-- [ ] look for more jekyll plugins (like, do i want jekyll sitemap and feed)
-    - https://jekyllrb.com/docs/step-by-step/10-deployment/
-
 - [ ] tags vs categories
 
 - [ ] design iteration
@@ -71,3 +68,4 @@ Deploy by merging to master and pushing to GitHub.
     - ref: https://mmistakes.github.io/minimal-mistakes/docs/installation/
 
 - [ ] emr: all the source links are broken
+- [ ] pagination
