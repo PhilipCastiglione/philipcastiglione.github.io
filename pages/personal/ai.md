@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Philip Castiglione
+title: Philip Castiglione - AI
 permalink: /personal/ai.html
 ---
 

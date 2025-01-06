@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Philip Castiglione
+title: Philip Castiglione - Game Dev
 permalink: /personal/game_dev.html
 ---
 
