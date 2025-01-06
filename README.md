@@ -22,44 +22,27 @@ Deploy by merging to master and pushing to GitHub.
 
 ## TODO
 
-- [ ] Improve home page
-
-- [ ] Improve resume
-
-- [ ] Improve management blog main page text
-
-- [ ] bio (update config description, linkedin, resume, og:description)
+### Content
 
 - [ ] more content
-
+- [ ] Improve home page
+- [ ] Improve resume
+- [ ] Improve management blog main page text
+- [ ] bio (update config description, linkedin, resume, og:description)
 - [ ] implement post dates approach
     - pick a posting frequency, go backwards and some amount forwards at approximately that frequency? posts that seem better should be now
-
 - [ ] group by tags, incorporate into blog index, make them clickable 
+
+### Design
 
 - [ ] design iteration
 
-- [ ] Set defaults in _config.yml
-    - eg.
-    ```yaml
-    defaults:
-    # _posts
-    - scope:
-        path: ""
-        type: posts
-    values:
-        layout: single
-        read_time: true
-        comments: true
-        share: true
-        related: true
-    ```
-    - ref: https://mmistakes.github.io/minimal-mistakes/docs/installation/
+### Fixes
 
 - [ ] emr: all the source links are broken
 
+### Maybe
+
 - [ ] pagination
-
 - [ ] do something with categories?
-
 - [ ] analytics? maybe
