@@ -24,8 +24,6 @@ Deploy by merging to master and pushing to GitHub.
 
 - [ ] figure out post dates approach
 
-- [ ] cross link posts
-
 - [ ] Layout improvements & best practices
     - [ ] Accessibility
     - [ ] Unroll stuff - og still (the only) thing?
