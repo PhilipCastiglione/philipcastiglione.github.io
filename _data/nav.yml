@@ -15,12 +15,12 @@
   link: /personal/
   children:
     - name: AI
-      link: /personal/ai.html
-    - name: CCN
-      link: /personal/ccn/
+      link: /personal/ai/
       children:
-        - name: Brain Model
-          link: /personal/ccn/brain_model.html
+        - name: CCN
+          link: /personal/ai/ccn.html
+        - name: Paper Matrix
+          link: https://pm.philipcastiglione.com/
     - name: Health
       link: /personal/health/
       children:

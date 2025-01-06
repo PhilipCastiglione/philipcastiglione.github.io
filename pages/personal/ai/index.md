@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Philip Castiglione - AI
-permalink: /personal/ai.html
+permalink: /personal/ai/
 ---
 
 # Artificial Intelligence
