@@ -22,18 +22,6 @@ Deploy by merging to master and pushing to GitHub.
 
 ## TODO
 
-- [ ] figure out post dates approach
-
-- [ ] Layout improvements & best practices
-    - [ ] Accessibility
-    - [ ] Unroll stuff - og still (the only) thing?
-- [ ] SEO stuff
-- [ ] analytics? maybe
-
-- [ ] Update README
-
-- [ ] remove unused pages/assets/images/stuff
-
 - [ ] Improve home page
 
 - [ ] Improve resume
@@ -43,6 +31,9 @@ Deploy by merging to master and pushing to GitHub.
 - [ ] bio (update config description, linkedin, resume, og:description)
 
 - [ ] more content
+
+- [ ] implement post dates approach
+    - pick a posting frequency, go backwards and some amount forwards at approximately that frequency? posts that seem better should be now
 
 - [ ] group by tags, incorporate into blog index, make them clickable 
 
@@ -70,3 +61,5 @@ Deploy by merging to master and pushing to GitHub.
 - [ ] pagination
 
 - [ ] do something with categories?
+
+- [ ] analytics? maybe
