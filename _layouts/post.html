@@ -6,4 +6,9 @@ title: Philip Castiglione – Blog
     <h1>{{ page.post_title }}</h1>
     <br class="media-tablet">
     {{ content }}
+    <div class="layouts-post-tags">
+        {% for tag in page.tags %}
+            <span class="layouts-post-tag">#{{ tag }}</span>
+        {% endfor %}
+    </div>
 </div>

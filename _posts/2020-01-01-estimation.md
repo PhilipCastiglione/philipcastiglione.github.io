@@ -1,7 +1,8 @@
 ---
 layout: post
 post_title: Estimation
-categories: blog management
+categories: blog
+tags: management process
 excerpt: Estimation in the software industry is terrible! So why should it happen? And how much?
 ---
 

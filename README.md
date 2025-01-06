@@ -22,9 +22,9 @@ Deploy by merging to master and pushing to GitHub.
 
 ## TODO
 
-- [ ] tags vs categories
+- [ ] figure out post dates approach
 
-- [ ] design iteration
+- [ ] cross link posts
 
 - [ ] Layout improvements & best practices
     - [ ] Accessibility
@@ -46,9 +46,9 @@ Deploy by merging to master and pushing to GitHub.
 
 - [ ] more content
 
-- [ ] figure out post dates
+- [ ] group by tags, incorporate into blog index, make them clickable 
 
-- [ ] cross link posts
+- [ ] design iteration
 
 - [ ] Set defaults in _config.yml
     - eg.
@@ -68,4 +68,7 @@ Deploy by merging to master and pushing to GitHub.
     - ref: https://mmistakes.github.io/minimal-mistakes/docs/installation/
 
 - [ ] emr: all the source links are broken
+
 - [ ] pagination
+
+- [ ] do something with categories?

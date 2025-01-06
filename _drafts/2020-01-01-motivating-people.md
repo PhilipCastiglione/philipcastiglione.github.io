@@ -1,7 +1,9 @@
 ---
 layout: post
 post_title: Motivating People
-categories: blog management
+categories: blog
+tags: management people
+excerpt: TODO
 ---
 
 TODO
