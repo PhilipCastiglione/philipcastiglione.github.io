@@ -48,11 +48,21 @@
         flex-direction: row;
         gap: $spacing-unit * 2;
         justify-content: space-between;
+        align-items: center;
 
         > * {
             flex-basis: 33.333334%;
         }
     }
+}
+
+.pages-resume-header-logo {
+    width: 60px;
+    height: 60px;
+    flex: 0;
+    border-radius: $border-radius;
+    margin-top: $spacing-unit;
+    margin-bottom: $spacing-unit;
 }
 
 .pages-resume-header-location-date {
