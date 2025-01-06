@@ -47,7 +47,7 @@ The longer a(n incentivised) metric exists, the more people will find ways to ga
 
 Incentivising metrics also drives short-termism. Bringing future period benefit forward or sacrificing long term benefit for a short term boost are common tactics to achieve incentive maximisation (for bonuses or career progression).
 
-> _Want fewer bugs and plan to count bug reports? No problem, we'll just make it harder for customers to submit reports. Or perhaps you can count open issues? Sure, we'll just auto-close stale but unfixed issues – based on some criteria that sounds totally reasonable. How about sales targets? Harder to create out of thin air? But pretty easy to manipulate closing dates and revenue milestones, pushing forward or backwards to maximize period based bonuses._
+> _Want fewer bugs and plan to count bug reports? No problem, we'll just make it harder for customers to submit reports. Or perhaps you can count open issues? Sure, we'll just auto-close stale but unfixed issues - based on some criteria that sounds totally reasonable. How about sales targets? Harder to create out of thin air? But pretty easy to manipulate closing dates and revenue milestones, pushing forward or backwards to maximize period based bonuses._
 >
 > _All of these examples are from real experience._
 

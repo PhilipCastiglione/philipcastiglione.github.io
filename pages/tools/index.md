@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Philip Castiglione – Tools
+title: Philip Castiglione - Tools
 permalink: /tools/
 ---
 

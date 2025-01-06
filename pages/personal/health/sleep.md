@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Philip Castiglione – Health
+title: Philip Castiglione - Health
 post_title: Rules For Good Sleep
 permalink: /personal/health/sleep.html
 ---

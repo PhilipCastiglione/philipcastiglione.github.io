@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Philip Castiglione – Health
+title: Philip Castiglione - Health
 permalink: /personal/health/
 ---
 

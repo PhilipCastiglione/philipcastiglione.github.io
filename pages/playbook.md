@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Philip Castiglione – Playbook
+title: Philip Castiglione - Playbook
 permalink: /playbook.html
 ---
 
