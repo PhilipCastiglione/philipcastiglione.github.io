@@ -1,3 +1,28 @@
 .layouts-page {
-    margin-top: $spacing-unit * 3;
+    ul,
+    ol {
+        margin-left: $spacing-unit * 3;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: $media-tablet) {
+    .layouts-page {
+        margin-top: $spacing-unit * 3;
+    }
+}
+
+@media only screen and (min-width: $media-desktop) {
+    .layouts-page {
+        margin-top: $spacing-unit * 4;
+    }
+}
+
+@media only screen and (min-width: $media-large) {
+    .layouts-page {
+        margin-top: $spacing-unit * 5;
+    }
 }
