@@ -6,6 +6,8 @@ url: https://philipcastiglione.com/
 github_username: philipcastiglione
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
 
 lsi: false
 safe: true
