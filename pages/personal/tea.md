@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Philip Castiglione
+title: Philip Castiglione - Tea
 permalink: /personal/tea.html
 ---
 

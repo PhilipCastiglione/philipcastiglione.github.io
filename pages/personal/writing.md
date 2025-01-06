@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Philip Castiglione
+title: Philip Castiglione - Writing
 permalink: /personal/writing.html
 ---
 
