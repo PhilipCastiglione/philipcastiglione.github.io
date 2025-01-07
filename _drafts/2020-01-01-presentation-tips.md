@@ -2,7 +2,7 @@
 layout: post
 post_title: Presentation Tips
 categories: blog
-tags: management process
+tags: management mastery
 excerpt: TODO
 ---
 
