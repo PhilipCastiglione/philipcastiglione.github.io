@@ -37,6 +37,7 @@ Deploy by merging to master and pushing to GitHub.
 
 ### Fixes
 
+- [ ] images into subfolders
 - [ ] emr: all the source links are broken
 
 ### Maybe
