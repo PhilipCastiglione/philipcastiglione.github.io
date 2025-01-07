@@ -2,7 +2,7 @@
 layout: post
 post_title: Limited Information Decision Making
 categories: blog
-tags: management process
+tags: management mastery
 excerpt: TODO
 ---
 
