@@ -2,13 +2,13 @@
   link: /
 - name: Playbook
   link: /playbook.html
+- name: Blog
+  link: /blog/
 - name: Tools
   link: /tools/
   children:
     - name: Was This Useful?
       link: /tools/useful.html
-- name: Blog
-  link: /blog/
 - name: Resume
   link: /resume.html
 - name: Personal
