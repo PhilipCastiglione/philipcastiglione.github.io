@@ -20,10 +20,10 @@ Deploy by merging to master and pushing to GitHub.
 
 ### Content
 
-- [ ] more content
-- [ ] Improve home page
+- [ ] More content
 - [ ] Improve resume
 - [ ] Improve management blog main page text
+- [ ] Improve home page
 - [ ] Playbook
 - [ ] Tools
 - [ ] bio (update config description, linkedin, resume, og:description)
