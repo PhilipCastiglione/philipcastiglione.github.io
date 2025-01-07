@@ -90,6 +90,18 @@
     margin: $spacing-unit 0;
 }
 
+.includes-header-top-level > :last-child,
+.includes-header-phone-menu > :last-child {
+    > .includes-header-link-item {
+        display: none;
+    }
+
+    > .includes-header-link-item-parent,
+    > .includes-header-link-item-active {
+        display: unset;
+    }
+}
+
 .includes-header-link-item {
     border-radius: $border-radius;
     padding: $spacing-unit $spacing-unit * 1.5;
