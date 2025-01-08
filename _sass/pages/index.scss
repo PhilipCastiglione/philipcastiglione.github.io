@@ -20,6 +20,11 @@
     p {
         font-size: $font-size-base * 1.15;
     }
+
+    .pages-index-headline {
+        font-size: $font-size-base * 1.5;
+        font-weight: 500;
+    }
 }
 
 @media only screen and (min-width: $media-tablet) {
