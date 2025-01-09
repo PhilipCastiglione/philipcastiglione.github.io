@@ -74,6 +74,7 @@ blockquote {
 blockquote {
     border-left: $spacing-unit solid $color-primary;
     padding-left: $spacing-unit * 2;
+    padding-right: $spacing-unit * 0.5;
     padding-top: $spacing-unit * 0.5;
     padding-bottom: $spacing-unit * 0.5;
     margin-top: $spacing-unit * 2.5;
