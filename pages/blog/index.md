@@ -4,9 +4,11 @@ title: Philip Castiglione - Blog
 permalink: /blog/
 ---
 
-# Management Blog
+My personal thoughts about how to run the operations of a tech company well. Mostly relevant to medium or larger organisations. Experiences are from leading engineers, leading leads, improving processes, managing people, significant tech stack and architecture decisions.
 
-My personal thoughts about how to manage well. Mostly relevant to medium or larger organisations.
+In the future I might work more into strategy, policy and higher level organisational design.
+
+---
 
 <div>
     {% for post in site.posts %}

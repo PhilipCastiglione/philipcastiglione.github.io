@@ -20,16 +20,20 @@ Deploy by merging to master and pushing to GitHub.
 
 ### Content
 
-- [ ] More content
+- [ ] bio (update config description, linkedin, resume, og:description)
 - [ ] Improve resume
-- [ ] Improve management blog main page text
+- [ ] More content
 - [ ] Improve home page
 - [ ] Playbook
+- [ ] Improve management blog main page text
 - [ ] Tools
-- [ ] bio (update config description, linkedin, resume, og:description)
+- [ ] More content
 - [ ] implement post dates approach
     - pick a posting frequency, go backwards and some amount forwards at approximately that frequency? posts that seem better should be now
 - [ ] group by tags, incorporate into blog index, make them clickable 
+- [ ] More content
+- [ ] Improve bio (update config description, linkedin, resume, og:description) and resume
+- [ ] More content
 
 ### Design
 
