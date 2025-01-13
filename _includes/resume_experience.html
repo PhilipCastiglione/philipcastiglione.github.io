@@ -1,0 +1,15 @@
+<!-- {{ include.organisation }} -->
+<div class="pages-resume-header-row-wrapper">
+    <img src="{{ '/assets/images/resume/' | append: include.img_name | relative_url}}"
+        alt="{{ include.organisation }} logo" class="pages-resume-header-logo-mobile">
+    <div class="pages-resume-header-row">
+        <img src="{{ '/assets/images/resume/' | append: include.img_name | relative_url}}"
+            alt="{{ include.organisation }} logo" class="pages-resume-header-logo">
+        <h3>{{ include.organisation }}</h3>
+        <h3>{{ include.title }}</h3>
+        <p class="pages-resume-header-location-date">
+            <em>{{ include.location }}</em>
+            <span class="pages-resume-header-date">{{ include.date }}</span>
+        </p>
+    </div>
+</div>
