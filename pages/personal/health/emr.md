@@ -53,7 +53,7 @@ EMFs are grouped by frequency, where higher frequency → more dangerous.
 - Are in the non-ionizing radiation part of the electromagnetic spectrum and are “not known to damage DNA or cells directly”.
 - Include static fields (EMFs that do not vary with time), and fields from electric power lines and appliances, cell phone usage, Bluetooth & wireless devices, smart meters, Wi-Fi, radio waves, microwaves, infrared radiation, and infrared & visible light.
 
-![electromagnetic radiation spectrum]({{ '/assets/images/emr_spectrum.png' | relative_url}})
+![electromagnetic radiation spectrum]({{ '/assets/images/emr/emr_spectrum.png' | relative_url}})
 
 ### What Is The Science Confident About?
 
@@ -120,7 +120,7 @@ EMFs are grouped by frequency, where higher frequency → more dangerous.
 
 Exec summary conclusions from the 2012 AGNIR meta-study ([source](https://www.notion.so/Electro-Magnetic-Radiation-d71b403d8f3b4fc490059630778b12ea?pvs=21)):
 
-![electromagnetic radiation summary]({{ '/assets/images/emr_summary.png' | relative_url}})
+![electromagnetic radiation summary]({{ '/assets/images/emr/emr_summary.png' | relative_url}})
 
 To make sense of these, we have to understand what the international guidelines are, to know if we are within them.
 

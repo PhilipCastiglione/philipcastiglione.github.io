@@ -14,14 +14,14 @@ An underdeveloped interest in the design of buildings and spaces.
 
 I love brutalist architecture:
 
-![Brutalist Architecture Example]({{'/assets/images/brutalist_1.png' | relative_url}})
-![Brutalist Architecture Example]({{'/assets/images/brutalist_2.png' | relative_url}})
+![Brutalist Architecture Example]({{'/assets/images/spatial_design/brutalist_1.png' | relative_url}})
+![Brutalist Architecture Example]({{'/assets/images/spatial_design/brutalist_2.png' | relative_url}})
 
 Also gothic brutalism:
 
-![Gothic Brutalist Architecture Example]({{'/assets/images/gothic_brutalism_1.png' | relative_url}})
-![Gothic Brutalist Architecture Example]({{'/assets/images/gothic_brutalism_2.png' | relative_url}})
-![Gothic Brutalist Architecture Example]({{'/assets/images/gothic_brutalism_3.png' | relative_url}})
+![Gothic Brutalist Architecture Example]({{'/assets/images/spatial_design/gothic_brutalism_1.png' | relative_url}})
+![Gothic Brutalist Architecture Example]({{'/assets/images/spatial_design/gothic_brutalism_2.png' | relative_url}})
+![Gothic Brutalist Architecture Example]({{'/assets/images/spatial_design/gothic_brutalism_3.png' | relative_url}})
 
 ## Public Spaces & Urban Design
 
@@ -32,7 +32,7 @@ Unique Modernist-Yugoslav monuments (Spomeniki in Slovenian, Spomenici in Croati
 
 ## Interior Design
 
-![Floating Stairs]({{'/assets/images/floating_stairs.png' | relative_url}})
+![Floating Stairs]({{'/assets/images/spatial_design/floating_stairs.png' | relative_url}})
 
 ## Abandoned Places
 
