@@ -193,3 +193,9 @@ a {
         display: unset;
     }
 }
+
+@media print {
+    .noprint {
+        display: none;
+    }
+}

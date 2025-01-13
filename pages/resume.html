@@ -6,139 +6,182 @@ permalink: /resume.html
 <div class="pages-resume page-container">
   <div class="outer-container">
     <div class="text-center">
-      <p>
+      <p class="noprint">
         <a href="{{ '/public/PhilipCastiglioneResume.pdf' | relative_url }}">Click here for a pdf version.</a>
       </p>
       <h1>Philip Castiglione</h1>
       <h4 class="pages-resume-subtitle">Software Engineering Leadership &Vert; Technology & Management Expert</h4>
+      <div class="pages-resume-header-contact">
+        <a href="mailto:philipcastiglione@gmail.com" class="pages-resume-header-link">
+          <img src="{{ '/assets/images/shared/email.png' | relative_url }}" alt="email icon">
+          <span>philipcastiglione@gmail.com</span>
+        </a>
+        <a href="https://www.linkedin.com/in/philcastiglione/" class="pages-resume-header-link" target="_blank"
+          rel="noopener noreferrer">
+          <img src="{{ '/assets/images/shared/linkedin.png' | relative_url }}" alt="linkedin logo">
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/philipCastiglione/" class="pages-resume-header-link" target="_blank"
+          rel="noopener noreferrer">
+          <img src="{{ '/assets/images/shared/github.png' | relative_url }}" alt="github logo">
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+    <div class="page-resume-top-bio">
+      <p>Hi, I'm Phil. I care about what I do and I help everyone around me to succeed.</p>
+      <p>I excel at building, growing and leading teams of engineers, achieving outcomes, and optimising organisational performance.</p>
     </div>
     <div class="pages-resume-header-title">
       <hr>
       <h2>Experience</h2>
       <hr>
     </div>
-    <!-- Elevate Partners -->
-    <div class="pages-resume-header-row">
-      <img src="{{ '/assets/images/elevate.jpeg' | relative_url}}" alt="Elevate Partners logo"
-        class="pages-resume-header-logo">
-      <h3>Elevate Partners</h3>
-      <h3>Principal Consultant</h3>
-      <p class="pages-resume-header-location-date">
-        <em>(Remote) Dublin & Perth</em>
-        <span>07/22 - now</span>
-      </p>
-    </div>
+    {% include resume_experience.html
+       organisation='Elevate Partners'
+       img_name='elevate.jpg'
+       title='Principal Consultant'
+       location='(Remote) Dublin, Ireland & Perth, Australia'
+       date='07/22 - now' %}
     <ul>
-      <li>US stealth data/fintech startup: Led the design and rapid prototyping of a SaaS product prototype for founder
-        sales pitches using scalable and hirable cutting edge technologies including Python, FastAPI, TypeScript, React,
-        Docker and GCP. Established strong patterns and coached client engineers on best practices.</li>
-      <li>NASDAQ listed fintech: Identified, designed and drove changes in vendor API usage reducing spend by 35%
-        (>$1.1m USD p.a), implemented on TypeScript Node.js backend after achieving buy-in from stakeholders and
-        socialising with engineering.</li>
-      <li>Australian startup: As technical co-founder, built and deployed an entire HR SaaS platform single handedly in
-        Ruby on Rails. Built a fully automated integrated sales engine for the B2B phone & email outreach team.</li>
+      <li>Varied roles across tech companies & industries in US and APAC:</li>
+      <ul><li>Principal Engineer (NASDAQ listed fintech, US stealth data/health startup), Startup CTO, Platform Tech Lead.</li></ul>
+      <li>Rapidly built trust, respect and empathy in order to unite behind shared goals and drive positive change.</li>
+      <li>Outcomes achieved by myself and teams I was accountable for include:</li>
+      <ul>
+        <li>Led the design and rapid prototyping of a SaaS product prototype, hitting the MVP target in 5 weeks to enable founder
+          sales pitches, using scalable and hirable cutting edge technologies and methodologies.</li>
+        <li>In support of a strategic organisational restructure, executed transfer of ownership of critical code and infrastructure
+          assets to newly established overseas teams, including onboarding and knowledge transfer, to ensure smooth integration and
+          operational continuity.</li>
+        <li>Led the design and development of an AI-enhanced HR SaaS platform and a fully integrated automated sales engine for the
+          B2B phone and email outreach team.</li>
+        <li>Secured efficiencies reducing spend on a key vendor API by 35% (>$1.1m USD p.a).</li>
+      </ul>
     </ul>
-    <!-- DIGIT, a Scopely Studio -->
-    <div class="pages-resume-header-row">
-      <img src="{{ '/assets/images/digit.jpeg' | relative_url}}" alt="DIGIT logo" class="pages-resume-header-logo">
-      <h3>DIGIT, a Scopely Studio</h3>
-      <h3>Platform Tech Lead</h3>
-      <p class="pages-resume-header-location-date">
-        <em>(Hybrid) Dublin, Ireland</em>
-        <span>11/19 - 06/22</span>
-      </p>
-    </div>
+    {% include resume_experience.html
+       organisation='DIGIT, a Scopely Studio'
+       img_name='digit.jpg'
+       title='Platform Tech Lead'
+       location='(Hybrid) Dublin, Ireland'
+       date='11/19 - 06/22' %}
     <ul>
-      <li>Led design and platform implementation of Battle Pass feature driving >$100m USD annual revenue using a highly
-        efficient, consistent and robust architecture of Python, Flask, MySQL, Redis, Celery and Protobuf to serve >100k
-        heavy traffic CCU.</li>
-      <li>Retained key customers by solving a long term complex flaky bug using load testing and performance profiling
-        techniques.</li>
-      <li>Consistently received the highest review rating possible and received two promotions within 2 years.</li>
-      <li>Lead a team of 5 amazing engineers; hiring, onboarding, mentoring; facilitating, protecting and enabling them.
-      </li>
+      <li>Led a team of 5 engineers; hiring, onboarding, mentoring; facilitating, growing and enabling them.</li>
+      <li>Drove strategic initiatives such as the cross-team Battle Pass feature which achieved >$100m USD annual revenue.</li>
+      <li>Responsible for a highly efficient, consistent and robust architecture (Python, Flask, MySQL, Redis, Celery, Protobuf,
+        AWS) to serve >100k heavy traffic real-time game CCU.</li>
+      <li>Consistently received the highest rating on the scale at every performance review.</li>
     </ul>
-    <!-- Cogent (acq. by Block NYSE: SQ) -->
-    <div class="pages-resume-header-row">
-      <img src="{{ '/assets/images/cogent.jpeg' | relative_url}}" alt="Cogent logo" class="pages-resume-header-logo">
-      <h3>Cogent (acq. by Block NYSE: SQ)</h3>
-      <h3>Software Engineer Consultant</h3>
-      <p class="pages-resume-header-location-date">
-        <em>Melbourne, Australia</em>
-        <span>04/18 - 11/19</span>
-      </p>
-    </div>
+    {% include resume_experience.html
+       organisation='Cogent (acq. by Block NYSE: SQ)'
+       img_name='cogent.jpg'
+       title='Software Engineer'
+       location='Melbourne, Australia'
+       date='04/18 - 11/19' %}
     <ul>
-      <li>ASX50 proptech: Improved core search path response time by 200-300ms (10-15%) for >100m monthly users via
-        optimisations through an event sourced data stream (Amazon RDS and Amazon Redshift), several microservice
-        enrichment layers (Ruby, Scala, GraphQL) to the front end (Backbone, React, jQuery).</li>
-      <li>Initiated Cogent’s AI & Machine Learning practice, building a public recommender system demo to drive client
+      <li>Initiated Cogent's AI & Machine Learning practice, building a public recommender system demo to drive client
         acquisition and then implementing an NLP pipeline to automate customer onboarding for a B2B SaaS startup,
         reducing manual effort by >40%.</li>
       <li>Every client I worked with tried to hire me.</li>
+      {% comment %} <li>ASX50 proptech: Improved core search path response time by 200-300ms (10-15%) for >100m monthly users via
+        optimisations through an event sourced data stream (Amazon RDS and Amazon Redshift), several microservice
+        enrichment layers (Ruby, Scala, GraphQL) to the front end (Backbone, React, jQuery).</li> {% endcomment %}
     </ul>
-    <!-- A2I2 (Applied AI Institute) -->
-    <div class="pages-resume-header-row">
-      <img src="{{ '/assets/images/a2i2.jpeg' | relative_url}}" alt="A2I2 logo" class="pages-resume-header-logo">
-      <h3>A2I2 (Applied AI Institute)</h3>
-      <h3>Machine Learning Internship</h3>
-      <p class="pages-resume-header-location-date">
-        <em>Melbourne, Australia</em>
-        <span>11/18 - 12/18</span>
-      </p>
-    </div>
+    {% include resume_experience.html
+       organisation='A2I2 (Applied AI Institute)'
+       img_name='a2i2.jpg'
+       title='Machine Learning Internship'
+       location='Melbourne, Australia'
+       date='11/18 - 12/18' %}
     <ul>
-      <li>A secondment from Cogent to upskill in AI/ML in order to help Cogent enter the space.</li>
+      <li>A secondment from Cogent to upskill in AI/ML.</li>
       <li>Built a computer vision prototype for generating application UIs from hand drawn sketches.</li>
     </ul>
-    <!-- JCurve Solutions (ASX: JCS) -->
-    <div class="pages-resume-header-row">
-      <img src="{{ '/assets/images/jcurve.jpeg' | relative_url}}" alt="JCurve Solutions logo"
-        class="pages-resume-header-logo">
-      <h3>JCurve Solutions (ASX: JCS)</h3>
-      <h3>Software Developer</h3>
-      <p class="pages-resume-header-location-date">
-        <em>Melbourne, Australia</em>
-        <span>05/16 - 04/18</span>
-      </p>
-    </div>
+    {% include resume_experience.html
+       organisation='JCurve Solutions (ASX: JCS)'
+       img_name='jcurve.jpg'
+       title='Software Developer'
+       location='Melbourne, Australia'
+       date='05/16 - 04/18' %}
     <ul>
-      <li>Core contributor on the primary product: learned best practices regarding code, tests, architecture, code
-        review.</li>
+      <li>Core contributor: learned best practices regarding code, tests, architecture, and the SDLC.</li>
       <li>Designed and built handrolled Authn/Authz system to OWASP standards supporting OAuth2 and ACL permissions
         using JWTs.</li>
     </ul>
-    <!-- Hardhat Digital -->
-    <div class="pages-resume-header-row">
-      <img src="{{ '/assets/images/hardhat.jpeg' | relative_url}}" alt="Hardhat Digital logo"
-        class="pages-resume-header-logo">
-      <h3>Hardhat Digital</h3>
-      <h3>Junior Programmer</h3>
-      <p class="pages-resume-header-location-date">
-        <em>Melbourne, Australia</em>
-        <span>06/15 - 05/16</span>
-      </p>
-    </div>
+    {% include resume_experience.html
+       organisation='Hardhat Digital'
+       img_name='hardhat.jpg'
+       title='Junior Programmer'
+       location='Melbourne, Australia'
+       date='06/15 - 05/16' %}
     <ul>
-      <li>Built CMS backed ecommerce websites, cross-platform phone apps and learned fullstack development from a
-        brilliant mentor.</li>
+      <li>Executed a career change into the tech industry.</li>
+      <li>Built CMS backed ecommerce sites, cross-platform phone apps and learned from a brilliant mentor.</li>
+    </ul>
+    {% include resume_experience.html
+       organisation='University of Melbourne'
+       img_name='unimelb.jpg'
+       title='Strategy and Business Analyst'
+       location='Melbourne, Australia'
+       date="'13 - '15" %}
+    <ul>
+      <li>Reponsible for business case development, budget preparation and reporting to the executive.</li>
+      <li>Designed and implemented a budget management framework for the Melbourne School of Land and Environment
+        across 16 stakeholders. Achieved excess annual surplus versus financial targets of >$1m on $47m budget.</li>
+    </ul>
+    {% include resume_experience.html
+       organisation='Safe Marketing Australia'
+       img_name='sma.jpg'
+       title='Non-Executive Director'
+       location='Melbourne, Australia'
+       date="'11 - '14" %}
+    <ul>
+      <li>Provided independent oversight and expertise to education sector marketing service provider.</li>
+      <li>Strategic guidance, governance and risk oversight for the executive.</li>
+    </ul>
+    {% include resume_experience.html
+       organisation='KPMG'
+       img_name='kpmg.jpg'
+       title='Management Consultant - Operations & Strategy'
+       location='Brisbane, Australia'
+       date="'12 - '13" %}
+    <ul>
+      <li>Client facing Management Consulting advice and deliverables in the areas of: Operational and Process
+        Improvement, Strategy, Business Performance Management and Organisational Design.</li>      
+    </ul>
+    {% include resume_experience.html
+       organisation='SC Financial Group & Castiglione Securities Trading'
+       img_name='cst.jpg'
+       title='Co-Founder'
+       location='Bangkok, Thailand & Perth, Australia & Melbourne, Australia'
+       date="'09 - '11" %}
+    <ul>
+      <li>Co-founded and ran two boutique investment businesses trading in derivatives and foreign currencies.</li>
+      <li>Raised more than $500k in capital from private investors and managed stakeholder relations.</li>
+    </ul>
+    {% include resume_experience.html
+       organisation='The University of Western Australia'
+       img_name='uwa.jpg'
+       title='Senior Accounts Officer'
+       location='Perth, Australia'
+       date="'05 - '09" %}
+    <ul>
+      <li>Management, training and leadership of a team of five departmental staff.</li>
+      <li>Major projects delivered include: Business Recovery Plan; a road map to a budget neutral position after
+        years of sustained deficits & Unit Costing Project; methodology to determine the per-subject cost of teaching
+        delivery within the school.</li>
     </ul>
     <div class="pages-resume-header-title">
       <hr>
       <h2>Education</h2>
       <hr>
     </div>
-    <!-- Deakin University -->
-    <div class="pages-resume-header-row">
-      <img src="{{ '/assets/images/deakin.jpeg' | relative_url}}" alt="Deakin University logo"
-        class="pages-resume-header-logo">
-      <h3>Deakin University</h3>
-      <h3>Bachelor of Computer Science</h3>
-      <p class="pages-resume-header-location-date">
-        <em>Melbourne, Australia</em>
-        <span>03/17 - 11/20</span>
-      </p>
-    </div>
+    {% include resume_experience.html
+       organisation='Deakin University'
+       img_name='deakin.jpg'
+       title='Bachelor of Computer Science'
+       location='Melbourne, Australia'
+       date="03/17 - 11/20" %}
     <ul>
       <li>Graduated top of my year, won just about every prize & scholarship available, whilst also working full time.
       </li>
@@ -147,17 +190,12 @@ permalink: /resume.html
         Distinction.</li>
       <li>Founding Executive Member (Treasurer) of Deakin Software Engineering Club.</li>
     </ul>
-    <!-- University of Melbourne -->
-    <div class="pages-resume-header-row">
-      <img src="{{ '/assets/images/unimelb.jpeg' | relative_url}}" alt="University of Melbourne logo"
-        class="pages-resume-header-logo">
-      <h3>University of Melbourne</h3>
-      <h3>Bachelor of Commerce (Finance)</h3>
-      <p class="pages-resume-header-location-date">
-        <em>Melbourne, Australia</em>
-        <span>03/09 - 02/12</span>
-      </p>
-    </div>
+    {% include resume_experience.html
+       organisation='University of Melbourne'
+       img_name='unimelb.jpg'
+       title='Bachelor of Commerce (Finance)'
+       location='Melbourne, Australia'
+       date="03/09 - 02/12" %}
     <ul>
       <li>High Distinction average, multiple academic awards, whilst also working mostly full time.</li>
       <li>CPA Management Accounting Prize, Sothertons Fraud and Forensics Prize.</li>
@@ -167,9 +205,8 @@ permalink: /resume.html
       <h2>Technical Skills</h2>
       <hr>
     </div>
-    <p>Python, Ruby, JavaScript, TypeScript, C#, Rails, Flask, FastAPI, Node.js, React, Svelte, Postgres, MySQL, NoSQL,
-      Redis, AWS, GCP, CI/CD, Docker, Git, DevOps, Testing, TDD/BDD, Full-Stack Web Development, Load Testing, Profiling
-      & Performance Optimisation, Monitoring, System Design, Distributed Systems, Software Architecture, applied AI/ML,
-      Generative AI, Data Engineering, Snowflake</p>
+    <p>I remain deeply technical. I have a broad skillset across Full-Stack Web Development, Scalable
+      System Design, Software Architecture, Distributed Systems, Profiling & Performance Optimisation, Cloud Infrastructure,
+      Observability and Monitoring, Analytics, Applied AI/ML & Generative AI.</p>
   </div>
 </div>
