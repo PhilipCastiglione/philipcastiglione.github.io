@@ -1,14 +1,14 @@
 - name: Home
   link: /
-- name: Playbook
-  link: /playbook.html
+# - name: Playbook
+#   link: /playbook.html
 - name: Blog
   link: /blog/
-- name: Tools
-  link: /tools/
-  children:
-    - name: Was This Useful?
-      link: /tools/useful.html
+# - name: Tools
+#   link: /tools/
+#   children:
+#     - name: Was This Useful?
+#       link: /tools/useful.html
 - name: Resume
   link: /resume.html
 - name: Personal
