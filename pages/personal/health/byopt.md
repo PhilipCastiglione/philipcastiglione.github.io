@@ -123,7 +123,7 @@ AND
 
 ## How Exercise Is Accessing Energy
 
-![energy production]({{ '/assets/images/energy_production.png' | relative_url}})
+![energy production]({{ '/assets/images/byopt/energy_production.png' | relative_url}})
 
 For the first 2 seconds, from all of it down to none of it, your body is using stored ATP.
 
@@ -141,7 +141,7 @@ Note performance declines to 1 minute and flattens.
 
 Slightly different numbers in this 1971 source:
 
-![energy classification]({{ '/assets/images/energy_classification.png' | relative_url}})
+![energy classification]({{ '/assets/images/byopt/energy_classification.png' | relative_url}})
 
 Mike says it's much more efficient to do one or the other. You can achieve overloads training anaerobically that will prevent you from reaching the point of aerobic training. If you do this, you can't do aerobic training. If you don't, you aren't stressing your anaerobic system sufficiently.
 
