@@ -150,19 +150,19 @@ _by Jeffrey Pfeffer_
 
 * Chau ... started a podcast ... [which] gave her the opportunity and the right to ask women who were very senior in their careers or public companies to talk for an hour. Because most people said yes to her invitations, Chau expanded her network strategically and significantly. Moreover, her status was enhanced through her association ... with high status people.
 * People are known partly by the company they keep.
-* having a prominent friend in an organisation boosted an individual's reputatio as a good performer.
+* having a prominent friend in an organisation boosted an individual's reputation as a good performer.
 * One way to build a powerful brand is to associate with other people and organisations that are themselves prestigious.
-* Chat began running panels of about twenty people. "I'll pick a topic I'm trying to get smarter on," she says. "Then I'll find three senior operators, and I'll ask them to be a panelist. It's a way for me to build my network of operators, and then I'll go invite the twenty founders that are building companies in this space that I want to meet. In the panel, I get all of this content from the founders and the operators who are much more expert than I am, and develop it into a blog post I can put out."
-* "By being out there and having this kind of brand, it makes it much easier for people to then say, 'cOme on my podcast,' or 'Will you sit on this panel, or do this keynote?'
+* Chau began running panels of about twenty people. "I'll pick a topic I'm trying to get smarter on," she says. "Then I'll find three senior operators, and I'll ask them to be a panelist. It's a way for me to build my network of operators, and then I'll go invite the twenty founders that are building companies in this space that I want to meet. In the panel, I get all of this content from the founders and the operators who are much more expert than I am, and develop it into a blog post I can put out."
+* "By being out there and having this kind of brand, it makes it much easier for people to then say, 'come on my podcast,' or 'Will you sit on this panel, or do this keynote?'
 * flywheel effect of personal branding
 * They could stand out from the crowd. By doing so, their credibility, connections, and power would grow.
 * Have a narrative - and tell it repeatedly
     * A brand needs coherence.
-    * At it's best and most effective, a brand brings together aspects of someone's personal and professional life in a way that makes it clear why they are uniquely qualified for some position or to found a company in a particular industry.
+    * At its best and most effective, a brand brings together aspects of someone's personal and professional life in a way that makes it clear why they are uniquely qualified for some position or to found a company in a particular industry.
     * Everyone needs a brand. Your task: think of a short (two or three sentence) way of describing yourself and your accomplishments that brings together your expertise, your experience (what you have done), and a way of integrating that with some aspect of your personal story.
-    * Once you develop a brand statement, get feedback on it from professional colleagues and friends. And then thinka bout how you are going to get that message out into the world.
+    * Once you develop a brand statement, get feedback on it from professional colleagues and friends. And then think about how you are going to get that message out into the world.
 * a lie will go halfway around the world in the time it takes the truth to put on its shoes.
-* the importants of getting your side of the story out early and often. Once impressions are formed, they are more difficult to change.
+* the importance of getting your side of the story out early and often. Once impressions are formed, they are more difficult to change.
 * Develop A Look
     * Standing out can be good; balance against signalling "one of us" - safer but doesn't make an impression.
     * using clothes and physical appearance as a part of branding
@@ -174,7 +174,7 @@ _by Jeffrey Pfeffer_
 * Conferences
 * Cultivate the media
     * the self promotion dilemma. On one hand, people are expected to project confidence and expertise while claiming competence. In situations such as job interviews or making a pitch, self-promotion is virtually required - how else would the target know about your wonderful qualities? On the other, there is often social disapproval and dislike for people who are seemingly boastful and "braggadocious."
-    * Research shows that if a person sings someone else's praises - even if that personal has a financial incentove to do so, such as an agent - many of the downsides of self-promotion disappear.
+    * Research shows that if a person sings someone else's praises - even if that person has a financial incentive to do so, such as an agent - many of the downsides of self-promotion disappear.
 * Stand out by being appropriately controversial
     * becoming newsworthy
     * An unobvious choice, a controversial position, draws attention.
@@ -189,7 +189,73 @@ _by Jeffrey Pfeffer_
 
 ### Network Relentlessly
 
-...
+* performance was not that important and social relationships and sponsorship mattered more
+* devote less time to the technical aspects of his job and more to building relationships with people both inside and outside of [company], so he could be more noticeable and known.
+* networking made his excellent technical work and his intelligence and interpersonal skills more widely visible.
+* Moreover, building relationships was completely consistent with the tasks of marketing and business development that constituted his job
+    * where this isn't true for me, find proper justifications for such activity
+* suggested the group go out for dinner - and he would pay for the meal. In a more informal atmosphere, his great ability to relate to people and his business smarts stood out, as there was less pressure.
+* finding a place to work where he would learn and possibly develop a good relationship with a mentor
+* his goal of leaving a legacy, of making an impact in the world, requires him to enlist the help of others, because he cannot accomplish what he wants to do by himself.
+* Who you know, and how many people you know, matters for your influence and for your career.
+* Spend enough time interacting with (useful) people
+    * people spend a lot of time with the inner circle and not much time socialising for networking; you just need to do more
+    * one reason that people don't engage in [networking] is that they don't find it enjoyable
+        * so make it enjoyable for self and others!
+* seeing networking as a task vs as a skill: when you are trying to build a skill, you are much more apt to be strategic or analytical about how you get better at it.
+* networking for instrumental reasons ... results in better career outcomes
+* a longitudinal field study ... found that "networking was the most robust predictor of career success."
+* Another longitudinal study observed an effect of networking on both concurrent salary and the growth rate of salary over time as well as a relationship between networking and career satisfaction.
+* networking ability dominated other aspects of political skill in its ability to explain career outcomes
+* In a study of which political skill dimensions were the most important for career outcomes, such as work productivity, career success, personal reputation, and job satisfaction, networking ability was among the most important.
+* it is easy to connect with Levy because he is intellectually curious ... smart and interested
+* became determined to spend time among the "most exceptional people in our culture because I wanted to gain their knowledge and their habits to improve the quality of my life."
+* think about bringing people into their lives
+    * no one wanted another phone call, particularly from someone they did not know
+    * "had to be generous, because I can't just be another person asking for something."
+    * lower their defenses
+* when people invested effort - in a person, in an activity - they cared about that entity more, because they see it as someone or some activity worthy of their effort.
+* novelty causes people to explore and seek to understand their new experience
+* "if you can curate an environment with high-profile people, they'll go out of their way to be there."
+* "the most desired human or experiences" entail wonder.
+* To create a sense of community, you need membership.
+    * a clear line delineating inside and out, and maybe a common language, a shared history, a feeling of influence..."
+* intentionality in how they have structured their social worlds that far exceeds that of most people
+* Pursue your "Weak Ties"
+    * ties that were most useful for finding a job were not the strong ties with family, friends and close work colleagues, but instead the ties with casual acquaintances - so-called weak ties.
+    * Any tie is better than cold calling - hence the phrase, "warm introduction."
+    * Often such casual, weak ties are sufficient to provide credibility
+    * don't spend too much time with people who are close. Instead, ensure that you are meeting a wide variety of people in a wide variety of organisations and industries.
+* Become a Broker
+    * bring together parties who could profitably benefit from interacting with or knowing each other
+    * opinion and behaviour are more homogenous within than between groups ... brokerage across the structural holes ... provides vision of options otherwise unseen, which is the mechanism by which brokerage becomes social capital.
+    * outcomes are better for those whose networks bridge structural holes
+    * network structure matters
+    * "moving information between people to whom one is only connected indirectly - often has little or no value"
+* Be Central
+    * exposure to the senior executive team
+    * interacted with numerous people and units across the organisation ... profound informational advantages
+    * Centrality affects visibility.
+    * becoming the focal point for information and opportunities
+    * when people evaluate jobs and roles, one dimension they should account for is the centrality that will accrue to them
+* Create Value for Others
+    * Sometimes this idea is described as being generous.
+    * putting yourself in the other's place, having some empathetic understanding of where they are coming from and what challenges they face, so that you can provide help reasonably easily and effectively.
+    * norm of reciprocity
+    * Help also binds people together through liking
+* If you want to get value from your connection to another, don't make that other do your thinking for you. ... be specific ... or the response won't be as favorable because the request is too general and untargeted.
+* Networking Time Management
+    * Technology can help ... not as good as a more personal connection, but as a way of keeping in touch, better than nothing
+    * use relationship management software
+    * sustaining a relationship, particularly a weak tie, does not require intense or deep connections. Casual updates, sharing an interesting article about a topic of mutual interest, or letting people know you are thinking about them is often sufficient.
+    * calling him every year on his birthday.
+    * balance investing in building a social network with harvesting the results of those efforts
+        * It is the extremely rare person who has properly solved the network growth to network value extraction ratio. But those few that have rise to the top very fast - and stay there.
+    * spend more time with those on the periphery than at the center, more time on people distant than on those who were close.
+        * why would you want to double down on somebody who's already in?
+    * leveraging technology and maybe building a staff (after all, hiring help is often not that expensive) - to become more time efficient in networking.
+* Consider how you spend your time. Are you devoting enough time to building social relationships? And with whom? Brokerage relationships? High-status others?
+* learn about how to see social capital
 
 ### Use Your Power
 
