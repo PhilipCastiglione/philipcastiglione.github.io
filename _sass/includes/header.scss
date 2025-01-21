@@ -90,15 +90,9 @@
     margin: $spacing-unit 0;
 }
 
-.includes-header-top-level > :last-child,
-.includes-header-phone-menu > :last-child {
-    > .includes-header-link-item {
-        display: none;
-    }
-
-    > .includes-header-link-item-parent,
-    > .includes-header-link-item-active {
-        display: unset;
+@media only screen and (min-width: $media-tablet) {
+    .includes-header-top-level {
+        justify-content: space-around;
     }
 }
 

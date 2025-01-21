@@ -6,6 +6,9 @@ tags: management process
 excerpt: A collaborative exercise for generating consensus driven improvements.
 ---
 
+ref:
+https://miro.com/miroverse/lightning-decision-jam-ldj/
+
 ## Overview
 
 The Lightning Decision Jam (LDJ) is a group workshop activity that can be used to generate improvements, solve problems, ideate suggestions and similar tasks.
