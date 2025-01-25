@@ -259,8 +259,32 @@ _by Jeffrey Pfeffer_
 
 ### Use Your Power
 
-...
+* A person new in a position gets a chance and has some time to do stuff before their opposition builds. This includes things they can do to build and perpetuate their power.
+* Enemies/grudges tend to last longer than favours. The longer you're in a position you may accumulate more resistance.
+* The tenure of leaders has shortened
+* Power is not a scarce resource with limited use. Rather, using it reinforces and builds it.
+* Use power, maybe even more than people think you have, effectively to perpetuate it.
+* Using power signals you have it; people/supporters are drawn to that
+* Outside succession faces challenges gaining acceptibility and credibility
+* Visibility to staff through meetings held and attended, involvement in hiring, training and teaching, spending time with people; created power.
+* Making positive change quickly by using power encourages people to your side and can reduce opportunities for sabotage
+* Existing people and processes usually have investment in the status quo, so power is needed to change it. By not using power it reduces.
+* Use power to bring in supporters and move out opponents.
+* Few people like to have underperformance displayed in charts and graphs
+* Tactical takedown of the opposition (various strategies; subterfuge; story-telling; new world order vs old world etc)
+* If you are powerful and perceived as willing to take down opposition, you will face less resistance.
+* A socially acceptable way of removing people is strategic outplacement; you can even get an enemy promoted (as long as it is away)
+* Use of power signals you have it and are willing to use it
+* Be a force to be reckoned with; reinforces power and reduces threats
+* “it is much safer to be feared than loved because ...love is preserved by the link of obligation which, owing to the baseness of men, is broken at every opportunity for their advantage; but fear preserves you by a dread of punishment which never fails.”
+* people join your side rather than be bulldozed
+* Use power to establish structures to perpetuate your power (dual class shares, hold CEO + Chairman of the board, ensure there are no good successors, hold multiple overlapping roles, embed deeply)
 
 ### Success Excuses (Almost) Everything: Why This Is the Most Important Rule of All
 
-...
+* This chapter is pretty obvious and all about the title.
+* Powerful people face few (sometimes no, always less) consequences.
+* People care little what you had to do to get somewhere, once you're there.
+* The strength of power motivation predicts holding a position of power and is associated with displaying artifacts that signal prestige and status.
+* Being powerful increases people's willingness to overlook your misdeeds, past and present.
+* Organisational behaviour actually displays the "Matthew Effect": "For whoever has will be given more, and they will have an abundance. Whoever does not have, even what they have will be taken from them."
