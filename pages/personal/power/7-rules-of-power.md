@@ -8,9 +8,37 @@ permalink: /personal/power/7-rules.html
 
 _by Jeffrey Pfeffer_
 
-## Summary
+## Condensed Summary
 
-...
+1. your internal and external scripts and self-descriptions should convey power and status, not diminish it
+1. know what you need to do to win
+1. persistence, resilience, toughness, confidence, shamelessness, power predict success - build them
+1. authenticity, false humility, deference, agreeableness, and vulnerability do not
+1. be competent first, warm and liked second
+1. act powerful; breaking rules and norms demonstrates power
+1. but - if you are going to win given the rules in place, then advocate for, follow, and enforce them
+1. surprising others can give you an edge
+1. ask forgiveness rather than permission; don't let rules or expectations limit your thinking
+1. ask for more (help, advice, ...) from others, more often
+1. appear successful and powerful: demeanour, grooming & clothing, body language, speech, emotional expression
+1. minimise notes and props
+1. do not apologies or minimise resonsibility; forcibly and actively defend yourself, your team, change the conversation to winning ground
+1. make positive claims in your stories, self-descriptions
+1. think about how you come across in terms of your "brand"; have brand statements available; achieve consistency (words, look, actions, artefacts)
+1. leverage prestigious affiliations
+1. take (build) credit for your work
+1. networking may the most important thing you do, so do it relentlessly
+1. network strategically, with people who you determine are key to your success
+1. networking is a skill, not a task - be analytical about building the skill
+1. get mentors, coaches, sponsors, personal board of directors...
+1. make the process fun, valuable, and meaningful for others
+1. pursue your "weak ties", don't overspend time with those already close
+1. identify potential, understand and recruit supporters & allies (what's in it for them?)
+1. be central; become a broker
+1. successful, strategic use of power is self-reinforcing
+1. be visible, and visibly powerful
+1. remove enemies as needed
+1. success excuses almost everything
 
 ## Chapter Notes
 

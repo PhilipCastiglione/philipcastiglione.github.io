@@ -45,9 +45,10 @@ With a mechanism for hiding longer explorations (eg footnotes) that I really can
     - pick a posting frequency, go backwards and some amount forwards at approximately that frequency? posts that seem better should be now
 - [ ] group by tags, incorporate into blog index, make them clickable 
 - [ ] More content
-- [ ] Improve resume
+- [ ] Improve resume (ref: https://www.kevinmconroy.com/hello/ - find more examples)
 - [ ] Improve bio (update config description, linkedin, resume, og:description) and resume
 - [ ] More content
+
 
 ### Design
 
