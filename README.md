@@ -16,6 +16,21 @@ bundle exec jekyll serve -l
 
 Deploy by merging to master and pushing to GitHub.
 
+## Blog
+
+Writing style should be
+
+My preferred writing style is:
+
+* Very concise; every line should be valuable
+* Incisive; get to the heart of things
+* Simple and direct without jargon, slang or colloquial language 
+* No waffling business jargon that doesn't mean much
+* Wise and intelligent through the content delivered
+
+Posts should be as short as possible to deliver the maximum value for the readers time
+With a mechanism for hiding longer explorations (eg footnotes) that I really can't avoid
+
 ## TODO
 
 ### Content
