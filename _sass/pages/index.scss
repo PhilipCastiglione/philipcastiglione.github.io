@@ -13,6 +13,7 @@
     display: flex;
     align-items: center;
     margin-top: $spacing-unit * 2;
+    margin-bottom: $spacing-unit * 4;
     flex-direction: column;
     gap: $spacing-unit * 2;
     text-align: center;
@@ -31,11 +32,13 @@
     .pages-index-section-one-content {
         gap: $spacing-unit * 4;
         margin-top: $spacing-unit * 8;
+        margin-bottom: $spacing-unit * 8;
     }
 }
 @media only screen and (min-width: $media-desktop) {
     .pages-index-section-one-content {
         gap: $spacing-unit * 10;
+        margin-bottom: $spacing-unit * 12;
         flex-direction: row-reverse;
     }
 }
