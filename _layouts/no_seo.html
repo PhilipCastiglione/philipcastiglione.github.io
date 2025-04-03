@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <title>{{ page.title }}</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/public/apple-touch-icon.png' | relative_url }}">
+    <link rel="icon" type="image/png" href="{{ '/public/favicon-32x32.png' | relative_url }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ '/public/favicon-16x16.png' | relative_url }}" sizes="16x16">
+    <link rel="manifest" href="{{ '/public/manifest.json' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <meta property="og:image" content="{{ '/public/fort.jpg' | relative_url }}" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+    <meta name="robots" content="noindex, nofollow" />
+</head>
+
+<body>
+    <main class="layouts-default-main">
+        {% include header.html %}
+        <div class="layouts-default-main-content">{{ content }}</div>
+        {% include footer.html %}
+    </main>
+</body>
+
+</html>
