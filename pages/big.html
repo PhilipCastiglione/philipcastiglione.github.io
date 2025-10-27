@@ -58,28 +58,26 @@ permalink: /big.html
   }
 
   .toggle-controls-btn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    padding: 8px 16px;
+    margin-top: 8px;
+    padding: 12px 16px;
     background: #4c88a9;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
-    z-index: 10;
+    width: 100%;
   }
 
   .toggle-controls-btn:hover {
     background: #3a7099;
   }
 
-  .controls-hidden .toggle-controls-btn {
-    position: fixed;
+  .controls-hidden .controls-panel {
+    display: none;
   }
 
-  .controls-hidden .controls-panel {
+  .controls-hidden .toggle-controls-btn {
     display: none;
   }
 
@@ -90,6 +88,10 @@ permalink: /big.html
     justify-content: center;
     transition: background-color 0.2s ease;
     overflow: hidden;
+  }
+
+  .controls-hidden .display-area {
+    cursor: pointer;
   }
 
   .big-text {
@@ -119,19 +121,21 @@ permalink: /big.html
       overflow-y: auto;
     }
 
-    .toggle-controls-btn {
-      position: fixed;
-    }
-
     .controls-hidden .controls-panel {
       display: none;
     }
+
+
+  .toggle-controls-btn {
+    margin-top: 16px;
+    padding: 16px 24px;
+    font-size: 24px;
+  }
+
   }
 </style>
 
 <div class="app-container">
-  <button class="toggle-controls-btn" id="toggleControls">Hide Controls</button>
-  
   <div class="controls-panel" id="controlsPanel">
     <div class="controls-row">
       <label for="textInput">Text to display:</label>
@@ -146,6 +150,10 @@ permalink: /big.html
     <div class="controls-row">
       <label for="bgColor">Background color:</label>
       <input type="color" id="bgColor" value="#ffffff">
+    </div>
+
+    <div class="controls-row">
+      <button class="toggle-controls-btn" id="toggleControls">Go!</button>
     </div>
   </div>
 
@@ -258,13 +266,10 @@ permalink: /big.html
   // Toggle controls visibility
   function toggleControls() {
     appContainer.classList.toggle('controls-hidden');
-    toggleBtn.textContent = appContainer.classList.contains('controls-hidden') 
-      ? 'Show Controls' 
-      : 'Hide Controls';
     saveStateToURL();
     
     // Resize text after toggling controls (delay to allow DOM update)
-    setTimeout(resizeTextToFit, 50);
+    setTimeout(resizeTextToFit, 20);
   }
 
   // Event listeners
@@ -284,6 +289,16 @@ permalink: /big.html
   });
 
   toggleBtn.addEventListener('click', toggleControls);
+
+  // Show controls when clicking display area (only when hidden)
+  displayArea.addEventListener('click', (e) => {
+    // Don't toggle if clicking from inside the controls or on the text input
+    if (e.target === displayArea || e.target === bigText) {
+      if (appContainer.classList.contains('controls-hidden')) {
+        toggleControls();
+      }
+    }
+  });
 
   // Resize text when window is resized (e.g., phone rotation)
   window.addEventListener('resize', resizeTextToFit);
