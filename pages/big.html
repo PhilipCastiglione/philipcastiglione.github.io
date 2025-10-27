@@ -1,0 +1,293 @@
+---
+layout: bare
+title: Big Text
+permalink: /big.html
+---
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
+  }
+
+  .app-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  /* Mobile: Controls on top */
+  .controls-panel {
+    padding: 16px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+  }
+
+  .controls-row {
+    margin-bottom: 12px;
+  }
+
+  .controls-row label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .controls-row input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .controls-row input[type="color"] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .toggle-controls-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 8px 16px;
+    background: #4c88a9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 10;
+  }
+
+  .toggle-controls-btn:hover {
+    background: #3a7099;
+  }
+
+  .controls-hidden .toggle-controls-btn {
+    position: fixed;
+  }
+
+  .controls-hidden .controls-panel {
+    display: none;
+  }
+
+  .display-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+    overflow: hidden;
+  }
+
+  .big-text {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.2s ease;
+    overflow-wrap: normal;
+    word-break: keep-all;
+    white-space: normal;
+    overflow: visible;
+    padding: 16px;
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  /* Desktop: Controls on left */
+  @media only screen and (min-width: 768px) {
+    .app-container {
+      flex-direction: row;
+    }
+
+    .controls-panel {
+      width: 300px;
+      border-bottom: none;
+      border-right: 1px solid #ddd;
+      overflow-y: auto;
+    }
+
+    .toggle-controls-btn {
+      position: fixed;
+    }
+
+    .controls-hidden .controls-panel {
+      display: none;
+    }
+  }
+</style>
+
+<div class="app-container">
+  <button class="toggle-controls-btn" id="toggleControls">Hide Controls</button>
+  
+  <div class="controls-panel" id="controlsPanel">
+    <div class="controls-row">
+      <label for="textInput">Text to display:</label>
+      <input type="text" id="textInput" placeholder="hello world">
+    </div>
+
+    <div class="controls-row">
+      <label for="textColor">Text color:</label>
+      <input type="color" id="textColor" value="#000000">
+    </div>
+
+    <div class="controls-row">
+      <label for="bgColor">Background color:</label>
+      <input type="color" id="bgColor" value="#ffffff">
+    </div>
+  </div>
+
+  <div class="display-area" id="displayArea">
+    <div class="big-text" id="bigText">hello world</div>
+  </div>
+</div>
+
+<script>
+  // Get elements
+  const textInput = document.getElementById('textInput');
+  const textColor = document.getElementById('textColor');
+  const bgColor = document.getElementById('bgColor');
+  const bigText = document.getElementById('bigText');
+  const displayArea = document.getElementById('displayArea');
+  const toggleBtn = document.getElementById('toggleControls');
+  const controlsPanel = document.getElementById('controlsPanel');
+  const appContainer = document.querySelector('.app-container');
+
+  // Load state from URL parameters
+  function loadStateFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    const text = params.get('text');
+    const textColorValue = params.get('textColor');
+    const bgColorValue = params.get('bgColor');
+    const controlsHidden = params.get('hideControls');
+
+    if (text) textInput.value = text;
+    if (textColorValue) textColor.value = textColorValue;
+    if (bgColorValue) bgColor.value = bgColorValue;
+    if (controlsHidden === 'true') {
+      appContainer.classList.add('controls-hidden');
+      toggleBtn.textContent = 'Show Controls';
+    }
+
+    updateDisplay();
+  }
+
+  // Update the display with current values
+  function updateDisplay() {
+    const text = textInput.value || 'hello world';
+    const tColor = textColor.value;
+    const bColor = bgColor.value;
+
+    bigText.textContent = text;
+    bigText.style.color = tColor;
+    displayArea.style.backgroundColor = bColor;
+    
+    // Resize text to fit available space
+    resizeTextToFit();
+  }
+
+  // Dynamically resize text to fit the available space
+  function resizeTextToFit() {
+    // Get the available space in the display area
+    const displayWidth = displayArea.clientWidth - 32; // Account for padding
+    const displayHeight = displayArea.clientHeight - 32; // Account for padding
+    
+    // Set max-width to allow wrapping at spaces
+    bigText.style.maxWidth = displayWidth + 'px';
+    
+    // Binary search for optimal font size
+    let minSize = 10;
+    let maxSize = 2000;
+    let optimalSize = 48;
+    
+    while (minSize <= maxSize) {
+      const testSize = Math.floor((minSize + maxSize) / 2);
+      bigText.style.fontSize = testSize + 'px';
+      
+      // Force reflow to get accurate measurements
+      void bigText.offsetWidth;
+      
+      // Check if text fits within the available space (both width and height)
+      const textWidth = bigText.scrollWidth;
+      const textHeight = bigText.scrollHeight;
+      
+      // Check if both dimensions fit
+      const fitsWidth = textWidth <= displayWidth;
+      const fitsHeight = textHeight <= displayHeight;
+      
+      if (fitsWidth && fitsHeight) {
+        // Text fits in both dimensions, try larger size
+        optimalSize = testSize;
+        minSize = testSize + 1;
+      } else {
+        // Text doesn't fit, try smaller size
+        maxSize = testSize - 1;
+      }
+    }
+    
+    // Apply the optimal size
+    bigText.style.fontSize = optimalSize + 'px';
+  }
+
+  // Save state to URL
+  function saveStateToURL() {
+    const params = new URLSearchParams();
+    if (textInput.value) params.set('text', textInput.value);
+    if (textColor.value !== '#000000') params.set('textColor', textColor.value);
+    if (bgColor.value !== '#ffffff') params.set('bgColor', bgColor.value);
+    if (appContainer.classList.contains('controls-hidden')) {
+      params.set('hideControls', 'true');
+    }
+
+    const newURL = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+    window.history.replaceState({}, '', newURL);
+  }
+
+  // Toggle controls visibility
+  function toggleControls() {
+    appContainer.classList.toggle('controls-hidden');
+    toggleBtn.textContent = appContainer.classList.contains('controls-hidden') 
+      ? 'Show Controls' 
+      : 'Hide Controls';
+    saveStateToURL();
+    
+    // Resize text after toggling controls (delay to allow DOM update)
+    setTimeout(resizeTextToFit, 50);
+  }
+
+  // Event listeners
+  textInput.addEventListener('input', () => {
+    updateDisplay();
+    saveStateToURL();
+  });
+
+  textColor.addEventListener('input', () => {
+    updateDisplay();
+    saveStateToURL();
+  });
+
+  bgColor.addEventListener('input', () => {
+    updateDisplay();
+    saveStateToURL();
+  });
+
+  toggleBtn.addEventListener('click', toggleControls);
+
+  // Resize text when window is resized (e.g., phone rotation)
+  window.addEventListener('resize', resizeTextToFit);
+
+  // Initialize
+  loadStateFromURL();
+</script>
