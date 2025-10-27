@@ -46,7 +46,8 @@ permalink: /big.html
     font-weight: 500;
   }
 
-  .controls-row input[type="text"] {
+  .controls-row input[type="text"],
+  .controls-row select {
     width: 100%;
     padding: 8px;
     border: 1px solid #ddd;
@@ -153,6 +154,17 @@ permalink: /big.html
     </div>
 
     <div class="controls-row">
+      <label for="fontFamily">Font family:</label>
+      <select id="fontFamily">
+        <option value="serif">Serif</option>
+        <option value="sans-serif" selected>Sans-serif</option>
+        <option value="monospace">Monospace</option>
+        <option value="cursive">Cursive</option>
+        <option value="fantasy">Fantasy</option>
+      </select>
+    </div>
+
+    <div class="controls-row">
       <label for="textColor">Text color:</label>
       <input type="color" id="textColor" value="#000000">
     </div>
@@ -175,6 +187,7 @@ permalink: /big.html
 <script>
   // Get elements
   const textInput = document.getElementById('textInput');
+  const fontFamily = document.getElementById('fontFamily');
   const textColor = document.getElementById('textColor');
   const bgColor = document.getElementById('bgColor');
   const bigText = document.getElementById('bigText');
@@ -187,11 +200,13 @@ permalink: /big.html
   function loadStateFromURL() {
     const params = new URLSearchParams(window.location.search);
     const text = params.get('text');
+    const fontFamilyValue = params.get('font');
     const textColorValue = params.get('textColor');
     const bgColorValue = params.get('bgColor');
     const controlsHidden = params.get('hideControls');
 
     if (text) textInput.value = text;
+    if (fontFamilyValue) fontFamily.value = fontFamilyValue;
     if (textColorValue) textColor.value = textColorValue;
     if (bgColorValue) bgColor.value = bgColorValue;
     if (controlsHidden === 'true') {
@@ -204,10 +219,12 @@ permalink: /big.html
   // Update the display with current values
   function updateDisplay() {
     const text = textInput.value || 'hello world';
+    const font = fontFamily.value;
     const tColor = textColor.value;
     const bColor = bgColor.value;
 
     bigText.textContent = text;
+    bigText.style.fontFamily = font;
     bigText.style.color = tColor;
     displayArea.style.backgroundColor = bColor;
     
@@ -268,6 +285,7 @@ permalink: /big.html
   function saveStateToURL() {
     const params = new URLSearchParams();
     if (textInput.value) params.set('text', textInput.value);
+    if (fontFamily.value !== 'sans-serif') params.set('font', fontFamily.value);
     if (textColor.value !== '#000000') params.set('textColor', textColor.value);
     if (bgColor.value !== '#ffffff') params.set('bgColor', bgColor.value);
     if (appContainer.classList.contains('controls-hidden')) {
@@ -289,6 +307,11 @@ permalink: /big.html
 
   // Event listeners
   textInput.addEventListener('input', () => {
+    updateDisplay();
+    saveStateToURL();
+  });
+
+  fontFamily.addEventListener('change', () => {
     updateDisplay();
     saveStateToURL();
   });
