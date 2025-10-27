@@ -12,19 +12,24 @@ permalink: /big.html
     margin: 0;
     padding: 0;
     height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile browsers */
     overflow: hidden;
     font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
+    background: #ffffff; /* Default background color */
   }
 
   .app-container {
     display: flex;
     height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile browsers */
     flex-direction: column;
+    min-height: -webkit-fill-available; /* iOS Safari fix */
   }
 
   /* Mobile: Controls on top */
   .controls-panel {
     padding: 16px;
+    padding-top: calc(16px + env(safe-area-inset-top));
     background: #f5f5f5;
     border-bottom: 1px solid #ddd;
     width: 100%;
@@ -88,6 +93,11 @@ permalink: /big.html
     justify-content: center;
     transition: background-color 0.2s ease;
     overflow: hidden;
+    /* Extend to safe area edges on iOS */
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
 
   .controls-hidden .display-area {
@@ -208,8 +218,14 @@ permalink: /big.html
   // Dynamically resize text to fit the available space
   function resizeTextToFit() {
     // Get the available space in the display area
-    const displayWidth = displayArea.clientWidth - 32; // Account for padding
-    const displayHeight = displayArea.clientHeight - 32; // Account for padding
+    // Account for text's padding (16px on each side = 32px) and safe area insets
+    const safeAreaTop = parseInt(getComputedStyle(displayArea).paddingTop) || 0;
+    const safeAreaBottom = parseInt(getComputedStyle(displayArea).paddingBottom) || 0;
+    const safeAreaLeft = parseInt(getComputedStyle(displayArea).paddingLeft) || 0;
+    const safeAreaRight = parseInt(getComputedStyle(displayArea).paddingRight) || 0;
+    
+    const displayWidth = displayArea.clientWidth - 32 - safeAreaLeft - safeAreaRight;
+    const displayHeight = displayArea.clientHeight - 32 - safeAreaTop - safeAreaBottom;
     
     // Set max-width to allow wrapping at spaces
     bigText.style.maxWidth = displayWidth + 'px';
