@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reelscore — all the ratings, one page</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page:           #f9f9f7;
+    --surface-1:      #fcfcfb;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --baseline:       #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --accent:         #2a78d6;
+    --track:          #86b6ef;
+    --danger:         #d03b3b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page:           #0d0d0d;
+      --surface-1:      #1a1a19;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --gridline:       #2c2c2a;
+      --baseline:       #383835;
+      --border:         rgba(255,255,255,0.10);
+      --accent:         #3987e5;
+      --track:          #184f95;
+      --danger:         #e66767;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page:           #0d0d0d;
+    --surface-1:      #1a1a19;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --gridline:       #2c2c2a;
+    --baseline:       #383835;
+    --border:         rgba(255,255,255,0.10);
+    --accent:         #3987e5;
+    --track:          #184f95;
+    --danger:         #e66767;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 20px 80px;
+    background: var(--page);
+    color: var(--text-primary);
+    font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; }
+
+  header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 28px; }
+  h1 { font-size: 20px; font-weight: 600; margin: 0; letter-spacing: -0.01em; }
+  header .sub { color: var(--text-muted); font-size: 13px; }
+  header .spacer { flex: 1; }
+
+  button, input, select {
+    font: inherit;
+    color: var(--text-primary);
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 9px 12px;
+  }
+  button { cursor: pointer; }
+  button:hover { border-color: var(--baseline); }
+  button.primary { background: var(--accent); color: #fff; border-color: transparent; }
+  button.primary:hover { filter: brightness(1.08); }
+  button.ghost { background: none; border: none; color: var(--text-secondary); padding: 6px 8px; font-size: 13px; }
+  button.ghost:hover { color: var(--text-primary); }
+  button.ghost[aria-pressed="true"] { color: var(--text-primary); font-weight: 600; }
+
+  form.search { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  form.search input[name=title] { flex: 1 1 260px; }
+  form.search input[name=year] { width: 92px; }
+
+  .recents { display: flex; gap: 6px; flex-wrap: wrap; min-height: 26px; margin-bottom: 24px; }
+  .recents button { font-size: 12px; padding: 3px 9px; border-radius: 999px; color: var(--text-secondary); }
+
+  .card {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+  }
+  .note { color: var(--text-secondary); font-size: 13px; }
+  .error { color: var(--danger); }
+
+  .picker li { list-style: none; }
+  .picker ul { margin: 10px 0 0; padding: 0; }
+  .picker button {
+    width: 100%; text-align: left; background: none; border: none;
+    border-top: 1px solid var(--gridline); border-radius: 0; padding: 10px 4px;
+  }
+  .picker button:hover { background: var(--page); }
+  .picker .yr { color: var(--text-muted); margin-left: 8px; font-size: 13px; }
+  .picker button { display: flex; align-items: baseline; gap: 16px; }
+  .picker .cand { margin-left: auto; color: var(--text-secondary); font-size: 13px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .picker details { margin: 0; }
+  .picker details summary { padding: 10px 4px; border-top: 1px solid var(--gridline); }
+
+  .headline { display: flex; gap: 20px; align-items: flex-start; margin-bottom: 4px; }
+  .headline img { width: 92px; border-radius: 8px; border: 1px solid var(--border); display: block; }
+  .headline h2 { margin: 0 0 2px; font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
+  .headline .meta { color: var(--text-secondary); font-size: 14px; }
+  .hero { margin-top: 14px; }
+  .hero .figure { font-size: 48px; font-weight: 600; line-height: 1; letter-spacing: -0.02em; }
+  .hero .cap { color: var(--text-muted); font-size: 12px; margin-top: 4px; }
+
+  .group { margin-top: 26px; }
+  .group h3 {
+    margin: 0 0 2px; font-size: 12px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--text-secondary);
+  }
+  .group .gcap { color: var(--text-muted); font-size: 12px; margin-bottom: 14px; }
+
+  /* Fixed track, not auto-fit: meters must be the same length in both groups or
+     the bars aren't comparable across critics and audience. */
+  .tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px 24px; }
+  @media (max-width: 720px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .tile .label { color: var(--text-secondary); font-size: 13px; margin-bottom: 3px; }
+  .tile .value { font-size: 26px; font-weight: 600; line-height: 1.1; letter-spacing: -0.01em; }
+  .tile .value .scale { font-size: 13px; font-weight: 400; color: var(--text-muted); margin-left: 3px; }
+  .tile .value.absent { font-size: 15px; font-weight: 400; color: var(--text-muted); }
+  .meter { height: 10px; background: var(--track); border-radius: 0 4px 4px 0; margin-top: 9px; overflow: visible; }
+  .meter > i { display: block; height: 100%; background: var(--accent); border-radius: 0 4px 4px 0; }
+  .tile .votes { color: var(--text-muted); font-size: 12px; margin-top: 6px; }
+
+  table { border-collapse: collapse; width: 100%; margin-top: 8px; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px 8px 0; border-bottom: 1px solid var(--gridline); }
+  th { color: var(--text-secondary); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; padding-right: 0; }
+
+  .links { margin-top: 22px; display: flex; gap: 14px; flex-wrap: wrap; font-size: 14px; }
+  .links a { color: var(--accent); }
+  .viewtoggle { display: flex; gap: 4px; margin-top: 22px; border-top: 1px solid var(--gridline); padding-top: 12px; }
+  details { margin-top: 14px; }
+  summary { cursor: pointer; color: var(--text-muted); font-size: 12px; }
+  pre { overflow: auto; font-size: 12px; color: var(--text-secondary); background: var(--page); padding: 12px; border-radius: 8px; }
+  .stale { opacity: 0.45; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Reelscore</h1>
+    <span class="sub">every rating, one page</span>
+    <span class="spacer"></span>
+    <button class="ghost" id="themeBtn" title="Toggle theme">◐</button>
+    <button class="ghost" id="keyBtn">API key</button>
+  </header>
+
+  <div class="card" id="keyPanel" hidden>
+    <p class="note" style="margin-top:0">
+      Needs a free <a href="https://mdblist.com/preferences/" target="_blank" rel="noopener">MDBList API key</a>
+      (1,000 lookups/day). It is stored only in this browser's localStorage and sent directly to api.mdblist.com.
+    </p>
+    <form class="search" id="keyForm">
+      <input name="key" type="password" placeholder="MDBList API key" autocomplete="off" style="flex:1 1 260px">
+      <button class="primary">Save</button>
+      <button type="button" id="keyClear">Clear</button>
+    </form>
+  </div>
+
+  <form class="search" id="searchForm">
+    <input name="title" placeholder="Film or series title" autocomplete="off" autofocus required>
+    <input name="year" type="number" placeholder="Year" min="1870" max="2100">
+    <select name="type">
+      <option value="movie">Film</option>
+      <option value="show">Series</option>
+      <option value="any">Either</option>
+    </select>
+    <button class="primary">Get ratings</button>
+  </form>
+  <div class="recents" id="recents"></div>
+
+  <div id="out"></div>
+
+</div>
+
+<script>
+const API = 'https://api.mdblist.com';
+const LS = {
+  key:     'reelscore.apikey',
+  recents: 'reelscore.recents',
+  theme:   'reelscore.theme',
+  cache:   id => 'reelscore.cache.' + id,
+};
+const CACHE_TTL = 7 * 24 * 3600 * 1000;
+
+const SOURCES = [
+  { label: 'RT Tomatometer',   group: 'critics',  max: 100, suffix: '%',   digits: 0, keys: ['tomatoes'] },
+  { label: 'Metascore',        group: 'critics',  max: 100, suffix: '',    digits: 0, keys: ['metacritic'] },
+  { label: 'IMDb',             group: 'audience', max: 10,  suffix: '/10', digits: 1, keys: ['imdb'] },
+  { label: 'RT Audience',      group: 'audience', max: 100, suffix: '%',   digits: 0, keys: ['popcorn', 'tomatoesaudience', 'audience'] },
+  { label: 'Metacritic users', group: 'audience', max: 10,  suffix: '/10', digits: 1, keys: ['metacriticuser', 'metacritic_user', 'metacriticus'] },
+  { label: 'Letterboxd',       group: 'audience', max: 5,   suffix: '/5',  digits: 1, keys: ['letterboxd'] },
+];
+
+const pick = (byKey, meta) => meta.keys.map(k => byKey[k]).find(r => r && r.value != null);
+
+const $  = s => document.querySelector(s);
+const el = (t, props = {}, kids = []) => {
+  const n = Object.assign(document.createElement(t), props);
+  for (const k of [].concat(kids)) n.append(k);
+  return n;
+};
+
+/* ---------- key + theme ---------- */
+
+const getKey = () => localStorage.getItem(LS.key) || '';
+
+$('#keyBtn').onclick = () => { $('#keyPanel').hidden = !$('#keyPanel').hidden; };
+$('#keyForm').onsubmit = e => {
+  e.preventDefault();
+  const v = e.target.elements.key.value.trim();
+  if (v) localStorage.setItem(LS.key, v);
+  e.target.reset();
+  $('#keyPanel').hidden = true;
+  render(el('p', { className: 'note', textContent: 'Key saved. Search away.' }));
+};
+$('#keyClear').onclick = () => { localStorage.removeItem(LS.key); alert('Key cleared.'); };
+
+const applyTheme = t => { if (t) document.documentElement.dataset.theme = t; };
+applyTheme(localStorage.getItem(LS.theme));
+$('#themeBtn').onclick = () => {
+  const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  applyTheme(next);
+  localStorage.setItem(LS.theme, next);
+};
+
+/* ---------- api ---------- */
+
+async function api(path, params = {}) {
+  const key = getKey();
+  if (!key) throw new Error('NO_KEY');
+  const u = new URL(API + path);
+  u.searchParams.set('apikey', key);
+  for (const [k, v] of Object.entries(params)) if (v !== '' && v != null) u.searchParams.set(k, v);
+
+  const r = await fetch(u);
+  if (r.status === 401 || r.status === 403) throw new Error('Rejected key — check it in the API key panel.');
+  if (r.status === 429) throw new Error('Daily limit reached (1,000/day on the free tier). Try again tomorrow.');
+  if (!r.ok) throw new Error(`MDBList returned ${r.status}.`);
+  return r.json();
+}
+
+const searchMedia = (query, year, type) =>
+  api(`/search/${type}`, { query, year, limit: 12 });
+
+async function fetchDetail(item) {
+  const type = normType(item);
+  const ids = item.ids || item;
+  const imdb = ids.imdbid || ids.imdb_id || ids.imdb;
+  const tmdb = ids.tmdbid || ids.tmdb_id || ids.tmdb;
+  const [provider, id] = imdb ? ['imdb', imdb] : tmdb ? ['tmdb', tmdb] : [null, null];
+  if (!id) throw new Error('That result carries no IMDb or TMDB id, so ratings cannot be looked up.');
+
+  const ck = LS.cache(`${provider}:${id}`);
+  const hit = JSON.parse(localStorage.getItem(ck) || 'null');
+  if (hit && Date.now() - hit.at < CACHE_TTL) return { data: hit.data, cachedAt: hit.at };
+
+  const data = await api(`/${provider}/${type}/${id}/`);
+  try { localStorage.setItem(ck, JSON.stringify({ at: Date.now(), data })); } catch {}
+  return { data, cachedAt: null };
+}
+
+const normType = it => (it.type || it.mediatype) === 'show' ? 'show' : 'movie';
+
+/* ---------- recents ---------- */
+
+function pushRecent(entry) {
+  const list = JSON.parse(localStorage.getItem(LS.recents) || '[]')
+    .filter(r => !(r.title === entry.title && r.year === entry.year));
+  list.unshift(entry);
+  localStorage.setItem(LS.recents, JSON.stringify(list.slice(0, 8)));
+  drawRecents();
+}
+
+function drawRecents() {
+  const box = $('#recents');
+  box.textContent = '';
+  for (const r of JSON.parse(localStorage.getItem(LS.recents) || '[]')) {
+    const b = el('button', { textContent: r.year ? `${r.title} (${r.year})` : r.title });
+    b.onclick = () => run(r.title, r.year, r.type || 'any');
+    box.append(b);
+  }
+}
+drawRecents();
+
+/* ---------- render ---------- */
+
+const render = node => { const o = $('#out'); o.textContent = ''; o.append(node); };
+const card = kids => el('div', { className: 'card' }, kids);
+const fmtVotes = n => n >= 1e6 ? (n / 1e6).toFixed(1).replace(/\.0$/, '') + 'M'
+                    : n >= 1e3 ? Math.round(n / 1e3) + 'K' : String(n);
+
+const clamp = n => Math.max(0, Math.min(100, n));
+
+/* MDBList occasionally reports a source on a 0-100 scale where its native scale is
+   /5 or /10; trust the value's own magnitude over the expected max. */
+const overscale = (rating, meta) => Number(rating.value) > meta.max * 1.5;
+
+function pct(rating, meta) {
+  if (typeof rating.score === 'number') return clamp(rating.score);
+  return clamp(Number(rating.value) / (overscale(rating, meta) ? 100 : meta.max) * 100);
+}
+
+const native = (rating, meta) => overscale(rating, meta)
+  ? { text: Number(rating.value).toFixed(0), suffix: '' }
+  : { text: Number(rating.value).toFixed(meta.digits), suffix: meta.suffix };
+
+function tile(meta, rating) {
+  const t = el('div', { className: 'tile' }, el('div', { className: 'label', textContent: meta.label }));
+
+  if (!rating || rating.value == null) {
+    t.append(el('div', { className: 'value absent', textContent: 'No score' }));
+    return t;
+  }
+
+  const n = native(rating, meta);
+  const v = el('div', { className: 'value', textContent: n.text });
+  if (n.suffix) v.append(el('span', { className: 'scale', textContent: n.suffix }));
+  t.append(v);
+
+  const p = pct(rating, meta);
+  t.append(el('div', {
+    className: 'meter',
+    title: `${p.toFixed(0)} of 100 normalised`,
+  }, el('i', { style: `width:${p}%` })));
+
+  if (rating.votes) t.append(el('div', { className: 'votes', textContent: fmtVotes(rating.votes) + ' votes' }));
+  return t;
+}
+
+function group(title, caption, metas, byKey) {
+  const g = el('div', { className: 'group' }, [
+    el('h3', { textContent: title }),
+    el('div', { className: 'gcap', textContent: caption }),
+  ]);
+  g.append(el('div', { className: 'tiles' }, metas.map(m => tile(m, pick(byKey, m)))));
+  return g;
+}
+
+function tableView(byKey) {
+  const rows = SOURCES.map(m => {
+    const r = pick(byKey, m);
+    const n = r ? native(r, m) : null;
+    return el('tr', {}, [
+      el('td', { textContent: m.label }),
+      el('td', { textContent: m.group === 'critics' ? 'Critics' : 'Audience' }),
+      el('td', { className: 'num', textContent: n ? n.text + n.suffix : '—' }),
+      el('td', { className: 'num', textContent: r ? pct(r, m).toFixed(0) : '—' }),
+      el('td', { className: 'num', textContent: r && r.votes ? fmtVotes(r.votes) : '—' }),
+    ]);
+  });
+  return el('table', {}, [
+    el('thead', {}, el('tr', {}, ['Source', 'Panel', 'Native', 'of 100', 'Votes']
+      .map((h, i) => el('th', { textContent: h, className: i > 1 ? 'num' : '' })))),
+    el('tbody', {}, rows),
+  ]);
+}
+
+function detailView(data, cachedAt) {
+  const byKey = {};
+  for (const r of data.ratings || []) if (r && r.source) byKey[r.source] = r;
+
+  const head = el('div', { className: 'headline' });
+  if (data.poster) head.append(el('img', { src: data.poster, alt: '' }));
+  const bits = [data.year, data.type === 'show' ? 'Series' : 'Film', data.runtime && `${data.runtime} min`,
+                (data.genres || []).slice(0, 3).map(g => g.title || g).join(', ')].filter(Boolean);
+  head.append(el('div', {}, [
+    el('h2', { textContent: data.title || '(untitled)' }),
+    el('div', { className: 'meta', textContent: bits.join(' · ') }),
+  ]));
+
+  const body = el('div', {}, head);
+
+  if (typeof data.score === 'number') {
+    body.append(el('div', { className: 'hero' }, [
+      el('div', { className: 'figure', textContent: String(Math.round(data.score)) }),
+      el('div', { className: 'cap', textContent: "MDBList's combined score, 0–100" }),
+    ]));
+  }
+
+  const critics  = SOURCES.filter(s => s.group === 'critics');
+  const audience = SOURCES.filter(s => s.group === 'audience');
+  body.append(group('Critics', 'Professional reviewers. Bars are each score normalised to 0–100.', critics, byKey));
+  body.append(group('Audience', 'Public ratings. Bars are each score normalised to 0–100.', audience, byKey));
+
+  const tableWrap = el('div', { hidden: true }, tableView(byKey));
+  const toggle = el('div', { className: 'viewtoggle' });
+  const bMeters = el('button', { className: 'ghost', textContent: 'Meters' });
+  const bTable  = el('button', { className: 'ghost', textContent: 'Table' });
+  bMeters.setAttribute('aria-pressed', 'true');
+  bTable.setAttribute('aria-pressed', 'false');
+  const setView = t => {
+    tableWrap.hidden = !t;
+    for (const g of body.querySelectorAll('.group')) g.hidden = t;
+    bMeters.setAttribute('aria-pressed', String(!t));
+    bTable.setAttribute('aria-pressed', String(t));
+  };
+  bMeters.onclick = () => setView(false);
+  bTable.onclick  = () => setView(true);
+  toggle.append(bMeters, bTable);
+  body.append(toggle, tableWrap);
+
+  const links = el('div', { className: 'links' });
+  const imdbId = data.imdb_id || data.imdbid;
+  const tmdbId = data.tmdb_id || data.tmdbid || data.tmdbId;
+  if (imdbId) links.append(el('a', { href: `https://www.imdb.com/title/${imdbId}/`, target: '_blank', rel: 'noopener', textContent: 'IMDb' }));
+  if (tmdbId) {
+    const kind = data.type === 'show' ? 'tv' : 'movie';
+    links.append(el('a', { href: `https://letterboxd.com/tmdb/${tmdbId}/`, target: '_blank', rel: 'noopener', textContent: 'Letterboxd' }));
+    links.append(el('a', { href: `https://www.themoviedb.org/${kind}/${tmdbId}`, target: '_blank', rel: 'noopener', textContent: 'TMDB' }));
+  }
+  if (links.children.length) body.append(links);
+
+  const known = new Set(SOURCES.flatMap(s => s.keys));
+  const extra = Object.keys(byKey).filter(k => !known.has(k));
+  if (extra.length) body.append(el('div', { className: 'note', style: 'margin-top:10px',
+    textContent: 'Also returned, not shown: ' + extra.join(', ') }));
+
+  if (cachedAt) body.append(el('div', { className: 'note', style: 'margin-top:10px',
+    textContent: 'Cached ' + new Date(cachedAt).toLocaleString() }));
+
+  const raw = el('details', {}, [
+    el('summary', { textContent: 'Raw response' }),
+    el('pre', { textContent: JSON.stringify(data, null, 2) }),
+  ]);
+  body.append(raw);
+
+  return card(body);
+}
+
+/* MDBList's search is diacritic-insensitive and substring-happy — "The Infiltrator"
+   pulls in "Thé au bois". Rank client-side and demote anything that isn't a real
+   title match rather than showing the raw order. */
+const STOPWORDS = new Set(['the', 'a', 'an', 'of', 'and']);
+const norm = s => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '')
+  .toLowerCase().replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim();
+
+function relevance(query, item, wantYear) {
+  const a = norm(query), b = norm(item.title);
+  if (!a || !b) return 0;
+  let r;
+  if (a === b) r = 100;
+  else if (b.startsWith(a)) r = 80;
+  else if (b.includes(a)) r = 65;
+  else {
+    const at = a.split(' ').filter(t => !STOPWORDS.has(t));
+    const bt = new Set(b.split(' '));
+    r = at.length ? Math.round(at.filter(t => bt.has(t)).length / at.length * 50) : 0;
+  }
+  if (wantYear && String(item.year) === String(wantYear)) r += 15;
+  return r;
+}
+
+const STRONG = 60;
+const ENRICH_CAP = 6;
+
+const notability = data => {
+  const votes = (data.ratings || []).map(r => Number(r.votes) || 0);
+  return votes.length ? Math.max(...votes) : 0;
+};
+
+function candidateRow(item, data, onPick) {
+  const b = el('button', {});
+  const line = el('span', {}, [
+    el('span', { textContent: item.title || '(untitled)' }),
+    el('span', { className: 'yr', textContent: [item.year, normType(item) === 'show' ? 'series' : 'film'].filter(Boolean).join(' · ') }),
+  ]);
+  b.append(line);
+
+  if (data) {
+    const imdb = (data.ratings || []).find(r => r.source === 'imdb' && r.value != null);
+    const bits = [];
+    if (imdb) bits.push(`IMDb ${Number(imdb.value).toFixed(1)}`);
+    const n = notability(data);
+    if (n) bits.push(`${fmtVotes(n)} votes`);
+    if (!bits.length) bits.push('no ratings');
+    b.append(el('span', { className: 'cand', textContent: bits.join(' · ') }));
+  } else if (typeof item.score_average === 'number' && item.score_average > 0) {
+    b.append(el('span', { className: 'cand', textContent: `score ${item.score_average}` }));
+  }
+
+  b.onclick = () => onPick(item);
+  return el('li', {}, b);
+}
+
+async function pickerView(strong, weak, onPick) {
+  const enriching = strong.slice(0, ENRICH_CAP);
+  const settled = await Promise.allSettled(enriching.map(s => fetchDetail(s.it)));
+  const detail = new Map();
+  enriching.forEach((s, i) => {
+    if (settled[i].status === 'fulfilled') detail.set(s.it, settled[i].value.data);
+  });
+
+  const ranked = [...strong].sort((x, y) => {
+    const dx = detail.get(x.it), dy = detail.get(y.it);
+    const nx = dx ? notability(dx) : -1, ny = dy ? notability(dy) : -1;
+    return ny - nx || y.rel - x.rel;
+  });
+
+  const ul = el('ul', {}, ranked.map(s => candidateRow(s.it, detail.get(s.it), onPick)));
+  const kids = [
+    el('div', { className: 'note', textContent: ranked.length
+      ? 'Best matches, most-rated first:'
+      : 'No close title match. Loose matches:' }),
+    ul,
+  ];
+
+  if (weak.length) {
+    const wul = el('ul', {}, weak.map(s => candidateRow(s.it, null, onPick)));
+    kids.push(el('details', {}, [
+      el('summary', { textContent: `${weak.length} looser ${weak.length === 1 ? 'match' : 'matches'}` }),
+      wul,
+    ]));
+  }
+  return card(el('div', { className: 'picker' }, kids));
+}
+
+/* ---------- flow ---------- */
+
+async function run(title, year, type) {
+  if (!getKey()) {
+    $('#keyPanel').hidden = false;
+    render(el('p', { className: 'note', textContent: 'Add an MDBList API key first.' }));
+    return;
+  }
+  render(el('p', { className: 'note', textContent: 'Searching…' }));
+
+  try {
+    const res = await searchMedia(title, year, type);
+    const items = res.search || [];
+    if (!items.length) {
+      render(card(el('p', { className: 'note', style: 'margin:0',
+        textContent: `Nothing found for “${title}”${year ? ` (${year})` : ''}.` })));
+      return;
+    }
+    pushRecent({ title, year, type });
+
+    const scored = items.map(it => ({ it, rel: relevance(title, it, year) }))
+                        .sort((a, b) => b.rel - a.rel);
+    let strong = scored.filter(s => s.rel >= STRONG);
+    let weak   = scored.filter(s => s.rel < STRONG);
+    if (!strong.length) { strong = weak; weak = []; }
+
+    if (strong.length === 1) return load(strong[0].it);
+
+    render(el('p', { className: 'note', textContent: `Ranking ${Math.min(strong.length, ENRICH_CAP)} candidates…` }));
+    render(await pickerView(strong, weak, load));
+  } catch (e) {
+    showError(e);
+  }
+}
+
+async function load(item) {
+  const prev = $('#out').firstElementChild;
+  if (prev) prev.classList.add('stale'); else render(el('p', { className: 'note', textContent: 'Loading ratings…' }));
+  try {
+    const { data, cachedAt } = await fetchDetail(item);
+    render(detailView(data, cachedAt));
+  } catch (e) {
+    showError(e);
+  }
+}
+
+function showError(e) {
+  if (e.message === 'NO_KEY') { $('#keyPanel').hidden = false; return; }
+  render(card(el('p', { className: 'note error', style: 'margin:0', textContent: e.message })));
+}
+
+$('#searchForm').onsubmit = e => {
+  e.preventDefault();
+  const f = e.target.elements;
+  run(f.title.value.trim(), f.year.value.trim(), f.type.value);
+};
+
+if (!getKey()) $('#keyPanel').hidden = false;
+</script>
+</body>
+</html>
