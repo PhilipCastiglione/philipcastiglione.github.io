@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Garden Pods in Ireland — Research</title>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #ffffff;
+    --bg-alt: #f4f6f8;
+    --text: #1a1d23;
+    --text-muted: #4c5560;
+    --border: #d7dce1;
+    --link: #0a5cb0;
+    --link-visited: #6a3f9e;
+    --focus: #0a5cb0;
+    --table-stripe: #eef1f4;
+    --code-bg: #eef0f2;
+    --callout-key-bg: #e9f6ec;
+    --callout-key-border: #2c7a41;
+    --callout-key-text: #14311c;
+    --callout-warn-bg: #fdf0e6;
+    --callout-warn-border: #b0501a;
+    --callout-warn-text: #4a2409;
+    --callout-action-bg: #e9f1fb;
+    --callout-action-border: #1f579e;
+    --callout-action-text: #0f2b4d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --bg: #14171c;
+      --bg-alt: #1b1f26;
+      --text: #e6e9ee;
+      --text-muted: #a9b1bc;
+      --border: #333a44;
+      --link: #7fb8f5;
+      --link-visited: #c6a6ec;
+      --focus: #7fb8f5;
+      --table-stripe: #1c2027;
+      --code-bg: #20242c;
+      --callout-key-bg: #102718;
+      --callout-key-border: #3fae63;
+      --callout-key-text: #b7ecc4;
+      --callout-warn-bg: #2b1c10;
+      --callout-warn-border: #e08a4b;
+      --callout-warn-text: #f5cfa8;
+      --callout-action-bg: #101f30;
+      --callout-action-border: #5090d6;
+      --callout-action-text: #bfdaf6;
+    }
+  }
+  html[data-theme="light"] {
+    color-scheme: light;
+    --bg: #ffffff;
+    --bg-alt: #f4f6f8;
+    --text: #1a1d23;
+    --text-muted: #4c5560;
+    --border: #d7dce1;
+    --link: #0a5cb0;
+    --link-visited: #6a3f9e;
+    --focus: #0a5cb0;
+    --table-stripe: #eef1f4;
+    --code-bg: #eef0f2;
+    --callout-key-bg: #e9f6ec;
+    --callout-key-border: #2c7a41;
+    --callout-key-text: #14311c;
+    --callout-warn-bg: #fdf0e6;
+    --callout-warn-border: #b0501a;
+    --callout-warn-text: #4a2409;
+    --callout-action-bg: #e9f1fb;
+    --callout-action-border: #1f579e;
+    --callout-action-text: #0f2b4d;
+  }
+  html[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #14171c;
+    --bg-alt: #1b1f26;
+    --text: #e6e9ee;
+    --text-muted: #a9b1bc;
+    --border: #333a44;
+    --link: #7fb8f5;
+    --link-visited: #c6a6ec;
+    --focus: #7fb8f5;
+    --table-stripe: #1c2027;
+    --code-bg: #20242c;
+    --callout-key-bg: #102718;
+    --callout-key-border: #3fae63;
+    --callout-key-text: #b7ecc4;
+    --callout-warn-bg: #2b1c10;
+    --callout-warn-border: #e08a4b;
+    --callout-warn-text: #f5cfa8;
+    --callout-action-bg: #101f30;
+    --callout-action-border: #5090d6;
+    --callout-action-text: #bfdaf6;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65;
+  }
+
+  code, pre, .legal, .mono {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  }
+
+  a { color: var(--link); }
+  a:visited { color: var(--link-visited); }
+  a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  h1, h2, h3 { line-height: 1.25; }
+  h2, h3 { scroll-margin-top: 5.5rem; }
+  section[id] { scroll-margin-top: 2rem; }
+
+  /* ---------- Layout ---------- */
+  .page {
+    display: flex;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+
+  .sidebar {
+    width: 290px;
+    flex: 0 0 290px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid var(--border);
+    background: var(--bg-alt);
+    padding: 1.25rem 1rem;
+  }
+
+  .sidebar h2.toc-heading {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin: 0.25rem 0 0.75rem;
+  }
+
+  .toc-toggle {
+    display: none;
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    font-weight: 600;
+    padding: 0.6rem 0.8rem;
+    background: var(--bg-alt);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  #tocList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #tocList li { margin: 0; }
+  #tocList a {
+    display: block;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.92rem;
+    border-left: 3px solid transparent;
+  }
+  #tocList li.toc-h3 a {
+    padding-left: 1.4rem;
+    font-size: 0.87rem;
+    color: var(--text-muted);
+  }
+  #tocList a:hover { background: var(--table-stripe); }
+  #tocList a.active {
+    border-left-color: var(--link);
+    background: var(--table-stripe);
+    color: var(--link);
+    font-weight: 600;
+  }
+
+  main {
+    margin-left: 290px;
+    flex: 1 1 auto;
+    padding: 3rem 2rem 6rem;
+    min-width: 0;
+  }
+
+  .content {
+    max-width: 72ch;
+    margin: 0 auto;
+  }
+
+  header.page-header {
+    max-width: 72ch;
+    margin: 0 auto 2.5rem;
+    padding: 0;
+  }
+
+  .top-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    max-width: 72ch;
+    margin: 0 auto 1.5rem;
+    padding: 0;
+  }
+
+  #themeToggle {
+    font: inherit;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--bg-alt);
+    color: var(--text);
+    cursor: pointer;
+  }
+
+  .dateline {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    border-left: 3px solid var(--border);
+    padding-left: 1rem;
+  }
+
+  section { margin-bottom: 2.75rem; }
+  section section { margin-bottom: 2rem; }
+
+  p { margin: 0 0 1rem; }
+  ul, ol { padding-left: 1.4rem; margin: 0 0 1rem; }
+  li { margin-bottom: 0.4rem; }
+
+  /* ---------- Tables ---------- */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 0 0 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 480px;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.94rem;
+  }
+  caption { text-align: left; padding: 0.5rem 0.75rem; font-weight: 600; }
+  thead th {
+    position: sticky;
+    top: 0;
+    background: var(--bg-alt);
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 2px solid var(--border);
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+
+  /* ---------- Legal blockquote ---------- */
+  blockquote.legal {
+    border-left: 4px solid var(--text-muted);
+    background: var(--bg-alt);
+    margin: 0 0 1.25rem;
+    padding: 0.75rem 1.25rem;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 0.92rem;
+  }
+  blockquote.legal ol, blockquote.legal ul { margin-bottom: 0; }
+  blockquote.legal p.legal-cite {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ---------- Callouts ---------- */
+  .callout {
+    border: 1px solid;
+    border-left-width: 5px;
+    border-radius: 6px;
+    padding: 0.9rem 1.1rem;
+    margin: 0 0 1.25rem;
+  }
+  .callout > *:last-child { margin-bottom: 0; }
+  .callout-label {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.78rem;
+    margin: 0 0 0.5rem;
+  }
+  .callout-key {
+    background: var(--callout-key-bg);
+    border-color: var(--callout-key-border);
+    color: var(--callout-key-text);
+  }
+  .callout-key .callout-label { color: var(--callout-key-border); }
+  .callout-warn {
+    background: var(--callout-warn-bg);
+    border-color: var(--callout-warn-border);
+    color: var(--callout-warn-text);
+  }
+  .callout-warn .callout-label { color: var(--callout-warn-border); }
+  .callout-action {
+    background: var(--callout-action-bg);
+    border-color: var(--callout-action-border);
+    color: var(--callout-action-text);
+  }
+  .callout-action .callout-label { color: var(--callout-action-border); }
+
+  /* ---------- Checklist ---------- */
+  .checklist {
+    list-style: none;
+    padding-left: 0;
+  }
+  .checklist li { margin-bottom: 0.55rem; }
+  .checklist label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    cursor: pointer;
+  }
+  .checklist input[type="checkbox"] {
+    margin-top: 0.28rem;
+    width: 1.05rem;
+    height: 1.05rem;
+    flex-shrink: 0;
+  }
+  .checklist input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+  #resetChecklist {
+    font: inherit;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 6px;
+    border: 1px solid currentColor;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+
+  footer.sources-note { color: var(--text-muted); font-size: 0.9rem; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .sidebar {
+      position: static;
+      width: 100%;
+      flex-basis: auto;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+    }
+    .toc-toggle { display: block; }
+    #tocList { display: none; margin-top: 0.75rem; }
+    #tocList.open { display: block; }
+    main { margin-left: 0; padding: 2rem 1.25rem 4rem; }
+    header.page-header { padding: 0; }
+    .top-controls { padding: 0; }
+    .page { display: block; }
+  }
+
+  /* ---------- Print ---------- */
+  @media print {
+    .sidebar, .toc-toggle, #themeToggle, #resetChecklist, .top-controls { display: none !important; }
+    main { margin-left: 0; }
+    body { background: #fff; color: #000; }
+    a { color: #000; text-decoration: underline; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; }
+    table, .callout, blockquote.legal { break-inside: avoid; }
+    .callout { border: 1px solid #000; }
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <nav class="sidebar" aria-label="Table of contents">
+    <button class="toc-toggle" id="tocToggle" aria-expanded="false" aria-controls="tocList">Contents ▾</button>
+    <h2 class="toc-heading">Contents</h2>
+    <ul id="tocList"></ul>
+  </nav>
+
+  <main>
+    <div class="top-controls">
+      <button id="themeToggle" type="button" aria-label="Toggle light and dark theme">Toggle theme</button>
+    </div>
+
+    <header class="page-header">
+      <h1>Garden Pods in Ireland — Research</h1>
+      <p class="dateline">Researched 2026-09-18. Context: ~12m² (3m × 4m) garden gym, backup use as office. Raheny, Dublin 5. 3-bed semi-d / end-of-terrace, built 2006. 43.075m² rear open space (52.955m² including the side lane, which is long and narrow and not a candidate location). Pod to be sited to the rear, where the existing ~3m² shed stands; that shed is being removed. No plumbing wanted; Ethernet desirable.</p>
+    </header>
+
+    <div class="content">
+
+    <section id="sec-1">
+      <h2>1. Bottom line</h2>
+      <p>For a 12m² insulated garden gym in Dublin, the realistic market is:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Tier</th><th>All-in cost</th><th>What you get</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Budget steel shell</td><td>€11k–14k</td><td>40mm composite panel, 2.1m wall height, factory-wired but not connected, no base, no floor covering</td></tr>
+            <tr><td>Turnkey mid-market</td><td>€18k–22k</td><td>Properly insulated build-up, finished interior, sockets/lights/heating/flooring, often base included</td></tr>
+            <tr><td>Premium / bespoke</td><td>€25k–35k+</td><td>SIPs or deep timber build-up, cedar cladding, triple glazing, architect-ish detailing</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Plus, where not included: concrete base (€1.5k–2.5k for 12m²), electrical supply from the house (~€900–1,500), Ethernet (~€400), skip/shed removal (~€350).</p>
+
+      <div class="callout callout-key">
+        <p class="callout-label">✓ Key finding</p>
+        <p><strong>Your regulatory position is comfortable.</strong> At 12m² you are inside every relevant threshold by a wide margin — planning exemption, Building Regulations exemption, and commencement-notice exemption all apply. Details in <a href="#sec-2">§2</a>.</p>
+      </div>
+
+      <p><strong>Two things you probably don't know yet:</strong> the exemption limit changed on 27 July 2026 (25m² → 30m²), and the <em>Building Regulations</em> exemption hinges on the building being used for <em>recreational</em> purposes and <strong>not</strong> "for the purposes of any trade or business" — which is exactly the gym-vs-office distinction you raised. See <a href="#sec-2-2">§2.2</a>.</p>
+    </section>
+
+    <section id="sec-2">
+      <h2>2. Regulations</h2>
+
+      <section id="sec-2-1">
+        <h3>2.1 Planning — you are exempt</h3>
+        <p>Governing law: Planning and Development Regulations 2001 (S.I. 600/2001), Schedule 2, Part 1, <strong>Class 3</strong>, as substituted by <strong>S.I. 338/2026</strong>, in force <strong>27 July 2026</strong>.</p>
+        <p>The current Class 3 conditions, verbatim from the statutory instrument:</p>
+
+        <blockquote class="legal">
+          <p class="legal-cite">Class 3 conditions (Schedule 2, Part 1, as substituted by S.I. 338/2026)</p>
+          <ol>
+            <li>No such structure forward of the front wall of the house.</li>
+            <li>Total area of such structures, <strong>taken together with any other such structures previously constructed</strong>, shall not exceed <strong>30 square metres</strong>.</li>
+            <li>Shall not reduce private open space reserved exclusively for the occupants, to the rear or to the side, to less than <strong>25 square metres</strong>.</li>
+            <li>External finishes of any structure <strong>placed to the side of a house</strong> (and tiled/slated roof covering) shall conform with those of the house.</li>
+            <li>Height not to exceed <strong>4m</strong> for a tiled or slated pitched roof, or <strong>3m in any other case</strong>.</li>
+            <li>Not to be used for human habitation, nor for keeping pigs/poultry/pigeons/ponies/horses, nor "for any other purpose other than a purpose incidental to the enjoyment of the house as such."</li>
+          </ol>
+        </blockquote>
+
+        <p><strong>Applied to you:</strong></p>
+
+        <div class="callout callout-key">
+          <p class="callout-label">✓ Key finding — exemption headroom</p>
+          <ul>
+            <li>Cumulative area: the shed is being removed (it occupies the pod's footprint), so the cumulative figure is <strong>12m² against a 30m² cap</strong> — about 18m² spare. You could go considerably larger if you ever wanted to, and you retain headroom for a future shed or store.</li>
+            <li>Retained open space: 43.075 − 12 = <strong>31.08m²</strong> against a 25m² minimum. Comfortable, and this is the conservative figure — condition 3 counts private open space "to the rear <strong>or to the side</strong>", so the lane arguably adds to the total. You don't need it to comply.</li>
+          </ul>
+        </div>
+
+        <div class="callout callout-warn">
+          <p class="callout-label">⚠ Warning — 3m height cap</p>
+          <p>Height: most pods are 2.5–3m. A flat or EPDM roof caps you at <strong>3m</strong>, not 4m — the 4m allowance only applies to a <em>tiled or slated pitched</em> roof. Confirm the quoted overall height, measured from finished ground level including the base.</p>
+        </div>
+
+        <ul>
+          <li>Condition 4 (external finishes must conform with the house) applies only to structures placed <strong>to the side</strong> of a house. The pod is going to the rear, so it doesn't bite — <strong>cladding is a free choice</strong>, cedar or composite or anything else. The long narrow side lane isn't a candidate location anyway.</li>
+          <li>Condition 6: a personal gym is unambiguously incidental. A home office for your own remote employment is conventionally accepted as incidental too. What would <em>not</em> be incidental: clients or staff visiting, signage, or anything resembling a business premises.</li>
+        </ul>
+
+        <p>The same 2026 instrument also raised the Class 1 house-extension exemption from 40m² to 45m², and separate instruments created a new <strong>Class 3A</strong> for habitable garden dwellings (32–45m², requires 14 days' notice to the council, expires 31 Dec 2030). Not your use case, but relevant if you ever want a granny flat — and note that a Class 3 structure eats into the combined allowance, so a 12m² pod now does constrain that option later.</p>
+      </section>
+
+      <section id="sec-2-2">
+        <h3>2.2 Building Regulations — exempt for a gym; arguably not for an office</h3>
+        <p>Governing law: Building Regulations 1997 (S.I. 497/1997), <strong>Third Schedule (Exempted Buildings), Class 2</strong>. Verbatim conditions:</p>
+
+        <blockquote class="legal">
+          <p class="legal-cite">Class 2 conditions (Third Schedule, Exempted Buildings, S.I. 497/1997)</p>
+          <ol>
+            <li>Detached from any other building.</li>
+            <li>Floor area not exceeding <strong>25 square metres</strong>.</li>
+            <li>Height not exceeding 3m, or 4m with a pitched roof.</li>
+            <li>"used exclusively for recreational or storage purposes or the keeping of plants, birds or animals for domestic purposes and <strong>shall not be used for the purposes of any trade or business</strong> or for human habitation."</li>
+          </ol>
+        </blockquote>
+
+        <p><strong>A gym is recreational → fully exempt from the Building Regulations.</strong> Clean.</p>
+
+        <div class="callout callout-warn">
+          <p class="callout-label">⚠ Warning — gym vs. office</p>
+          <p><strong>An office used for your employment is arguably "for the purposes of any trade or business"</strong>, which would take it outside Class 2 and mean Parts A–M apply in full (structure, fire, ventilation, Part L energy conservation). In practice: enforcement of this against domestic garden offices is effectively nil, thousands exist, and nobody is coming to inspect. It matters for two reasons only — it means a supplier's claim to be "fully building-regs compliant" is usually unverified marketing, and it's a latent technical non-compliance you should know exists rather than discover later.</p>
+        </div>
+
+        <p>Since the gym is the primary plan, this is a non-issue for you. Worth knowing if the backup plan ever becomes the main plan.</p>
+
+        <p><strong>Note the new mismatch:</strong> planning exemption is now 30m², but the Building Regulations exemption is still <strong>25m²</strong>. A pod between 25 and 30m² is planning-exempt but <em>not</em> Building-Regs-exempt. Several supplier blogs have not caught up with this. At 12m² you're inside both.</p>
+      </section>
+
+      <section id="sec-2-3">
+        <h3>2.3 Commencement notice — not required</h3>
+        <p>Governing law: Building Control Regulations 1997 (S.I. 496/1997), Article 7, as amended.</p>
+
+        <ul>
+          <li>Art. 7(1): Part II (commencement notices) applies only to buildings <strong>"to which the Building Regulations apply."</strong></li>
+          <li>Art. 7(2)(a): Part II does <strong>not</strong> apply where the works are exempted development for planning purposes <strong>and</strong> Part III (fire safety certificates) does not apply.</li>
+          <li>Art. 7(2)(c): Part II is re-applied only to a new <em>dwelling</em>, or an extension to a dwelling <strong>exceeding 45m²</strong> (raised from 40m² on 27 July 2026 by S.I. 359/2026).</li>
+        </ul>
+
+        <div class="callout callout-key">
+          <p class="callout-label">✓ Key finding — no commencement notice required</p>
+          <p>A detached 12m² garden gym is neither a dwelling nor an extension. <strong>No commencement notice, no BCMS filing, no assigned certifier, no fee.</strong></p>
+        </div>
+
+        <p>Some pod-company blog posts state that a commencement notice is always required. That is wrong for your case — they have imported the rule that applies to the new Class 3A habitable units.</p>
+      </section>
+
+      <section id="sec-2-4">
+        <h3>2.4 Electrical — the one place with real legal teeth</h3>
+        <p>This is the part of the project with genuine statutory obligations, and the part most likely to be done badly.</p>
+
+        <ul>
+          <li>Under the Electricity Regulation Act 1999 (as amended), this is <strong>"restricted electrical work"</strong>. Since 1 October 2013 it must be carried out by a <strong>Registered Electrical Contractor (REC)</strong> on the Safe Electric scheme, regulated by the CRU. Unregistered work is a prosecutable offence.</li>
+          <li>The REC <strong>must issue you a Completion Certificate</strong> for all but minor works. This is your proof the installation meets the National Rules for Electrical Installations (I.S. 10101). Get it in your hands before final payment.</li>
+          <li>Correct method: a <strong>dedicated circuit from the house consumer unit</strong> — not a spur off an existing socket — in <strong>steel wire armoured (SWA) cable</strong>, buried <strong>450–600mm</strong> on a sand bed with yellow warning tape above, terminating in a <strong>local consumer unit inside the pod</strong> with RCD/RCBO protection.</li>
+          <li>Your 2006 consumer unit probably has spare capacity and a spare way, but confirm it. Boards at capacity need upgrading first, which is a cost that surfaces on install day if nobody checked.</li>
+        </ul>
+
+        <p><strong>Your existing shed supply:</strong> unknown provenance, so treat it as suspect. It is quite likely a spur or unarmoured cable. Have an REC test it. Do not let anyone reuse it to save a trench unless it tests clean and gets certified — and have the REC safely disconnect it when the shed is removed.</p>
+
+        <p><strong>Ethernet:</strong> do it, and do it now rather than later. It's priced at around €385 ex VAT as a line item (GardenRooms.ie publish this), and Berko include CAT6 in their standard package. Run it in the same trench in <strong>separate ducting</strong>, physically separated from the SWA. Retrofitting means re-digging the garden. Pull a spare draw-cord or empty duct at the same time while the trench is open — it costs almost nothing and buys you every future option.</p>
+      </section>
+
+      <section id="sec-2-5">
+        <h3>2.5 Other obligations worth handling</h3>
+        <ul>
+          <li><strong>Drainage and wayleaves.</strong> You just bought, so your purchase pack should include a certified site layout showing the foul and surface-water runs. Check it before fixing the pod position and the cable trench route — you don't want to build over a foul run or inside a wayleave. A 2006 house will have separate foul and surface systems.</li>
+          <li><strong>Roof runoff.</strong> 12m² of new roof is a small volume but it needs a destination — a soakaway or a connection to the existing surface-water system. Don't let it discharge toward the boundary or the neighbour's side.</li>
+          <li><strong>Home insurance.</strong> Notify your insurer. Outbuildings are often covered only to a sub-limit, and gym equipment may need specifying. An uninsured €20k structure is an avoidable own goal.</li>
+        </ul>
+
+        <div class="callout callout-warn">
+          <p class="callout-label">⚠ Warning — VAT two-thirds rule</p>
+          <p><strong>VAT — ask explicitly.</strong> Construction services are 13.5%, but Revenue's <strong>two-thirds rule</strong> says that if the VAT-exclusive cost of the goods exceeds two-thirds of the total VAT-exclusive price, the <em>whole</em> supply is taxed at 23%. Factory-built pods dropped in are more likely to hit 23%; on-site builds are more likely to stay at 13.5%. On a €20k job that's roughly €1,600 of difference. More importantly, <strong>quotes in this sector are inconsistently quoted ex- and inc-VAT</strong>, which is the single biggest cause of comparing quotes that aren't comparable.</p>
+        </div>
+      </section>
+    </section>
+
+    <section id="sec-3">
+      <h2>3. The market — who sells these</h2>
+      <p>Ireland has 20+ operators. They fall into four fairly distinct groups.</p>
+
+      <section id="sec-3-group-a">
+        <h3>Group A — Steel shed manufacturers extending into garden rooms</h3>
+        <p>Irish, established, high volume, published price lists, cheapest. Spec is the weak point: 40mm composite panels and low wall heights.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Company</th><th>Base</th><th>Price for ~12m²</th><th>Spec</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Adman Steel Sheds</strong></td>
+                <td>—</td>
+                <td><strong>€11,250</strong> (3m × 4.2m)</td>
+                <td>40mm insulation walls/roof, 25mm floor, steel frame, PVC exterior, tile-effect roof, double-glazed uPVC</td>
+                <td><strong>2.1m standard wall height.</strong> Base NOT included. Floor is OSB, no covering. "Fully wired… ready to be connected to mains" — i.e. you supply the connection. 10–12 week lead time. Full price list published.</td>
+              </tr>
+              <tr>
+                <td><strong>Steeltech</strong></td>
+                <td>Showrooms incl. Dublin</td>
+                <td><strong>from €10,490</strong></td>
+                <td>40mm steel composite panel, grey or woodgrain</td>
+                <td>Factory-wired "plug &amp; play", install in under a day. 450+ units on display. Price valid to 30 Sep 2026.</td>
+              </tr>
+              <tr>
+                <td><strong>Shanette</strong></td>
+                <td>Dublin 12 + Westmeath showrooms</td>
+                <td>Price list on request</td>
+                <td>100mm galvanised frame, <strong>Kingspan composite panels in 40/60/80/100mm</strong></td>
+                <td>Standard size 4.2m × 3m fits your brief. The 100mm panel option makes this the pick of Group A if you go this route. Base/electrics not stated.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="sec-3-group-b">
+        <h3>Group B — Turnkey garden room specialists (the sweet spot for your brief)</h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Company</th><th>Base</th><th>Price for ~12m²</th><th>Spec</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sprout Pod</strong></td>
+                <td>Ireland + NI</td>
+                <td><strong>€18,500</strong> (4m × 3m)</td>
+                <td>Steel frame, "full insulation", Siberian larch / teak / composite / cedar cladding options</td>
+                <td>Turnkey: sockets, lights, heating, flooring included. Free delivery and installation nationwide, "no hidden costs". Full published price list (€10,300 for 3×2m up to €32,200 for 7×4m). <strong>Does not publish insulation depth or U-values — ask first.</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Garden Office Solutions</strong></td>
+                <td>Sallins, Co. Kildare</td>
+                <td><strong>€19,950</strong> (12.5m²)</td>
+                <td><strong>SIP panels</strong>, Canadian red cedar, <strong>triple-glazed</strong>, claims BER A-rated</td>
+                <td>Best-specified published price I found at your size. Turnkey incl. electrical connections, insulation, interior painting. Build phase 5 days, but reviews mention a <strong>3–4 month waiting list</strong>.</td>
+              </tr>
+              <tr>
+                <td><strong>Loghouse</strong></td>
+                <td>Rathcoole, Dublin (+ Cork, Athlone)</td>
+                <td><strong>€18,490 inc VAT</strong> (4.2m × 3.4m)</td>
+                <td>ECO Garden Room range</td>
+                <td>Delivery and assembly included, free to Leinster. Range €13,399 (3×3m) to €32,499. Google rating 4.6 shown on own site.</td>
+              </tr>
+              <tr>
+                <td><strong>My Garden Room</strong></td>
+                <td>Showrooms Dublin, Kildare, Wicklow</td>
+                <td><strong>€9,550 basic / €19,600 turnkey</strong> (4.5m × 3m)</td>
+                <td>Heavy-duty timber frame, fibre-cement cladding (no repainting), box-profile steel roof, A+ uPVC double glazing</td>
+                <td>The clearest published illustration of the basic-vs-turnkey gap: <strong>~€10,000</strong>. Turnkey explicitly includes the concrete base plus electrics, insulation, plastering, painting, flooring. Lower-end aesthetic.</td>
+              </tr>
+              <tr>
+                <td><strong>Modern Garden Rooms</strong></td>
+                <td>Dublin &amp; Leinster</td>
+                <td>Quote only</td>
+                <td><strong>Best published insulation: 50mm rigid board + 100mm Earthwool walls, 150mm roof with insulated plasterboard, 100mm underfloor.</strong> Cedar cladding</td>
+                <td>Trading since 2008. Claims 5.0 from 100+ Google reviews. Delivered "fully finished". No published prices, no U-values, no warranty stated.</td>
+              </tr>
+              <tr>
+                <td><strong>The Garden Pod</strong></td>
+                <td>Dublin</td>
+                <td>Quote only</td>
+                <td>Red cedar, double and triple glazing, heat/cooling units, full wall/ceiling/floor insulation</td>
+                <td>One of your two original links. Publishes essentially no specifics — no prices, no U-values, no base or electrical scope, no lead time, no warranty. Estimate by email from your dimensions and a photo.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="sec-3-group-c">
+        <h3>Group C — Premium / bespoke</h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Company</th><th>Price</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>GardenRooms.ie</strong></td>
+                <td><strong>€1,700/m² ex VAT</strong>; smallest model CUBE 20 at 20m² = €32,599 ex VAT</td>
+                <td>Doesn't serve a 12m² brief. <strong>But their published extras list is the most useful transparency in the sector</strong> — see <a href="#sec-5">§5</a>. Package genuinely includes foundations, electrics, plastering, flooring, skirting. Advertises 82 five-star Google reviews.</td>
+              </tr>
+              <tr>
+                <td><strong>Concept Modular</strong></td>
+                <td>Quote only</td>
+                <td>Galvanised steel frame + aluminium alloy shell, 100mm sprayed polyurethane, LOW-E double glazing, SPC flooring. <strong>50-year structural warranty</strong> — the longest I found.</td>
+              </tr>
+              <tr>
+                <td><strong>Garden Room Ireland</strong></td>
+                <td>€18,000–€60,000</td>
+                <td>Dublin-based, UK-manufactured steel pods, <strong>25-year exterior guarantee</strong>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="sec-3-group-d">
+        <h3>Group D — Cross-border (Northern Ireland) and kit importers</h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Company</th><th>Price</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Berko Pod Systems</strong></td>
+                <td>Dungiven, Derry. "Belvedere" 3.2m × 3.4m at <strong>£12,500 + 20% VAT</strong> (≈£15,000)</td>
+                <td><strong>Genuinely good spec for the money: light gauge steel frame, 150mm twin insulation (100mm wool + 50mm Kingspan), EPDM roof, drylined and painted, full electrical package including smart heater AND CAT6, ground screws available instead of a concrete slab.</strong> ~10 week lead time. Caveats: GBP pricing plus 20% UK VAT, cross-border consumer-rights and warranty enforcement is messier, and their site still cites the outdated 25m² exemption.</td>
+              </tr>
+              <tr>
+                <td><strong>Outer Space Pods</strong></td>
+                <td>Strabane, NI</td>
+                <td>GRP + SIPs, 30 years in glass-reinforced plastics. No published prices or specs at all.</td>
+              </tr>
+              <tr>
+                <td><strong>Gardenhouse24 / Summerhouse24</strong></td>
+                <td>~€5,600–€6,000 for a 12m² cabin</td>
+                <td>Baltic log cabin kits. <strong>Not comparable</strong> — these are basic garden houses, not insulated year-round rooms. Useful only as the floor of the market. See the review warnings in <a href="#sec-4">§4</a>.</td>
+              </tr>
+              <tr>
+                <td><strong>The Pod Factory</strong></td>
+                <td>Quote only. Part of MFC Modular Group</td>
+                <td>See the review warning in <a href="#sec-4">§4</a> before engaging.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <section id="sec-4">
+      <h2>4. Reputation and reviews — and why the data is thin</h2>
+      <p><strong>The honest finding: review data in this sector is too sparse to rely on.</strong> Most Irish operators have no Trustpilot presence at all. The Google review counts companies advertise on their own sites are self-reported and self-curated. I could not independently verify star ratings for most of them.</p>
+
+      <p>What I did find:</p>
+
+      <div class="callout callout-warn">
+        <p class="callout-label">⚠ Warning — negative review findings</p>
+        <p><strong>Gardenhouse24 — Trustpilot 4.0 from 166 reviews</strong> (85% 5-star, but <strong>7% 1-star</strong>). Positives: responsive office staff, tidy install crews, good value. Negative complaints are specific and concerning:</p>
+        <ul>
+          <li>A cabin that "didn't survive two winters", with roof damage in the January 2025 storms and deterioration of walls, windows and doors.</li>
+          <li>Almost three months' wait for replacement doors, with repeated broken promises.</li>
+          <li>A customer advised to remove house insulation, then told mid-project that installation services were no longer available, leaving unexpected costs and abandoned work.</li>
+          <li>Repeated complaints of unresponsive aftercare.</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-warn">
+        <p class="callout-label">⚠ Warning — negative review findings</p>
+        <p><strong>The Pod Factory — Trustpilot 3.5, but from only 2 reviews</strong>, one of which is a detailed 1-star:</p>
+        <ul>
+          <li>12-week promise became nearly 7 months.</li>
+          <li>"Uncommunicative throughout. Had to follow up repeatedly, answers took 2 weeks+ on average."</li>
+          <li>Delivered pod had missing fixtures, dents, chips, uneven tiling.</li>
+          <li>Contractor "destroyed our garden", left debris, and caused a leaking pipe connection.</li>
+          <li>Scheduled repairs never happened, with no explanation.</li>
+        </ul>
+      </div>
+
+      <p>Two reviews is not a pattern, but that level of specificity is worth weighing.</p>
+
+      <p><strong>Better-signalled operators:</strong> Modern Garden Rooms (trading since 2008, claims 5.0 from 100+ Google reviews), GardenRooms.ie (82 five-star Google reviews), Loghouse (4.6 Google), Garden Office Solutions (consistently positive, though with a 3–4 month queue).</p>
+
+      <section id="sec-4-commercial-risk">
+        <h3>Commercial risk — this is the real exposure</h3>
+
+        <div class="callout callout-warn">
+          <p class="callout-label">⚠ Warning — deposit risk</p>
+          <p>You'll be asked for a substantial deposit on a company you can't easily assess. I found no garden-room-specific Irish insolvency, but the template for what this looks like is <strong>DK Windows &amp; Doors</strong> (Dublin 12, trading since 2005, into liquidation December 2024): it had accumulated <strong>€1.5m of customer deposits</strong> and ran out of cash, having promoted a Black Friday deposit push days before closing. Customers became unsecured creditors — bottom of the queue. One couple faced losing close to €50,000.</p>
+        </div>
+
+        <div class="callout callout-action">
+          <p class="callout-label">☐ Action — practical protections</p>
+          <p>Practical protections, in order of usefulness:</p>
+          <ol>
+            <li><strong>Keep the deposit as small as the supplier will accept</strong>, and stage the remaining payments against delivered milestones (base poured, unit delivered, electrics certified, snag list closed).</li>
+            <li><strong>Pay by credit card where possible</strong> — chargeback is a far better remedy than being an unsecured creditor.</li>
+            <li><strong>Check CRO filings</strong> (core.cro.ie) before paying: how long incorporated, are annual returns filed and on time, any prior insolvency among the directors. A ten-minute check.</li>
+            <li><strong>Never pay the final tranche before the Safe Electric Completion Certificate is in your hands</strong> and the snag list is closed.</li>
+            <li>Be wary of an unusually large discount contingent on an unusually large up-front payment. That's the DK Windows pattern.</li>
+          </ol>
+        </div>
+      </section>
+    </section>
+
+    <section id="sec-5">
+      <h2>5. What differs between offerings — the questions that actually separate them</h2>
+
+      <section id="sec-5-insulation">
+        <h3>Insulation is the single biggest real divide</h3>
+        <p>This determines whether you have a year-round gym or an expensive shed you avoid in January.</p>
+
+        <ul>
+          <li><strong>40mm composite panel</strong> (Adman, Steeltech base spec) is thin. It's fine for storage or occasional use; it is well below what a habitable wall requires, and it means higher heating costs and more condensation risk in a room where you'll be generating moisture.</li>
+          <li><strong>150mm build-ups</strong> (Modern Garden Rooms: 50mm PIR + 100mm Earthwool; Berko: 100mm wool + 50mm Kingspan) approach dwelling-wall performance.</li>
+          <li><strong>SIPs</strong> (Garden Office Solutions, Outer Space Pods) perform well for their thickness and are airtight, but airtightness makes ventilation more important, not less.</li>
+        </ul>
+
+        <div class="callout callout-action">
+          <p class="callout-label">☐ Action — ask for U-values in writing</p>
+          <p><strong>Almost nobody publishes U-values.</strong> Ask for them in writing, for walls, roof and floor separately. A supplier who can't produce them is telling you something.</p>
+        </div>
+      </section>
+
+      <section id="sec-5-scope">
+        <h3>Scope boundaries — who does what</h3>
+        <p>This is where quotes diverge most, and where "from €X" pricing misleads. Ask each supplier, in writing, which of these are in their number:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Item</th><th>Typical cost</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Concrete base / foundations</td>
+                <td>€90–150/m² → <strong>~€1,500–2,500</strong> for 12m²; ground screws €1,200–3,000</td>
+                <td>Included by My Garden Room (turnkey) and GardenRooms.ie; <strong>excluded</strong> by Adman; unstated by most. Ground screws avoid a slab and are faster, but a slab is better under dropped weights.</td>
+              </tr>
+              <tr>
+                <td>Electrical cable from house</td>
+                <td><strong>~€900 ex VAT</strong> (GardenRooms.ie published) to €1,500+</td>
+                <td>Depends heavily on trench length and what it crosses. Paving or driveway crossings cost significantly more.</td>
+              </tr>
+              <tr>
+                <td>CAT6 Ethernet</td>
+                <td><strong>~€385 ex VAT</strong></td>
+                <td>Included as standard by Berko.</td>
+              </tr>
+              <tr>
+                <td>Internal fit-out (plaster, paint, flooring, sockets, lights, heating)</td>
+                <td>~€5,000–9,000 if not included</td>
+                <td>This is most of the basic-vs-turnkey gap.</td>
+              </tr>
+              <tr>
+                <td>Delivery</td>
+                <td>~€350</td>
+                <td>Free within Leinster from several suppliers.</td>
+              </tr>
+              <tr>
+                <td>Skip / spoil / <strong>old shed removal</strong></td>
+                <td><strong>~€350</strong>, more if there's a slab to break out</td>
+                <td><strong>On the critical path</strong> — the shed sits in the pod's footprint, so demolition and disconnection must complete before the base goes in. See <a href="#sec-5-1">§5.1</a>.</td>
+              </tr>
+              <tr>
+                <td>External oiling (cedar)</td>
+                <td>€825–1,050 per application</td>
+                <td><strong>Recurring.</strong> Cedar needs re-oiling. Fibre-cement and composite cladding don't — a real maintenance trade-off, not just aesthetics.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="sec-5-1">
+        <h3>5.1 The shed is on the critical path</h3>
+        <p>The shed occupies the pod's footprint, so it isn't an optional tidy-up — demolition has to finish before the base goes in. That has a few practical consequences:</p>
+
+        <ul>
+          <li><strong>Keep it inside one contract.</strong> Have the pod company own demolition, disposal, base and install as a single scope. If you split it, you create a gap where each party can blame the other for the ground not being ready, and you carry the schedule risk yourself.</li>
+          <li><strong>Ask what's under the shed.</strong> A 2006-era shed very likely sits on a slab or a bed of paving. Find out whether breaking it out and removing the spoil is in the quote, and who bears the cost if it turns out to be thicker than expected. Do not assume the old base is reusable — a shed base won't have the depth, reinforcement or level tolerance a pod needs, and any supplier willing to build on it without inspection is cutting a corner.</li>
+          <li><strong>Trace the existing supply before anyone digs.</strong> The shed has power of unknown provenance. Have the REC find and isolate it at the board before demolition, and identify its route. If it runs where the new trench will go, you want that known in advance rather than discovered with a spade. Its route may also tell you the cheapest path for the new SWA run.</li>
+          <li><strong>Sequence the disconnection properly.</strong> Shed supply isolated and made safe → shed demolished and removed → slab broken out and spoil taken away → ground checked and levelled → base laid. Ask for that sequence in the quote so the skip is on site once, not twice.</li>
+        </ul>
+      </section>
+
+      <section id="sec-5-design">
+        <h3>Do they design for you?</h3>
+        <p>Mostly no, and mostly you don't need it. For a 12m² exempt structure there's nothing to design around — no drawings to lodge, no certificates to file. Most suppliers do a free site visit, produce 3D visuals, and quote. Only the premium end (GardenRooms.ie, Concept Modular) does anything resembling design work. Don't pay for architectural input on this.</p>
+      </section>
+
+      <section id="sec-5-warranties">
+        <h3>Warranties</h3>
+        <p>Wildly inconsistent, and most suppliers don't publish one at all. The outliers: Concept Modular's 50-year structural warranty, Garden Room Ireland's 25-year exterior guarantee. Get the warranty <strong>in writing with the quote</strong>, and check what it actually covers — structure only, or also the roof membrane, glazing units and electrics, which are what actually fail. Note the Gardenhouse24 complaint about a cabin failing within two winters: a warranty is only as good as the company still being there.</p>
+      </section>
+
+      <section id="sec-5-lead-times">
+        <h3>Lead times</h3>
+        <p>10–12 weeks (Adman, Berko) is typical. Garden Office Solutions has a 3–4 month queue before work starts. Steeltech claims install in under a day once manufactured. Given you have no urgency, use the lead time as leverage rather than a constraint — and treat a supplier promising something dramatically faster than the field with suspicion. The Pod Factory complaint was precisely a 12-week promise becoming 7 months.</p>
+      </section>
+    </section>
+
+    <section id="sec-6">
+      <h2>6. Gym-specific — the few things that genuinely matter</h2>
+      <p>Keeping this proportionate, as you asked. Four things, none of them exotic:</p>
+
+      <ol>
+        <li><strong>Internal ceiling height.</strong> The budget steel units have a <strong>2.1m wall height</strong> — that is genuinely tight for anything overhead, and it's the one dimension you cannot fix later. Ask for internal floor-to-ceiling height, not wall height or external height, and aim for ~2.4m.</li>
+        <li><strong>Floor build-up.</strong> Dropped weights need a floor that doesn't flex or drum. A concrete slab with rubber matting is the simple, cheap answer. A timber deck on joists over ground screws is springier and noisier — fine for cardio and bodyweight, less good if you're deadlifting.</li>
+        <li><strong>Ventilation.</strong> A well-insulated, airtight box with someone exercising in it gets hot and humid quickly, and the moisture has to go somewhere or it condenses. An openable window plus a small extract fan handles it. This is the most commonly skipped item and the most common regret.</li>
+        <li><strong>Heating.</strong> With decent insulation, 12m² needs very little — a single panel heater is usually enough (Berko bundle a ~1.5kW smart heater). If the insulation is 40mm, you'll be paying for heat continuously instead. That's the insulation decision showing up as a running cost.</li>
+      </ol>
+
+      <p>You don't need acoustic isolation, and I'd skip it. Normal construction with a decent floor mat is what almost everyone does.</p>
+    </section>
+
+    <section id="sec-7">
+      <h2>7. Suggested shortlist and next step</h2>
+      <p>Given your brief — normal spec, 12m², gym-primary, Dublin 5, no urgency — I'd get three quotes on an identical written specification from:</p>
+
+      <ol>
+        <li><strong>Garden Office Solutions</strong> — €19,950 for 12.5m², SIPs, cedar, triple glazing. Best-specified published price at your size.</li>
+        <li><strong>Modern Garden Rooms</strong> — best published insulation build-up, Dublin/Leinster, trading since 2008. Quote-only, so this tests whether the spec comes at a sane price.</li>
+        <li><strong>Sprout Pod</strong> — €18,500 for exactly 4m × 3m, turnkey, published price list, nationwide install. The pricing transparency is a genuine plus; the missing insulation spec is the thing to interrogate.</li>
+      </ol>
+
+      <p>Worth a fourth quote from <strong>Shanette</strong> (Dublin 12 showroom, specify the <strong>100mm</strong> panel not the 40mm) as an Irish-manufactured steel alternative at likely lower cost, and from <strong>Adman</strong> at €11,250 purely as a price anchor — its 2.1m wall height makes it a poor gym, but knowing the floor of the market strengthens your position on the others.</p>
+
+      <div class="callout callout-action">
+        <p class="callout-label">☐ Ask every supplier — written question checklist</p>
+        <p><strong>Ask every supplier the same written questions:</strong> tick these off as you phone around — your answers are saved in this browser.</p>
+        <ul class="checklist" id="supplierChecklist">
+          <li><label><input type="checkbox" data-key="q1"><span>U-values for wall, roof and floor, separately.</span></label></li>
+          <li><label><input type="checkbox" data-key="q2"><span>Internal floor-to-ceiling height.</span></label></li>
+          <li><label><input type="checkbox" data-key="q3"><span>Overall external height from finished ground level (must be ≤3m unless tiled/slated pitched).</span></label></li>
+          <li><label><input type="checkbox" data-key="q4"><span>Is the base included, and is it a slab or ground screws? What's the floor build-up?</span></label></li>
+          <li><label><input type="checkbox" data-key="q5"><span>Is the supply cable from the house included? Who is the REC, and will I receive a Completion Certificate?</span></label></li>
+          <li><label><input type="checkbox" data-key="q6"><span>Is CAT6 included or priced? Will you run separate ducting plus a spare draw-cord in the same trench?</span></label></li>
+          <li><label><input type="checkbox" data-key="q7"><span>Is demolition and disposal of the existing 3m² shed included — and breaking out whatever slab is under it, plus removing the spoil? Who bears the cost if the slab is thicker than expected? Is safe disconnection of its existing supply by your REC included?</span></label></li>
+          <li><label><input type="checkbox" data-key="q8"><span>Is the quote inclusive or exclusive of VAT, and at what rate — 13.5% or 23%?</span></label></li>
+          <li><label><input type="checkbox" data-key="q9"><span>What is the written warranty, what does it cover, and for how long?</span></label></li>
+          <li><label><input type="checkbox" data-key="q10"><span>Deposit amount, payment schedule, and what each tranche is tied to.</span></label></li>
+          <li><label><input type="checkbox" data-key="q11"><span>Addresses of two or three installs in Dublin that are at least three years old.</span></label></li>
+        </ul>
+        <button type="button" id="resetChecklist">Reset checklist</button>
+      </div>
+
+      <p>That last one is the highest-value question on the list. In a sector where the review data is this thin, a pod that has survived three Irish winters is better evidence than any number of five-star ratings.</p>
+    </section>
+
+    <section id="sec-8">
+      <h2>8. What I could not verify</h2>
+      <ul>
+        <li><strong>Prices for quote-only suppliers</strong>: The Garden Pod, Modern Garden Rooms, Concept Modular, The Pod Factory, Outer Space Pods, Shanette all withhold pricing. The figures in <a href="#sec-3">§3</a> for these are absent, not estimated.</li>
+        <li><strong>U-values</strong>: essentially nobody publishes them. Insulation comparisons in <a href="#sec-5">§5</a> are based on stated material thicknesses, which is directional, not a performance measurement.</li>
+        <li><strong>Google star ratings</strong>: self-reported on company websites. I could not independently confirm them. Trustpilot volumes are small (Gardenhouse24's 166 is the only meaningful sample; The Pod Factory has 2).</li>
+        <li><strong>Company financial health</strong>: I did no CRO filing checks. Worth doing on your final two or three — I can do this if useful.</li>
+        <li><strong>Berko's regulatory claims</strong>: their site still cites the superseded 25m² exemption, which is a small but real indicator of how current suppliers' compliance information is.</li>
+        <li><strong>boards.ie threads</strong>: blocked automated access, so I could not extract the homeowner cost reports and company experiences there. Given how thin the formal review data is, these threads are probably the highest-value source still unread — worth 20 minutes of your own browsing, particularly "Garden room / Gym build opinions" and "Garden room cost".</li>
+      </ul>
+    </section>
+
+    <section id="sec-sources">
+      <h2>Sources</h2>
+
+      <h3>Primary legislation and official</h3>
+      <ul>
+        <li><a href="https://www.irishstatutebook.ie/eli/2026/si/338/made/en/print" target="_blank" rel="noopener noreferrer">S.I. 338/2026 — Planning and Development (Exempted Development) Regulations 2026 (primary legislation)</a></li>
+        <li><a href="https://www.irishstatutebook.ie/eli/1997/si/497/made/en/print" target="_blank" rel="noopener noreferrer">S.I. 497/1997 — Building Regulations 1997 (primary legislation)</a></li>
+        <li><a href="https://revisedacts.lawreform.ie/eli/1997/si/496/revised/en/html" target="_blank" rel="noopener noreferrer">Building Control Regulations 1997 (S.I. 496/1997), revised/consolidated (primary legislation)</a></li>
+        <li><a href="https://www.revenue.ie/en/vat/vat-on-services/two-thirds-rule/index.aspx" target="_blank" rel="noopener noreferrer">Revenue — the two-thirds rule</a></li>
+        <li><a href="https://safeelectric.ie/help-advice/completion-certificates/" target="_blank" rel="noopener noreferrer">Safe Electric — Completion Certificates</a></li>
+        <li><a href="https://www.sdcc.ie/en/services/planning-building-control/exempted-development/new-exemptions-27-07-26/" target="_blank" rel="noopener noreferrer">South Dublin County Council — new exemptions 27.07.26</a></li>
+      </ul>
+
+      <h3>Suppliers</h3>
+      <ul>
+        <li><a href="https://quote.sproutpod.ie/shop/" target="_blank" rel="noopener noreferrer">Sprout Pod — price list</a></li>
+        <li><a href="https://gardenofficesolutions.ie/" target="_blank" rel="noopener noreferrer">Garden Office Solutions</a></li>
+        <li><a href="https://www.mygardenroom.ie/garden-rooms" target="_blank" rel="noopener noreferrer">My Garden Room</a></li>
+        <li><a href="https://admansteelsheds.com/sheds/garden-room/" target="_blank" rel="noopener noreferrer">Adman Steel Sheds — price list</a></li>
+        <li><a href="https://www.steeltechsheds.ie/products/home-offices/" target="_blank" rel="noopener noreferrer">Steeltech</a></li>
+        <li><a href="https://shanettesheds.ie/service/garden-rooms/" target="_blank" rel="noopener noreferrer">Shanette</a></li>
+        <li><a href="https://moderngardenrooms.ie/garden-gym-rooms/" target="_blank" rel="noopener noreferrer">Modern Garden Rooms</a></li>
+        <li><a href="https://www.thegardenpod.ie/garden-gym-pod.html" target="_blank" rel="noopener noreferrer">The Garden Pod</a></li>
+        <li><a href="https://www.gardenrooms.ie/how-much-does-garden-room-cost/" target="_blank" rel="noopener noreferrer">GardenRooms.ie — costs and extras</a></li>
+        <li><a href="https://berkopodsystems.com/garden-rooms-manufacturer-ireland/" target="_blank" rel="noopener noreferrer">Berko Pod Systems</a></li>
+        <li><a href="https://www.conceptmodular.ie/use-cases/home-gym" target="_blank" rel="noopener noreferrer">Concept Modular</a></li>
+        <li><a href="https://www.loghouse.ie/garden-room-electrics-ireland/" target="_blank" rel="noopener noreferrer">Loghouse — garden room electrics</a></li>
+      </ul>
+
+      <h3>Reviews and press</h3>
+      <ul>
+        <li><a href="https://ie.trustpilot.com/review/gardenhouse24.ie" target="_blank" rel="noopener noreferrer">Gardenhouse24 on Trustpilot</a></li>
+        <li><a href="https://www.trustpilot.com/review/thepodfactory.ie" target="_blank" rel="noopener noreferrer">The Pod Factory on Trustpilot</a></li>
+        <li><a href="https://www.irishtimes.com/your-money/2024/12/09/customer-fury-as-dublin-windows-company-shuts-with-thousands-in-deposits/" target="_blank" rel="noopener noreferrer">Irish Times — on DK Windows &amp; Doors liquidation</a></li>
+      </ul>
+
+      <footer class="sources-note">
+        <p>Compiled from the source research report, garden-pod-research.md, dated 2026-09-18.</p>
+      </footer>
+    </section>
+
+    </div>
+  </main>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- Theme toggle ---------- */
+  var THEME_KEY = "gardenPodTheme";
+  var root = document.documentElement;
+  var themeToggle = document.getElementById("themeToggle");
+
+  function currentEffectiveTheme() {
+    var explicit = root.getAttribute("data-theme");
+    if (explicit) return explicit;
+    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+
+  var savedTheme = localStorage.getItem(THEME_KEY);
+  if (savedTheme === "light" || savedTheme === "dark") {
+    root.setAttribute("data-theme", savedTheme);
+  }
+
+  themeToggle.addEventListener("click", function () {
+    var next = currentEffectiveTheme() === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    localStorage.setItem(THEME_KEY, next);
+  });
+
+  /* ---------- Mobile TOC disclosure ---------- */
+  var tocToggle = document.getElementById("tocToggle");
+  var tocList = document.getElementById("tocList");
+  tocToggle.addEventListener("click", function () {
+    var open = tocList.classList.toggle("open");
+    tocToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  /* ---------- Build table of contents ----------
+     The section wrappers carry the ids (so the §-cross-references resolve),
+     so derive each entry from the section and label it with its own heading. */
+  var main = document.querySelector("main");
+  var sections = main.querySelectorAll("section[id]");
+  var linkBySectionId = {};
+  var tocLinks = [];
+
+  sections.forEach(function (sec) {
+    var heading = null;
+    for (var i = 0; i < sec.children.length; i++) {
+      var tag = sec.children[i].tagName;
+      if (tag === "H2" || tag === "H3") { heading = sec.children[i]; break; }
+    }
+    if (!heading) return;
+
+    var li = document.createElement("li");
+    li.className = heading.tagName === "H3" ? "toc-h3" : "toc-h2";
+    var a = document.createElement("a");
+    a.href = "#" + sec.id;
+    a.textContent = heading.textContent;
+    li.appendChild(a);
+    tocList.appendChild(li);
+    tocLinks.push(a);
+    linkBySectionId[sec.id] = a;
+  });
+
+  /* ---------- Scroll-spy ---------- */
+  if ("IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var link = linkBySectionId[entry.target.id];
+        if (!link) return;
+        tocLinks.forEach(function (l) { l.classList.remove("active"); });
+        link.classList.add("active");
+      });
+    }, { rootMargin: "0px 0px -80% 0px", threshold: 0 });
+
+    sections.forEach(function (sec) { observer.observe(sec); });
+  }
+
+  /* ---------- Supplier checklist persistence ---------- */
+  var CHECK_KEY = "gardenPodChecklist";
+
+  function loadChecklist() {
+    try {
+      return JSON.parse(localStorage.getItem(CHECK_KEY)) || {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function saveChecklist(state) {
+    localStorage.setItem(CHECK_KEY, JSON.stringify(state));
+  }
+
+  var boxes = document.querySelectorAll("#supplierChecklist input[type=checkbox]");
+  var state = loadChecklist();
+  boxes.forEach(function (box) {
+    if (state[box.dataset.key]) box.checked = true;
+    box.addEventListener("change", function () {
+      var s = loadChecklist();
+      s[box.dataset.key] = box.checked;
+      saveChecklist(s);
+    });
+  });
+
+  var resetBtn = document.getElementById("resetChecklist");
+  resetBtn.addEventListener("click", function () {
+    localStorage.removeItem(CHECK_KEY);
+    boxes.forEach(function (box) { box.checked = false; });
+  });
+})();
+</script>
+
+</body>
+</html>
