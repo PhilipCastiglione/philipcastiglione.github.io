@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>{{TITLE}}</title>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #ffffff;
+    --bg-alt: #f4f6f8;
+    --text: #1a1d23;
+    --text-muted: #4c5560;
+    --border: #d7dce1;
+    --link: #0a5cb0;
+    --link-visited: #6a3f9e;
+    --focus: #0a5cb0;
+    --table-stripe: #eef1f4;
+    --code-bg: #eef0f2;
+    --callout-key-bg: #e9f6ec;
+    --callout-key-border: #2c7a41;
+    --callout-key-text: #14311c;
+    --callout-warn-bg: #fdf0e6;
+    --callout-warn-border: #b0501a;
+    --callout-warn-text: #4a2409;
+    --callout-action-bg: #e9f1fb;
+    --callout-action-border: #1f579e;
+    --callout-action-text: #0f2b4d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --bg: #14171c;
+      --bg-alt: #1b1f26;
+      --text: #e6e9ee;
+      --text-muted: #a9b1bc;
+      --border: #333a44;
+      --link: #7fb8f5;
+      --link-visited: #c6a6ec;
+      --focus: #7fb8f5;
+      --table-stripe: #1c2027;
+      --code-bg: #20242c;
+      --callout-key-bg: #102718;
+      --callout-key-border: #3fae63;
+      --callout-key-text: #b7ecc4;
+      --callout-warn-bg: #2b1c10;
+      --callout-warn-border: #e08a4b;
+      --callout-warn-text: #f5cfa8;
+      --callout-action-bg: #101f30;
+      --callout-action-border: #5090d6;
+      --callout-action-text: #bfdaf6;
+    }
+  }
+  html[data-theme="light"] {
+    color-scheme: light;
+    --bg: #ffffff;
+    --bg-alt: #f4f6f8;
+    --text: #1a1d23;
+    --text-muted: #4c5560;
+    --border: #d7dce1;
+    --link: #0a5cb0;
+    --link-visited: #6a3f9e;
+    --focus: #0a5cb0;
+    --table-stripe: #eef1f4;
+    --code-bg: #eef0f2;
+    --callout-key-bg: #e9f6ec;
+    --callout-key-border: #2c7a41;
+    --callout-key-text: #14311c;
+    --callout-warn-bg: #fdf0e6;
+    --callout-warn-border: #b0501a;
+    --callout-warn-text: #4a2409;
+    --callout-action-bg: #e9f1fb;
+    --callout-action-border: #1f579e;
+    --callout-action-text: #0f2b4d;
+  }
+  html[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #14171c;
+    --bg-alt: #1b1f26;
+    --text: #e6e9ee;
+    --text-muted: #a9b1bc;
+    --border: #333a44;
+    --link: #7fb8f5;
+    --link-visited: #c6a6ec;
+    --focus: #7fb8f5;
+    --table-stripe: #1c2027;
+    --code-bg: #20242c;
+    --callout-key-bg: #102718;
+    --callout-key-border: #3fae63;
+    --callout-key-text: #b7ecc4;
+    --callout-warn-bg: #2b1c10;
+    --callout-warn-border: #e08a4b;
+    --callout-warn-text: #f5cfa8;
+    --callout-action-bg: #101f30;
+    --callout-action-border: #5090d6;
+    --callout-action-text: #bfdaf6;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65;
+  }
+
+  code, pre, .legal, .mono {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  }
+
+  a { color: var(--link); }
+  a:visited { color: var(--link-visited); }
+  a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  h1, h2, h3 { line-height: 1.25; }
+  h2, h3 { scroll-margin-top: 5.5rem; }
+  section[id] { scroll-margin-top: 2rem; }
+
+  /* ---------- Layout ---------- */
+  .page {
+    display: flex;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+
+  .sidebar {
+    width: 290px;
+    flex: 0 0 290px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid var(--border);
+    background: var(--bg-alt);
+    padding: 1.25rem 1rem;
+  }
+
+  .sidebar h2.toc-heading {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin: 0.25rem 0 0.75rem;
+  }
+
+  .toc-toggle {
+    display: none;
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    font-weight: 600;
+    padding: 0.6rem 0.8rem;
+    background: var(--bg-alt);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  #tocList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #tocList li { margin: 0; }
+  #tocList a {
+    display: block;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.92rem;
+    border-left: 3px solid transparent;
+  }
+  #tocList li.toc-h3 a {
+    padding-left: 1.4rem;
+    font-size: 0.87rem;
+    color: var(--text-muted);
+  }
+  #tocList a:hover { background: var(--table-stripe); }
+  #tocList a.active {
+    border-left-color: var(--link);
+    background: var(--table-stripe);
+    color: var(--link);
+    font-weight: 600;
+  }
+
+  main {
+    margin-left: 290px;
+    flex: 1 1 auto;
+    padding: 3rem 2rem 6rem;
+    min-width: 0;
+  }
+
+  .content {
+    max-width: 72ch;
+    margin: 0 auto;
+  }
+
+  header.page-header {
+    max-width: 72ch;
+    margin: 0 auto 2.5rem;
+    padding: 0;
+  }
+
+  .top-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    max-width: 72ch;
+    margin: 0 auto 1.5rem;
+    padding: 0;
+  }
+
+  #themeToggle {
+    font: inherit;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--bg-alt);
+    color: var(--text);
+    cursor: pointer;
+  }
+
+  .dateline {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    border-left: 3px solid var(--border);
+    padding-left: 1rem;
+  }
+
+  section { margin-bottom: 2.75rem; }
+  section section { margin-bottom: 2rem; }
+
+  p { margin: 0 0 1rem; }
+  ul, ol { padding-left: 1.4rem; margin: 0 0 1rem; }
+  li { margin-bottom: 0.4rem; }
+
+  /* ---------- Tables ---------- */
+  .table-wrap {
+    /* Tables bleed symmetrically out of the 72ch prose column into whatever
+       space is spare, so wide tables don't scroll while the page has room. */
+    --table-bleed: clamp(0px, (100vw - 290px - 4rem - 72ch) / 2, 16rem);
+    overflow-x: auto;
+    width: calc(100% + 2 * var(--table-bleed));
+    margin: 0 0 1.25rem calc(-1 * var(--table-bleed));
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 480px;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.94rem;
+  }
+  caption { text-align: left; padding: 0.5rem 0.75rem; font-weight: 600; }
+  thead th {
+    position: sticky;
+    top: 0;
+    background: var(--bg-alt);
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 2px solid var(--border);
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+
+  /* ---------- Legal blockquote ---------- */
+  blockquote.legal {
+    border-left: 4px solid var(--text-muted);
+    background: var(--bg-alt);
+    margin: 0 0 1.25rem;
+    padding: 0.75rem 1.25rem;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 0.92rem;
+  }
+  blockquote.legal ol, blockquote.legal ul { margin-bottom: 0; }
+  blockquote.legal p.legal-cite {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ---------- Callouts ---------- */
+  .callout {
+    border: 1px solid;
+    border-left-width: 5px;
+    border-radius: 6px;
+    padding: 0.9rem 1.1rem;
+    margin: 0 0 1.25rem;
+  }
+  .callout > *:last-child { margin-bottom: 0; }
+  .callout-label {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.78rem;
+    margin: 0 0 0.5rem;
+  }
+  .callout-key {
+    background: var(--callout-key-bg);
+    border-color: var(--callout-key-border);
+    color: var(--callout-key-text);
+  }
+  .callout-key .callout-label { color: var(--callout-key-border); }
+  .callout-warn {
+    background: var(--callout-warn-bg);
+    border-color: var(--callout-warn-border);
+    color: var(--callout-warn-text);
+  }
+  .callout-warn .callout-label { color: var(--callout-warn-border); }
+  .callout-action {
+    background: var(--callout-action-bg);
+    border-color: var(--callout-action-border);
+    color: var(--callout-action-text);
+  }
+  .callout-action .callout-label { color: var(--callout-action-border); }
+
+  /* ---------- Checklist ---------- */
+  .checklist {
+    list-style: none;
+    padding-left: 0;
+  }
+  .checklist li { margin-bottom: 0.55rem; }
+  .checklist label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    cursor: pointer;
+  }
+  .checklist input[type="checkbox"] {
+    margin-top: 0.28rem;
+    width: 1.05rem;
+    height: 1.05rem;
+    flex-shrink: 0;
+  }
+  .checklist input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+  [id^="resetChecklist"] {
+    font: inherit;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 6px;
+    border: 1px solid currentColor;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+
+  footer.sources-note { color: var(--text-muted); font-size: 0.9rem; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .sidebar {
+      position: static;
+      width: 100%;
+      flex-basis: auto;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+    }
+    .toc-toggle { display: block; }
+    #tocList { display: none; margin-top: 0.75rem; }
+    #tocList.open { display: block; }
+    main { margin-left: 0; padding: 2rem 1.25rem 4rem; }
+    header.page-header { padding: 0; }
+    .top-controls { padding: 0; }
+    .page { display: block; }
+    .table-wrap { --table-bleed: 0px; }
+  }
+
+  /* ---------- Print ---------- */
+  @media print {
+    .sidebar, .toc-toggle, #themeToggle, [id^="resetChecklist"], .top-controls { display: none !important; }
+    main { margin-left: 0; }
+    .table-wrap { --table-bleed: 0px; }
+    body { background: #fff; color: #000; }
+    a { color: #000; text-decoration: underline; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; }
+    table, .callout, blockquote.legal { break-inside: avoid; }
+    .callout { border: 1px solid #000; }
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <nav class="sidebar" aria-label="Table of contents">
+    <button class="toc-toggle" id="tocToggle" aria-expanded="false" aria-controls="tocList">Contents ▾</button>
+    <h2 class="toc-heading">Contents</h2>
+    <ul id="tocList">
+{{TOC}}
+    </ul>
+  </nav>
+
+  <main>
+    <div class="top-controls">
+      <button id="themeToggle" type="button" aria-label="Toggle light and dark theme">Toggle theme</button>
+    </div>
+
+    <header class="page-header">
+      <h1>{{HEADING}}</h1>
+      {{DATELINE}}
+    </header>
+
+    <div class="content">
+
+    {{CONTENT}}
+
+    </div>
+  </main>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- Theme toggle ---------- */
+  var THEME_KEY = "{{THEME_KEY}}";
+  var root = document.documentElement;
+  var themeToggle = document.getElementById("themeToggle");
+
+  function currentEffectiveTheme() {
+    var explicit = root.getAttribute("data-theme");
+    if (explicit) return explicit;
+    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+
+  var savedTheme = localStorage.getItem(THEME_KEY);
+  if (savedTheme === "light" || savedTheme === "dark") {
+    root.setAttribute("data-theme", savedTheme);
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      var next = currentEffectiveTheme() === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem(THEME_KEY, next);
+    });
+  }
+
+  /* ---------- Mobile TOC disclosure ---------- */
+  var tocToggle = document.getElementById("tocToggle");
+  var tocList = document.getElementById("tocList");
+  if (tocToggle && tocList) {
+    tocToggle.addEventListener("click", function () {
+      var open = tocList.classList.toggle("open");
+      tocToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
+
+  /* ---------- Scroll-spy ----------
+     The TOC is emitted statically by the generator, so derive the link map
+     from the rendered #tocList anchors instead of building the list here. */
+  var main = document.querySelector("main");
+  var sections = main.querySelectorAll("section[id]");
+  var linkBySectionId = {};
+  var tocLinks = [];
+
+  document.querySelectorAll("#tocList a[href^=\"#\"]").forEach(function (a) {
+    var id = a.getAttribute("href").slice(1);
+    linkBySectionId[id] = a;
+    tocLinks.push(a);
+  });
+
+  if ("IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var link = linkBySectionId[entry.target.id];
+        if (!link) return;
+        tocLinks.forEach(function (l) { l.classList.remove("active"); });
+        link.classList.add("active");
+      });
+    }, { rootMargin: "0px 0px -80% 0px", threshold: 0 });
+
+    sections.forEach(function (sec) { observer.observe(sec); });
+  }
+
+  /* ---------- Supplier checklist persistence ---------- */
+  var CHECK_KEY = "{{STORAGE_KEY}}";
+
+  function loadChecklist() {
+    try {
+      return JSON.parse(localStorage.getItem(CHECK_KEY)) || {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function saveChecklist(state) {
+    localStorage.setItem(CHECK_KEY, JSON.stringify(state));
+  }
+
+  var boxes = document.querySelectorAll(".checklist input[type=checkbox]");
+  if (boxes.length) {
+    var state = loadChecklist();
+    boxes.forEach(function (box) {
+      if (state[box.dataset.key]) box.checked = true;
+      box.addEventListener("change", function () {
+        var s = loadChecklist();
+        s[box.dataset.key] = box.checked;
+        saveChecklist(s);
+      });
+    });
+  }
+
+  document.querySelectorAll("button[id^='resetChecklist']").forEach(function (resetBtn) {
+    resetBtn.addEventListener("click", function () {
+      localStorage.removeItem(CHECK_KEY);
+      boxes.forEach(function (box) { box.checked = false; });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
