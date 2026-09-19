@@ -22,6 +22,13 @@ kramdown:
 sass:
   sass_dir: _sass
   style: compressed
+
+# jekyll-sitemap lists static .html files unless sitemap:false.
+defaults:
+  - scope:
+      path: research
+    values:
+      sitemap: false
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
