@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Steep, Narrow Driveway — Raheny, Dublin 5</title>
+<title>driveway — protected research</title>
 <style>
   :root {
     color-scheme: light;
@@ -238,6 +238,52 @@
     padding-left: 1rem;
   }
 
+  /* ---------- Unlock panel ---------- */
+  .unlock-panel {
+    display: none;
+    max-width: 26rem;
+    margin: 2rem auto 3rem;
+    padding: 1.5rem 1.75rem;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-align: center;
+  }
+  body.locked .unlock-panel { display: block; }
+  body.locked .sidebar,
+  body.locked .top-controls { display: none; }
+  body.locked main { margin-left: 0; }
+  .unlock-panel p { margin: 0 0 1rem; }
+  .unlock-panel input[type="password"] {
+    font: inherit;
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    margin-bottom: 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--text);
+  }
+  .unlock-panel button {
+    font: inherit;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid var(--link);
+    border-radius: 6px;
+    background: var(--link);
+    color: var(--bg);
+    cursor: pointer;
+  }
+  .unlock-error {
+    color: var(--callout-warn-border);
+    background: var(--callout-warn-bg);
+    border: 1px solid var(--callout-warn-border);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    margin-top: 0.85rem;
+    font-size: 0.9rem;
+  }
+
   section { margin-bottom: 2.75rem; }
   section section { margin-bottom: 2rem; }
 
@@ -389,7 +435,7 @@
 
   /* ---------- Print ---------- */
   @media print {
-    .sidebar, .toc-toggle, #themeToggle, [id^="resetChecklist"], .top-controls { display: none !important; }
+    .sidebar, .toc-toggle, #themeToggle, [id^="resetChecklist"], .top-controls, .unlock-panel { display: none !important; }
     main { margin-left: 0; }
     .table-wrap { --table-bleed: 0px; }
     body { background: #fff; color: #000; }
@@ -408,24 +454,12 @@
   }
 </style>
 </head>
-<body>
+<body class="locked">
 <div class="page">
   <nav class="sidebar" aria-label="Table of contents">
     <button class="toc-toggle" id="tocToggle" aria-expanded="false" aria-controls="tocList">Contents ▾</button>
     <h2 class="toc-heading">Contents</h2>
-    <ul id="tocList">
-<li class="toc-h2"><a href="#sec-1">1. Bottom line</a></li>
-<li class="toc-h2"><a href="#sec-2">2. The site, as measured</a></li>
-<li class="toc-h2"><a href="#sec-3">3. The entrance: already at the legal maximum</a></li>
-<li class="toc-h2"><a href="#sec-4">4. The slope: what the geometry permits</a></li>
-<li class="toc-h2"><a href="#sec-5">5. The level bay, costed</a></li>
-<li class="toc-h2"><a href="#sec-6">6. Living with it: the parking protocol</a></li>
-<li class="toc-h2"><a href="#sec-7">7. Who does what</a></li>
-<li class="toc-h2"><a href="#sec-8">8. The EV charger</a></li>
-<li class="toc-h2"><a href="#sec-9">9. Sequence</a></li>
-<li class="toc-h2"><a href="#sec-10">10. What I could not verify</a></li>
-<li class="toc-h2"><a href="#appendix-a-sources">Appendix A — Sources</a></li>
-    </ul>
+    <ul id="tocList"></ul>
   </nav>
 
   <main>
@@ -434,791 +468,21 @@
     </div>
 
     <header class="page-header">
-      <h1>Steep, Narrow Driveway — Raheny, Dublin 5</h1>
-      <p class="dateline">Researched 2026-09-20, revised 2026-09-20 with site measurements.</p>
+      <h1 id="headingSlot"></h1>
+      <div id="datelineSlot"></div>
     </header>
 
-    <div class="content">
-
-    
-<p><strong>Brief:</strong> a front driveway in Raheny, Dublin 5 that is steep and awkward to enter. 3-bed semi-detached / end-of-terrace, built 2006, corner site. The car is a Škoda Elroq 60. Two original wants: widen the entrance, and do something about the slope. An EV charger is wanted but not yet installed.</p>
-
-<p><strong>Local authority:</strong> Dublin City Council. Raheny is in the DCC administrative area (North Central), not Fingal — the county boundary is close, meeting Fingal around Kilbarrack, but Raheny is comfortably inside the city.</p>
-<section id="sec-1">
-<h2>1. Bottom line</h2>
-
-<p>Three findings, in descending order of how much they change the plan.</p>
-
-<p><strong>The entrance cannot be widened. It is already at the legal maximum.</strong> The opening measures 3.0m at the pier faces, and DCC’s standard for a single dwelling is “at least 2.5 metres or at most 3 metres”. There is no application to make. 4m exists only for an entrance shared between two dwellings, which is ruled out. This closes the project you expected to be uncontroversial.</p>
-
-<p><strong>The dishing is already 3.3m, so widening it to the 3.6m maximum wins 30cm.</strong> That is a “could do”, not a fix. The realignment may be worth more than the width — a dish offset from the gate reduces the usable path through both — and the site inspection is free, so asking costs nothing. But do not expect it to transform the entry. <a href="#sec-3-2">§3.2</a> sets out what is actually left.</p>
-
-<p><strong>On the entrance you are essentially at the regulatory ceiling already.</strong> The opening is at the 3.0m maximum and the dish is within 30cm of its own. Nothing done on your property changes the road geometry that forces the angled approach. The honest conclusion is that the entry difficulty is largely inherent to the corner site, and the remaining gains are small: the pier trim, the pier profile, folding the mirrors, and practice.</p>
-
-<p><strong>The slope is 19.1%, which is genuinely steep, and a level parking bay is achievable without planning permission.</strong> Not by regrading — that is arithmetically impossible here — but by cutting a level platform, which works out better than expected once you notice that only the <em>wheelbase</em> needs to be level, not the car’s full length. That lets the excavation stand clear of the house foundations, which probably removes underpinning from the scope.</p>
-
-<div class="table-wrap">
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>Cost</th>
-      <th>Permission</th>
-      <th>Buys you</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Fold the mirrors, strip the pier trim, practise the line (<a href="#sec-3-2">§3.2</a>)</td>
-      <td>~€0</td>
-      <td>Probably none</td>
-      <td>~170mm of mirror width, plus whatever the trim is hiding</td>
-    </tr>
-    <tr>
-      <td>Two wheel chocks and the protocol (<a href="#sec-6">§6</a>)</td>
-      <td>€30 – €60</td>
-      <td>None</td>
-      <td>Settles the parking-brake worry</td>
-    </tr>
-    <tr>
-      <td>EV charger, after the €300 grant (<a href="#sec-8">§8</a>)</td>
-      <td>€800 – €1,500</td>
-      <td>None</td>
-      <td>Charging</td>
-    </tr>
-    <tr>
-      <td>Realign, and widen the dish 3.3m → 3.6m (<a href="#sec-3-2">§3.2</a>)</td>
-      <td>€611.60</td>
-      <td>None — affidavit route</td>
-      <td>30cm and better alignment. Marginal</td>
-    </tr>
-    <tr>
-      <td>Part-level bay at 8% (<a href="#sec-5">§5</a>)</td>
-      <td>€9,000 – €19,000</td>
-      <td>None — exempt</td>
-      <td>Most of the parked discomfort</td>
-    </tr>
-    <tr>
-      <td>Fully level bay (<a href="#sec-5">§5</a>)</td>
-      <td>€11,000 – €25,000</td>
-      <td>None — exempt</td>
-      <td>All of the parked discomfort</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<div class="callout callout-key">
-<p class="callout-label">✓ Key finding — The brake worry is cheap to settle. The other two complaints are not.</p>
-<p>Chocks and the protocol cost under €60 and close out the parking-brake question properly (<a href="#sec-6">§6</a>). The entry difficulty has <strong>no cheap fix</strong> — you are at the permitted maximum on the opening and 30cm off it on the dish, so what is left is mirrors, trim and technique. The parked gradient has no cheap fix either: it is the bay or nothing. Those are the honest positions, and the €611.60 dishing job sits awkwardly between them.</p>
-</div>
-<div class="callout callout-warn">
-<p class="callout-label">⚠ Warning — The bay buys comfort at the cost of steps to your front door</p>
-<p>A level bay is only achievable by cutting <em>below</em> the natural slope, and your front door sits at the top of that slope. Every version of this option leaves the door 0.6–1.0m above the parking surface, so you gain 4–6 steps at your front entrance, permanently. Shopping, bins, deliveries and any future mobility need all get worse. That trade-off, not the money, is the real decision. <a href="#sec-4-3">§4.3</a> quantifies it.</p>
-</div>
-</section>
-<section id="sec-2">
-<h2>2. The site, as measured</h2>
-
-<div class="table-wrap">
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>Value</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Driveway length</td>
-      <td>6.8m</td>
-      <td>measured, approximate</td>
-    </tr>
-    <tr>
-      <td>Rise, footpath to house</td>
-      <td>1.3m</td>
-      <td>measured, approximate</td>
-    </tr>
-    <tr>
-      <td><strong>Gradient</strong></td>
-      <td><strong>19.1% — 1:5.2 — 10.8°</strong></td>
-      <td>derived</td>
-    </tr>
-    <tr>
-      <td>Slope profile</td>
-      <td>fairly uniform</td>
-      <td>observed</td>
-    </tr>
-    <tr>
-      <td>Entrance opening at pier faces</td>
-      <td>3.0m</td>
-      <td>measured, excludes decorative trim</td>
-    </tr>
-    <tr>
-      <td>Dishing block, full width</td>
-      <td>3.3m</td>
-      <td>measured</td>
-    </tr>
-    <tr>
-      <td>Dishing at the low lip</td>
-      <td>narrower than 3.3m, misaligned with the opening</td>
-      <td>observed</td>
-    </tr>
-    <tr>
-      <td>Approach</td>
-      <td>angled, one viable line only</td>
-      <td>observed, corner site</td>
-    </tr>
-    <tr>
-      <td>Top of driveway</td>
-      <td>runs to the house wall / front door</td>
-      <td>confirmed</td>
-    </tr>
-    <tr>
-      <td>Side frontage</td>
-      <td>none usable</td>
-      <td>confirmed</td>
-    </tr>
-    <tr>
-      <td>Grounding</td>
-      <td>nothing scrapes</td>
-      <td>observed</td>
-    </tr>
-    <tr>
-      <td>Gates</td>
-      <td>none, and none wanted</td>
-      <td>confirmed</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<div class="callout callout-action">
-<p class="callout-label">☐ Action — Re-measure the rise before spending anything</p>
-<p>Everything in <a href="#sec-4">§4</a> and <a href="#sec-5">§5</a> pivots on the 1.3m figure, which you described as inexpert and approximate. At 0.8m the gradient is 11.8% and my advice would be to live with it. At 1.3m it is 19.1% and the bay is worth costing. Take a straight edge and a spirit level, step it down the slope accumulating the rise, and measure the <strong>driving surface only</strong> — exclude any step up to the threshold. Also measure the driveway width, which I have assumed at 3.2m throughout and which drives every area-based cost below.</p>
-</div>
-<section id="the-car">
-<h3>The car</h3>
-
-<p>Škoda Elroq 60, from the manufacturer’s technical specification:</p>
-
-<div class="table-wrap">
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Length</td>
-      <td>4,488mm</td>
-    </tr>
-    <tr>
-      <td>Width, excluding mirrors</td>
-      <td>1,884mm</td>
-    </tr>
-    <tr>
-      <td>Wheelbase</td>
-      <td>~2,765mm</td>
-    </tr>
-    <tr>
-      <td>Ground clearance at kerb weight</td>
-      <td>~186mm</td>
-    </tr>
-    <tr>
-      <td>Kerb weight, including 75kg driver</td>
-      <td>1,975 – 2,131 kg</td>
-    </tr>
-    <tr>
-      <td><strong>Total permitted weight</strong></td>
-      <td><strong>2,457 kg</strong></td>
-    </tr>
-    <tr>
-      <td>Turning circle diameter</td>
-      <td>9.3m</td>
-    </tr>
-    <tr>
-      <td>Battery, gross (net)</td>
-      <td>63 (59) kWh</td>
-    </tr>
-    <tr>
-      <td>AC charging 0–100%</td>
-      <td>11 kW / 6h 30m</td>
-    </tr>
-    <tr>
-      <td>Standard tyre and rim</td>
-      <td>235/55 R19 101T on 8Jx19 ET45</td>
-    </tr>
-    <tr>
-      <td>Overall tyre diameter, every fitment</td>
-      <td>737 – 745mm</td>
-    </tr>
-    <tr>
-      <td>Recommended tyre pressure</td>
-      <td>2.7 bar</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<p>The 186mm clearance is why nothing scrapes at 19.1%, and it is generous enough that both bay designs below improve the grounding margin rather than worsening it. Note that the spec sheet lists clearance as 186/182/170mm and wheelbase as 2765/2766/2769mm across the five-variant range without a clean per-variant mapping, so treat these as approximate for the 60.</p>
-</section>
-</section>
-<section id="sec-3">
-<h2>3. The entrance: already at the legal maximum</h2>
-<section id="sec-3-1">
-<h3>3.1 Why the opening cannot be widened</h3>
-<blockquote class="legal">
-<p class="legal-cite">Dublin City Development Plan 2022–2028, Vol. 2 App. 5 §4.3.1</p>
-<p>For a single residential dwelling, the vehicular opening proposed shall be at least 2.5 metres or at most 3 metres in width and shall not have outward opening gates. Where a shared entrance for two residential dwellings is proposed, this width may increase to a maximum of 4 metres.</p>
-</blockquote>
-
-<p>At 3.0m you are at the ceiling. There is nothing to apply for.</p>
-
-<p>Two notes for completeness. The 3.6m figure that circulates widely comes from DCC’s <em>Parking Cars in Front Gardens</em> advisory booklet, which still cites the superseded 2011–2017 development plan; it is out of date as a width standard, and a neighbour’s wider opening is likely grandfathered rather than a precedent. And had you needed permission, it would not have been a formality — Article 9(1)(a)(ii) of the Planning and Development Regulations 2001 removes the exemption for “the formation, laying out or material widening of a means of access to a public road the surfaced carriageway of which exceeds 4 metres in width”, which covers every street in Dublin.</p>
-
-<p>Since you are not adding gates and the estate is open-plan throughout, you also avoid DCC’s stated position that in open-plan estates “preferably no change should be made”, and that erecting gates, piers and enclosing walls there “disrupt[s] the character of the estate”. Leaving the frontage open is the correct call and the council’s preferred one.</p>
-</section>
-<section id="sec-3-2">
-<h3>3.2 What is actually left on the entrance</h3>
-
-<p>The dish measures <strong>3.3m across the full block</strong>, against a 3.6m maximum. Widening it therefore wins <strong>30cm</strong>, which is not much, and an earlier draft of this document oversold it as the answer. Treat it as optional.</p>
-
-<p>What may still be worth having is the <strong>realignment</strong>. The dish is offset from the opening, and on a forced angled approach an offset dish reduces the usable path through the pair of them — the effective width is governed by where they overlap, not by either dimension alone. Realigning a 3.3m dish to the 3.0m gate could recover more than the 30cm of extra width would. Neither you nor I can size that gain from here; the inspector on site can, and the inspection is free.</p>
-
-<p>So: phone Road Maintenance, have them look, and decide on what they tell you. Do not commit €611.60 on the strength of the width figure alone.</p>
-
-<p>Three cheaper things to try first, because they cost nothing and one of them may matter more than the dish.</p>
-
-<p><strong>Fold the mirrors on approach.</strong> The car is 1,884mm across the body but roughly 2,050–2,070mm across the mirrors. Folding them recovers about <strong>170mm of total clearance</strong> — more than half of what widening the dish would give you — for free, every time. Many MEB cars can be set to fold on locking; folding manually before the turn is a two-second habit.</p>
-
-<p><strong>Check what the pier trim is costing you.</strong> You measured 3.0m at the pier faces <em>excluding</em> decorative trim, which means the actual clear opening the car passes through is narrower than 3.0m. Since 3.0m is the permitted maximum, removing or slimming that trim brings the real opening up to what you are already allowed rather than exceeding it. That could be 50–150mm back for the price of a morning’s work.</p>
-
-<p><strong>Consider rounding the leading edge of the piers</strong> at body height, if they are square. On an angled entry it is the pier corner that catches, and chamfering it changes the effective opening on the diagonal without moving anything.</p>
-<div class="callout callout-warn">
-<p class="callout-label">⚠ Warning — The trim question sits in a grey zone</p>
-<p>Article 9(1)(a)(ii) disapplies the exemption for the “material widening” of an access, while DCC’s development plan says permission is needed for “widening” without the qualifier. Taking off decorative trim to reach a 3.0m opening that already complies with the standard is very unlikely to be material — but strictly the opening does get wider. If you want certainty, a <strong>Section 5 declaration costs €80</strong> and takes four weeks. If you would rather not ask, that is a judgement call and a small one, but it is yours rather than mine.</p>
-</div>
-
-<div class="table-wrap">
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Standard domestic dishing, up to 7m²</td>
-      <td><strong>€611.60</strong></td>
-    </tr>
-    <tr>
-      <td>Above 7m²</td>
-      <td>€87.40/m²</td>
-    </tr>
-    <tr>
-      <td>Granite kerb</td>
-      <td>~€200 per linear metre</td>
-    </tr>
-    <tr>
-      <td>Specialist footpath paving</td>
-      <td>€200 – €500/m²</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<p>At 3.6m wide across a typical 1.8m footpath the dish is about 6.5m², inside the flat-rate band. DCC Road Maintenance Services carry out the work — you cannot use your own contractor, and you do not need a road opening licence. An inspector visits and quotes first.</p>
-
-<p><strong>Contact:</strong> 01 222 2507, roadmaintenance@dublincity.ie.</p>
-</section>
-<section id="sec-3-3">
-<h3>3.3 The affidavit route</h3>
-
-<p>Because the entrance predates the seven-year threshold by well over a decade, you do not need planning permission for the dishing:</p>
-<blockquote class="legal">
-<p class="legal-cite">DCC, Apply to Modify a Footpath for Vehicular Access</p>
-<p>This affidavit must certify that the entrance has been used for vehicle access for at least 7 years. … Where a sworn affidavit is provided, the width of the dishing provided by Road Maintenance Services shall be a maximum of 3.6m.</p>
-</blockquote>
-
-<p>The affidavit is a letter of declaration signed and witnessed by a solicitor or peace commissioner. That is the whole process — no application fee, no eight-week wait, no third-party appeal risk. A 2006 house clears the test with 14 years to spare, though you should confirm the entrance itself dates from the original build.</p>
-</section>
-</section>
-<section id="sec-4">
-<h2>4. The slope: what the geometry permits</h2>
-<section id="sec-4-1">
-<h3>4.1 Why a full regrade is pointless</h3>
-
-<p>The rise is fixed at both ends — the footpath at the bottom, your house at the top — so a regrade cannot reduce the total rise. All it can do is redistribute rise across the available run. You have confirmed the slope is <strong>fairly uniform</strong>, which means there is nothing to redistribute. A full-length regrade would cost five figures and return the same 19.1%.</p>
-
-<p>Lengthening the run would work, but there is no usable side frontage and a diagonal route across a 6.8m garden gains too little to matter. That route is closed.</p>
-
-<p>And there is no gradient standard to comply with in any case. I searched specifically and found no Irish maximum for a private residential driveway; DCC’s plan sets dimensions, surfacing, sightlines and drainage but is silent on gradient. Building Regulations Part M does not reach it either:</p>
-<blockquote class="legal">
-<p class="legal-cite">Technical Guidance Document M — application to existing dwellings</p>
-<p>The Requirements of Part M do not apply to works in connection with extensions to and the material alterations of existing dwellings, provided that such works do not create a new dwelling.</p>
-</blockquote>
-
-<p>The 1:8 and 1:6 figures in circulation are Australian, US and UK rules of thumb. They are useful for judging whether 19.1% is uncomfortable — it is, comfortably beyond both — but they carry no legal force here.</p>
-</section>
-<section id="sec-4-2">
-<h3>4.2 You only need to level the wheelbase</h3>
-
-<p>This is the observation that makes a level bay affordable. <strong>The car sits on its wheels.</strong> If the 2,765mm wheelbase is level, the car is level. The front and rear overhangs — about 1.7m of bodywork between them — can sit over sloping ground, provided clearance is maintained.</p>
-
-<p>So the level platform needs to be roughly <strong>3.2m long</strong>, not 4.5m. That has two consequences, and both are favourable:</p>
-
-<ul>
-  <li>The cut is shallower, because you are levelling less of the run.</li>
-  <li>More importantly, <strong>the platform does not need to reach the house wall.</strong> The rear overhang is about 0.86m, so the rear axle must sit that far forward of the wall anyway. The excavation can stop ~0.7m short of the front elevation — which is what takes underpinning off the table (<a href="#sec-4-4">§4.4</a>).</li>
-</ul>
-</section>
-<section id="sec-4-3">
-<h3>4.3 The two viable bay designs</h3>
-
-<p>Measuring from the front boundary, the platform spans roughly 2.9m to 6.1m, with a ramp below it and steps above it to the door.</p>
-
-<div class="table-wrap">
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>A — fully level</th>
-      <th>B — part-level at 8%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Parking surface gradient</td>
-      <td><strong>0%</strong></td>
-      <td><strong>8%</strong></td>
-    </tr>
-    <tr>
-      <td>Entry ramp gradient</td>
-      <td>10.3%</td>
-      <td>12.1%</td>
-    </tr>
-    <tr>
-      <td>Deepest cut, at back of platform</td>
-      <td>0.87m</td>
-      <td>0.56m</td>
-    </tr>
-    <tr>
-      <td>Retaining wall height</td>
-      <td>0.87m</td>
-      <td>0.56m</td>
-    </tr>
-    <tr>
-      <td>Steps from platform to front door</td>
-      <td>1.00m — about 6 risers</td>
-      <td>0.69m — about 4 risers</td>
-    </tr>
-    <tr>
-      <td>Standoff from house wall</td>
-      <td>~0.7m</td>
-      <td>~0.7m</td>
-    </tr>
-    <tr>
-      <td>Inside Class 6 (1m level change)</td>
-      <td>Yes</td>
-      <td>Yes, easily</td>
-    </tr>
-    <tr>
-      <td>Inside Class 5 (1.2m front wall)</td>
-      <td>Yes</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>Indicative cost</td>
-      <td>€11,000 – €25,000</td>
-      <td>€9,000 – €19,000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<p>Both are exempted development. Neither needs planning permission.</p>
-
-<p><strong>Option B deserves more attention than it will instinctively get.</strong> Dropping from 19.1% to 8% removes most of the discomfort — 8% is a gradient you would not think about — while cutting 0.31m less, building a wall a third shorter, and costing you two fewer steps at the front door. Option A buys the last 8 percentage points of flatness for roughly €4,000 and two extra risers. On the facts, B is the better trade.</p>
-
-<p><strong>On grounding, both designs improve on today.</strong> You currently drive over a footpath-to-19.1% transition without scraping. Option A replaces that with a 10.3% ramp, which is gentler. The new convex break at the top of the ramp needs about 71mm of clearance at mid-wheelbase against your ~186mm; option B’s 12.1%-to-8% break needs almost nothing. A proper vertical transition curve at the top of the ramp should still be specified, but the margin is comfortable rather than marginal.</p>
-</section>
-<section id="sec-4-4">
-<h3>4.4 Why the foundations are probably safe</h3>
-
-<p>The standard test for excavating near a foundation is the 45° rule: the excavation is outside the foundation’s zone of influence if the horizontal distance to it is at least the vertical distance the dig extends below the foundation’s underside.</p>
-
-<p>For option A, the platform base sits about 1.0m below original ground level at the house, standing 0.7m clear of the wall. If the foundation underside is at a typical 0.8m depth, the excavation reaches about 0.2m below it, at 0.7m horizontal distance. 0.7m ≥ 0.2m, so the dig is well outside the 45° line. Option B, cutting 0.31m less, is safer still.</p>
-
-<p><strong>This is the single most important thing the standoff buys you.</strong> Traditional mass concrete underpinning in Ireland runs €1,200–€2,500 per metre run, plus €1,000–€2,500 for engineer supervision. Over a 3.2m frontage that is €4,800–€10,500 avoided.</p>
-<div class="callout callout-warn">
-<p class="callout-label">⚠ Warning — This must be confirmed with a trial pit, not assumed</p>
-<p>The arithmetic above depends on the actual foundation depth, which nobody knows yet. A 2006 strip foundation is usually 0.7–0.9m, but it could be shallower, and there could be a services run in the way. A trial pit plus a structural engineer’s inspection costs €300–€600 and is the gating investigation for the entire option. Commission it before you commission anything else, and do not let a paving contractor talk you past it.</p>
-</div>
-</section>
-<section id="sec-4-5">
-<h3>4.5 Drainage</h3>
-
-<p>Two independent requirements, both binding.</p>
-
-<p><strong>Nothing may discharge to the public road.</strong> Planning circular BSCR 5/08 established that surface water from a new or extended driveway must not discharge onto the public road. Water goes to a permeable surface, a soakaway, or an existing surface water system on your own ground. Your platform sits 0.2–0.4m above footpath level, so gravity drainage to a soakaway works — no pump needed.</p>
-
-<p><strong>A level platform needs positive drainage.</strong> Option A is flat, so it needs either a cross-fall to a channel drain or a channel across its low edge. You also need a channel at the <em>back</em> of the platform to intercept water coming down off the steps and upper ground, so it does not pond against the retaining wall or track toward the house. Option B’s 8% fall handles most of this naturally, which is another point in its favour.</p>
-
-<p>Budget €1,000–€2,500 for channel drains and a soakaway. Treat any quote that omits drainage as incomplete rather than cheap.</p>
-</section>
-<section id="sec-4-6">
-<h3>4.6 What stays exempt</h3>
-<blockquote class="legal">
-<p class="legal-cite">Planning and Development Regulations 2001, Sch. 2 Pt. 1 Class 6</p>
-<p>(a) The construction of any path, drain or pond or the carrying out of any landscaping works within the curtilage of a house. — <em>The level of the ground shall not be altered by more than 1 metre above or below the level of the adjoining ground.</em></p>
-
-<p>(b) Any works within the curtilage of a house for … (ii) the provision of a hard surface in the area of the garden forward of the front building line of the house … for purposes incidental to the enjoyment of the house as such. — <em>Provided that the area of the hard surface is less than 25 square metres or less than 50% of the area of the garden forward of the front building line of the house … whichever is the smaller, or if the area of the hard surface is 25 square metres or greater or comprises more than 50% … it shall be constructed using permeable materials or otherwise allow for rainwater to soak into the ground.</em></p>
-</blockquote>
-
-<p>Both bay designs stay inside the 1m level-change condition — option A at 0.87m has 13cm of headroom, which is not much, so the design should be drawn to levels and checked rather than eyeballed on site.</p>
-
-<p>The hard-surface condition means <strong>the surface must be permeable</strong>. At roughly 22m² your driveway is under the 25m² figure, but it is almost certainly more than 50% of the front garden, and the condition applies to whichever is smaller. Class 5 separately caps a wall forward of the front building line at 1.2m, which both designs clear, and requires concrete or blockwork visible from the road to be capped and rendered or plastered.</p>
-</section>
-</section>
-<section id="sec-5">
-<h2>5. The level bay, costed</h2>
-
-<p>Assuming a 3.2m driveway width and roughly 22m² of surface.</p>
-
-<div class="table-wrap">
-<table>
-  <thead>
-    <tr>
-      <th>Item</th>
-      <th>Option A — level</th>
-      <th>Option B — 8%</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Structural engineer: inspection, levels, retaining design, certification</td>
-      <td>€1,200 – €2,500</td>
-      <td>€1,200 – €2,500</td>
-    </tr>
-    <tr>
-      <td>Trial pit to establish foundation depth</td>
-      <td>€300 – €600</td>
-      <td>€300 – €600</td>
-    </tr>
-    <tr>
-      <td>Excavation, cart-away and disposal</td>
-      <td>€1,500 – €3,000</td>
-      <td>€1,200 – €2,400</td>
-    </tr>
-    <tr>
-      <td>Retaining structure (~6–8m² / ~4–5m² of wall face)</td>
-      <td>€2,500 – €6,000</td>
-      <td>€1,500 – €3,000</td>
-    </tr>
-    <tr>
-      <td>Steps and handrail</td>
-      <td>€1,500 – €4,000</td>
-      <td>€1,000 – €2,500</td>
-    </tr>
-    <tr>
-      <td>Channel drains and soakaway</td>
-      <td>€1,000 – €2,500</td>
-      <td>€1,000 – €2,500</td>
-    </tr>
-    <tr>
-      <td>Permeable surface, ~22m²</td>
-      <td>€1,600 – €3,500</td>
-      <td>€1,600 – €3,500</td>
-    </tr>
-    <tr>
-      <td>Contingency at 15%</td>
-      <td>€1,400 – €3,300</td>
-      <td>€1,200 – €2,600</td>
-    </tr>
-    <tr>
-      <td><strong>Total</strong></td>
-      <td><strong>€11,000 – €25,000</strong></td>
-      <td><strong>€9,000 – €19,000</strong></td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<p><strong>If the trial pit brings underpinning into scope</strong>, add €1,200–€2,500 per metre run over ~3.2m plus €1,000–€2,500 supervision — roughly €5,800–€10,500, taking option A to about €35,000. This is why the trial pit comes first.</p>
-
-<p>Underlying rates, for checking quotes:</p>
-
-<div class="table-wrap">
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Break out and dispose of existing concrete or tarmac</td>
-      <td>€10 – €25/m²</td>
-    </tr>
-    <tr>
-      <td>Excavation, hardcore, sub-base</td>
-      <td>€15 – €40/m²</td>
-    </tr>
-    <tr>
-      <td>Soil disposal, 6-yard skip</td>
-      <td>€230 – €349</td>
-    </tr>
-    <tr>
-      <td>Retaining wall, residential, Dublin</td>
-      <td>€350 – €600/m² of wall face</td>
-    </tr>
-    <tr>
-      <td>Permeable block paving</td>
-      <td>€70 – €95/m²</td>
-    </tr>
-    <tr>
-      <td>Resin bound on a new base</td>
-      <td>€120 – €160/m²</td>
-    </tr>
-    <tr>
-      <td>Structural engineer</td>
-      <td>€90 – €150/hr, or €500 – €3,000 per project</td>
-    </tr>
-    <tr>
-      <td>Underpinning, mass concrete</td>
-      <td>€1,200 – €2,500 per metre run</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<p>Excavation, disposal and sub-base can account for up to half the total spend on driveway work and do not scale down neatly on a small area — which is why a 22m² job does not cost a third of a 60m² one.</p>
-</section>
-<section id="sec-6">
-<h2>6. Living with it: the parking protocol</h2>
-
-<p>Free, immediate, and it answers the concern about the parking brake on a heavy car.</p>
-
-<p><strong>On this car, park and the parking brake are one control.</strong> The drive selector is a rocker offering only R, N and D/B — there is no P position on it. Park is the separate ⓟ button, and because the MEB platform has no mechanical parking pawl, that button <em>is</em> the electric parking brake. There is nothing to sequence and no transmission lock to protect. Advice written for a conventional automatic — apply the handbrake before selecting P — does not apply to this car at all.</p>
-
-<p><strong>The consequence is that the parking brake is the only thing holding the car.</strong> That is the argument for a mechanical backup, and it is why chocks below are the primary recommendation rather than a supplement.</p>
-<section id="what-the-actual-risks-are-and-are-not">
-<h3>What the actual risks are, and are not</h3>
-
-<p><strong>Wear: not a concern.</strong> There is no wear mechanism from being parked on a slope. The brake holds by static clamp, and pads only wear where there is relative motion between pad and disc. Parking on 19.1% for years does not consume the brake. The actuator wears per application, not per hour parked, so a steep driveway costs nothing in brake life.</p>
-
-<p><strong>Power loss: not a concern.</strong> Electromechanical parking brakes are self-locking by design — the actuator drives a screw that stays clamped without power — so the brake does not release if the 12V system fails. The realistic failure mode is not sudden release; it is the brake never having fully applied, or slow creep.</p>
-
-<p><strong>Load: a modest concern.</strong> At the 2,457kg permitted weight on 19.1%, the downslope force is about <strong>4.5 kN (460 kgf)</strong>. Type-approval requirements for light-vehicle parking brakes sit at or below this gradient — sources cite 18% for ECE R13 and 8% for R13-H, and I could not establish which governs this category. You are at the edge of the standard design case rather than comfortably inside it. Not alarming, and not a large margin either.</p>
-</section>
-<section id="the-protocol">
-<h3>The protocol</h3>
-<ul class="checklist" id="supplierChecklist">
-<li><label><input type="checkbox" data-key="e7c3ffe9"><span><strong>Use two wheel chocks. This is the main recommendation.</strong> With no pawl, chocks are the only holding mechanism independent of the car’s electronics.</span></label></li>
-<li><label><input type="checkbox" data-key="d08a3a6c"><span><strong>Place them on the downhill side</strong> — parked nose-out facing downhill, a roll goes forward, so the chocks go in front of the two front wheels. Facing downhill also loads the front axle, so the chocks get more normal force working for them.</span></label></li>
-<li><label><input type="checkbox" data-key="6950769c"><span><strong>Buy them 175–200mm tall.</strong> The sizing convention is a quarter of tyre height, and every Elroq fitment sits within 8mm of a 741mm overall diameter — Škoda holds rolling diameter constant across the 19”, 20” and 21” options — so the target is <strong>~185mm whichever wheels are fitted</strong>. Avoid the commonly-stocked 150mm size, which is only 20% of tyre height.</span></label></li>
-</ul>
-<button type="button" id="resetChecklist">Reset checklist</button>
-
-<p><strong>Verified as suitable:</strong> the <a href="https://www.pittman.ie/cdn/shop/files/GHP_Yellow_Wheel_Chock_12_-_Data_Sheet.pdf" target="_blank" rel="noopener noreferrer">GHP Yellow Wheel Chock 12</a> from Pittman (product code 751212) — 175mm high, 120 × 240mm, 3.7kg, moulded rubber with a serrated underside, rated to 5 tonnes. At 175mm it is 23.6% of tyre height, and the 5-tonne rating is roughly double the car’s 2,457kg gross weight. The serrated rubber base is the right specification for grip on a paved slope, and the integrated handle matters more than it sounds — a protocol only gets followed if it is not a nuisance.</p>
-
-<p>Note that the datasheet advises: “For vehicles parked on sloped areas consider chocking all four wheels.” At 19.1% that advice is aimed squarely at this driveway. Two on the downhill side is the sensible daily practice, since the parking brake remains the primary restraint and the chocks are an independent backup rather than a substitute — but four is not an unreasonable reading of the manufacturer’s own guidance.</p>
-<ul class="checklist" id="supplierChecklist-2">
-<li><label><input type="checkbox" data-key="31561d53"><span><strong>Turn the wheels toward the boundary as you roll to a stop</strong>, not after stopping.</span></label></li>
-</ul>
-<button type="button" id="resetChecklist-2">Reset checklist</button>
-
-<p><strong>On turning the wheels while stationary:</strong> the instinct to avoid it is sound, but the effect is small. Dry steering scrubs the tyres against an abrasive surface and loads the steering components, and electric power steering draws current and warms up — but it has thermal protection, and occasional dry steering does no damage. The more useful point is that you never need to dry-steer. Turn during the last metre while the car is still moving and it is ordinary steering, costing nothing. On a forced angled entry the wheels may already be turned at the point you stop, which makes this free.</p>
-
-<p>If it still adds difficulty, skip it. The chocks supersede it, and a protocol that gets followed beats one that gets abandoned.</p>
-
-<p><strong>Nose-out, then.</strong> Parking nose-in is ruled out, which is reasonable on a corner site with one viable approach line. What it costs is worth knowing: the parking brake acts on the rear axle, and facing downhill transfers weight off the rear — roughly 3–4% of vehicle weight — so this is the less favourable orientation for brake holding. It does mean reversing in, which is the safer manoeuvre for emerging onto the road. A fair trade, and a further argument for the chocks.</p>
-
-<p>One thing not worth doing: drive-on levelling ramps. Correcting 19.1% across a 2,765mm wheelbase needs about 530mm of blocks under the downhill wheels. Even partial correction to 14% needs 135mm, which is a daily hassle and its own hazard with a two-tonne car on a slope.</p>
-</section>
-</section>
-<section id="sec-7">
-<h2>7. Who does what</h2>
-
-<div class="table-wrap">
-<table>
-  <thead>
-    <tr>
-      <th>Role</th>
-      <th>When you need them</th>
-      <th>Registration to check</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Chartered structural engineer</td>
-      <td><strong>First.</strong> Trial pit, foundation depth, levels, retaining design, certification</td>
-      <td>Engineers Ireland — Chartered Engineer</td>
-    </tr>
-    <tr>
-      <td>Groundworks / civil contractor</td>
-      <td>Excavation, retaining, drainage, sub-base, steps</td>
-      <td>Tax clearance, insurance, CIRI</td>
-    </tr>
-    <tr>
-      <td>Paving contractor</td>
-      <td>Surface only</td>
-      <td>As above</td>
-    </tr>
-    <tr>
-      <td>Registered electrician</td>
-      <td>EV charger</td>
-      <td><strong>Safe Electric</strong> — mandatory for the grant</td>
-    </tr>
-    <tr>
-      <td>Solicitor or peace commissioner</td>
-      <td>The seven-year affidavit for the dishing</td>
-      <td>—</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<p>No architect or planning consultant is needed. Nothing here requires a planning application, which removes the two professions that would otherwise dominate the fee budget.</p>
-
-<p><strong>Lead with groundworks, not paving.</strong> This is a groundworks job with a paving finish — excavation, a retaining structure, and drainage — not a paving job with some digging. Leading with a paving contractor on a cut-and-retain site is how you end up with a good-looking surface over an inadequate sub-base, no drainage, and a wall nobody designed. Ask to see completed cut-and-retain work on a sloped site, not a portfolio of flat driveways.</p>
-
-<p><strong>The engineer is worth paying for even if you build nothing.</strong> A trial pit and a levels survey will tell you whether option A or B is viable on your foundations, for a few hundred euro. That is the cheapest possible way to avoid scoping a project the ground will not support.</p>
-</section>
-<section id="sec-8">
-<h2>8. The EV charger</h2>
-
-<p>Independent of everything above — you have off-street parking today, so nothing gates this.</p>
-
-<ul>
-  <li><strong>Grant: €300</strong>, reduced from €600 on 1 January 2024. One per MPRN, not per person — <strong>check whether a previous owner or occupant already claimed it at this address.</strong> On a house you have recently moved into this is a real risk and a five-minute check.</li>
-  <li><strong>Conditions:</strong> private off-street parking; you own or are registered keeper of an EV or PHEV; the property is your primary residence; the charger is on the SEAI approved product list; installation by a <strong>Safe Electric</strong> registered electrician.</li>
-  <li><strong>Cost:</strong> €1,100 – €1,800 supplied and fitted before the grant, so <strong>€800 – €1,500 net</strong>. A 7kW single-phase unit — Zappi, Ohme, Wallbox and similar — runs €800 – €1,400 installed.</li>
-  <li><strong>Timeline:</strong> 2–4 hours on site, 3–6 weeks from first quote to working charger.</li>
-</ul>
-
-<p><strong>On charge rate:</strong> the Elroq 60’s spec quotes 11 kW AC at 6h 30m for 0–100%, but 11 kW needs three-phase, which Irish domestic supply generally is not. On a single-phase 7.4kW charger expect roughly <strong>8 hours for 0–100%</strong> on the 59 kWh usable pack. Comfortably an overnight charge, so the difference is academic unless you need fast turnarounds.</p>
-<div class="callout callout-action">
-<p class="callout-label">☐ Action — Duct while the ground is open</p>
-<p>If you proceed with either bay design, lay a draw-duct from the consumer unit to the charger position during the groundworks. Retrofitting a cable run through a finished permeable surface is destructive and entirely avoidable. This costs almost nothing during excavation and is the highest-value piece of sequencing in the project.</p>
-</div>
-
-<p>Decide the charger position <em>after</em> the parking position, not before. Tethered cables are typically 5m or 7.5m, and on a bay set back from the house wall the charge port may end up further from the wall than you expect.</p>
-</section>
-<section id="sec-9">
-<h2>9. Sequence</h2>
-
-<p><strong>Do now, under €1,500 total:</strong></p>
-<ul class="checklist" id="supplierChecklist-3">
-<li><label><input type="checkbox" data-key="d54b57f6"><span>Re-measure the rise carefully, and measure the driveway width (<a href="#sec-2">§2</a>).</span></label></li>
-<li><label><input type="checkbox" data-key="69e472b6"><span>Fold the mirrors on every approach, and see whether that alone changes the entry (<a href="#sec-3-2">§3.2</a>).</span></label></li>
-<li><label><input type="checkbox" data-key="a4eedbb0"><span>Measure the clear opening <em>including</em> the pier trim, and work out what removing it would recover (<a href="#sec-3-2">§3.2</a>).</span></label></li>
-<li><label><input type="checkbox" data-key="49147ec9"><span>Phone Road Maintenance Services on 01 222 2507 for a free inspection, and ask specifically whether realigning the dish would gain more than the 30cm of width. Decide on what they say (<a href="#sec-3-2">§3.2</a>).</span></label></li>
-<li><label><input type="checkbox" data-key="9968d823"><span>Only if you proceed with the dish: confirm the entrance dates from the original 2006 build, and get the affidavit sworn (<a href="#sec-3-3">§3.3</a>).</span></label></li>
-<li><label><input type="checkbox" data-key="71803718"><span>Buy two heavy-duty rubber wheel chocks, 180–200mm tall (<a href="#sec-6">§6</a>).</span></label></li>
-<li><label><input type="checkbox" data-key="53b4e7ea"><span>Check the SEAI grant has not already been claimed on this MPRN (<a href="#sec-8">§8</a>).</span></label></li>
-</ul>
-<button type="button" id="resetChecklist-3">Reset checklist</button>
-
-<p><strong>Then reassess.</strong> Live with the realigned dish and the protocol for a few weeks. The entry problem should be materially better and the brake worry should be settled. If the parked gradient still bothers you, continue.</p>
-
-<p><strong>Investigation, €300–€600 and it governs everything:</strong></p>
-<ul class="checklist" id="supplierChecklist-4">
-<li><label><input type="checkbox" data-key="e2154e28"><span>Engage a chartered structural engineer for a trial pit, foundation depth, and a levels survey (<a href="#sec-4-4">§4.4</a>).</span></label></li>
-<li><label><input type="checkbox" data-key="615736e1"><span>Get their view on option A versus option B against the actual foundation depth (<a href="#sec-4-3">§4.3</a>).</span></label></li>
-</ul>
-<button type="button" id="resetChecklist-4">Reset checklist</button>
-
-<p><strong>Only if the pit comes back favourable:</strong></p>
-<ul class="checklist" id="supplierChecklist-5">
-<li><label><input type="checkbox" data-key="71279060"><span>Engineer designs the retaining structure and drainage to levels, checked against the 1m Class 6 limit.</span></label></li>
-<li><label><input type="checkbox" data-key="32429cf9"><span>Three groundworks-led quotes, each itemising drainage and steps separately, and stating the surface’s permeability.</span></label></li>
-<li><label><input type="checkbox" data-key="97f27f73"><span>Lay the charger duct during groundworks (<a href="#sec-8">§8</a>).</span></label></li>
-<li><label><input type="checkbox" data-key="b29f1d41"><span>Charger installed by a Safe Electric electrician once the surface is down.</span></label></li>
-</ul>
-<button type="button" id="resetChecklist-5">Reset checklist</button>
-</section>
-<section id="sec-10">
-<h2>10. What I could not verify</h2>
-
-<p><strong>Foundation depth</strong>, which decides whether underpinning enters the scope and therefore whether this is a €10,000 project or a €35,000 one. Only a trial pit resolves it. Everything in <a href="#sec-4-4">§4.4</a> and <a href="#sec-5">§5</a> is conditional on it.</p>
-
-<p><strong>Your measurements.</strong> The 1.3m rise is approximate by your own description, and the 3.2m driveway width is my assumption, not a measurement. The gradient, the cut depths, the wall areas and every area-based cost move with them.</p>
-
-<p><strong>Whether the Elroq has a parking lock — now resolved as “no”.</strong> Confirmed from the car itself: the drive selector rocker offers only R, N and D/B, with park on a separate ⓟ button that is the electric parking brake. This matches the forum reports, though I still found nothing in Škoda documentation that states it outright. The practical consequence — the parking brake is the sole holding device, so chock the wheels — is in <a href="#sec-6">§6</a>.</p>
-
-<p><strong>The exact parking-brake gradient requirement</strong> for your vehicle category. Sources cite 18% for ECE R13 and 8% for R13-H and I could not establish which governs. The practical conclusion — that 19.1% is at or beyond the design point, so chock the wheels — holds either way.</p>
-
-<p><strong>Per-variant Elroq figures.</strong> The specification lists clearance as 186/182/170mm and wheelbase as 2765/2766/2769mm across five variants without mapping each to a variant. I have used the most favourable, which is also the most likely for the 60.</p>
-
-<p><strong>The 2026 amendment, checked indirectly.</strong> S.I. 338 of 2026, effective 27 July 2026, amended the exempted development classes. I confirmed from the Department’s circular and two local authority summaries that it covers extensions (40m² to 45m²), dormer boxes and roof lights, subdivision, auxiliary dwellings, external wall insulation, heat pumps, cycle and bin storage, and garden structures (25m² to 30m²) — none of which touch Class 5, Class 6 or Article 9. I could not read the statutory instrument directly; both irishstatutebook.ie and the gov.ie publication page returned HTTP 403. The Class 5, Class 6 and Article 9 wording quoted here is from the Department’s unofficial consolidation of the 2001–2021 regulations. Before committing money, have a solicitor or planning consultant confirm against the current consolidated text.</p>
-
-<p><strong>The original 2006 permission.</strong> I have not seen it. Article 9(1)(a)(i) disapplies exemptions where works would contravene a condition attached to a permission, so a condition on boundary treatment or levels could in principle remove the Class 5 and Class 6 reliefs the bay depends on. This is a free lookup on DCC’s planning register and worth doing before the engineer’s visit.</p>
-
-<p><strong>Where DCC measures the 3.6m dishing width</strong> — across the full block, or at the flat lip. Your block is 3.3m at its full width and narrower at the lip, so if the limit is taken at the lip the available gain is larger than 30cm. I could not establish the convention from DCC’s published material. Ask the inspector; it directly determines whether the €611.60 is worth spending.</p>
-
-<p><strong>How much the dish misalignment actually costs you.</strong> The effective opening on an angled approach is set by where the dish and the gate overlap, which needs a site measurement of the offset and the approach line to quantify. This is the one entrance question with real value left in it, and it is a question for the inspector rather than a desk exercise.</p>
-
-<p><strong>No Irish gradient standard.</strong> As set out in <a href="#sec-4-1">§4.1</a>. I searched specifically and found none; an engineer may know of NSAI or TII guidance I did not surface.</p>
-
-<p><strong>Retaining wall rates</strong> come from a single contractor’s published guide and exclude design, drainage and excavation. The €350–€600/m² Dublin figure is an order of magnitude, not a budget. One source quotes a much wider €250–€1,500/m² range across wall types.</p>
-</section>
-<section id="appendix-a-sources">
-<h2>Appendix A — Sources</h2>
-
-<p><strong>Legislation and statutory guidance</strong></p>
-
-<ul>
-  <li>Planning and Development Regulations 2001 (S.I. 600/2001), Schedule 2 Part 1 Classes 5, 6 and Article 9 — <a href="https://assets.gov.ie/121548/a045e28d-c0fe-430a-a35f-d35a31df72c1.pdf" target="_blank" rel="noopener noreferrer">Department’s unofficial consolidation 2001–2021</a></li>
-  <li><a href="https://www.gov.ie/en/department-of-housing-local-government-and-heritage/publications/planning-and-development-exempted-development-act-of-2000-regulations-2026-si-338-of-2026/" target="_blank" rel="noopener noreferrer">Planning and Development (Exempted Development (Act of 2000)) Regulations 2026, S.I. 338 of 2026</a> — and <a href="https://www.sdcc.ie/en/services/planning-building-control/exempted-development/new-exemptions-27-07-26/" target="_blank" rel="noopener noreferrer">South Dublin County Council’s summary</a></li>
-  <li><a href="https://www.galway.ie/sites/default/files/2025-07/Technical%20Guidance%20Document%20Part%20M%20-%20Access%20and%20Use%202022.pdf" target="_blank" rel="noopener noreferrer">Technical Guidance Document M — Access and Use, 2022</a></li>
-</ul>
-
-<p><strong>Dublin City Council</strong></p>
-
-<ul>
-  <li><a href="https://www.dublincity.ie/sites/default/files/2022-12/Final%20Vol%202-Appendices.pdf" target="_blank" rel="noopener noreferrer">Dublin City Development Plan 2022–2028, Volume 2 Appendices</a> — Appendix 5 §4.1–4.3.7 governs front garden parking and vehicular entrances</li>
-  <li><a href="https://www.dublincity.ie/residential/transportation/road-maintenance-services/modify-footpath-allow-vehicular-access" target="_blank" rel="noopener noreferrer">Apply to Modify a Footpath for Vehicular Access</a> — dishing process, fees, affidavit route</li>
-  <li><a href="https://www.dublincity.ie/sites/default/files/media/file-uploads/2018-05/Parking_Cars_in_Front_Gardens_Advisory_Booklet.pdf" target="_blank" rel="noopener noreferrer">Parking Cars in Front Gardens — advisory booklet</a> — good on boundary treatment, out of date on the 3.6m width</li>
-  <li><a href="https://www.dublincity.ie/residential/planning/planning-applications/find-planning-application/exempt-development/exempted-development-section-5" target="_blank" rel="noopener noreferrer">Section 5 Declaration</a> — €80, four weeks, if you want the bay’s exempt status in writing</li>
-  <li><a href="https://data.smartdublin.ie/dataset/administrative-areas-dcc" target="_blank" rel="noopener noreferrer">Administrative Areas DCC</a></li>
-</ul>
-
-<p><strong>Vehicle</strong></p>
-
-<ul>
-  <li><a href="https://cdn.skoda-storyboard.com/2024/10/TD-Elroq-en_f8cdb684.pdf" target="_blank" rel="noopener noreferrer">Škoda Elroq technical specifications</a> — manufacturer’s data, 15 December 2025</li>
-  <li><a href="https://en.wikipedia.org/wiki/Breakover_angle" target="_blank" rel="noopener noreferrer">Breakover angle</a> and <a href="https://en.wikipedia.org/wiki/Parking_pawl" target="_blank" rel="noopener noreferrer">parking pawl</a></li>
-  <li><a href="https://unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2018/R013hr4e.pdf" target="_blank" rel="noopener noreferrer">UN Regulation No. 13-H</a> — parking brake gradient requirements, not conclusively resolved</li>
-</ul>
-
-<p><strong>EV charging</strong></p>
-
-<ul>
-  <li><a href="https://www.seai.ie/grants/electric-vehicle-grants/electric-vehicle-charging" target="_blank" rel="noopener noreferrer">SEAI Electric Vehicle Charging Grants</a></li>
-  <li><a href="https://www.ges.ie/blog/seai-ev-charger-grant-ireland-2026" target="_blank" rel="noopener noreferrer">SEAI EV Charger Grant 2026</a> and <a href="https://volteire.ie/seai-grant/eligibility" target="_blank" rel="noopener noreferrer">eligibility</a></li>
-  <li><a href="https://homeevcharger.ie/ev-charger-installation-cost-ireland/" target="_blank" rel="noopener noreferrer">EV charger installation cost, Ireland 2026</a></li>
-</ul>
-
-<p><strong>Costs</strong> — trade sources, treat as indicative</p>
-
-<ul>
-  <li><a href="https://elmlandscaping.ie/new-driveway-cost-ireland/" target="_blank" rel="noopener noreferrer">New driveway cost in Ireland 2026</a></li>
-  <li><a href="https://planningpermissionireland.ie/self-build-hub/driveway-cost-ireland" target="_blank" rel="noopener noreferrer">Driveway cost in Ireland 2026, and the SuDS rule</a> — source for circular BSCR 5/08</li>
-  <li><a href="https://fpsstructures.com/retaining-walls/concrete-retaining-wall-cost-in-ireland-city-wise-breakdown/" target="_blank" rel="noopener noreferrer">Concrete retaining wall cost in Ireland</a></li>
-  <li><a href="https://buildtech.ie/blog/residential-structural-engineer-cost-ireland" target="_blank" rel="noopener noreferrer">Residential structural engineer cost in Ireland 2026</a></li>
-  <li><a href="https://banrach.ie/subsidence-cost-ireland/" target="_blank" rel="noopener noreferrer">Subsidence and underpinning costs in Ireland</a></li>
-  <li><a href="https://greyhound.ie/how-much-does-skip-hire-cost-in-dublin/" target="_blank" rel="noopener noreferrer">Skip hire cost Dublin 2026</a></li>
-  <li><a href="https://www.checkatrade.com/blog/cost-guides/soakaway-cost/" target="_blank" rel="noopener noreferrer">Soakaway and garden drainage costs</a></li>
-</ul>
-</section>
-
-
+    <div class="unlock-panel" id="unlockPanel">
+      <form id="unlockForm">
+        <p>This page is encrypted. Enter the passphrase to view it.</p>
+        <label for="passphraseInput" class="visually-hidden">Passphrase</label>
+        <input type="password" id="passphraseInput" name="passphrase" autocomplete="off" placeholder="Passphrase">
+        <button type="submit">Unlock</button>
+      </form>
+      <p class="unlock-error" id="unlockError" role="alert" hidden></p>
     </div>
+
+    <div class="content" id="contentSlot"></div>
   </main>
 </div>
 
@@ -1226,7 +490,7 @@
 (function () {
   "use strict";
 
-  /* ---------- Theme toggle ---------- */
+  /* ---------- Theme toggle (works while locked) ---------- */
   var THEME_KEY = "research-driveway-theme";
   var root = document.documentElement;
   var themeToggle = document.getElementById("themeToggle");
@@ -1250,78 +514,200 @@
     });
   }
 
-  /* ---------- Mobile TOC disclosure ---------- */
-  var tocToggle = document.getElementById("tocToggle");
-  var tocList = document.getElementById("tocList");
-  if (tocToggle && tocList) {
-    tocToggle.addEventListener("click", function () {
-      var open = tocList.classList.toggle("open");
-      tocToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  /* ---------- Behaviour that depends on decrypted content ----------
+     Runs once, after the unlock panel successfully injects the dateline,
+     TOC and content — none of this exists in the DOM until then. */
+  function initPageBehaviors() {
+    var tocToggle = document.getElementById("tocToggle");
+    var tocList = document.getElementById("tocList");
+    if (tocToggle && tocList) {
+      tocToggle.addEventListener("click", function () {
+        var open = tocList.classList.toggle("open");
+        tocToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    }
+
+    var main = document.querySelector("main");
+    var sections = main.querySelectorAll("section[id]");
+    var linkBySectionId = {};
+    var tocLinks = [];
+
+    document.querySelectorAll("#tocList a[href^=\"#\"]").forEach(function (a) {
+      var id = a.getAttribute("href").slice(1);
+      linkBySectionId[id] = a;
+      tocLinks.push(a);
+    });
+
+    if ("IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var link = linkBySectionId[entry.target.id];
+          if (!link) return;
+          tocLinks.forEach(function (l) { l.classList.remove("active"); });
+          link.classList.add("active");
+        });
+      }, { rootMargin: "0px 0px -80% 0px", threshold: 0 });
+
+      sections.forEach(function (sec) { observer.observe(sec); });
+    }
+
+    var CHECK_KEY = "research-driveway-checklist";
+
+    function loadChecklist() {
+      try {
+        return JSON.parse(localStorage.getItem(CHECK_KEY)) || {};
+      } catch (e) {
+        return {};
+      }
+    }
+
+    function saveChecklist(state) {
+      localStorage.setItem(CHECK_KEY, JSON.stringify(state));
+    }
+
+    var boxes = document.querySelectorAll(".checklist input[type=checkbox]");
+    if (boxes.length) {
+      var state = loadChecklist();
+      boxes.forEach(function (box) {
+        if (state[box.dataset.key]) box.checked = true;
+        box.addEventListener("change", function () {
+          var s = loadChecklist();
+          s[box.dataset.key] = box.checked;
+          saveChecklist(s);
+        });
+      });
+    }
+
+    document.querySelectorAll("button[id^='resetChecklist']").forEach(function (resetBtn) {
+      resetBtn.addEventListener("click", function () {
+        localStorage.removeItem(CHECK_KEY);
+        boxes.forEach(function (box) { box.checked = false; });
+      });
     });
   }
 
-  /* ---------- Scroll-spy ----------
-     The TOC is emitted statically by the generator, so derive the link map
-     from the rendered #tocList anchors instead of building the list here. */
-  var main = document.querySelector("main");
-  var sections = main.querySelectorAll("section[id]");
-  var linkBySectionId = {};
-  var tocLinks = [];
+  /* ---------- Decryption ---------- */
+  var SALT_B64 = "ziKzhxXLhmjF9ZPtd2l9Bw==";
+  var IV_B64 = "azQxlvgGcVd4N4qQ";
+  var CIPHERTEXT_B64 = "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";
+  var PBKDF2_ITERATIONS = 600000;
+  var PASSPHRASE_KEY = "research-driveway-key";
 
-  document.querySelectorAll("#tocList a[href^=\"#\"]").forEach(function (a) {
-    var id = a.getAttribute("href").slice(1);
-    linkBySectionId[id] = a;
-    tocLinks.push(a);
-  });
-
-  if ("IntersectionObserver" in window) {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        var link = linkBySectionId[entry.target.id];
-        if (!link) return;
-        tocLinks.forEach(function (l) { l.classList.remove("active"); });
-        link.classList.add("active");
-      });
-    }, { rootMargin: "0px 0px -80% 0px", threshold: 0 });
-
-    sections.forEach(function (sec) { observer.observe(sec); });
+  function utf8Bytes(str) {
+    return new TextEncoder().encode(str);
   }
 
-  /* ---------- Supplier checklist persistence ---------- */
-  var CHECK_KEY = "research-driveway-checklist";
+  function base64ToBytes(b64) {
+    var binary = atob(b64);
+    var bytes = new Uint8Array(binary.length);
+    for (var i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+    return bytes;
+  }
 
-  function loadChecklist() {
+  async function decryptPayload(passphrase) {
+    var salt = base64ToBytes(SALT_B64);
+    var iv = base64ToBytes(IV_B64);
+    var ciphertext = base64ToBytes(CIPHERTEXT_B64);
+
+    var baseKey = await crypto.subtle.importKey(
+      "raw", utf8Bytes(passphrase), "PBKDF2", false, ["deriveKey"]
+    );
+    var key = await crypto.subtle.deriveKey(
+      { name: "PBKDF2", salt: salt, iterations: PBKDF2_ITERATIONS, hash: "SHA-256" },
+      baseKey,
+      { name: "AES-GCM", length: 256 },
+      false,
+      ["decrypt"]
+    );
+    var plainBuf = await crypto.subtle.decrypt({ name: "AES-GCM", iv: iv }, key, ciphertext);
+    return new TextDecoder().decode(plainBuf);
+  }
+
+  function applyPayload(payload) {
+    if (payload.heading) {
+      var h = document.getElementById("headingSlot");
+      h.innerHTML = payload.heading;
+      document.title = h.textContent;
+    }
+    document.getElementById("datelineSlot").innerHTML = payload.dateline || "";
+    document.getElementById("tocList").innerHTML = payload.toc || "";
+    document.getElementById("contentSlot").innerHTML = payload.content || "";
+    initPageBehaviors();
+  }
+
+  function showError(msg) {
+    var el = document.getElementById("unlockError");
+    if (!el) return;
+    el.textContent = msg;
+    el.hidden = false;
+  }
+
+  function hideError() {
+    var el = document.getElementById("unlockError");
+    if (el) el.hidden = true;
+  }
+
+  function showFatal(msg) {
+    var panel = document.getElementById("unlockPanel");
+    if (panel) panel.innerHTML = "<p>" + msg + "</p>";
+  }
+
+  async function tryUnlock(passphrase, opts) {
+    var silent = !!(opts && opts.silent);
     try {
-      return JSON.parse(localStorage.getItem(CHECK_KEY)) || {};
+      var json = await decryptPayload(passphrase);
+      var payload = JSON.parse(json);
+      applyPayload(payload);
+      try { sessionStorage.setItem(PASSPHRASE_KEY, passphrase); } catch (e) { /* ignore */ }
+      document.body.classList.remove("locked");
+      return true;
     } catch (e) {
-      return {};
+      if (!silent) showError("That passphrase didn't work.");
+      return false;
     }
   }
 
-  function saveChecklist(state) {
-    localStorage.setItem(CHECK_KEY, JSON.stringify(state));
-  }
-
-  var boxes = document.querySelectorAll(".checklist input[type=checkbox]");
-  if (boxes.length) {
-    var state = loadChecklist();
-    boxes.forEach(function (box) {
-      if (state[box.dataset.key]) box.checked = true;
-      box.addEventListener("change", function () {
-        var s = loadChecklist();
-        s[box.dataset.key] = box.checked;
-        saveChecklist(s);
-      });
+  function wireUnlockForm() {
+    var form = document.getElementById("unlockForm");
+    var input = document.getElementById("passphraseInput");
+    if (!form || !input) return;
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      hideError();
+      tryUnlock(input.value, { silent: false });
     });
   }
 
-  document.querySelectorAll("button[id^='resetChecklist']").forEach(function (resetBtn) {
-    resetBtn.addEventListener("click", function () {
-      localStorage.removeItem(CHECK_KEY);
-      boxes.forEach(function (box) { box.checked = false; });
-    });
-  });
+  function passphraseFromHash() {
+    var hash = window.location.hash;
+    if (hash.indexOf("#k=") === 0) return decodeURIComponent(hash.slice(3));
+    return null;
+  }
+
+  async function boot() {
+    if (!window.crypto || !window.crypto.subtle) {
+      showFatal("This page needs to be viewed over https:// or from localhost — Web Crypto is unavailable here.");
+      return;
+    }
+
+    wireUnlockForm();
+
+    var hashPass = passphraseFromHash();
+    if (hashPass) {
+      var unlockedFromHash = await tryUnlock(hashPass, { silent: true });
+      if (unlockedFromHash) {
+        history.replaceState(null, "", window.location.pathname + window.location.search);
+        return;
+      }
+    }
+
+    var stored = null;
+    try { stored = sessionStorage.getItem(PASSPHRASE_KEY); } catch (e) { /* ignore */ }
+    if (stored) await tryUnlock(stored, { silent: true });
+  }
+
+  boot();
 })();
 </script>
 

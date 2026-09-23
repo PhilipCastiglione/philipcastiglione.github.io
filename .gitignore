@@ -1,3 +1,5 @@
+.research-key
+research/*/_research.md
 _site
 .sass-cache
 .jekyll-cache

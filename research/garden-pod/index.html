@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Garden Pods in Ireland — Research</title>
+<title>garden-pod — protected research</title>
 <style>
   :root {
     color-scheme: light;
@@ -238,6 +238,52 @@
     padding-left: 1rem;
   }
 
+  /* ---------- Unlock panel ---------- */
+  .unlock-panel {
+    display: none;
+    max-width: 26rem;
+    margin: 2rem auto 3rem;
+    padding: 1.5rem 1.75rem;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-align: center;
+  }
+  body.locked .unlock-panel { display: block; }
+  body.locked .sidebar,
+  body.locked .top-controls { display: none; }
+  body.locked main { margin-left: 0; }
+  .unlock-panel p { margin: 0 0 1rem; }
+  .unlock-panel input[type="password"] {
+    font: inherit;
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    margin-bottom: 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--text);
+  }
+  .unlock-panel button {
+    font: inherit;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid var(--link);
+    border-radius: 6px;
+    background: var(--link);
+    color: var(--bg);
+    cursor: pointer;
+  }
+  .unlock-error {
+    color: var(--callout-warn-border);
+    background: var(--callout-warn-bg);
+    border: 1px solid var(--callout-warn-border);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    margin-top: 0.85rem;
+    font-size: 0.9rem;
+  }
+
   section { margin-bottom: 2.75rem; }
   section section { margin-bottom: 2rem; }
 
@@ -389,7 +435,7 @@
 
   /* ---------- Print ---------- */
   @media print {
-    .sidebar, .toc-toggle, #themeToggle, [id^="resetChecklist"], .top-controls { display: none !important; }
+    .sidebar, .toc-toggle, #themeToggle, [id^="resetChecklist"], .top-controls, .unlock-panel { display: none !important; }
     main { margin-left: 0; }
     .table-wrap { --table-bleed: 0px; }
     body { background: #fff; color: #000; }
@@ -408,25 +454,12 @@
   }
 </style>
 </head>
-<body>
+<body class="locked">
 <div class="page">
   <nav class="sidebar" aria-label="Table of contents">
     <button class="toc-toggle" id="tocToggle" aria-expanded="false" aria-controls="tocList">Contents ▾</button>
     <h2 class="toc-heading">Contents</h2>
-    <ul id="tocList">
-<li class="toc-h2"><a href="#sec-1">1. Bottom line</a></li>
-<li class="toc-h2"><a href="#sec-2">2. How to actually choose a supplier</a></li>
-<li class="toc-h2"><a href="#sec-3">3. The candidates — Republic of Ireland, turnkey</a></li>
-<li class="toc-h2"><a href="#sec-4">4. Reputation, reviews and company health</a></li>
-<li class="toc-h2"><a href="#sec-5">5. Designing it for both gym and office</a></li>
-<li class="toc-h2"><a href="#sec-6">6. What differs between the offerings</a></li>
-<li class="toc-h2"><a href="#sec-7">7. Regulations — settled, for reference</a></li>
-<li class="toc-h2"><a href="#sec-8">8. What to talk to suppliers about</a></li>
-<li class="toc-h2"><a href="#sec-9">9. What I could not verify</a></li>
-<li class="toc-h2"><a href="#appendix-a-budget-and-self-finish-options-ruled-out">Appendix A — Budget and self-finish options (ruled out)</a></li>
-<li class="toc-h2"><a href="#appendix-b-suppliers-outside-the-republic-ruled-out">Appendix B — Suppliers outside the Republic (ruled out)</a></li>
-<li class="toc-h2"><a href="#sources">Sources</a></li>
-    </ul>
+    <ul id="tocList"></ul>
   </nav>
 
   <main>
@@ -435,833 +468,21 @@
     </div>
 
     <header class="page-header">
-      <h1>Garden Pods in Ireland — Research</h1>
-      <p class="dateline">Researched 2026-09-18, revised 2026-09-19.</p>
+      <h1 id="headingSlot"></h1>
+      <div id="datelineSlot"></div>
     </header>
 
-    <div class="content">
-
-    
-<p><strong>Brief:</strong> a ~12m² (3m × 4m) garden pod in Raheny, Dublin 5, usable as <strong>either a gym or an office</strong>, with the use likely to switch between the two over the years. 3-bed semi-detached / end-of-terrace, built 2006. 43.075m² of rear open space. The pod goes to the rear, on the footprint of an existing 1.8m × 2.35m shed that is being removed. No plumbing. Wired Ethernet wanted.</p>
-
-<p><strong>Constraints that shape everything below:</strong></p>
-
-<ul>
-  <li><strong>Turnkey only.</strong> No managing contractors, no self-finishing, no coordinating a base with one firm and a build with another. One supplier, one contract, one number.</li>
-  <li><strong>Republic of Ireland suppliers only.</strong> No cross-border currency, VAT or consumer-rights complications.</li>
-  <li><strong>No maintenance-hungry materials.</strong> Nothing that needs oiling or re-treating on a cycle.</li>
-  <li><strong>Quality and reliability beat price.</strong> A 10–15% price difference is noise across a structure that will sit in the garden for decades. Degradation, defects, and a supplier who disappears are not.</li>
-</ul>
-
-<p>Options that fail these filters are in the appendices, kept for reference and price context.</p>
-<section id="sec-1">
-<h2>1. Bottom line</h2>
-
-<p>A turnkey 12m² pod from a Republic of Ireland supplier lands at <strong>€18,000–€22,000</strong> for a well-specified one, rising to €25k+ for premium. Published prices at almost exactly your size:</p>
-
-<div class="table-wrap">
-<table>
-  <thead>
-    <tr>
-      <th>Supplier</th>
-      <th>Size</th>
-      <th>Price</th>
-      <th>Cladding</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Loghouse</td>
-      <td>4.2m × 3.4m</td>
-      <td>€18,490 inc VAT</td>
-      <td>Timber</td>
-    </tr>
-    <tr>
-      <td>Sprout Pod</td>
-      <td>4m × 3m</td>
-      <td>€18,500</td>
-      <td>Larch / teak / composite / cedar</td>
-    </tr>
-    <tr>
-      <td>My Garden Room</td>
-      <td>4.5m × 3m</td>
-      <td>€19,600 turnkey</td>
-      <td>Fibre cement — no maintenance</td>
-    </tr>
-    <tr>
-      <td>Garden Office Solutions</td>
-      <td>12.5m²</td>
-      <td>€19,950</td>
-      <td>Canadian red cedar</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<p>Budget for <strong>€20k–24k all-in</strong> once the shed demolition, the electrical supply run from the house, and Ethernet are in the number. Get every quote as a single inclusive-of-VAT figure so you’re comparing like with like — see <a href="#sec-8">§8</a>.</p>
-<div class="callout callout-key">
-<p class="callout-label">✓ Key finding</p>
-<p><strong>Regulatory position: clear.</strong> At 12m² you’re inside every threshold with room to spare, and there’s nothing to file, notify or certify apart from the electrical work. Full detail in <a href="#sec-7">§7</a> if you want it; you don’t need to act on any of it.</p>
-</div>
-
-<p><strong>The real decision is which supplier, not which pod.</strong> The products in the €18–20k turnkey band are more alike than different. What varies is whether the company turns up, finishes properly, and is still answering the phone in three years. <a href="#sec-2">§2</a> is about how to judge that.</p>
-</section>
-<section id="sec-2">
-<h2>2. How to actually choose a supplier</h2>
-
-<p>The hard part is that every supplier’s website looks the same: nice photos, happy testimonials, no prices, no specifics. Here’s a way to get past that without spending weeks on it.</p>
-<section id="sec-2-1">
-<h3>2.1 Hard filters — apply these first, they eliminate most of the market</h3>
-
-<p>Bin a supplier immediately if any of these are true. No further thought required.</p>
-
-<ul>
-  <li>Not based in the Republic of Ireland.</li>
-  <li>Not genuinely turnkey — if the base, the fit-out or the electrical connection is “your side”, it’s out.</li>
-  <li>Won’t take on removing the existing shed as part of their scope (<a href="#sec-6-1">§6.1</a> explains why this matters more than it sounds).</li>
-  <li>Cladding requires periodic oiling or re-treating <em>and</em> they can’t offer a maintenance-free alternative.</li>
-  <li>Asks for full payment up front, or offers a notable discount conditional on paying early or in full.</li>
-  <li>Won’t put the quote, the scope and the warranty in writing.</li>
-</ul>
-</section>
-<section id="sec-2-2">
-<h3>2.2 The quote process is the test</h3>
-<div class="callout callout-key">
-<p class="callout-label">✓ Key finding — the quote process is the test</p>
-<p>This is the single most useful idea in this document. <strong>How a supplier behaves while trying to win your business is the best available predictor of how they’ll behave once they have your deposit</strong> — and it costs you nothing but a few emails to find out.</p>
-</div>
-
-<p>The detailed one-star review of The Pod Factory (<a href="#sec-4">§4</a>) describes a 12-week promise becoming seven months, with replies averaging over two weeks. That behaviour was almost certainly visible during the sales process. Watch for:</p>
-
-<ul>
-  <li><strong>Response time to your first email.</strong> If it takes a week now, it’ll take three when there’s a problem.</li>
-  <li><strong>Do they visit the site, or quote blind?</strong> A site visit means they’ve actually looked at access, ground conditions, and where the cable trench will run. A blind quote means variations later.</li>
-  <li><strong>Is the quote itemised, or one number with no breakdown?</strong> Itemised means they’ve costed the job. A bare number means scope arguments when the shed slab turns out to be thicker than expected.</li>
-  <li><strong>Do they answer a direct question directly?</strong> “What’s the insulation thickness?” should get a number, not “it’s fully insulated to the highest standard”.</li>
-  <li><strong>Do they volunteer problems?</strong> A supplier who says “that base might need extra depth given where the old shed was” is thinking about your job. One who says everything is fine, always, isn’t.</li>
-  <li><strong>Do they push for a quick decision or deposit?</strong> Urgency manufactured by a supplier is a bad sign, and you have no deadline.</li>
-</ul>
-
-<p>Two or three of these going badly is enough to walk away, even from the cheapest quote.</p>
-</section>
-<section id="sec-2-3">
-<h3>2.3 Evidence, ranked by how much it&#39;s worth</h3>
-
-<div class="table-wrap">
-<table>
-  <thead>
-    <tr>
-      <th>Evidence</th>
-      <th>Weight</th>
-      <th>Why</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>How they handle your enquiry (<a href="#sec-2-2">§2.2</a>)</td>
-      <td><strong>Highest</strong></td>
-      <td>First-hand, current, and about <em>your</em> job</td>
-    </tr>
-    <tr>
-      <td>Walking into a showroom and touching a unit</td>
-      <td><strong>High</strong></td>
-      <td>You can judge finish quality yourself in 20 minutes</td>
-    </tr>
-    <tr>
-      <td>Independent reviews with specifics and dates</td>
-      <td><strong>High</strong></td>
-      <td>Especially complaints — they’re more informative than praise</td>
-    </tr>
-    <tr>
-      <td>Years trading + Companies Registration Office filing history</td>
-      <td><strong>Medium-high</strong></td>
-      <td>A supplier who survived 2008 and 2020 is a different proposition to one incorporated in 2023</td>
-    </tr>
-    <tr>
-      <td>Warranty length <strong>relative to company age</strong></td>
-      <td><strong>Medium</strong></td>
-      <td>A 50-year warranty from a 4-year-old company is marketing, not cover</td>
-    </tr>
-    <tr>
-      <td>Published specification detail</td>
-      <td><strong>Low-medium</strong></td>
-      <td>Publishing detail exposes you to comparison, so it’s mildly costly and therefore mildly informative</td>
-    </tr>
-    <tr>
-      <td>Testimonials on their own website</td>
-      <td><strong>Zero</strong></td>
-      <td>Self-selected</td>
-    </tr>
-    <tr>
-      <td>Price</td>
-      <td><strong>Low</strong></td>
-      <td>Only useful for spotting outliers — see below</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</section>
-<section id="sec-2-4">
-<h3>2.4 Where price actually comes in</h3>
-
-<p>Use price twice, and only twice:</p>
-
-<ol>
-  <li><strong>To spot an outlier.</strong> Something 40% below the field isn’t a bargain, it’s a different specification — thinner insulation, no base, no electrical connection, or a shell rather than a finished room. Find out which before dismissing or accepting it.</li>
-  <li><strong>To break a tie</strong> between two suppliers you’re equally happy with.</li>
-</ol>
-
-<p>That’s it. Do not rank on price.</p>
-</section>
-<section id="sec-2-5">
-<h3>2.5 Showrooms — your best substitute for seeing a real install</h3>
-
-<p>You can’t ask a supplier for the addresses of previous customers; handing those out would breach data-protection rules, and any supplier who agreed would be doing the same with your address later.</p>
-
-<p>The legitimate equivalent is a <strong>showroom visit</strong>, and several suppliers have them within easy reach:</p>
-
-<ul>
-  <li><strong>Shanette</strong> — Dublin 12</li>
-  <li><strong>My Garden Room</strong> — showrooms in Dublin, Kildare and Wicklow</li>
-  <li><strong>Loghouse</strong> — Rathcoole, Co. Dublin</li>
-  <li><strong>Steeltech</strong> — Dublin among many locations</li>
-</ul>
-
-<p>You can do two or three in an afternoon. Twenty minutes inside an actual unit tells you more about finish quality, ceiling height, door and window feel, and how solid the thing is than any amount of web research. Push on the walls. Look at the corners and the junction where the roof meets the wall. Ask them to show you the same model you’d be buying, not the top-of-range display piece.</p>
-</section>
-<section id="sec-2-6">
-<h3>2.6 Suggested approach, given you&#39;re time-poor</h3>
-
-<ol>
-  <li>Visit <strong>two showrooms</strong> in one afternoon (Shanette in Dublin 12 and My Garden Room are the easiest pairing).</li>
-  <li>Request quotes from <strong>four</strong> suppliers with the same brief (<a href="#sec-8">§8</a>). Sprout Pod, Loghouse, Modern Garden Rooms and Garden Office Solutions is a reasonable set — see <a href="#sec-3">§3</a> for why.</li>
-  <li>Score them on <a href="#sec-2-2">§2.2</a> behaviour as the quotes come in. Expect one or two to self-eliminate by being slow or evasive.</li>
-  <li>Run the Companies Registration Office check (<a href="#sec-4-3">§4.3</a>) on your final two.</li>
-  <li>Choose on quality, track record and how they’ve dealt with you. Use price to break the tie.</li>
-</ol>
-</section>
-</section>
-<section id="sec-3">
-<h2>3. The candidates — Republic of Ireland, turnkey</h2>
-
-<div class="table-wrap">
-<table>
-  <thead>
-    <tr>
-      <th>Supplier</th>
-      <th>Based</th>
-      <th>Price at ~12m²</th>
-      <th>Construction</th>
-      <th>Cladding &amp; maintenance</th>
-      <th>Notes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Modern Garden Rooms</strong></td>
-      <td>Dublin &amp; Leinster</td>
-      <td>Quote only</td>
-      <td><strong>Deepest published insulation of anyone: 50mm rigid board + 100mm Earthwool in walls, 150mm in the roof, 100mm underfloor</strong></td>
-      <td>Cedar — ask about silvering (<a href="#sec-6-2">§6.2</a>)</td>
-      <td><strong>Trading since 2008 — longest track record in this group.</strong> Claims 5.0 from 100+ Google reviews. Delivered fully finished. No published price or warranty.</td>
-    </tr>
-    <tr>
-      <td><strong>Garden Office Solutions</strong></td>
-      <td>Sallins, Co. Kildare</td>
-      <td><strong>€19,950</strong> (12.5m²)</td>
-      <td>Structural Insulated Panels (SIPs — rigid foam bonded between two boards, strong and airtight for their thickness), triple glazing</td>
-      <td>Canadian red cedar — ask about silvering</td>
-      <td>Best-specified published price at your size. Turnkey including electrical connections, insulation, interior painting. Build phase ~5 days, but reviews report a <strong>3–4 month queue</strong> before starting.</td>
-    </tr>
-    <tr>
-      <td><strong>My Garden Room</strong></td>
-      <td>Showrooms Dublin, Kildare, Wicklow</td>
-      <td><strong>€19,600</strong> turnkey (4.5m × 3m)</td>
-      <td>Heavy-duty timber frame, box-profile steel roof, A+ rated double-glazed unplasticised PVC (uPVC) windows</td>
-      <td><strong>Fibre cement — genuinely zero maintenance</strong></td>
-      <td><strong>Best match for your no-maintenance requirement.</strong> Turnkey explicitly includes the concrete base, electrics, insulation, plastering, painting and flooring. Three showrooms you can visit. Plainer aesthetic is the trade-off.</td>
-    </tr>
-    <tr>
-      <td><strong>Loghouse</strong></td>
-      <td>Rathcoole, Co. Dublin (+ Cork, Athlone)</td>
-      <td><strong>€18,490 inc VAT</strong> (4.2m × 3.4m)</td>
-      <td>ECO Garden Room range; hybrid steel-and-timber panels</td>
-      <td>Timber</td>
-      <td>Google 4.6 on own site. Delivery and assembly included, free to Leinster. Multiple branches suggests real scale. Mentioned favourably on boards.ie for insulation and general feel (<a href="#sec-4-2">§4.2</a>).</td>
-    </tr>
-    <tr>
-      <td><strong>Sprout Pod</strong></td>
-      <td>Republic of Ireland</td>
-      <td><strong>€18,500</strong> (4m × 3m)</td>
-      <td>Steel frame, “full insulation” — depth not published</td>
-      <td>Siberian larch / teak / <strong>composite</strong> / cedar — composite is maintenance-free</td>
-      <td>Fully published price list (€10,300 for 3×2m up to €32,200 for 7×4m), turnkey with sockets, lights, heating and flooring, free nationwide delivery and installation. <strong>Insulation depth unpublished — ask.</strong> No independent reviews found.</td>
-    </tr>
-    <tr>
-      <td><strong>Shanette</strong></td>
-      <td>Dublin 12 + Westmeath showrooms</td>
-      <td>Price list on request</td>
-      <td>100mm galvanised steel frame, Kingspan composite panels in <strong>40/60/80/100mm</strong></td>
-      <td>PVC-coated steel — zero maintenance</td>
-      <td>Standard 4.2m × 3m size fits. boards.ie reports their <strong>80mm spec includes slabbing, plastering, painting and laminate flooring</strong> — that’s turnkey. <strong>Specify 80mm or 100mm, not 40mm.</strong> Showroom in Dublin 12.</td>
-    </tr>
-    <tr>
-      <td><strong>The Garden Pod</strong></td>
-      <td>Dublin</td>
-      <td>Quote only</td>
-      <td>Red cedar, double and triple glazing, heat/cooling units, full insulation</td>
-      <td>Cedar</td>
-      <td>One of your original two links. Publishes almost nothing — no price, no spec detail, no scope, no lead time, no warranty. Estimate by email from dimensions and a photo.</td>
-    </tr>
-    <tr>
-      <td><strong>Concept Modular</strong></td>
-      <td>Republic of Ireland</td>
-      <td>Quote only</td>
-      <td>Galvanised steel frame, aluminium alloy shell, 100mm sprayed polyurethane insulation, low-emissivity double glazing</td>
-      <td>Aluminium — zero maintenance</td>
-      <td><strong>50-year structural warranty</strong>, the longest found. Weigh that against company age (<a href="#sec-2-3">§2.3</a>).</td>
-    </tr>
-    <tr>
-      <td><strong>Garden Room Ireland</strong></td>
-      <td>Dublin</td>
-      <td>€18,000–€60,000</td>
-      <td>Steel pods, manufactured in the UK</td>
-      <td>—</td>
-      <td><strong>25-year exterior guarantee.</strong> Dublin-based company, though units are made in the UK.</td>
-    </tr>
-    <tr>
-      <td><strong>GardenRooms.ie</strong></td>
-      <td>Republic of Ireland</td>
-      <td>€1,700/m² ex VAT; smallest model is 20m² at €32,599 ex VAT</td>
-      <td>Foundations, electrics, plastering, flooring and skirting all genuinely included</td>
-      <td>—</td>
-      <td><strong>Too big and too expensive for a 12m² brief.</strong> Listed because their published extras list is the most transparent pricing in the sector and I’ve used it for the cost benchmarks in <a href="#sec-6">§6</a>.</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</section>
-<section id="sec-4">
-<h2>4. Reputation, reviews and company health</h2>
-<section id="sec-4-1">
-<h3>4.1 The formal review data is thin — that&#39;s the finding</h3>
-
-<p>Most Irish operators have no independent review presence at all. The Google review counts on company websites are self-reported and self-curated, and I could not independently verify them. Where Trustpilot data exists, the samples are tiny. Treat any “5.0 from 100+ reviews” claim on a supplier’s own site as unverified.</p>
-
-<p>What I did find:</p>
-<div class="callout callout-warn">
-<p class="callout-label">⚠ Warning — negative review findings</p>
-<p><strong>The Pod Factory — Trustpilot 3.5, from only 2 reviews.</strong> Two reviews is not a pattern, but the one-star is specific enough to be worth reading: a 12-week promise became nearly seven months; “uncommunicative throughout, answers took 2 weeks+ on average”; the delivered pod had missing fixtures, dents, chips and uneven tiling; the contractor “destroyed our garden” and caused a leaking pipe; scheduled repairs never happened.</p>
-</div>
-<div class="callout callout-warn">
-<p class="callout-label">⚠ Warning — negative review findings</p>
-<p><strong>Gardenhouse24 — Trustpilot 4.0 from 166 reviews</strong> (85% five-star, 7% one-star). This is the only meaningful sample in the sector. Positives: responsive office staff, tidy install crews. The complaints cluster around <strong>aftercare</strong>, which is the failure mode that matters: a cabin that “didn’t survive two winters” with storm roof damage; nearly three months waiting on replacement doors; installation services withdrawn mid-project. (Gardenhouse24 sells log cabin kits rather than turnkey pods — see Appendix A — but the aftercare pattern is instructive.)</p>
-</div>
-
-<p><strong>Better-signalled:</strong> Modern Garden Rooms (since 2008), Loghouse (4.6 Google, multiple branches), Garden Office Solutions (consistently positive, with a queue), GardenRooms.ie (82 five-star Google reviews).</p>
-</section>
-<section id="sec-4-2">
-<h3>4.2 boards.ie — a reading list for you</h3>
-
-<p>boards.ie blocks automated access, so I can’t read these threads. Given how thin the formal review data is, homeowners naming names on a forum is probably the most valuable source available — worth 20–30 minutes of your own reading.</p>
-
-<p><strong>Useful heuristic: the thread ID sorts by recency.</strong> Higher number = more recent. Anything starting <code>20584</code> is roughly the last year or two; <code>20578</code>–<code>20581</code> is older. Start at the top of this list.</p>
-
-<p><strong>Supplier recommendations — start here:</strong></p>
-
-<ul>
-  <li><a href="https://www.boards.ie/discussion/2058430650/garden-room-cost" target="_blank" rel="noopener noreferrer">Garden room cost</a> — <code>2058430650</code>, newest found</li>
-  <li><a href="https://www.boards.ie/discussion/2058429150/garden-office-recommendations" target="_blank" rel="noopener noreferrer">Garden Office recommendations</a> — <code>2058429150</code></li>
-  <li><a href="https://www.boards.ie/discussion/2058426921/garden-office" target="_blank" rel="noopener noreferrer">Garden office</a> — <code>2058426921</code></li>
-  <li><a href="https://www.boards.ie/discussion/2058386397/garden-office-shed-recommendations" target="_blank" rel="noopener noreferrer">Garden Office/Shed recommendations</a> — <code>2058386397</code></li>
-  <li><a href="https://www.boards.ie/discussion/2058286275/garden-room-recommendation" target="_blank" rel="noopener noreferrer">Garden room recommendation</a> — <code>2058286275</code></li>
-  <li><a href="https://www.boards.ie/discussion/2058250061/garden-office-a-few-questions" target="_blank" rel="noopener noreferrer">Garden office — a few questions</a> — <code>2058250061</code></li>
-</ul>
-
-<p><strong>Build quality, insulation and gym use:</strong></p>
-
-<ul>
-  <li><a href="https://www.boards.ie/discussion/2058384607/garden-room-gym-build-opinions" target="_blank" rel="noopener noreferrer">Garden room / Gym build opinions</a> — <code>2058384607</code>, directly on point</li>
-  <li><a href="https://www.boards.ie/discussion/2058352039/garden-room-insulation" target="_blank" rel="noopener noreferrer">Garden Room insulation</a> — <code>2058352039</code></li>
-  <li><a href="https://www.boards.ie/discussion/2058349560/garden-room-kits" target="_blank" rel="noopener noreferrer">Garden Room kits</a> — <code>2058349560</code></li>
-  <li><a href="https://www.boards.ie/discussion/2058075242/my-garden-room-build" target="_blank" rel="noopener noreferrer">My garden Room Build</a> — <code>2058075242</code>, a full build diary</li>
-  <li><a href="https://www.boards.ie/discussion/2057846019/shed-for-home-gym" target="_blank" rel="noopener noreferrer">Shed for home gym</a> — <code>2057846019</code>, older</li>
-</ul>
-
-<p><strong>Electrics:</strong></p>
-
-<ul>
-  <li><a href="https://www.boards.ie/discussion/2058272245/electricity-cable-to-garden-office" target="_blank" rel="noopener noreferrer">Electricity cable to garden office</a> — <code>2058272245</code></li>
-</ul>
-
-<p><strong>What surfaced second-hand from search snippets</strong> — I could not read these in context, so treat as leads to verify rather than findings:</p>
-
-<ul>
-  <li><strong>Shanette</strong> — described as the only supplier offering 80mm insulation, with slabbing, plastering, painting and laminate flooring included. Positive.</li>
-  <li><strong>Loghouse</strong> — “nicer feel and better insulation” than the budget steel options; hybrid panels with a steel back and timber front.</li>
-  <li><strong>Steeltech</strong> — budget-friendly but “looked and felt cheap”, and reported as very busy.</li>
-  <li><strong>Sheds Ireland</strong> — from €7,990 for a 10ft × 10ft including a free concrete base.</li>
-</ul>
-</section>
-<section id="sec-4-3">
-<h3>4.3 Company health — the Companies Registration Office check</h3>
-
-<p>Worth doing on your final two, and it takes about ten minutes.</p>
-
-<p><strong>How it works:</strong> the register is at <a href="https://core.cro.ie" target="_blank" rel="noopener noreferrer">core.cro.ie</a>. <strong>Searching by company name or number is free</strong> and needs no account. The documents themselves — annual returns and the financial statements attached to them — are <strong>paid, per document</strong>.</p>
-
-<p><strong>What to look at, in order:</strong></p>
-
-<ol>
-  <li><strong>Incorporation date.</strong> How long have they actually traded? This is free to check and is the single most useful number. A company trading since 2008 has survived a property crash and a pandemic.</li>
-  <li><strong>Are annual returns filed, and filed on time?</strong> Also free to see. Persistent late filing is a reasonable proxy for a business under strain or badly run.</li>
-  <li><strong>The most recent financial statements</strong>, if you want to pay for one document. Look at net assets and whether directors have loaned money in.</li>
-  <li><strong>Trading name vs registered entity.</strong> Most of these operate under a brand that isn’t the registered company name. The name on your contract and the name on the quote should match a real registered entity — if you can’t find one, ask them directly which company you’d be contracting with.</li>
-</ol>
-
-<p><strong>Important limitation:</strong> filed accounts can already be over a year out of date by the time you read them. Companies get 56 days after their annual return date to file, and the statements themselves can be nine months old at that point. Treat this as one input, not an answer.</p>
-</section>
-<section id="sec-4-4">
-<h3>4.4 Deposits — what&#39;s normal, what&#39;s a red flag, and what protection you have</h3>
-
-<p>You’re not in a position to dictate payment terms to a supplier, and you shouldn’t try. A deposit is normal and reasonable in this trade. The realistic approach is to know what a bad request looks like and simply not use that supplier.</p>
-<div class="callout callout-warn">
-<p class="callout-label">⚠ Warning — deposit risk</p>
-<p><strong>Why it matters:</strong> the pattern to avoid is <strong>DK Windows &amp; Doors</strong> — a Dublin 12 firm trading since 2005, into liquidation in December 2024 having accumulated <strong>€1.5 million in customer deposits</strong>, days after a Black Friday push encouraging large deposits. Customers became unsecured creditors, at the bottom of the queue. One couple faced losing close to €50,000. Nothing garden-room-specific has come to light, but the shape of the risk is identical.</p>
-</div>
-<div class="callout callout-warn">
-<p class="callout-label">⚠ Warning — red flags</p>
-<p><strong>Red flags — walk away:</strong></p>
-<ul>
-  <li>Full payment demanded up front.</li>
-  <li>A meaningful discount conditional on paying early or in full.</li>
-  <li>Pressure to pay a deposit before you have a written quote and scope.</li>
-  <li>No written contract.</li>
-  <li>Cash or bank transfer pushed specifically as a way to get a better price.</li>
-</ul>
-</div>
-<div class="callout callout-action">
-<p class="callout-label">☐ Action — protection you actually have</p>
-<p><strong>The protection you actually have, and it’s better than I first said:</strong> pay by card. The Competition and Consumer Protection Commission confirms that <strong>chargeback applies to Irish debit cards, not just credit cards</strong> — if you pay a deposit by debit or credit card and the business doesn’t deliver, you can ask your bank to reverse the transaction. A bank transfer has no equivalent remedy. So:</p>
-<ul>
-  <li><strong>Pay the deposit by debit card rather than bank transfer</strong>, even if it’s slightly less convenient.</li>
-  <li>Keep the written quote and scope, since a chargeback claim needs evidence of what was promised.</li>
-  <li>Don’t pay the final tranche until the Safe Electric Completion Certificate is in your hands and the snag list is closed.</li>
-</ul>
-</div>
-
-<p>If a supplier won’t take card for a deposit, that’s information too.</p>
-</section>
-</section>
-<section id="sec-5">
-<h2>5. Designing it for both gym and office</h2>
-
-<p>Since the use will switch, the right approach is to spec each aspect for whichever use is more demanding. That costs very little extra and avoids a room that only works one way.</p>
-
-<div class="table-wrap">
-<table>
-  <thead>
-    <tr>
-      <th>Aspect</th>
-      <th>More demanding use</th>
-      <th>Spec for it</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Insulation &amp; heating</strong></td>
-      <td><strong>Office</strong></td>
-      <td>Sitting still for eight hours in January needs far more heat than a workout does. Office use sets the insulation requirement.</td>
-    </tr>
-    <tr>
-      <td><strong>Ventilation</strong></td>
-      <td><strong>Gym</strong></td>
-      <td>Exercise generates heat and moisture fast; a sealed, well-insulated box gets humid and then condenses. Gym use sets the ventilation requirement.</td>
-    </tr>
-    <tr>
-      <td><strong>Ceiling height</strong></td>
-      <td><strong>Gym</strong></td>
-      <td>2.4m internal for overhead lifts — and it makes a much better office than a low one anyway.</td>
-    </tr>
-    <tr>
-      <td><strong>Floor</strong></td>
-      <td><strong>Gym</strong></td>
-      <td>Must take dropped weights without flexing or drumming.</td>
-    </tr>
-    <tr>
-      <td><strong>Glazing</strong></td>
-      <td><strong>Both, differently</strong></td>
-      <td>Office needs glare control; gym wants usable wall space. See below.</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<section id="sec-5-1">
-<h3>5.1 Getting both right</h3>
-
-<p><strong>Ceiling height: 2.4m internal, and confirm it in writing.</strong> Ask for <em>internal floor-to-ceiling</em> height, not wall height and not external height — those are different numbers and suppliers quote whichever flatters them. The budget steel units are 2.1m, which is genuinely tight for anything overhead and impossible to fix later. This is the one dimension with no remedy.</p>
-
-<p><strong>Floor: concrete base, then rubber matting.</strong> A concrete slab handles dropped weights without flex or noise; a timber deck on joists over ground screws is springier and drummier. Rubber matting over the slab can be lifted or covered with a rug when it’s an office. Don’t let anyone fit built-in furniture — it locks in one use.</p>
-
-<p><strong>Ventilation: an openable window plus a small extract fan.</strong> This is the most commonly skipped item and the most common regret. It’s also cheap. The gym case demands it; the office case benefits from it on a warm afternoon.</p>
-
-<p><strong>Glazing: moderate, and think about which way it faces.</strong> A full glass frontage looks great in photos and causes two real problems — glare on monitors, and summer overheating in a small insulated box. It also removes the wall space a gym wants for a rack or mirrors. Ask where the glazing will face relative to the sun, and plan a desk position that isn’t looking into it or backing onto it.</p>
-
-<p><strong>Heating: one panel heater is plenty</strong> at 12m² if the insulation is decent. If the insulation is thin, you pay for that every winter instead. This is the insulation decision showing up as a running cost.</p>
-
-<p><strong>Acoustics — the office case, and it’s not what you’d think.</strong> You don’t need sound isolation from the neighbours; normal construction is fine and that’s what everyone does. What you may notice is the <em>inside</em> of a small hard-surfaced box echoing on video calls. A rug and something soft on one wall fixes it entirely. Worth knowing, not worth engineering.</p>
-
-<p><strong>Power: more sockets than you think, at two heights.</strong> Desk-height sockets for an office, floor-level for gym equipment and a fan. Sockets are cheap now and expensive once the walls are finished. Ethernet is covered in <a href="#sec-7-4">§7.4</a>.</p>
-</section>
-</section>
-<section id="sec-6">
-<h2>6. What differs between the offerings</h2>
-<section id="sec-6-1">
-<h3>6.1 Removing the shed is on the critical path</h3>
-
-<p>The shed (1.8m × 2.35m, about 4.2m²) sits exactly where the pod goes, so its removal isn’t tidying up — it gates the whole job.</p>
-
-<ul>
-  <li><strong>Keep it inside one contract.</strong> If the pod company owns demolition, disposal, base and install as a single scope, there’s no gap for anyone to blame anyone else, and you’re not coordinating it.</li>
-  <li><strong>Ask what’s under it.</strong> A shed of that age very likely sits on a slab or paving. Get breaking it out and removing the spoil explicitly priced, and settle who bears the cost if it’s thicker than expected — that’s the classic mid-job variation. Don’t let anyone build on the old base; a shed slab won’t have the depth, reinforcement or level tolerance a pod needs.</li>
-  <li><strong>Trace the existing electrical supply before anyone digs.</strong> The shed has power of unknown provenance. The electrician should find and isolate it at the board before demolition. Its route may also be the cheapest path for the new cable.</li>
-</ul>
-</section>
-<section id="sec-6-2">
-<h3>6.2 Cladding and maintenance — a correction worth reading</h3>
-
-<p>You said you’d never oil wood, and that’s a reasonable filter. But the picture is more forgiving than “wood = ongoing work”:</p>
-<div class="callout callout-key">
-<p class="callout-label">✓ Key finding — cedar silvering</p>
-<p><strong>Cedar and larch left alone weather to a silver-grey within a few years, and this does not affect durability at all.</strong> Cedar has a 25+ year maintenance-free life. The oiling every 18 months is <strong>purely cosmetic</strong> — it preserves the original honey colour. If you’re happy with silver-grey, cedar is effectively maintenance-free.</p>
-</div>
-
-<ul>
-  <li><strong>Fibre cement</strong> (brands: Cedral, James Hardie) is genuinely zero-maintenance — immune to rot, fungus and insects, no treatment ever, and currently cheaper than cedar. This is the strongest match for your requirement. <strong>My Garden Room</strong> uses it.</li>
-  <li><strong>Composite</strong> holds its chosen colour for years without treatment and doesn’t silver. <strong>Sprout Pod</strong> offers it as an option.</li>
-  <li><strong>PVC-coated steel</strong> (Shanette, and the budget units) needs no painting or treatment.</li>
-</ul>
-
-<p>So the real question to ask a cedar-clad supplier is: <em>“if I never treat this, what does it look like in five years, and does anything fail?”</em> The honest answer is “grey, and no”. Decide whether you’re fine with grey. If not, pick fibre cement or composite and the question disappears.</p>
-</section>
-<section id="sec-6-3">
-<h3>6.3 Insulation — the number to ask for</h3>
-
-<p>Insulation depth is the biggest genuine difference between a room you use in January and one you avoid. Ask for <strong>thickness in millimetres for walls, roof and floor</strong>. It’s a number anyone in the trade can give you on the spot, and it’s directly comparable across suppliers.</p>
-
-<p>Rough scale:</p>
-
-<ul>
-  <li><strong>40mm composite panel</strong> — the budget tier. Fine for storage, thin for all-day winter occupancy.</li>
-  <li><strong>80–100mm</strong> — Shanette’s upper options. A reasonable working standard.</li>
-  <li><strong>150mm</strong> — Modern Garden Rooms’ wall build-up. Approaching a proper house wall.</li>
-  <li><strong>Structural Insulated Panels</strong> — Garden Office Solutions. Perform well for their thickness and are airtight, which makes the ventilation point in <a href="#sec-5-1">§5.1</a> more important, not less.</li>
-</ul>
-
-<p><em>(You may see “U-values” mentioned in the trade — a measure of heat loss where lower is better. Almost nobody in this sector publishes them and asking for them on every component will make you look like hard work. Millimetres of insulation is the practical question.)</em></p>
-</section>
-<section id="sec-6-4">
-<h3>6.4 Scope and cost benchmarks</h3>
-
-<p>Useful for sanity-checking a quote. Most of these should be inside a turnkey number — the point is to make sure they are.</p>
-
-<div class="table-wrap">
-<table>
-  <thead>
-    <tr>
-      <th>Item</th>
-      <th>Benchmark cost</th>
-      <th>Notes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Concrete base</td>
-      <td>€90–150/m² → roughly €1,500–2,500 at 12m²</td>
-      <td>Included in My Garden Room’s turnkey price and GardenRooms.ie’s. Ground screws are an alternative at €1,200–3,000, but a slab is better under dropped weights.</td>
-    </tr>
-    <tr>
-      <td>Electrical supply run from the house</td>
-      <td>~€900 ex VAT published, up to €1,500+</td>
-      <td>Driven by trench length and what it crosses. Paving or a driveway crossing costs significantly more.</td>
-    </tr>
-    <tr>
-      <td>Wired Ethernet</td>
-      <td>~€385 ex VAT</td>
-      <td>Cheap now, expensive later.</td>
-    </tr>
-    <tr>
-      <td>Internal fit-out</td>
-      <td>€5,000–9,000 if not included</td>
-      <td>This is most of the shell-vs-turnkey gap.</td>
-    </tr>
-    <tr>
-      <td>Delivery</td>
-      <td>~€350</td>
-      <td>Often free within Leinster.</td>
-    </tr>
-    <tr>
-      <td>Shed demolition, spoil and skip</td>
-      <td>~€350, more with a slab to break out</td>
-      <td>See <a href="#sec-6-1">§6.1</a>.</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</section>
-<section id="sec-6-5">
-<h3>6.5 Warranties and lead times</h3>
-
-<p><strong>Warranties</strong> are inconsistent and mostly unpublished. The outliers are Concept Modular (50-year structural) and Garden Room Ireland (25-year exterior). Get it in writing with the quote and check what it actually covers — structure only, or also the roof membrane, glazing units and electrics, which are what actually fail. Weigh the length against how long the company has existed.</p>
-
-<p><strong>Lead times</strong> of 10–12 weeks are typical, and Garden Office Solutions runs a 3–4 month queue. You have no deadline, so this is not a constraint — but be suspicious of anyone promising dramatically faster than the field. The Pod Factory complaint was exactly that: 12 weeks promised, seven months delivered.</p>
-</section>
-<section id="sec-6-6">
-<h3>6.6 Design service</h3>
-
-<p>You don’t need one and shouldn’t pay for one. For a 12m² exempt structure there is nothing to design around — no drawings to lodge, no certificates to file. Most suppliers do a free site visit and 3D visuals as part of quoting.</p>
-</section>
-</section>
-<section id="sec-7">
-<h2>7. Regulations — settled, for reference</h2>
-
-<p>Nothing here needs action from you beyond the electrical work in <a href="#sec-7-4">§7.4</a>. Included so the basis is on record.</p>
-<section id="sec-7-1">
-<h3>7.1 Planning — exempt</h3>
-
-<p>Planning and Development Regulations 2001, Schedule 2, Part 1, <strong>Class 3</strong>, as substituted by <strong>S.I. 338/2026</strong>, in force <strong>27 July 2026</strong>. Verbatim conditions:</p>
-<blockquote class="legal">
-<p class="legal-cite">Class 3 conditions (Schedule 2, Part 1, as substituted by S.I. 338/2026)</p>
-<ol>
-  <li>No such structure forward of the front wall of a house.</li>
-  <li>Total area of such structures, taken together with any other such structures previously constructed, shall not exceed <strong>30 square metres</strong>.</li>
-  <li>Shall not reduce private open space reserved exclusively for the occupants, to the rear or to the side, to less than <strong>25 square metres</strong>.</li>
-  <li>External finishes of any structure placed <strong>to the side</strong> of a house (and tiled or slated roof covering) shall conform with those of the house.</li>
-  <li>Height not to exceed <strong>4m</strong> for a tiled or slated pitched roof, or <strong>3m</strong> in any other case.</li>
-  <li>Not to be used for human habitation, nor for keeping pigs, poultry, pigeons, ponies or horses, nor for any purpose other than one incidental to the enjoyment of the house.</li>
-</ol>
-</blockquote>
-<div class="callout callout-key">
-<p class="callout-label">✓ Key finding — exemption headroom</p>
-<p><strong>Applied to you:</strong> 12m² against a 30m² cap, with the shed gone — about 18m² spare. Retained open space 43.075 − 12 = <strong>31.08m²</strong> against a 25m² minimum. Condition 4 doesn’t apply because the pod is to the rear, so <strong>cladding is a free choice</strong>. Comfortable on every count.</p>
-</div>
-<div class="callout callout-warn">
-<p class="callout-label">⚠ Warning — 3m height cap</p>
-<p><strong>The only one to actually watch:</strong> condition 5. A flat or membrane roof caps you at <strong>3m</strong>, not 4m — the 4m allowance applies only to a tiled or slated pitched roof. Confirm the quoted overall height measured from finished ground level including the base. Most pods are 2.5–3m, so this is a check, not a problem.</p>
-</div>
-
-<p>The 2026 instrument also raised the house-extension exemption from 40m² to 45m², and separate instruments created a new <strong>Class 3A</strong> for habitable garden dwellings (32–45m², 14 days’ notice to the council, expires 31 December 2030). Not your use case, but note a Class 3 structure eats into the combined allowance if you ever wanted a granny flat.</p>
-</section>
-<section id="sec-7-2">
-<h3>7.2 Building Regulations — exempt</h3>
-
-<p>Building Regulations 1997, Third Schedule (Exempted Buildings), Class 2 exempts a single-storey detached building ancillary to a dwelling, not exceeding 25m², not exceeding 3m (4m pitched), used for recreational or storage purposes and not for a trade or business.</p>
-
-<p>A 12m² personal gym or a home office for your own use sits comfortably inside this. The trade-or-business condition is aimed at running a business from the building — clients visiting, staff, signage — not at working from home. Garden offices are ubiquitous in Dublin and this is not a live issue.</p>
-
-<p>One quirk worth knowing if you ever scale up: <strong>planning exemption is now 30m² but the Building Regulations exemption is still 25m²</strong>, so a pod between the two would be planning-exempt and Building-Regs-caught. At 12m² you’re inside both.</p>
-</section>
-<section id="sec-7-3">
-<h3>7.3 Commencement notice — not required</h3>
-
-<p>Building Control Regulations 1997, Article 7: commencement notices apply only to buildings to which the Building Regulations apply, and are excluded where the works are exempted development and fire safety certification doesn’t apply. They’re re-applied only to a new dwelling or an extension over 45m².</p>
-<div class="callout callout-key">
-<p class="callout-label">✓ Key finding — no commencement notice required</p>
-<p>A detached 12m² garden pod is neither. <strong>No commencement notice, no filing, no assigned certifier, no fee.</strong></p>
-</div>
-
-<p>Some supplier blogs claim otherwise — they’ve imported the rule for the new Class 3A habitable units.</p>
-</section>
-<section id="sec-7-4">
-<h3>7.4 Electrical — the one part with real obligations</h3>
-
-<ul>
-  <li>This is <strong>“restricted electrical work”</strong> under the Electricity Regulation Act 1999. It must be done by a <strong>Registered Electrical Contractor (REC)</strong> on the Safe Electric scheme, regulated by the Commission for Regulation of Utilities. Unregistered work is a prosecutable offence.</li>
-  <li>The contractor <strong>must issue you a Completion Certificate</strong>. This is your proof the installation meets the National Rules for Electrical Installations. <strong>Get it before final payment.</strong></li>
-  <li>Correct method: a dedicated circuit from the house consumer unit — not a spur off an existing socket — in <strong>steel wire armoured (SWA) cable</strong>, buried 450–600mm on a sand bed with warning tape above, terminating in a <strong>consumer unit inside the pod</strong> with residual-current protection.</li>
-  <li>Your 2006 board probably has a spare way and spare capacity, but it should be confirmed rather than discovered on install day.</li>
-  <li><strong>The existing shed supply is of unknown provenance — treat it as suspect.</strong> Have it tested; don’t let anyone reuse it to save a trench unless it tests clean and is certified.</li>
-</ul>
-
-<p><strong>Ethernet:</strong> run it in the same trench in <strong>separate ducting</strong>, physically separated from the power cable. Pull a spare draw-cord or empty duct at the same time — it costs almost nothing while the trench is open and buys every future option. Retrofitting means digging the garden up again.</p>
-</section>
-<section id="sec-7-5">
-<h3>7.5 Loose ends</h3>
-
-<ul>
-  <li><strong>Drainage.</strong> Your purchase pack should have a certified site layout showing foul and surface-water runs. Worth a glance before fixing the pod position and trench route.</li>
-  <li><strong>Roof runoff.</strong> 12m² is a small volume but needs a destination — a soakaway or the existing surface-water system, not toward a boundary.</li>
-  <li><strong>Home insurance.</strong> Notify your insurer. Outbuildings are often covered only to a sub-limit and gym equipment may need specifying.</li>
-</ul>
-</section>
-</section>
-<section id="sec-8">
-<h2>8. What to talk to suppliers about</h2>
-
-<p>Your list, with the reasoning and a few additions. Send roughly this as the initial enquiry — it’s specific without being an interrogation, and the way it’s answered is itself the test (<a href="#sec-2-2">§2.2</a>).</p>
-
-<p><strong>The brief to give them:</strong></p>
-
-<blockquote>
-  <p>A 3m × 4m garden room in Raheny, Dublin 5, to be used as a gym and/or home office. There’s an existing shed (1.8m × 2.35m) on the spot that needs to come out first. I’d want it turnkey — base, build, fit-out, power and data — and I’m not in a rush.</p>
-</blockquote>
-
-<p><strong>What to ask:</strong></p>
-<ul class="checklist" id="supplierChecklist">
-<li><label><input type="checkbox" data-key="bdc00923"><span><strong>The existing shed.</strong> It’s 1.8m × 2.35m and sits where the pod goes. Can you quote for removing and disposing of it, including breaking out and taking away whatever base is under it? Who carries the cost if that base is thicker than expected?</span></label></li>
-<li><label><input type="checkbox" data-key="63482ad1"><span><strong>Options, with prices and trade-offs.</strong> Windows, doors, cladding, insulation levels, roof type — what are the choices, what does each cost, and what’s the downside of each? <em>(Asking for trade-offs rather than a spec sheet gets you a much more useful conversation, and shows you whether they’ll be straight with you.)</em></span></label></li>
-<li><label><input type="checkbox" data-key="69a7f0d8"><span><strong>Maintenance.</strong> What will this need over the next ten years? Anything that needs treating, oiling or repainting? <em>(You wouldn’t have known about the cedar oiling question otherwise — see <a href="#sec-6-2">§6.2</a>. If they’re vague here, press.)</em></span></label></li>
-<li><label><input type="checkbox" data-key="8ec147aa"><span><strong>A rough cost breakdown, plus one final all-in number including VAT.</strong> <em>(Quotes in this sector are inconsistently ex- and inc-VAT, which is the main reason quotes aren’t comparable. Insisting on one inclusive number solves it. The underlying reason rates vary: construction services are 13.5%, but if materials exceed two-thirds of the price the whole supply goes to 23% — not your problem to solve, just don’t let it make two quotes look different when they aren’t.)</em></span></label></li>
-<li><label><input type="checkbox" data-key="11fe1eec"><span><strong>Warranty</strong> — how long, what does it cover, and is it in writing?</span></label></li>
-<li><label><input type="checkbox" data-key="a3b2cacf"><span><strong>Lead time</strong> — from order to finished, and what’s the queue before you start?</span></label></li>
-<li><label><input type="checkbox" data-key="5a148574"><span><strong>Internal floor-to-ceiling height.</strong> I need 2.4m for overhead lifts. <em>(Insist on internal floor-to-ceiling, not wall height or external height.)</em></span></label></li>
-<li><label><input type="checkbox" data-key="3ca6e692"><span><strong>Ventilation and damp.</strong> It’ll be used as a gym some of the time, so it’ll get warm and humid. How is that handled — openable windows, extract fan, anything else?</span></label></li>
-<li><label><input type="checkbox" data-key="012b3d30"><span><strong>Insulation and heating.</strong> What thickness of insulation in walls, roof and floor? What heating do you fit, and what would it cost to run for full-day winter office use?</span></label></li>
-<li><label><input type="checkbox" data-key="32937acf"><span><strong>Wired Ethernet and power.</strong> I want a network cable as well as power. Is the supply run from the house included, who does the electrical work, and will I get a Safe Electric Completion Certificate? Can you run separate ducting and a spare draw-cord in the same trench?</span></label></li>
-<li><label><input type="checkbox" data-key="5fa710cf"><span><strong>Deposit and payment schedule</strong> — how much, when, and can the deposit be paid by card?</span></label></li>
-</ul>
-<button type="button" id="resetChecklist">Reset checklist</button>
-
-<p>Two things deliberately <em>not</em> on this list: U-values (<a href="#sec-6-3">§6.3</a>) and addresses of previous customers (<a href="#sec-2-5">§2.5</a>).</p>
-</section>
-<section id="sec-9">
-<h2>9. What I could not verify</h2>
-
-<ul>
-  <li><strong>Prices for quote-only suppliers</strong> — Modern Garden Rooms, The Garden Pod, Concept Modular, Shanette. Those cells are blank, not estimated.</li>
-  <li><strong>Google star ratings</strong> — self-reported on company sites. Trustpilot volumes are tiny except Gardenhouse24’s 166.</li>
-  <li><strong>Companies Registration Office filings</strong> — I did no lookups. <a href="#sec-4-3">§4.3</a> is the method; happy to run it on your final two if you want.</li>
-  <li><strong>Insulation depth for Sprout Pod</strong> — unpublished despite their otherwise good price transparency.</li>
-  <li><strong>boards.ie thread contents</strong> — blocked to automated access. The <a href="#sec-4-2">§4.2</a> list is assembled from search results; the supplier mentions there are second-hand and need reading in context.</li>
-  <li><strong>Exact dates on boards.ie threads</strong> — inferred from thread ID ordering, not confirmed.</li>
-</ul>
-</section>
-<section id="appendix-a-budget-and-self-finish-options-ruled-out">
-<h2>Appendix A — Budget and self-finish options (ruled out)</h2>
-
-<p>Kept for price context. All fail the turnkey requirement, and the 2.1m wall heights rule them out for gym use regardless.</p>
-
-<div class="table-wrap">
-<table>
-  <thead>
-    <tr>
-      <th>Supplier</th>
-      <th>Price at ~12m²</th>
-      <th>Why it’s out</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Adman Steel Sheds</strong></td>
-      <td>€11,250 (3m × 4.2m)</td>
-      <td>40mm insulation, <strong>2.1m wall height</strong>, no base, a bare oriented strand board (OSB) floor with no covering, “ready to be connected to mains” — you arrange the connection. 10–12 week lead time. Full price list published.</td>
-    </tr>
-    <tr>
-      <td><strong>Steeltech</strong></td>
-      <td>From €10,490</td>
-      <td>40mm steel composite panel, factory-wired plug-and-play. boards.ie comment: “looked and felt cheap”. Showrooms nationwide including Dublin.</td>
-    </tr>
-    <tr>
-      <td><strong>Urban Garden Sheds</strong></td>
-      <td>€3,350–€11,395 range</td>
-      <td>25mm or 40mm insulation, PVC-coated steel (no painting), <strong>10-year guarantee on frame and cladding</strong>, 84 five-star Google reviews. Shed-grade rather than room-grade; electrical work is an optional extra. Leinster delivery.</td>
-    </tr>
-    <tr>
-      <td><strong>Gardenhouse24 / Summerhouse24</strong></td>
-      <td>~€5,600–6,000 for a 12m² cabin</td>
-      <td>Baltic log cabin kits, not insulated year-round rooms. Not comparable. See the aftercare complaints in <a href="#sec-4-1">§4.1</a>.</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<p><strong>The one worth a second look:</strong> <strong>Shanette</strong> started as a steel shed manufacturer but its 80mm and 100mm specifications include slabbing, plastering, painting and flooring — which makes it genuinely turnkey. It’s in the main list in <a href="#sec-3">§3</a> for that reason. Just don’t let anyone quote you the 40mm version.</p>
-
-<p>The useful number from this tier: <strong>My Garden Room publishes both a shell price (€9,550) and a turnkey price (€19,600) for the same 4.5m × 3m unit.</strong> That €10,000 gap is what turnkey actually costs, and it’s why shell prices aren’t comparable to finished ones.</p>
-</section>
-<section id="appendix-b-suppliers-outside-the-republic-ruled-out">
-<h2>Appendix B — Suppliers outside the Republic (ruled out)</h2>
-
-<p>Excluded on your instruction to avoid cross-border complications. Noted because the specifications are competitive, in case that ever changes.</p>
-
-<div class="table-wrap">
-<table>
-  <thead>
-    <tr>
-      <th>Supplier</th>
-      <th>Based</th>
-      <th>Price</th>
-      <th>Notes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Berko Pod Systems</strong></td>
-      <td>Dungiven, Co. Derry</td>
-      <td>“Belvedere” 3.2m × 3.4m at £12,500 + 20% VAT</td>
-      <td>Strong spec for the money: light gauge steel frame, 150mm twin insulation (100mm wool + 50mm rigid board), membrane roof, drylined and painted, <strong>full electrical package including a smart heater and network cable</strong>, ground screws available instead of a slab. ~10 week lead time. Sterling pricing, UK VAT, and their site still cites the superseded 25m² exemption.</td>
-    </tr>
-    <tr>
-      <td><strong>Outer Space Pods</strong></td>
-      <td>Strabane, Co. Tyrone</td>
-      <td>Not published</td>
-      <td>Glass reinforced plastic (GRP) with Structural Insulated Panels; 30 years in GRP fabrication. No published prices or specifications at all.</td>
-    </tr>
-    <tr>
-      <td><strong>CG Joinery</strong></td>
-      <td>Co. Down</td>
-      <td>Not published</td>
-      <td>Surfaced on boards.ie as “a level above Steeltech” with a finish preferred to Loghouse. Second-hand.</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</section>
-<section id="sources">
-<h2>Sources</h2>
-
-<p><strong>Primary legislation and official guidance</strong></p>
-
-<ul>
-  <li><a href="https://www.irishstatutebook.ie/eli/2026/si/338/made/en/print" target="_blank" rel="noopener noreferrer">S.I. 338/2026 — Planning and Development (Exempted Development) Regulations 2026</a></li>
-  <li><a href="https://www.irishstatutebook.ie/eli/1997/si/497/made/en/print" target="_blank" rel="noopener noreferrer">Building Regulations 1997 (S.I. 497/1997)</a></li>
-  <li><a href="https://revisedacts.lawreform.ie/eli/1997/si/496/revised/en/html" target="_blank" rel="noopener noreferrer">Building Control Regulations 1997 — revised and consolidated</a></li>
-  <li><a href="https://www.sdcc.ie/en/services/planning-building-control/exempted-development/new-exemptions-27-07-26/" target="_blank" rel="noopener noreferrer">South Dublin County Council — new exemptions from 27 July 2026</a></li>
-  <li><a href="https://www.revenue.ie/en/vat/vat-on-services/two-thirds-rule/index.aspx" target="_blank" rel="noopener noreferrer">Revenue — the two-thirds rule for VAT on services</a></li>
-  <li><a href="https://safeelectric.ie/help-advice/completion-certificates/" target="_blank" rel="noopener noreferrer">Safe Electric — Completion Certificates</a></li>
-  <li><a href="https://www.ccpc.ie/consumer-advice/consumer-rights/buying-goods/disputed-card-transactions-chargeback" target="_blank" rel="noopener noreferrer">Competition and Consumer Protection Commission (CCPC) — disputed card transactions and chargeback</a></li>
-  <li><a href="https://www.ccpc.ie/consumer-advice/consumer-rights/buying-goods/companies-going-out-of-business" target="_blank" rel="noopener noreferrer">CCPC — companies going out of business</a></li>
-  <li><a href="https://cro.ie/services-and-help/access-to-cro-data/" target="_blank" rel="noopener noreferrer">Companies Registration Office — access to data</a></li>
-</ul>
-
-<p><strong>Suppliers</strong></p>
-
-<ul>
-  <li><a href="https://quote.sproutpod.ie/shop/" target="_blank" rel="noopener noreferrer">Sprout Pod price list</a></li>
-  <li><a href="https://gardenofficesolutions.ie/" target="_blank" rel="noopener noreferrer">Garden Office Solutions</a></li>
-  <li><a href="https://www.mygardenroom.ie/garden-rooms" target="_blank" rel="noopener noreferrer">My Garden Room</a></li>
-  <li><a href="https://www.loghouse.ie/garden-room-electrics-ireland/" target="_blank" rel="noopener noreferrer">Loghouse — garden room electrics guide</a></li>
-  <li><a href="https://moderngardenrooms.ie/garden-gym-rooms/" target="_blank" rel="noopener noreferrer">Modern Garden Rooms</a></li>
-  <li><a href="https://shanettesheds.ie/service/garden-rooms/" target="_blank" rel="noopener noreferrer">Shanette</a></li>
-  <li><a href="https://www.thegardenpod.ie/garden-gym-pod.html" target="_blank" rel="noopener noreferrer">The Garden Pod</a></li>
-  <li><a href="https://www.conceptmodular.ie/use-cases/home-gym" target="_blank" rel="noopener noreferrer">Concept Modular</a></li>
-  <li><a href="https://www.gardenrooms.ie/how-much-does-garden-room-cost/" target="_blank" rel="noopener noreferrer">GardenRooms.ie — costs and extras</a></li>
-  <li><a href="https://admansteelsheds.com/sheds/garden-room/" target="_blank" rel="noopener noreferrer">Adman Steel Sheds price list</a></li>
-  <li><a href="https://www.steeltechsheds.ie/products/home-offices/" target="_blank" rel="noopener noreferrer">Steeltech</a></li>
-  <li><a href="https://urbangardensheds.ie/garden-rooms-garden-offices-ireland/" target="_blank" rel="noopener noreferrer">Urban Garden Sheds</a></li>
-</ul>
-
-<p><strong>Reviews and press</strong></p>
-
-<ul>
-  <li><a href="https://ie.trustpilot.com/review/gardenhouse24.ie" target="_blank" rel="noopener noreferrer">Gardenhouse24 on Trustpilot</a></li>
-  <li><a href="https://www.trustpilot.com/review/thepodfactory.ie" target="_blank" rel="noopener noreferrer">The Pod Factory on Trustpilot</a></li>
-  <li><a href="https://www.irishtimes.com/your-money/2024/12/09/customer-fury-as-dublin-windows-company-shuts-with-thousands-in-deposits/" target="_blank" rel="noopener noreferrer">Irish Times — DK Windows &amp; Doors liquidation and customer deposits</a></li>
-</ul>
-</section>
-
-
+    <div class="unlock-panel" id="unlockPanel">
+      <form id="unlockForm">
+        <p>This page is encrypted. Enter the passphrase to view it.</p>
+        <label for="passphraseInput" class="visually-hidden">Passphrase</label>
+        <input type="password" id="passphraseInput" name="passphrase" autocomplete="off" placeholder="Passphrase">
+        <button type="submit">Unlock</button>
+      </form>
+      <p class="unlock-error" id="unlockError" role="alert" hidden></p>
     </div>
+
+    <div class="content" id="contentSlot"></div>
   </main>
 </div>
 
@@ -1269,7 +490,7 @@
 (function () {
   "use strict";
 
-  /* ---------- Theme toggle ---------- */
+  /* ---------- Theme toggle (works while locked) ---------- */
   var THEME_KEY = "research-garden-pod-theme";
   var root = document.documentElement;
   var themeToggle = document.getElementById("themeToggle");
@@ -1293,78 +514,200 @@
     });
   }
 
-  /* ---------- Mobile TOC disclosure ---------- */
-  var tocToggle = document.getElementById("tocToggle");
-  var tocList = document.getElementById("tocList");
-  if (tocToggle && tocList) {
-    tocToggle.addEventListener("click", function () {
-      var open = tocList.classList.toggle("open");
-      tocToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  /* ---------- Behaviour that depends on decrypted content ----------
+     Runs once, after the unlock panel successfully injects the dateline,
+     TOC and content — none of this exists in the DOM until then. */
+  function initPageBehaviors() {
+    var tocToggle = document.getElementById("tocToggle");
+    var tocList = document.getElementById("tocList");
+    if (tocToggle && tocList) {
+      tocToggle.addEventListener("click", function () {
+        var open = tocList.classList.toggle("open");
+        tocToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    }
+
+    var main = document.querySelector("main");
+    var sections = main.querySelectorAll("section[id]");
+    var linkBySectionId = {};
+    var tocLinks = [];
+
+    document.querySelectorAll("#tocList a[href^=\"#\"]").forEach(function (a) {
+      var id = a.getAttribute("href").slice(1);
+      linkBySectionId[id] = a;
+      tocLinks.push(a);
+    });
+
+    if ("IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var link = linkBySectionId[entry.target.id];
+          if (!link) return;
+          tocLinks.forEach(function (l) { l.classList.remove("active"); });
+          link.classList.add("active");
+        });
+      }, { rootMargin: "0px 0px -80% 0px", threshold: 0 });
+
+      sections.forEach(function (sec) { observer.observe(sec); });
+    }
+
+    var CHECK_KEY = "research-garden-pod-checklist";
+
+    function loadChecklist() {
+      try {
+        return JSON.parse(localStorage.getItem(CHECK_KEY)) || {};
+      } catch (e) {
+        return {};
+      }
+    }
+
+    function saveChecklist(state) {
+      localStorage.setItem(CHECK_KEY, JSON.stringify(state));
+    }
+
+    var boxes = document.querySelectorAll(".checklist input[type=checkbox]");
+    if (boxes.length) {
+      var state = loadChecklist();
+      boxes.forEach(function (box) {
+        if (state[box.dataset.key]) box.checked = true;
+        box.addEventListener("change", function () {
+          var s = loadChecklist();
+          s[box.dataset.key] = box.checked;
+          saveChecklist(s);
+        });
+      });
+    }
+
+    document.querySelectorAll("button[id^='resetChecklist']").forEach(function (resetBtn) {
+      resetBtn.addEventListener("click", function () {
+        localStorage.removeItem(CHECK_KEY);
+        boxes.forEach(function (box) { box.checked = false; });
+      });
     });
   }
 
-  /* ---------- Scroll-spy ----------
-     The TOC is emitted statically by the generator, so derive the link map
-     from the rendered #tocList anchors instead of building the list here. */
-  var main = document.querySelector("main");
-  var sections = main.querySelectorAll("section[id]");
-  var linkBySectionId = {};
-  var tocLinks = [];
+  /* ---------- Decryption ---------- */
+  var SALT_B64 = "HZxPu4fFNqJhBNBU5oD1Pw==";
+  var IV_B64 = "vF3pMOf//zWKlxi1";
+  var CIPHERTEXT_B64 = "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";
+  var PBKDF2_ITERATIONS = 600000;
+  var PASSPHRASE_KEY = "research-garden-pod-key";
 
-  document.querySelectorAll("#tocList a[href^=\"#\"]").forEach(function (a) {
-    var id = a.getAttribute("href").slice(1);
-    linkBySectionId[id] = a;
-    tocLinks.push(a);
-  });
-
-  if ("IntersectionObserver" in window) {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        var link = linkBySectionId[entry.target.id];
-        if (!link) return;
-        tocLinks.forEach(function (l) { l.classList.remove("active"); });
-        link.classList.add("active");
-      });
-    }, { rootMargin: "0px 0px -80% 0px", threshold: 0 });
-
-    sections.forEach(function (sec) { observer.observe(sec); });
+  function utf8Bytes(str) {
+    return new TextEncoder().encode(str);
   }
 
-  /* ---------- Supplier checklist persistence ---------- */
-  var CHECK_KEY = "research-garden-pod-checklist";
+  function base64ToBytes(b64) {
+    var binary = atob(b64);
+    var bytes = new Uint8Array(binary.length);
+    for (var i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+    return bytes;
+  }
 
-  function loadChecklist() {
+  async function decryptPayload(passphrase) {
+    var salt = base64ToBytes(SALT_B64);
+    var iv = base64ToBytes(IV_B64);
+    var ciphertext = base64ToBytes(CIPHERTEXT_B64);
+
+    var baseKey = await crypto.subtle.importKey(
+      "raw", utf8Bytes(passphrase), "PBKDF2", false, ["deriveKey"]
+    );
+    var key = await crypto.subtle.deriveKey(
+      { name: "PBKDF2", salt: salt, iterations: PBKDF2_ITERATIONS, hash: "SHA-256" },
+      baseKey,
+      { name: "AES-GCM", length: 256 },
+      false,
+      ["decrypt"]
+    );
+    var plainBuf = await crypto.subtle.decrypt({ name: "AES-GCM", iv: iv }, key, ciphertext);
+    return new TextDecoder().decode(plainBuf);
+  }
+
+  function applyPayload(payload) {
+    if (payload.heading) {
+      var h = document.getElementById("headingSlot");
+      h.innerHTML = payload.heading;
+      document.title = h.textContent;
+    }
+    document.getElementById("datelineSlot").innerHTML = payload.dateline || "";
+    document.getElementById("tocList").innerHTML = payload.toc || "";
+    document.getElementById("contentSlot").innerHTML = payload.content || "";
+    initPageBehaviors();
+  }
+
+  function showError(msg) {
+    var el = document.getElementById("unlockError");
+    if (!el) return;
+    el.textContent = msg;
+    el.hidden = false;
+  }
+
+  function hideError() {
+    var el = document.getElementById("unlockError");
+    if (el) el.hidden = true;
+  }
+
+  function showFatal(msg) {
+    var panel = document.getElementById("unlockPanel");
+    if (panel) panel.innerHTML = "<p>" + msg + "</p>";
+  }
+
+  async function tryUnlock(passphrase, opts) {
+    var silent = !!(opts && opts.silent);
     try {
-      return JSON.parse(localStorage.getItem(CHECK_KEY)) || {};
+      var json = await decryptPayload(passphrase);
+      var payload = JSON.parse(json);
+      applyPayload(payload);
+      try { sessionStorage.setItem(PASSPHRASE_KEY, passphrase); } catch (e) { /* ignore */ }
+      document.body.classList.remove("locked");
+      return true;
     } catch (e) {
-      return {};
+      if (!silent) showError("That passphrase didn't work.");
+      return false;
     }
   }
 
-  function saveChecklist(state) {
-    localStorage.setItem(CHECK_KEY, JSON.stringify(state));
-  }
-
-  var boxes = document.querySelectorAll(".checklist input[type=checkbox]");
-  if (boxes.length) {
-    var state = loadChecklist();
-    boxes.forEach(function (box) {
-      if (state[box.dataset.key]) box.checked = true;
-      box.addEventListener("change", function () {
-        var s = loadChecklist();
-        s[box.dataset.key] = box.checked;
-        saveChecklist(s);
-      });
+  function wireUnlockForm() {
+    var form = document.getElementById("unlockForm");
+    var input = document.getElementById("passphraseInput");
+    if (!form || !input) return;
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      hideError();
+      tryUnlock(input.value, { silent: false });
     });
   }
 
-  document.querySelectorAll("button[id^='resetChecklist']").forEach(function (resetBtn) {
-    resetBtn.addEventListener("click", function () {
-      localStorage.removeItem(CHECK_KEY);
-      boxes.forEach(function (box) { box.checked = false; });
-    });
-  });
+  function passphraseFromHash() {
+    var hash = window.location.hash;
+    if (hash.indexOf("#k=") === 0) return decodeURIComponent(hash.slice(3));
+    return null;
+  }
+
+  async function boot() {
+    if (!window.crypto || !window.crypto.subtle) {
+      showFatal("This page needs to be viewed over https:// or from localhost — Web Crypto is unavailable here.");
+      return;
+    }
+
+    wireUnlockForm();
+
+    var hashPass = passphraseFromHash();
+    if (hashPass) {
+      var unlockedFromHash = await tryUnlock(hashPass, { silent: true });
+      if (unlockedFromHash) {
+        history.replaceState(null, "", window.location.pathname + window.location.search);
+        return;
+      }
+    }
+
+    var stored = null;
+    try { stored = sessionStorage.getItem(PASSPHRASE_KEY); } catch (e) { /* ignore */ }
+    if (stored) await tryUnlock(stored, { silent: true });
+  }
+
+  boot();
 })();
 </script>
 
