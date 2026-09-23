@@ -18,11 +18,16 @@ Deploy by merging to master and pushing to GitHub.
 
 Write markdown; the HTML is generated. Never hand-edit the HTML.
 
+This repo is public, so research content is never committed in plaintext.
+`index.html` embeds it as AES-256-GCM ciphertext, decrypted client-side by a
+passphrase the reader supplies.
+
 ```
 research/<project-slug>/
-  _research.md    source of truth — the only file you edit
-  index.html      GENERATED, committed, served at /research/<project-slug>/
-  _artifacts/     optional, for other stored files
+  _research.md      source of truth — the only file you edit, gitignored
+  _research.md.enc  GENERATED, committed — encrypted _research.md
+  index.html        GENERATED, committed, served at /research/<project-slug>/
+  _artifacts/       optional, for other stored files
 ```
 
 Regenerate after editing the markdown:
@@ -30,6 +35,15 @@ Regenerate after editing the markdown:
 ```sh
 bundle exec ruby _script/build-research.rb <project-slug>   # or no args for all
 bundle exec ruby _script/build-research.rb --check          # exit 1 if stale
+```
+
+The passphrase comes from the `RESEARCH_KEY` env var, else the gitignored
+`.research-key` file at the repo root; it lives in a password manager. A
+fresh clone has neither `_research.md` nor `.research-key` — recover the
+markdown from the committed `.enc` file once you have the passphrase:
+
+```sh
+bundle exec ruby _script/build-research.rb --decrypt <project-slug>
 ```
 
 Output is committed because GitHub Pages builds with its own fixed gem set and
@@ -42,25 +56,9 @@ than extending them, which would publish the Gemfile.
 
 ### Markdown conventions
 
-| Write                         | Get                                             |
-| ----------------------------- | ----------------------------------------------- |
-| `# Title`                     | page heading and `<title>`                      |
-| first paragraph after the `#` | the context dateline                            |
-| `## 2. Regulations`           | section `sec-2`, listed in the contents sidebar |
-| `### 2.1 Planning`            | subsection `sec-2-1`, **not** in the contents   |
-| `### Group A — Steel sheds`   | subsection with a slugified id                  |
-| `> [!KEY] optional label`     | green "✓ Key finding" callout                   |
-| `> [!WARNING] optional label` | orange "⚠ Warning" callout                      |
-| `> [!ACTION] optional label`  | blue "☐ Action" callout                         |
-| `> [!LEGAL] citation text`    | monospace legal quote with that citation        |
-| `- [ ] item`                  | checkbox, remembered in the browser             |
-| a table                       | wrapped so it scrolls on mobile                 |
-
-Numbered headings get `sec-N` / `sec-N-M` ids, so cross-references are stable:
-write `[§2.1](#sec-2-1)`, which also works when reading the markdown on GitHub.
-
-Callout bodies follow blockquote rules — a blank line inside one needs its own
-`>`. Headings are plain text, so `**bold**` in a heading shows the asterisks.
+Callouts, legal quotes, checklists, section ids and `§` cross-references are
+documented in `.claude/skills/research-page/SKILL.md`, which is also what agents
+working in this repo load. Kept in one place so the two cannot drift.
 
 The generated page carries `<meta name="robots" content="noindex, nofollow">`,
 and the `defaults:` block in `_config.yml` keeps `research/` out of `sitemap.xml`.

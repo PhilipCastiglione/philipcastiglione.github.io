@@ -16,12 +16,23 @@ will be overwritten. Edit `research/<slug>/_research.md` and regenerate:
 bundle exec ruby _script/build-research.rb <slug>
 ```
 
-Adding research: create `research/<slug>/_research.md`, run the generator, and
-commit both files. The markdown conventions — callouts, legal quotes,
-checklists, section ids and cross-references — are documented under "Research
-projects" in README.md. Read that before writing a research page; plain markdown
-works, but the conventions are what produce the callouts and the sidebar
-contents.
+The repo is public, so `_research.md` is gitignored — the generator encrypts it
+client-side (AES-256-GCM, PBKDF2) into the committed `_research.md.enc` and into
+`index.html` itself. It needs a passphrase: `RESEARCH_KEY` env var, else the
+gitignored `.research-key` file at the repo root; the real passphrase lives in
+a password manager, not in this repo. On a fresh clone, recover the markdown
+from the committed `.enc` file:
+
+```sh
+bundle exec ruby _script/build-research.rb --decrypt <slug>
+```
+
+Commit `index.html` and `_research.md.enc`, never `_research.md`.
+
+**Before writing or editing any research page, use the `research-page` skill.**
+It carries the markdown conventions — callouts, legal quotes, checklists,
+section ids and cross-references — that produce the callouts and the sidebar
+contents. Plain markdown builds, but silently loses all of that.
 
 Keep prose in the markdown. Presentation belongs in
 `_script/research-template.html`, which all research pages share.

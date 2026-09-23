@@ -238,6 +238,52 @@
     padding-left: 1rem;
   }
 
+  /* ---------- Unlock panel ---------- */
+  .unlock-panel {
+    display: none;
+    max-width: 26rem;
+    margin: 2rem auto 3rem;
+    padding: 1.5rem 1.75rem;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-align: center;
+  }
+  body.locked .unlock-panel { display: block; }
+  body.locked .sidebar,
+  body.locked .top-controls { display: none; }
+  body.locked main { margin-left: 0; }
+  .unlock-panel p { margin: 0 0 1rem; }
+  .unlock-panel input[type="password"] {
+    font: inherit;
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    margin-bottom: 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--text);
+  }
+  .unlock-panel button {
+    font: inherit;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid var(--link);
+    border-radius: 6px;
+    background: var(--link);
+    color: var(--bg);
+    cursor: pointer;
+  }
+  .unlock-error {
+    color: var(--callout-warn-border);
+    background: var(--callout-warn-bg);
+    border: 1px solid var(--callout-warn-border);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    margin-top: 0.85rem;
+    font-size: 0.9rem;
+  }
+
   section { margin-bottom: 2.75rem; }
   section section { margin-bottom: 2rem; }
 
@@ -389,7 +435,7 @@
 
   /* ---------- Print ---------- */
   @media print {
-    .sidebar, .toc-toggle, #themeToggle, [id^="resetChecklist"], .top-controls { display: none !important; }
+    .sidebar, .toc-toggle, #themeToggle, [id^="resetChecklist"], .top-controls, .unlock-panel { display: none !important; }
     main { margin-left: 0; }
     .table-wrap { --table-bleed: 0px; }
     body { background: #fff; color: #000; }
@@ -408,14 +454,12 @@
   }
 </style>
 </head>
-<body>
+<body class="locked">
 <div class="page">
   <nav class="sidebar" aria-label="Table of contents">
     <button class="toc-toggle" id="tocToggle" aria-expanded="false" aria-controls="tocList">Contents ▾</button>
     <h2 class="toc-heading">Contents</h2>
-    <ul id="tocList">
-{{TOC}}
-    </ul>
+    <ul id="tocList"></ul>
   </nav>
 
   <main>
@@ -424,15 +468,21 @@
     </div>
 
     <header class="page-header">
-      <h1>{{HEADING}}</h1>
-      {{DATELINE}}
+      <h1 id="headingSlot">{{HEADING}}</h1>
+      <div id="datelineSlot"></div>
     </header>
 
-    <div class="content">
-
-    {{CONTENT}}
-
+    <div class="unlock-panel" id="unlockPanel">
+      <form id="unlockForm">
+        <p>This page is encrypted. Enter the passphrase to view it.</p>
+        <label for="passphraseInput" class="visually-hidden">Passphrase</label>
+        <input type="password" id="passphraseInput" name="passphrase" autocomplete="off" placeholder="Passphrase">
+        <button type="submit">Unlock</button>
+      </form>
+      <p class="unlock-error" id="unlockError" role="alert" hidden></p>
     </div>
+
+    <div class="content" id="contentSlot"></div>
   </main>
 </div>
 
@@ -440,7 +490,7 @@
 (function () {
   "use strict";
 
-  /* ---------- Theme toggle ---------- */
+  /* ---------- Theme toggle (works while locked) ---------- */
   var THEME_KEY = "{{THEME_KEY}}";
   var root = document.documentElement;
   var themeToggle = document.getElementById("themeToggle");
@@ -464,78 +514,200 @@
     });
   }
 
-  /* ---------- Mobile TOC disclosure ---------- */
-  var tocToggle = document.getElementById("tocToggle");
-  var tocList = document.getElementById("tocList");
-  if (tocToggle && tocList) {
-    tocToggle.addEventListener("click", function () {
-      var open = tocList.classList.toggle("open");
-      tocToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  /* ---------- Behaviour that depends on decrypted content ----------
+     Runs once, after the unlock panel successfully injects the dateline,
+     TOC and content — none of this exists in the DOM until then. */
+  function initPageBehaviors() {
+    var tocToggle = document.getElementById("tocToggle");
+    var tocList = document.getElementById("tocList");
+    if (tocToggle && tocList) {
+      tocToggle.addEventListener("click", function () {
+        var open = tocList.classList.toggle("open");
+        tocToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    }
+
+    var main = document.querySelector("main");
+    var sections = main.querySelectorAll("section[id]");
+    var linkBySectionId = {};
+    var tocLinks = [];
+
+    document.querySelectorAll("#tocList a[href^=\"#\"]").forEach(function (a) {
+      var id = a.getAttribute("href").slice(1);
+      linkBySectionId[id] = a;
+      tocLinks.push(a);
+    });
+
+    if ("IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var link = linkBySectionId[entry.target.id];
+          if (!link) return;
+          tocLinks.forEach(function (l) { l.classList.remove("active"); });
+          link.classList.add("active");
+        });
+      }, { rootMargin: "0px 0px -80% 0px", threshold: 0 });
+
+      sections.forEach(function (sec) { observer.observe(sec); });
+    }
+
+    var CHECK_KEY = "{{STORAGE_KEY}}";
+
+    function loadChecklist() {
+      try {
+        return JSON.parse(localStorage.getItem(CHECK_KEY)) || {};
+      } catch (e) {
+        return {};
+      }
+    }
+
+    function saveChecklist(state) {
+      localStorage.setItem(CHECK_KEY, JSON.stringify(state));
+    }
+
+    var boxes = document.querySelectorAll(".checklist input[type=checkbox]");
+    if (boxes.length) {
+      var state = loadChecklist();
+      boxes.forEach(function (box) {
+        if (state[box.dataset.key]) box.checked = true;
+        box.addEventListener("change", function () {
+          var s = loadChecklist();
+          s[box.dataset.key] = box.checked;
+          saveChecklist(s);
+        });
+      });
+    }
+
+    document.querySelectorAll("button[id^='resetChecklist']").forEach(function (resetBtn) {
+      resetBtn.addEventListener("click", function () {
+        localStorage.removeItem(CHECK_KEY);
+        boxes.forEach(function (box) { box.checked = false; });
+      });
     });
   }
 
-  /* ---------- Scroll-spy ----------
-     The TOC is emitted statically by the generator, so derive the link map
-     from the rendered #tocList anchors instead of building the list here. */
-  var main = document.querySelector("main");
-  var sections = main.querySelectorAll("section[id]");
-  var linkBySectionId = {};
-  var tocLinks = [];
+  /* ---------- Decryption ---------- */
+  var SALT_B64 = "{{SALT_B64}}";
+  var IV_B64 = "{{IV_B64}}";
+  var CIPHERTEXT_B64 = "{{CIPHERTEXT_B64}}";
+  var PBKDF2_ITERATIONS = {{PBKDF2_ITERATIONS}};
+  var PASSPHRASE_KEY = "{{PASSPHRASE_KEY}}";
 
-  document.querySelectorAll("#tocList a[href^=\"#\"]").forEach(function (a) {
-    var id = a.getAttribute("href").slice(1);
-    linkBySectionId[id] = a;
-    tocLinks.push(a);
-  });
-
-  if ("IntersectionObserver" in window) {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        var link = linkBySectionId[entry.target.id];
-        if (!link) return;
-        tocLinks.forEach(function (l) { l.classList.remove("active"); });
-        link.classList.add("active");
-      });
-    }, { rootMargin: "0px 0px -80% 0px", threshold: 0 });
-
-    sections.forEach(function (sec) { observer.observe(sec); });
+  function utf8Bytes(str) {
+    return new TextEncoder().encode(str);
   }
 
-  /* ---------- Supplier checklist persistence ---------- */
-  var CHECK_KEY = "{{STORAGE_KEY}}";
+  function base64ToBytes(b64) {
+    var binary = atob(b64);
+    var bytes = new Uint8Array(binary.length);
+    for (var i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+    return bytes;
+  }
 
-  function loadChecklist() {
+  async function decryptPayload(passphrase) {
+    var salt = base64ToBytes(SALT_B64);
+    var iv = base64ToBytes(IV_B64);
+    var ciphertext = base64ToBytes(CIPHERTEXT_B64);
+
+    var baseKey = await crypto.subtle.importKey(
+      "raw", utf8Bytes(passphrase), "PBKDF2", false, ["deriveKey"]
+    );
+    var key = await crypto.subtle.deriveKey(
+      { name: "PBKDF2", salt: salt, iterations: PBKDF2_ITERATIONS, hash: "SHA-256" },
+      baseKey,
+      { name: "AES-GCM", length: 256 },
+      false,
+      ["decrypt"]
+    );
+    var plainBuf = await crypto.subtle.decrypt({ name: "AES-GCM", iv: iv }, key, ciphertext);
+    return new TextDecoder().decode(plainBuf);
+  }
+
+  function applyPayload(payload) {
+    if (payload.heading) {
+      var h = document.getElementById("headingSlot");
+      h.innerHTML = payload.heading;
+      document.title = h.textContent;
+    }
+    document.getElementById("datelineSlot").innerHTML = payload.dateline || "";
+    document.getElementById("tocList").innerHTML = payload.toc || "";
+    document.getElementById("contentSlot").innerHTML = payload.content || "";
+    initPageBehaviors();
+  }
+
+  function showError(msg) {
+    var el = document.getElementById("unlockError");
+    if (!el) return;
+    el.textContent = msg;
+    el.hidden = false;
+  }
+
+  function hideError() {
+    var el = document.getElementById("unlockError");
+    if (el) el.hidden = true;
+  }
+
+  function showFatal(msg) {
+    var panel = document.getElementById("unlockPanel");
+    if (panel) panel.innerHTML = "<p>" + msg + "</p>";
+  }
+
+  async function tryUnlock(passphrase, opts) {
+    var silent = !!(opts && opts.silent);
     try {
-      return JSON.parse(localStorage.getItem(CHECK_KEY)) || {};
+      var json = await decryptPayload(passphrase);
+      var payload = JSON.parse(json);
+      applyPayload(payload);
+      try { sessionStorage.setItem(PASSPHRASE_KEY, passphrase); } catch (e) { /* ignore */ }
+      document.body.classList.remove("locked");
+      return true;
     } catch (e) {
-      return {};
+      if (!silent) showError("That passphrase didn't work.");
+      return false;
     }
   }
 
-  function saveChecklist(state) {
-    localStorage.setItem(CHECK_KEY, JSON.stringify(state));
-  }
-
-  var boxes = document.querySelectorAll(".checklist input[type=checkbox]");
-  if (boxes.length) {
-    var state = loadChecklist();
-    boxes.forEach(function (box) {
-      if (state[box.dataset.key]) box.checked = true;
-      box.addEventListener("change", function () {
-        var s = loadChecklist();
-        s[box.dataset.key] = box.checked;
-        saveChecklist(s);
-      });
+  function wireUnlockForm() {
+    var form = document.getElementById("unlockForm");
+    var input = document.getElementById("passphraseInput");
+    if (!form || !input) return;
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      hideError();
+      tryUnlock(input.value, { silent: false });
     });
   }
 
-  document.querySelectorAll("button[id^='resetChecklist']").forEach(function (resetBtn) {
-    resetBtn.addEventListener("click", function () {
-      localStorage.removeItem(CHECK_KEY);
-      boxes.forEach(function (box) { box.checked = false; });
-    });
-  });
+  function passphraseFromHash() {
+    var hash = window.location.hash;
+    if (hash.indexOf("#k=") === 0) return decodeURIComponent(hash.slice(3));
+    return null;
+  }
+
+  async function boot() {
+    if (!window.crypto || !window.crypto.subtle) {
+      showFatal("This page needs to be viewed over https:// or from localhost — Web Crypto is unavailable here.");
+      return;
+    }
+
+    wireUnlockForm();
+
+    var hashPass = passphraseFromHash();
+    if (hashPass) {
+      var unlockedFromHash = await tryUnlock(hashPass, { silent: true });
+      if (unlockedFromHash) {
+        history.replaceState(null, "", window.location.pathname + window.location.search);
+        return;
+      }
+    }
+
+    var stored = null;
+    try { stored = sessionStorage.getItem(PASSPHRASE_KEY); } catch (e) { /* ignore */ }
+    if (stored) await tryUnlock(stored, { silent: true });
+  }
+
+  boot();
 })();
 </script>
 

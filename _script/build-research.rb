@@ -4,11 +4,15 @@
 require "kramdown"
 require "digest"
 require "cgi"
+require "openssl"
+require "base64"
+require "json"
 
 SCRIPT_DIR = __dir__
 REPO_ROOT = File.expand_path("..", SCRIPT_DIR)
 RESEARCH_DIR = File.join(REPO_ROOT, "research")
 TEMPLATE_PATH = File.join(SCRIPT_DIR, "research-template.html")
+RESEARCH_KEY_PATH = File.join(REPO_ROOT, ".research-key")
 
 HEADING_RE = /\A(\d+(?:\.\d+)*)\.?\s/
 CALLOUT_START_RE = /\A>\s*\[!(KEY|WARNING|ACTION|LEGAL)\]\s*(.*)\z/
@@ -29,6 +33,10 @@ CALLOUT_CLASSES = {
   "WARNING" => "callout-warn",
   "ACTION" => "callout-action"
 }.freeze
+
+PBKDF2_ITERATIONS = 600_000
+AES_KEY_LEN = 32
+GCM_TAG_LEN = 16
 
 def html_escape(text)
   CGI.escapeHTML(text)
@@ -205,68 +213,210 @@ def parse_research_markdown(src)
   }
 end
 
-def build_html(md_src, slug, template)
+# Salt/iv are derived from slug+plaintext (not random) so re-encrypting
+# unchanged content is byte-identical and `--check` stays meaningful.
+def derive_salt(slug, plaintext)
+  Digest::SHA256.digest("research-salt:#{slug}\0#{plaintext}")[0, 16]
+end
+
+def derive_iv(slug, plaintext)
+  Digest::SHA256.digest("research-iv:#{slug}\0#{plaintext}")[0, 12]
+end
+
+def derive_key(passphrase, salt)
+  OpenSSL::PKCS5.pbkdf2_hmac(passphrase, salt, PBKDF2_ITERATIONS, AES_KEY_LEN, OpenSSL::Digest.new("SHA256"))
+end
+
+def encrypt_payload(plaintext, slug, passphrase)
+  salt = derive_salt(slug, plaintext)
+  iv = derive_iv(slug, plaintext)
+  key = derive_key(passphrase, salt)
+
+  cipher = OpenSSL::Cipher.new("aes-256-gcm")
+  cipher.encrypt
+  cipher.key = key
+  cipher.iv = iv
+  ciphertext = cipher.update(plaintext) + cipher.final
+  { salt: salt, iv: iv, ciphertext: ciphertext + cipher.auth_tag }
+end
+
+def decrypt_payload(salt, iv, blob, passphrase)
+  key = derive_key(passphrase, salt)
+  tag = blob[-GCM_TAG_LEN, GCM_TAG_LEN]
+  ciphertext = blob[0...-GCM_TAG_LEN]
+
+  cipher = OpenSSL::Cipher.new("aes-256-gcm")
+  cipher.decrypt
+  cipher.key = key
+  cipher.iv = iv
+  cipher.auth_tag = tag
+  cipher.update(ciphertext) + cipher.final
+end
+
+def serialize_enc(enc)
+  JSON.generate(
+    "salt" => Base64.strict_encode64(enc[:salt]),
+    "iv" => Base64.strict_encode64(enc[:iv]),
+    "ciphertext" => Base64.strict_encode64(enc[:ciphertext])
+  )
+end
+
+def parse_enc(src)
+  data = JSON.parse(src)
+  {
+    salt: Base64.strict_decode64(data.fetch("salt")),
+    iv: Base64.strict_decode64(data.fetch("iv")),
+    ciphertext: Base64.strict_decode64(data.fetch("ciphertext"))
+  }
+end
+
+def load_passphrase
+  env_key = ENV["RESEARCH_KEY"]
+  return env_key.strip if env_key && !env_key.strip.empty?
+
+  if File.exist?(RESEARCH_KEY_PATH)
+    file_key = File.read(RESEARCH_KEY_PATH).strip
+    return file_key unless file_key.empty?
+  end
+
+  abort "error: no research passphrase found. Set RESEARCH_KEY or create #{RESEARCH_KEY_PATH}."
+end
+
+def research_passphrase
+  @research_passphrase ||= load_passphrase
+end
+
+def build_html(md_src, slug, template, passphrase)
   parsed = parse_research_markdown(md_src)
+  payload_json = JSON.generate(
+    "heading" => parsed[:heading],
+    "dateline" => parsed[:dateline],
+    "toc" => parsed[:toc],
+    "content" => parsed[:content]
+  )
+  enc = encrypt_payload(payload_json, slug, passphrase)
+
+  # Headings can name places the slug doesn't, so they are encrypted too.
+  public_title = "#{slug} — protected research"
 
   replacements = {
-    "{{TITLE}}" => parsed[:heading],
-    "{{HEADING}}" => parsed[:heading],
-    "{{DATELINE}}" => parsed[:dateline],
-    "{{TOC}}" => parsed[:toc],
-    "{{CONTENT}}" => parsed[:content],
+    "{{TITLE}}" => html_escape(public_title),
+    "{{HEADING}}" => "",
     "{{STORAGE_KEY}}" => "research-#{slug}-checklist",
-    "{{THEME_KEY}}" => "research-#{slug}-theme"
+    "{{THEME_KEY}}" => "research-#{slug}-theme",
+    "{{PASSPHRASE_KEY}}" => "research-#{slug}-key",
+    "{{SALT_B64}}" => Base64.strict_encode64(enc[:salt]),
+    "{{IV_B64}}" => Base64.strict_encode64(enc[:iv]),
+    "{{CIPHERTEXT_B64}}" => Base64.strict_encode64(enc[:ciphertext]),
+    "{{PBKDF2_ITERATIONS}}" => PBKDF2_ITERATIONS.to_s
   }
-  template.gsub(/\{\{[A-Z_]+\}\}/) { |token| replacements.fetch(token, token) }
+  template.gsub(/\{\{[A-Z0-9_]+\}\}/) { |token| replacements.fetch(token, token) }
 end
 
 def discover_slugs
-  Dir.glob(File.join(RESEARCH_DIR, "*", "_research.md")).sort.map do |path|
-    File.basename(File.dirname(path))
+  Dir.glob(File.join(RESEARCH_DIR, "*")).select { |p| File.directory?(p) }.sort.filter_map do |dir|
+    slug = File.basename(dir)
+    md_path = File.join(dir, "_research.md")
+    enc_path = File.join(dir, "_research.md.enc")
+
+    if File.exist?(md_path)
+      slug
+    elsif File.exist?(enc_path)
+      warn "note: research/#{slug} has only _research.md.enc — run `--decrypt #{slug}` first, skipping"
+      nil
+    end
   end
+end
+
+def run_decrypt(slug, force)
+  dir = File.join(RESEARCH_DIR, slug)
+  enc_path = File.join(dir, "_research.md.enc")
+  md_path = File.join(dir, "_research.md")
+
+  abort "error: #{enc_path} does not exist" unless File.exist?(enc_path)
+  if File.exist?(md_path) && !force
+    abort "error: #{md_path} already exists; pass --force to overwrite"
+  end
+
+  enc = parse_enc(File.read(enc_path))
+  passphrase = research_passphrase
+
+  begin
+    plaintext = decrypt_payload(enc[:salt], enc[:iv], enc[:ciphertext], passphrase)
+  rescue OpenSSL::Cipher::CipherError
+    abort "error: failed to decrypt research/#{slug}/_research.md.enc — wrong passphrase?"
+  end
+
+  File.write(md_path, plaintext)
+  puts "wrote research/#{slug}/_research.md"
 end
 
 def main
   argv = ARGV.dup
   check_mode = !!argv.delete("--check")
+  force = !!argv.delete("--force")
+
+  if (idx = argv.index("--decrypt"))
+    argv.delete_at(idx)
+    slug = argv.delete_at(idx)
+    abort "error: --decrypt requires a slug argument" unless slug
+    run_decrypt(slug, force)
+    return
+  end
+
   slugs = argv.empty? ? discover_slugs : argv
 
   if slugs.empty?
-    warn "No research/*/_research.md files found."
+    warn "No research/*/_research.md or _research.md.enc files found."
     exit 0
   end
 
   template = File.read(TEMPLATE_PATH)
   out_of_date = []
+  processed = []
 
   slugs.each do |slug|
-    md_path = File.join(RESEARCH_DIR, slug, "_research.md")
-    out_path = File.join(RESEARCH_DIR, slug, "index.html")
+    dir = File.join(RESEARCH_DIR, slug)
+    md_path = File.join(dir, "_research.md")
+    enc_path = File.join(dir, "_research.md.enc")
+    out_path = File.join(dir, "index.html")
 
     unless File.exist?(md_path)
-      abort "error: #{md_path} does not exist"
+      if File.exist?(enc_path)
+        warn "note: research/#{slug} has only _research.md.enc — run `--decrypt #{slug}` first, skipping"
+        next
+      else
+        abort "error: #{md_path} does not exist"
+      end
     end
 
     md_src = File.read(md_path)
+    passphrase = research_passphrase
 
     begin
-      html = build_html(md_src, slug, template)
+      html = build_html(md_src, slug, template, passphrase)
+      enc_json = serialize_enc(encrypt_payload(md_src, slug, passphrase))
     rescue => e
       abort "error: failed to build research/#{slug}: #{e.message}"
     end
 
+    processed << slug
+
     if check_mode
-      current = File.exist?(out_path) ? File.read(out_path) : nil
-      out_of_date << slug if current != html
+      current_html = File.exist?(out_path) ? File.read(out_path) : nil
+      current_enc = File.exist?(enc_path) ? File.read(enc_path) : nil
+      out_of_date << slug if current_html != html || current_enc != enc_json
     else
       File.write(out_path, html)
+      File.write(enc_path, enc_json)
       puts "wrote research/#{slug}/index.html"
+      puts "wrote research/#{slug}/_research.md.enc"
     end
   end
 
   if check_mode
     if out_of_date.empty?
-      puts "up to date: #{slugs.join(', ')}"
+      puts "up to date: #{processed.join(', ')}"
       exit 0
     else
       warn "out of date: #{out_of_date.join(', ')}"
