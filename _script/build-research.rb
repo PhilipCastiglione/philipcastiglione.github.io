@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require "kramdown"
 require "digest"
 require "cgi"
 require "openssl"
 require "base64"
 require "json"
+require "tempfile"
 
 SCRIPT_DIR = __dir__
 REPO_ROOT = File.expand_path("..", SCRIPT_DIR)
@@ -322,39 +322,64 @@ def discover_slugs
     if File.exist?(md_path)
       slug
     elsif File.exist?(enc_path)
-      warn "note: research/#{slug} has only _research.md.enc — run `--decrypt #{slug}` first, skipping"
+      warn "note: research/#{slug} has only _research.md.enc — run `--sync #{slug}` first, skipping"
       nil
     end
   end
 end
 
-def run_decrypt(slug, force)
-  dir = File.join(RESEARCH_DIR, slug)
-  enc_path = File.join(dir, "_research.md.enc")
-  md_path = File.join(dir, "_research.md")
-
+def read_encrypted_source(enc_path, passphrase)
   abort "error: #{enc_path} does not exist" unless File.exist?(enc_path)
+  enc = parse_enc(File.read(enc_path))
+  decrypt_payload(enc[:salt], enc[:iv], enc[:ciphertext], passphrase)
+rescue OpenSSL::Cipher::CipherError
+  abort "error: failed to decrypt #{enc_path} — wrong passphrase?"
+end
+
+def write_private_file(path, contents)
+  Tempfile.create(["_research-", ".tmp"], File.dirname(path), binmode: true) do |file|
+    file.write(contents)
+    file.close
+    File.rename(file.path, path)
+  end
+end
+
+def record_synced_source(md_path, plaintext)
+  write_private_file("#{md_path}.synced", Digest::SHA256.hexdigest(plaintext))
+end
+
+def save_decrypted_source(md_path, plaintext)
+  write_private_file(md_path, plaintext)
+  record_synced_source(md_path, plaintext)
+  puts "wrote #{md_path.delete_prefix(REPO_ROOT + '/')}"
+end
+
+def run_decrypt(slug, force)
+  md_path = File.join(RESEARCH_DIR, slug, "_research.md")
   if File.exist?(md_path) && !force
     abort "error: #{md_path} already exists; pass --force to overwrite"
   end
 
-  enc = parse_enc(File.read(enc_path))
-  passphrase = research_passphrase
-
-  begin
-    plaintext = decrypt_payload(enc[:salt], enc[:iv], enc[:ciphertext], passphrase)
-  rescue OpenSSL::Cipher::CipherError
-    abort "error: failed to decrypt research/#{slug}/_research.md.enc — wrong passphrase?"
-  end
-
-  File.write(md_path, plaintext)
-  puts "wrote research/#{slug}/_research.md"
+  plaintext = read_encrypted_source("#{md_path}.enc", research_passphrase)
+  save_decrypted_source(md_path, plaintext)
 end
 
 def main
   argv = ARGV.dup
   check_mode = !!argv.delete("--check")
   force = !!argv.delete("--force")
+
+  case argv.first
+  when "--setup", "--sync"
+    require_relative "research-sync"
+    command, slug = argv
+    if argv.length > 2 || (command == "--setup" && !slug) || force || check_mode
+      abort "usage: --setup <slug> or --sync [<slug>]"
+    end
+    return setup_research(slug) if command == "--setup"
+
+    return sync_research(slug)
+  end
 
   if (idx = argv.index("--decrypt"))
     argv.delete_at(idx)
@@ -371,6 +396,7 @@ def main
     exit 0
   end
 
+  require "kramdown"
   template = File.read(TEMPLATE_PATH)
   out_of_date = []
   processed = []
@@ -409,6 +435,7 @@ def main
     else
       File.write(out_path, html)
       File.write(enc_path, enc_json)
+      record_synced_source(md_path, md_src)
       puts "wrote research/#{slug}/index.html"
       puts "wrote research/#{slug}/_research.md.enc"
     end

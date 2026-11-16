@@ -18,16 +18,18 @@ bundle exec ruby _script/build-research.rb <slug>
 
 The repo is public, so `_research.md` is gitignored — the generator encrypts it
 client-side (AES-256-GCM, PBKDF2) into the committed `_research.md.enc` and into
-`index.html` itself. It needs a passphrase: `RESEARCH_KEY` env var, else the
-gitignored `.research-key` file at the repo root; the real passphrase lives in
-a password manager, not in this repo. On a fresh clone, recover the markdown
-from the committed `.enc` file:
+`index.html` itself. On a fresh clone, have the user run
+`ruby _script/build-research.rb --setup <slug>` in Terminal once. Setup stores the
+passphrase in a local, gitignored `.research-key` file and installs Git hooks
+that refresh locally decrypted pages after a pull. `RESEARCH_KEY` can override
+the saved key. For another page or a manual refresh, run:
 
 ```sh
-bundle exec ruby _script/build-research.rb --decrypt <slug>
+ruby _script/build-research.rb --sync <slug>
 ```
 
-Commit `index.html` and `_research.md.enc`, never `_research.md`.
+Sync preserves local edits. Commit only `index.html` and `_research.md.enc`
+when publishing page content.
 
 **Before writing or editing any research page, use the `research-page` skill.**
 It carries the markdown conventions — callouts, legal quotes, checklists,

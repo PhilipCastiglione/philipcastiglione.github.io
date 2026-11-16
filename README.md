@@ -37,14 +37,26 @@ bundle exec ruby _script/build-research.rb <project-slug>   # or no args for all
 bundle exec ruby _script/build-research.rb --check          # exit 1 if stale
 ```
 
-The passphrase comes from the `RESEARCH_KEY` env var, else the gitignored
-`.research-key` file at the repo root; it lives in a password manager. A
-fresh clone has neither `_research.md` nor `.research-key` — recover the
-markdown from the committed `.enc` file once you have the passphrase:
+### One-time setup on each checkout
 
 ```sh
-bundle exec ruby _script/build-research.rb --decrypt <project-slug>
+ruby _script/build-research.rb --setup home-server
 ```
+
+Run setup with the repo's Ruby version. Enter the research passphrase from your
+password manager at the hidden prompt.
+Setup verifies it, saves it in the gitignored `.research-key` file with owner-only
+permissions, decrypts the selected page, and installs local Git hooks. After
+that, `git pull` refreshes any research page already decrypted in this checkout.
+The build script also uses the saved key. `RESEARCH_KEY` is still available as
+an override for builds and manual syncs.
+
+Use `ruby _script/build-research.rb --sync <project-slug>` to decrypt another
+page or refresh it manually. Omit the slug to refresh all locally decrypted
+pages. If a local Markdown file has edits, sync leaves it in place and reports
+the conflict. Keep that copy somewhere outside the public site tree before
+syncing again, then merge in your edits. Setup preserves existing Git hooks and
+prints instructions if you need to add the sync command to one.
 
 Output is committed because GitHub Pages builds with its own fixed gem set and
 cannot run a custom plugin. Same markdown in, byte-identical HTML out.

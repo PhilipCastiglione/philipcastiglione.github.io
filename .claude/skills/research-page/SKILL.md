@@ -20,11 +20,15 @@ non-sensitive: `driveway`, not `suburb-driveway`.
 
 ## Procedure
 
-1. **Get the passphrase available.** The generator reads `RESEARCH_KEY`, else the
-   gitignored `.research-key` at the repo root. On a fresh clone neither exists —
-   ask the user for it, do not invent one, and do not print it.
-2. **Recover existing sources if needed.** A fresh clone has no `_research.md`:
-   `bundle exec ruby _script/build-research.rb --decrypt <slug>`
+1. **Set up the checkout once.** Have the user run
+   `ruby _script/build-research.rb --setup <slug>` in Terminal. Setup prompts for
+   the passphrase privately, saves it in the gitignored `.research-key` file, and
+   installs Git hooks to refresh local sources on pull. `RESEARCH_KEY` can
+   override the saved key.
+2. **Sync the source before editing an existing page.** Run
+   `ruby _script/build-research.rb --sync <slug>` to decrypt a page or update a
+   local copy. If sync reports a conflict, preserve the local edits before
+   replacing the copy.
 3. **Write or edit `research/<slug>/_research.md`** using the conventions below.
 4. **Build:** `bundle exec ruby _script/build-research.rb <slug>` (omit the slug to
    build every page).

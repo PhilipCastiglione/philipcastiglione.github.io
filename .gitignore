@@ -1,5 +1,7 @@
 .research-key
 research/*/_research.md
+research/*/_research.md.synced
+research/*/_research-*.tmp
 _site
 .sass-cache
 .jekyll-cache
